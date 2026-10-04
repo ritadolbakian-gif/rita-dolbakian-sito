@@ -118,6 +118,8 @@ export const MEDIA: Record<string, MediaItem> = {
   author: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian", pos: "50% 22%" },
   "agenda-cover": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "wm-cover": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
+  "home-bg-m": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "40% 20%" },
+  "chi-sono-bg-m": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "40% 20%" },
   "home-bg": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "0% 30%" },
   "chi-sono-bg": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "0% 30%" },
 };

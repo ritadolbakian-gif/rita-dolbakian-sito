@@ -14,12 +14,16 @@ export function Hero() {
   const fade = (d: number) => ({ initial: reduce ? false : { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.9, delay: d, ease: [0.22, 1, 0.36, 1] as const } });
 
   return (
-    <section ref={ref} data-hero-dark className="section-dark relative overflow-hidden pt-28 pb-14 md:pt-40 md:pb-28">
+    <section ref={ref} data-hero-dark className="section-dark relative overflow-hidden pt-0 pb-14 md:pt-40 md:pb-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[104vw] md:hidden" aria-hidden>
+          <Slot id="home-bg-m" priority raw sizes="100vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink from-2% via-ink/60 via-35% to-ink/10" />
+        </div>
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden>
         <Slot id="home-bg" priority raw sizes="58vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/30 via-25% to-transparent" />
       </div>
-      <div className="wrap relative">
+      <div className="wrap relative pt-[62vw] md:pt-0">
         <div className="max-w-4xl">
           <motion.p {...fade(0.1)} className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-10 bg-rose" />Per operatrici e operatori del benessere</motion.p>
           <Heading as="h1" text="Sei un operatore del benessere e vuoi *più clienti*, prezzi più alti e un'agenda piena?" className="text-[clamp(2.3rem,6vw,5.2rem)]" delay={0.2} immediate />

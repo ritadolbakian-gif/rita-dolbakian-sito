@@ -22,14 +22,18 @@ export function PageHero({ eyebrow, title, answer, dark = false, bgId, imageId, 
     </div>
   );
   return (
-    <section data-hero-dark={dark ? "" : undefined} className={`${dark ? "section-dark" : "bg-blush/30"} relative overflow-hidden pt-28 pb-12 md:pt-40 md:pb-20`}>
-      {bgId && (
+    <section data-hero-dark={dark ? "" : undefined} className={`${dark ? "section-dark" : "bg-blush/30"} relative overflow-hidden ${bgId ? "pt-0" : "pt-28"} pb-12 md:pt-40 md:pb-20`}>
+      {bgId && (<>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[104vw] md:hidden" aria-hidden>
+          <Slot id={`${bgId}-m`} priority raw sizes="100vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink from-2% via-ink/60 via-35% to-ink/10" />
+        </div>
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden>
           <Slot id={bgId} priority raw sizes="58vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/30 via-25% to-transparent" />
         </div>
-      )}
-      <div className="wrap relative">
+      </>)}
+      <div className={`wrap relative ${bgId ? "pt-[62vw] md:pt-0" : ""}`}>
         {imageId ? (
           <div className={`grid items-center gap-10 lg:gap-14 ${imageRatio.startsWith("16") ? "lg:grid-cols-[0.8fr_1.2fr]" : "lg:grid-cols-[1.1fr_0.9fr]"}`}>
             {text}
