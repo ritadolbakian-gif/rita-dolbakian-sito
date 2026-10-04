@@ -58,8 +58,8 @@ export const MEDIA: Record<string, MediaItem> = {
   "risultati-hero": { alt: "Rita con una allieva (autorizzata) (16:9)" },
   "area-privata": { src: "/media/rita-divano.webp", alt: "Studio accogliente, area privata (16:9)" , pos: "30% 40%" },
   // Foto in testata delle pagine (due colonne)
-  "agenda-top": { src: "/media/rita-conversazione.webp", alt: "Rita ascolta una professionista del benessere", pos: "68% 40%" },
-  "wm-top": { src: "/media/rita-tablet.webp", alt: "Rita con il tablet nel suo studio", pos: "42% 40%" },
+  "agenda-top": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "wm-top": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "rd-top": { src: "/media/lezione-gruppo.webp", alt: "Rita mostra una tecnica a un piccolo gruppo (immagine illustrativa)", pos: "50% 40%" },
   "cert-top": { src: "/media/aula-grande.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "60% 40%" },
   "percorsi-top": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio", pos: "52% 35%" },

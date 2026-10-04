@@ -14,12 +14,10 @@ export default function MetodoAgenda() {
   return (
     <>
       <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Metodo e primo percorso di affiancamento per operatrici e operatori del benessere che vogliono continuità e clienti qualificati online.", "/percorsi/metodo-agenda")} />
-      <PageHero imageId="agenda-top" imageRatio="4/5" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Vuoi un'agenda che *regge* anche nei mesi difficili?" answer="Il Metodo A.G.E.N.D.A. è il mio metodo per operatrici e operatori del benessere che vogliono smettere di andare a tentativi. È il primo percorso di affiancamento: si parte da una call di orientamento e si arriva a un'agenda con più ordine, più direzione e clienti più qualificati.">
+      <PageHero imageId="agenda-top" imageRatio="16/9" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Vuoi un'agenda che *regge* anche nei mesi difficili?" answer="Il Metodo A.G.E.N.D.A. è il mio metodo per operatrici e operatori del benessere che vogliono smettere di andare a tentativi. È il primo percorso di affiancamento: si parte da una call di orientamento e si arriva a un'agenda con più ordine, più direzione e clienti più qualificati.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
       </PageHero>
-
-      <section className="pt-10 md:pt-14"><div className="wrap"><Slot kind="foto" id="agenda-cover" label="Metodo A.G.E.N.D.A." ratio="16/9" art="arch" className="!rounded-[1.5rem] md:!rounded-[2rem]" /></div></section>
 
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-2 items-center">

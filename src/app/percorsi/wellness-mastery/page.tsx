@@ -34,12 +34,10 @@ export default function WellnessMastery() {
   return (
     <>
       <JsonLd data={courseLd("Wellness Mastery", "Da operatrice del benessere a imprenditrice digitale: 10 moduli, 6 bonus e garanzia di 14 giorni.", "/percorsi/wellness-mastery")} />
-      <PageHero imageId="wm-top" imageRatio="4/5" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il mio percorso per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
+      <PageHero imageId="wm-top" imageRatio="16/9" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il mio percorso per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
-
-      <section className="pt-10 md:pt-14"><div className="wrap"><Slot kind="foto" id="wm-cover" label="Wellness Mastery" ratio="16/9" art="arch" className="!rounded-[1.5rem] md:!rounded-[2rem]" /></div></section>
 
       <section className="py-10 md:py-14">
         <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">

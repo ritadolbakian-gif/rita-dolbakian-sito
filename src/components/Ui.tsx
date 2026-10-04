@@ -16,7 +16,7 @@ export function PageHero({ eyebrow, title, answer, dark = false, bgId, imageId, 
   const text = (
     <div>
       <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />{eyebrow}</p>
-      <Heading as="h1" text={title} className={imageId ? "text-[clamp(2.3rem,8vw,4.6rem)] max-w-3xl" : "text-[clamp(2.3rem,9.5vw,5.6rem)] max-w-5xl"} delay={0.1} immediate />
+      <Heading as="h1" text={title} className={imageId ? (imageRatio.startsWith("16") ? "text-[clamp(2.1rem,6.5vw,3.8rem)] max-w-3xl" : "text-[clamp(2.3rem,8vw,4.6rem)] max-w-3xl") : "text-[clamp(2.3rem,9.5vw,5.6rem)] max-w-5xl"} delay={0.1} immediate />
       {answer && <Reveal delay={0.5}><p className={`mt-8 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>{answer}</p></Reveal>}
       {children && <Reveal delay={0.6}><div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 [&>*]:justify-center">{children}</div></Reveal>}
     </div>
@@ -31,7 +31,7 @@ export function PageHero({ eyebrow, title, answer, dark = false, bgId, imageId, 
       )}
       <div className="wrap relative">
         {imageId ? (
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+          <div className={`grid items-center gap-10 lg:gap-14 ${imageRatio.startsWith("16") ? "lg:grid-cols-[0.8fr_1.2fr]" : "lg:grid-cols-[1.1fr_0.9fr]"}`}>
             {text}
             <Reveal delay={0.3}><Slot kind="foto" id={imageId} label={eyebrow} ratio={imageRatio} art={imageArt} className="shadow-[0_40px_80px_-40px_rgba(11,10,9,.5)]" /></Reveal>
           </div>
