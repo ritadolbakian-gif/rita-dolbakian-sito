@@ -28,7 +28,7 @@ export default function FormazioneCertificata() {
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Course", name: "Formazione certificata Rita Dolbakian Academy", description: "Percorso a tre livelli di formazione pratica sul massaggio, con attestato finale.", provider: { "@type": "EducationalOrganization", name: "Rita Dolbakian Academy" }, inLanguage: "it-IT" }} />
       <PageHero imageId="cert-top" imageRatio="4/3" imageArt="orbs" dark eyebrow="Formazione certificata" title="Un percorso che finisce con *qualcosa in mano*." answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
-        <Link href="/call-orientamento" className="btn btn-primary">Parliamone insieme <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Capiamo da quale livello partire <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
       </PageHero>
 
@@ -151,7 +151,7 @@ export default function FormazioneCertificata() {
         { q: "Con questo attestato posso aprire un'attività?", a: "L'attestato attesta il percorso formativo. Per aprire un'attività servono i requisiti e le autorizzazioni previsti dalla legge: se ne parla in call." },
         { q: "Come posso verificare un attestato?", a: <>Se la verifica è attiva, basta inserire il codice riportato sull'attestato. <Tbc>se attivare la verifica</Tbc></>, plain: "Se la verifica è attiva, basta inserire il codice riportato sull'attestato." },
       ]} />
-      <CtaBand title="Vuoi sapere da quale *livello* partire?" primary={{ href: "/call-orientamento", label: "Prenota la call gratuita" }} />
+      <CtaBand title="Vuoi sapere da quale *livello* partire?" primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
     </>
   );
 }

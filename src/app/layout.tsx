@@ -14,7 +14,7 @@ const sans = Hanken_Grotesk({ variable: "--font-sans", subsets: ["latin"], displ
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: "Rita Dolbakian | Formazione per chi lavora nel benessere", template: "%s | Rita Dolbakian" },
+  title: { default: "Rita Dolbakian | Più clienti e un'agenda piena nel benessere", template: "%s | Rita Dolbakian" },
   description: "Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni. Percorsi per riempire l'agenda online e per imparare a massaggiare con un metodo preciso.",
   openGraph: { type: "website", locale: "it_IT", siteName: "Rita Dolbakian Academy", images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Rita Dolbakian. Il tuo talento. Il tuo metodo. Più clienti." }] },
   twitter: { card: "summary_large_image", images: ["/og-image.jpg"] },

@@ -8,9 +8,9 @@ export const metadata = meta("Corsi, guide e percorsi di Rita Dolbakian", "Il ca
 export default function Corsi() {
   return (
     <>
-      <PageHero imageId="corsi-top" imageRatio="4/5" imageArt="leaf" eyebrow="Corsi" title="Tutto il percorso, *in un posto*." answer="Qui trovi tutto quello che ho preparato: la guida gratuita, il Metodo A.G.E.N.D.A., Wellness Mastery e il Metodo Rita Dolbakian. Filtra per area, business o tecnica, e per formato, video, in presenza, guida o affiancamento." />
+      <PageHero imageId="corsi-top" imageRatio="4/5" imageArt="leaf" eyebrow="Corsi" title="Tutto il percorso, *in un posto*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato: la guida gratuita, il Metodo A.G.E.N.D.A., Wellness Mastery e il Metodo Rita Dolbakian. Filtra per area, business o tecnica, e per formato, video, in presenza, guida o affiancamento." />
       <section className="section"><div className="wrap"><CatalogoCorsi /></div></section>
-      <CtaBand title="Non sai quale *scegliere*?" primary={{ href: "/percorsi", label: "Fai il test di orientamento" }} secondary={{ href: "/call-orientamento", label: "Prenota la call" }} />
+      <CtaBand title="Non sai quale *scegliere*?" primary={{ href: "/percorsi", label: "Rispondi a 3 domande" }} secondary={{ href: "/call-orientamento", label: "Prenota la call" }} />
       <section className="section bg-blush/30"><div className="wrap">
         <p className="eyebrow mb-5">Cosa dicono le allieve</p>
         <QuoteWall />

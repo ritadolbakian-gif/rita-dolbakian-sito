@@ -26,8 +26,8 @@ export default function MetodoRD() {
     <>
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
       <PageHero imageId="rd-top" imageRatio="4/3" imageArt="stones" dark eyebrow="Metodo Rita Dolbakian" title="Impara a *massaggiare*. Con mani sicure." answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
-        <Link href="/call-orientamento" className="btn btn-primary">Parliamone insieme <span className="arr">→</span></Link>
-        <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Scegli il tuo livello con me <span className="arr">→</span></Link>
+        <Link href="#livelli" className="btn btn-ghost">Guarda i tre livelli</Link>
       </PageHero>
 
       <section className="py-4"><div className="wrap"><p className="text-center text-sm text-stone rounded-2xl border border-dashed border-rose/60 p-4">Struttura dei livelli in bozza: <Tbc>mia validazione su programma, durata, sedi e prezzi</Tbc></p></div></section>
@@ -39,8 +39,8 @@ export default function MetodoRD() {
             <Label n="01" t="Cosa lo rende diverso" />
             <Heading text="Tecnica, *ascolto*, presenza." className="text-5xl md:text-6xl" />
             <div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-              <p>Un metodo che ho studiato, testato e semplificato in oltre dieci anni di lavoro. Meno fronzoli, più chiarezza su cosa fare e perché lo stai facendo.</p>
-              <p>Non impari a ripetere dei movimenti. Impari a sentire, a dosare la pressione, a stare con la persona che hai davanti.</p>
+              <p>Hai visto cento video e non sei sicura delle tue mani. La pressione giusta non si impara a parole. Il mio metodo l'ho studiato, testato e semplificato in oltre dieci anni: sai cosa fai, in che ordine, e perché.</p>
+              <p>Non impari a ripetere dei movimenti. Impari a sentire, a dosare, a restare con la persona che hai davanti.</p>
               <p className="text-sm"><Tbc>i tratti distintivi del mio metodo</Tbc></p>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function MetodoRD() {
         { q: "Posso poi aprire la mia attività?", a: "Il percorso aiuta a costruire competenza. Per aprire un'attività servono i requisiti previsti dalla legge: chiedi in call." },
         { q: "Il metodo è una terapia?", a: "No. È formazione su tecnica manuale e benessere. Non offre promesse di cura né indicazioni mediche." },
       ]} />
-      <CtaBand title="Prima di scegliere, *parliamone*." primary={{ href: "/call-orientamento", label: "Prenota la call gratuita" }} />
+      <CtaBand title="Prima di scegliere, *parliamone*." primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
     </>
   );
 }

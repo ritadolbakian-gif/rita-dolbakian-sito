@@ -19,7 +19,7 @@ export default function Percorsi() {
   return (
     <>
       <PageHero imageId="percorsi-top" imageRatio="4/5" imageArt="waves" eyebrow="Percorsi" title="Non tutti partono dallo *stesso* punto." answer="Ho costruito due strade. Il Metodo A.G.E.N.D.A. e Wellness Mastery sono per chi lavora nel benessere e vuole più continuità online. Il Metodo Rita Dolbakian è per chi vuole imparare a massaggiare o perfezionare la propria tecnica, online e in presenza. Ti aiuto a capire da quale partire.">
-        <Link href="/call-orientamento" className="btn btn-primary">Prenota la call gratuita <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
       </PageHero>
 
       <section className="section">
