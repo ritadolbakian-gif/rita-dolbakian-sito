@@ -41,11 +41,11 @@ export function CookieBanner() {
         </div>
       )}
       <div className="mt-5 flex flex-wrap gap-2">
-        <button onClick={() => choose({ analytics: false, marketing: false })} className="btn btn-ghost !min-h-11 !py-2 !px-5 text-sm">Rifiuta tutto</button>
+        <button onClick={() => choose({ analytics: false, marketing: false })} className="btn btn-ghost !w-auto !min-h-11 !py-2 !px-5 text-sm">Rifiuta tutto</button>
         {custom
-          ? <button onClick={() => choose(c)} className="btn btn-primary !min-h-11 !py-2 !px-5 text-sm">Salva scelta</button>
-          : <><button onClick={() => setCustom(true)} className="btn btn-ghost !min-h-11 !py-2 !px-5 text-sm">Personalizza</button>
-              <button onClick={() => choose({ analytics: true, marketing: true })} className="btn btn-primary !min-h-11 !py-2 !px-5 text-sm">Accetta tutto</button></>}
+          ? <button onClick={() => choose(c)} className="btn btn-primary !w-auto !min-h-11 !py-2 !px-5 text-sm">Salva scelta</button>
+          : <><button onClick={() => setCustom(true)} className="btn btn-ghost !w-auto !min-h-11 !py-2 !px-5 text-sm">Personalizza</button>
+              <button onClick={() => choose({ analytics: true, marketing: true })} className="btn btn-primary !w-auto !min-h-11 !py-2 !px-5 text-sm">Accetta tutto</button></>}
       </div>
     </div>
   );

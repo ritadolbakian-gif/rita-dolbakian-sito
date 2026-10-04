@@ -13,12 +13,12 @@ export function JsonLd({ data }: { data: object }) {
 /** Testata di pagina: H1 unico + answer block 40–60 parole. */
 export function PageHero({ eyebrow, title, answer, dark = false, children }: { eyebrow: string; title: string; answer?: ReactNode; dark?: boolean; children?: ReactNode }) {
   return (
-    <section className={`${dark ? "section-dark" : "bg-blush/30"} pt-36 pb-16 md:pt-44 md:pb-24`}>
+    <section className={`${dark ? "section-dark" : "bg-blush/30"} pt-28 pb-12 md:pt-44 md:pb-24`}>
       <div className="wrap">
         <p className="eyebrow mb-6">{eyebrow}</p>
-        <Heading as="h1" text={title} className="text-[clamp(2.7rem,6.5vw,5.6rem)] max-w-5xl" delay={0.1} immediate />
+        <Heading as="h1" text={title} className="text-[clamp(2.3rem,9.5vw,5.6rem)] max-w-5xl" delay={0.1} immediate />
         {answer && <Reveal delay={0.5}><p className={`mt-8 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>{answer}</p></Reveal>}
-        {children && <Reveal delay={0.6}><div className="mt-10 flex flex-wrap gap-4">{children}</div></Reveal>}
+        {children && <Reveal delay={0.6}><div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 [&>*]:justify-center">{children}</div></Reveal>}
       </div>
     </section>
   );
@@ -56,7 +56,7 @@ export function CtaBand({ title = "Se senti che continuare così *non ti basta* 
         <Heading text={title} className="text-4xl md:text-6xl" />
         <Reveal delay={0.2}>
           <p className="mt-6 text-xl font-display italic text-ivory/80">{sub}</p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-4 [&>*]:justify-center">
             <Link href={primary.href} className="btn btn-primary">{primary.label} <span className="arr">→</span></Link>
             {secondary && <Link href={secondary.href} className="btn btn-ghost">{secondary.label}</Link>}
           </div>

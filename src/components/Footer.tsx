@@ -6,7 +6,7 @@ import { CookiePrefsLink } from "./CookieBanner";
 export function Footer() {
   return (
     <footer className="section-dark pt-20 pb-28 sm:pb-10 overflow-hidden">
-      <div className="wrap mb-16"><Image src="/media/logo-light.png" alt="Rita Dolbakian. Il tuo talento. Il tuo metodo. Più clienti." width={1971} height={537} className="w-full max-w-3xl h-auto" /></div>
+      <div className="wrap mb-10 md:mb-14"><Image src="/media/logo-light.png" alt="Rita Dolbakian. Il tuo talento. Il tuo metodo. Più clienti." width={1971} height={537} className="w-56 sm:w-72 h-auto" /></div>
       <div className="wrap grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <p className="mt-4 max-w-sm text-ivory/65">Massaggiatrice e formatrice nel benessere da oltre dieci anni. Con calma, con chiarezza.</p>

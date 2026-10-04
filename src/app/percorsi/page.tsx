@@ -31,7 +31,7 @@ export default function Percorsi() {
           <Label n="02" t="Il confronto" />
           <Heading text="I tre percorsi, *a confronto*." className="text-5xl md:text-6xl" />
           <Reveal>
-            <div className="mt-12 overflow-x-auto rounded-3xl bg-ivory">
+            <div className="mt-12 hidden md:block overflow-x-auto rounded-3xl bg-ivory">
               <table className="w-full min-w-[46rem] text-left">
                 <thead><tr className="border-b border-[var(--line)] text-xs uppercase tracking-[0.15em] text-stone">
                   {["Percorso", "Per chi è", "Cosa ottieni", "Formato", ""].map((h) => <th key={h} className="p-5 font-medium">{h}</th>)}
@@ -48,6 +48,19 @@ export default function Percorsi() {
               </table>
             </div>
           </Reveal>
+          <div className="mt-10 grid gap-4 md:hidden">
+            {rows.map((r) => (
+              <Link key={r.n} href={r.href} className="rounded-3xl bg-ivory p-6 block">
+                <h3 className="font-display text-3xl">{r.n}</h3>
+                <dl className="mt-4 space-y-3 text-sm">
+                  <div><dt className="eyebrow">Per chi è</dt><dd className="text-stone mt-1">{r.who}</dd></div>
+                  <div><dt className="eyebrow">Cosa ottieni</dt><dd className="text-stone mt-1">{r.get}</dd></div>
+                  <div><dt className="eyebrow">Formato</dt><dd className="text-stone mt-1">{r.fmt}</dd></div>
+                </dl>
+                <span className="mt-5 inline-block font-medium">Scopri →</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

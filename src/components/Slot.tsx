@@ -21,15 +21,19 @@ export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art,
       style={{ aspectRatio: ratio }}
       data-slot={kind}
       data-slot-id={id}
-      initial={reduce ? false : { clipPath: "inset(0 0 100% 0)" }}
-      whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+      initial={reduce ? false : "hidden"}
+      whileInView="show"
+      viewport={{ once: true, amount: 0.05 }}
     >
+      <motion.div
+        className="absolute inset-0"
+        variants={{ hidden: { clipPath: "inset(0 0 100% 0)" }, show: { clipPath: "inset(0 0 0% 0)" } }}
+        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+      >
       {isVideo ? (
         <video src={file} poster={cover} controls playsInline preload="none" className="absolute inset-0 size-full object-cover" aria-label={text} />
       ) : file ? (
-        <Image src={file} alt={text} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" style={{ objectPosition: m?.pos }} />
+        <Image src={file} alt={text} fill priority={id === "hero"} sizes="(min-width:1024px) 45vw, (min-width:640px) 70vw, 100vw" className="object-cover" style={{ objectPosition: m?.pos }} />
       ) : (
         <Art variant={art ?? pickArt(label)} />
       )}
@@ -41,6 +45,7 @@ export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art,
         </span>
       )}
       {!file && <span className="slot-tag" data-slot-label>{kind} · {label}</span>}
+      </motion.div>
     </motion.div>
   );
 }

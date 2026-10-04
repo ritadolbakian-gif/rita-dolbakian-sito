@@ -38,11 +38,11 @@ export function Orientatore() {
   };
 
   return (
-    <div className="section-dark rounded-[2rem] p-8 md:p-14" aria-live="polite">
+    <div className="section-dark rounded-[2rem] p-6 sm:p-8 md:p-14" aria-live="polite">
       {!done ? (
         <>
           <p className="eyebrow">Domanda {i + 1} di {STEPS.length}</p>
-          <h3 className="font-display text-4xl md:text-5xl mt-4">{STEPS[i].q}</h3>
+          <h3 className="font-display text-3xl sm:text-4xl md:text-5xl mt-4">{STEPS[i].q}</h3>
           <div className="mt-8 grid gap-3">
             {STEPS[i].o.map((o) => (
               <button key={o.l} onClick={() => pick(o.s as Record<string, number>)} className="text-left rounded-2xl border border-ivory/20 px-6 py-4 min-h-14 hover:border-rose hover:bg-ivory/5 transition-colors">
@@ -54,7 +54,7 @@ export function Orientatore() {
       ) : (
         <>
           <p className="eyebrow">Ti consiglio di iniziare da</p>
-          <h3 className="font-display text-5xl md:text-6xl mt-4 kw">{RESULT[best].t}</h3>
+          <h3 className="font-display text-4xl sm:text-5xl md:text-6xl mt-4 kw">{RESULT[best].t}</h3>
           <p className="mt-4 text-ivory/70 max-w-xl">{RESULT[best].d}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href={RESULT[best].href} className="btn btn-primary">Scopri il percorso <span className="arr">→</span></Link>

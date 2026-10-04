@@ -33,7 +33,7 @@ export function GuidePopup() {
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-[75] grid place-items-center p-4 bg-ink/60 backdrop-blur-sm" onClick={() => setOpen(false)}>
-      <div role="dialog" aria-modal="true" aria-label="Guida gratuita" onClick={(e) => e.stopPropagation()} className="relative w-full max-w-lg rounded-[2rem] bg-ivory p-8 md:p-10 shadow-2xl">
+      <div role="dialog" aria-modal="true" aria-label="Guida gratuita" onClick={(e) => e.stopPropagation()} className="relative w-full max-w-lg max-h-[92dvh] overflow-y-auto rounded-[2rem] bg-ivory p-6 sm:p-10 shadow-2xl">
         <button onClick={() => setOpen(false)} aria-label="Chiudi" className="absolute right-4 top-4 size-11 grid place-items-center text-xl">✕</button>
         <p className="eyebrow">Prima di andare</p>
         <h2 className="font-display text-4xl mt-3 leading-[1.05]">I primi 10 clienti online, <em className="kw">con ordine</em>.</h2>

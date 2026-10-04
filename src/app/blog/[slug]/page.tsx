@@ -34,10 +34,10 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
     <>
       <JsonLd data={ld} />
       <article>
-        <header className="bg-blush/30 pt-36 pb-14 md:pt-44">
+        <header className="bg-blush/30 pt-28 pb-10 md:pt-44">
           <div className="wrap max-w-4xl">
             <p className="eyebrow mb-5"><Link href="/blog" className="ulink">Blog</Link> · {p.cat} · {p.read} min di lettura</p>
-            <Heading as="h1" text={p.title} className="text-[clamp(2.3rem,5.5vw,4.4rem)]" immediate />
+            <Heading as="h1" text={p.title} className="text-[clamp(2rem,8vw,4.4rem)]" immediate />
             <p className="mt-6 text-sm text-stone">Di Rita Dolbakian · Aggiornato il {fmt(p.updated)}</p>
           </div>
         </header>

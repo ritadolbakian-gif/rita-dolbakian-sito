@@ -38,11 +38,11 @@ export function Header() {
   return (
     <>
       <Progress />
-      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${solid ? "bg-ivory/80 backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2.5" : "py-5"}`}>
+      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${solid ? "bg-ivory/80 backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2" : "py-3 md:py-5"}`}>
         <div className="wrap flex items-center justify-between gap-4">
-          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src="/media/logo-compact.png" alt="Rita Dolbakian" width={1971} height={372} priority className={`w-auto transition-all duration-500 ${solid ? "h-9 md:h-10" : "h-10 md:h-12"}`} /></Link>
+          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src="/media/logo-compact.png" alt="Rita Dolbakian" width={1971} height={372} priority className={`w-auto transition-all duration-500 ${solid ? "h-10 md:h-11" : "h-11 md:h-14"}`} /></Link>
 
-          <nav className="hidden lg:flex items-center" aria-label="Principale">
+          <nav className="hidden xl:flex items-center" aria-label="Principale">
             {NAV.map((n) =>
               n.href === "/percorsi" ? (
                 <div key={n.href} className="group relative">
@@ -68,7 +68,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Link href="/area-privata" className="hidden md:inline-flex items-center gap-2 rounded-full border border-ink/20 px-4 min-h-11 text-sm transition-colors duration-300 hover:bg-ink hover:text-ivory hover:border-ink"><Lock />Area Privata</Link>
             <Link href="/call-orientamento" className="btn btn-primary hidden md:inline-flex !min-h-11 !py-2.5">Prenota la call <span className="arr">→</span></Link>
-            <button onClick={() => setOpen(true)} className="lg:hidden min-h-11 min-w-11 grid place-items-center" aria-label="Apri il menu" aria-expanded={open}>
+            <button onClick={() => setOpen(true)} className="xl:hidden min-h-11 min-w-11 grid place-items-center" aria-label="Apri il menu" aria-expanded={open}>
               <span className="block w-7 space-y-2"><span className="block h-px bg-ink" /><span className="block h-px bg-ink w-5 ml-auto" /></span>
             </button>
           </div>
@@ -80,18 +80,18 @@ export function Header() {
           <motion.div className="section-dark fixed inset-0 z-[60] flex flex-col overflow-y-auto"
             initial={{ clipPath: "circle(0% at 90% 5%)" }} animate={{ clipPath: "circle(150% at 90% 5%)" }} exit={{ clipPath: "circle(0% at 90% 5%)" }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
             <div className="wrap flex justify-between items-center py-5">
-              <Image src="/media/logo-light-compact.png" alt="Rita Dolbakian" width={1971} height={372} className="h-10 w-auto" />
+              <Image src="/media/logo-light-compact.png" alt="Rita Dolbakian" width={1971} height={372} className="h-11 w-auto" />
               <button onClick={() => setOpen(false)} className="min-h-11 min-w-11 text-2xl" aria-label="Chiudi il menu">✕</button>
             </div>
             <nav className="wrap flex-1 flex flex-col justify-center gap-2 py-6" aria-label="Menu mobile">
               {NAV.map((n, i) => (
                 <motion.div key={n.href} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 + i * 0.06 }}>
-                  <Link href={n.href} onClick={() => setOpen(false)} className="font-display text-5xl flex items-baseline gap-4"><span className="eyebrow !text-ivory/40 w-6">0{i + 1}</span>{n.label}</Link>
+                  <Link href={n.href} onClick={() => setOpen(false)} className="font-display text-4xl sm:text-5xl flex items-baseline gap-4 py-1"><span className="eyebrow !text-ivory/40 w-6">0{i + 1}</span>{n.label}</Link>
                 </motion.div>
               ))}
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/call-orientamento" onClick={() => setOpen(false)} className="btn btn-primary">Prenota la call <span className="arr">→</span></Link>
-                <Link href="/area-privata" onClick={() => setOpen(false)} className="btn btn-ghost"><Lock />Area Privata</Link>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link href="/call-orientamento" onClick={() => setOpen(false)} className="btn btn-primary justify-center">Prenota la call <span className="arr">→</span></Link>
+                <Link href="/area-privata" onClick={() => setOpen(false)} className="btn btn-ghost justify-center"><Lock />Area Privata</Link>
               </div>
             </nav>
           </motion.div>
@@ -102,8 +102,17 @@ export function Header() {
 }
 
 export function StickyCta() {
+  const path = usePathname();
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const on = () => setShow(window.scrollY > 700);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
+  if (path.startsWith("/call-orientamento") || path.startsWith("/area-privata")) return null;
   return (
-    <div className="sm:hidden fixed bottom-3 inset-x-3 z-40">
+    <div className={`sm:hidden fixed inset-x-3 z-40 transition-all duration-500 ${show ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0 pointer-events-none"}`} style={{ bottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
       <Link href="/call-orientamento" className="btn btn-primary w-full justify-center shadow-xl">Prenota la call gratuita</Link>
     </div>
   );
