@@ -16,7 +16,7 @@ const STEPS = [
   { q: "Da dove vuoi partire?", o: [
     { l: "Con un confronto e un po' di orientamento", s: { agenda: 2 } },
     { l: "Con un percorso completo, a fondo", s: { mastery: 2, rd: 1 } },
-    { l: "Con calma, prima leggo e capisco", s: { agenda: 1 } },
+    { l: "Prima leggo e capisco", s: { agenda: 1 } },
   ] },
 ] as const;
 

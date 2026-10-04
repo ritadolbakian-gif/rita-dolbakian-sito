@@ -10,16 +10,16 @@ import { meta } from "@/lib/seo";
 export const metadata = meta("Formazione certificata con Rita Dolbakian", "Il percorso a tre livelli di Rita Dolbakian Academy che si conclude con un attestato: obiettivi, requisiti, durata, modalità e prossime edizioni.", "/formazione-certificata");
 
 const levels = [
-  { n: "1", id: "cert-livello-1", art: "stones" as const, t: "Fondamenta del tocco", goal: "Imparare le basi con calma: postura, pressione, ritmo, le prime sequenze.", who: "Chi parte da zero" },
+  { n: "1", id: "cert-livello-1", art: "stones" as const, t: "Fondamenta del tocco", goal: "Imparare le basi: postura, pressione, ritmo, le prime sequenze.", who: "Chi parte da zero" },
   { n: "2", id: "cert-livello-2", art: "waves" as const, t: "Tecnica e precisione", goal: "Collegare le sequenze, adattare il tocco alla persona, correggere gli errori più comuni.", who: "Chi ha già le basi" },
-  { n: "3", id: "cert-livello-3", art: "arch" as const, t: "Perfezionamento e mestiere", goal: "Affinare il proprio stile e presentarlo con chiarezza, in vista di un'attività propria.", who: "Chi massaggia già" },
+  { n: "3", id: "cert-livello-3", art: "arch" as const, t: "Perfezionamento e mestiere", goal: "Affinare il proprio stile e presentarlo bene, in vista di un'attività propria.", who: "Chi massaggia già" },
 ];
 
 const steps = [
   ["Colloquio", "Una chiacchierata per scegliere il livello giusto."],
   ["Studio online", "Lezioni video da seguire con i tuoi tempi."],
   ["Pratica in presenza", "Mani su mani, in gruppi piccoli."],
-  ["Verifica", "Una valutazione finale, chiara e onesta."],
+  ["Verifica", "Una valutazione finale, chiara."],
   ["Attestato", "Il riconoscimento del percorso fatto."],
 ];
 
@@ -37,10 +37,10 @@ export default function FormazioneCertificata() {
           <Reveal><Slot kind="foto" id="cert-hero" label="Rita in aula con un gruppo piccolo" ratio="16/10" art="orbs" /></Reveal>
           <div>
             <Label n="01" t="Cosa significa" />
-            <Heading text="Un attestato *onesto*, non una scorciatoia." className="text-4xl md:text-5xl" />
+            <Heading text="Cosa è, e cosa *non è*, questo attestato." className="text-4xl md:text-5xl" />
             <div className="mt-6 space-y-4 text-lg text-stone max-w-xl">
               <p>Alla fine ricevi un attestato di Rita Dolbakian Academy che racconta il percorso che hai fatto, livello per livello.</p>
-              <p>Un attestato di partecipazione non sostituisce i requisiti di legge per esercitare la professione. Per aprire un'attività servono le autorizzazioni previste: se ne parla, con chiarezza, in call.</p>
+              <p>Un attestato di partecipazione non sostituisce i requisiti di legge per esercitare la professione. Per aprire un'attività servono le autorizzazioni previste: se ne parla in call.</p>
               <p className="text-sm"><Tbc>formula esatta e valore dell'attestato; eventuale ente certificatore reale</Tbc></p>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function FormazioneCertificata() {
 
       <Objections n="07" title="Domande che *conviene* farsi." items={[
         { t: "Mi serve davvero un attestato?", d: "Dipende da cosa vuoi fare. Per alcuni è un traguardo personale, per altri un passo verso un'attività. In call ne parliamo." },
-        { t: "È riconosciuto?", d: <>Dico le cose come stanno: è un attestato della nostra Academy e va presentato per quello che è. <Tbc>eventuale ente certificatore reale</Tbc></> },
+        { t: "È riconosciuto?", d: <>È un attestato della nostra Academy e va presentato per quello che è. <Tbc>eventuale ente certificatore reale</Tbc></> },
         { t: "Posso farlo mentre lavoro?", d: <>Il percorso è pensato in tappe. <Tbc>calendario e carico settimanale</Tbc></> },
       ]} />
 

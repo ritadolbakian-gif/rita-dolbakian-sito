@@ -9,7 +9,7 @@ export const metadata = meta("Contatti", "Scrivi a Rita Dolbakian Academy: modul
 export default function Contatti() {
   return (
     <>
-      <PageHero eyebrow="Contatti" title="Scrivimi, *con calma*." answer="Per una domanda sui percorsi puoi usare il modulo qui sotto, scrivere su WhatsApp o sui social. Se preferisci un confronto a voce, prenota la call gratuita di orientamento: circa 30 minuti, nessun obbligo." />
+      <PageHero eyebrow="Contatti" title="Scrivimi, *ti rispondo io*." answer="Per una domanda sui percorsi puoi usare il modulo qui sotto, scrivere su WhatsApp o sui social. Se preferisci un confronto a voce, prenota la call gratuita di orientamento: circa 30 minuti, nessun obbligo." />
       <section className="section">
         <div className="wrap grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
           <div><LeadForm tipo="contatti" cta="Invia il messaggio" withMessage /></div>

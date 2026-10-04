@@ -115,7 +115,7 @@ export default function Home() {
           <div className="mt-14 grid gap-px bg-[var(--line)] md:grid-cols-3 border border-[var(--line)] rounded-3xl overflow-hidden">
             {[
               { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
-              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Un confronto calmo e onesto per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
+              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Una chiacchierata per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
               { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi, Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Scegli il tuo percorso" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
@@ -180,8 +180,8 @@ export default function Home() {
       {/* 08 — Fiducia */}
       <section className="section bg-blush/35">
         <div className="wrap">
-          <Label n="08" t="Sinceramente" />
-          <Heading text="Cosa puoi aspettarti. E cosa *no*." className="text-5xl md:text-7xl max-w-4xl" />
+          <Label n="08" t="Da me" />
+          <Heading text="Cosa aspettarti *da me*." className="text-5xl md:text-7xl max-w-4xl" />
           <div className="mt-14"><TrustBar /></div>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             <Reveal><div className="rounded-3xl bg-ivory p-8 md:p-10 h-full">
@@ -189,7 +189,7 @@ export default function Home() {
               <ul className="mt-6 space-y-3 text-stone">
                 <li>✓ lavori nel benessere e hai già competenza;</li>
                 <li>✓ hai poca continuità e vuoi smettere di andare a tentativi;</li>
-                <li>✓ sei pronta a mettere ordine nel tuo modo di lavorare.</li>
+                <li>✓ sei pronta a cambiare qualcosa nel tuo modo di lavorare.</li>
               </ul>
             </div></Reveal>
             <Reveal delay={0.1}><div className="section-dark rounded-3xl p-8 md:p-10 h-full">
@@ -250,7 +250,7 @@ export default function Home() {
 
       <section className="section-dark pt-16 overflow-hidden" aria-hidden>
         <div className="marquee-track marquee-rev">
-          {[0, 1].map((n) => <div key={n} className="flex shrink-0">{Array.from({ length: 4 }).map((_, i) => <span key={i} className="outline-text text-[clamp(4rem,12vw,10rem)] leading-none px-8 whitespace-nowrap">Con calma <span className="text-rose" style={{ WebkitTextStroke: 0 }}>✦</span> Con chiarezza <span className="text-rose" style={{ WebkitTextStroke: 0 }}>✦</span></span>)}</div>)}
+          {[0, 1].map((n) => <div key={n} className="flex shrink-0">{Array.from({ length: 4 }).map((_, i) => <span key={i} className="outline-text text-[clamp(4rem,12vw,10rem)] leading-none px-8 whitespace-nowrap">Agenda piena <span className="text-rose" style={{ WebkitTextStroke: 0 }}>✦</span> Prezzi giusti <span className="text-rose" style={{ WebkitTextStroke: 0 }}>✦</span></span>)}</div>)}
         </div>
       </section>
 
@@ -259,7 +259,7 @@ export default function Home() {
           <Label t="Un primo passo" />
           <Heading text="Se senti che continuare così *non ti basta* più, parliamone." className="text-5xl md:text-7xl" />
           <Reveal delay={0.2}>
-            <p className="mt-8 text-xl font-display italic text-ivory/80">Con calma. Con chiarezza.</p>
+            <p className="mt-8 text-xl font-display italic text-ivory/80">Scrivimi o prenota: ti rispondo io.</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
               <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>

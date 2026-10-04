@@ -61,7 +61,7 @@ export function Objections({ n, items, title = "Ma se… *ho dei dubbi*?" }: { n
   return (
     <section className="section">
       <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-        <div><Label n={n} t="I dubbi più comuni" /><Heading text={title} className="text-5xl md:text-6xl" /><p className="mt-5 text-stone max-w-sm">Se ti stai chiedendo una di queste cose, è normale. Ecco una risposta onesta.</p></div>
+        <div><Label n={n} t="I dubbi più comuni" /><Heading text={title} className="text-5xl md:text-6xl" /><p className="mt-5 text-stone max-w-sm">Se ti stai chiedendo una di queste cose, è normale. Ecco cosa ti rispondo.</p></div>
         <div className="grid gap-4">
           {items.map((i, k) => (
             <Reveal key={i.t} delay={k * 0.07}>

@@ -9,14 +9,14 @@ import { meta } from "@/lib/seo";
 export const metadata = meta("Metodo Rita Dolbakian: impara a massaggiare", "Il Metodo Rita Dolbakian per imparare a massaggiare e migliorare la tua tecnica: tre livelli, studio online e pratica in presenza.", "/percorsi/metodo-rita-dolbakian");
 
 const levels = [
-  { n: "Livello 1", id: "rd-livello-1", art: "stones" as const, t: "Fondamenta del tocco", pts: ["Postura e uso del corpo", "Pressione, ritmo e continuità", "Le prime sequenze, con calma", "Ascolto della persona"], learn: "A sentire cosa fanno le tue mani.", who: "Per chi parte da zero" },
+  { n: "Livello 1", id: "rd-livello-1", art: "stones" as const, t: "Fondamenta del tocco", pts: ["Postura e uso del corpo", "Pressione, ritmo e continuità", "Le prime sequenze", "Ascolto della persona"], learn: "A sentire cosa fanno le tue mani.", who: "Per chi parte da zero" },
   { n: "Livello 2", id: "rd-livello-2", art: "waves" as const, t: "Tecnica e precisione", pts: ["Sequenze complete e transizioni", "Adattare il tocco alla persona", "Cura dell'ambiente e dell'accoglienza", "Errori comuni e come correggerli"], learn: "A lavorare con più sicurezza e fluidità.", who: "Per chi ha le basi" },
-  { n: "Livello 3", id: "rd-livello-3", art: "arch" as const, t: "Perfezionamento e mestiere", pts: ["Affinare il proprio stile", "Costruire il tuo trattamento firma", "Presentare il tuo lavoro con chiarezza", "Un passo verso la tua attività"], learn: "A riconoscere e raccontare il tuo modo di lavorare.", who: "Per chi massaggia già" },
+  { n: "Livello 3", id: "rd-livello-3", art: "arch" as const, t: "Perfezionamento e mestiere", pts: ["Affinare il proprio stile", "Costruire il tuo trattamento firma", "Presentare il tuo lavoro in modo chiaro", "Un passo verso la tua attività"], learn: "A riconoscere e raccontare il tuo modo di lavorare.", who: "Per chi massaggia già" },
 ];
 
 const day = [
   ["Prima", "Guardi la lezione online, quante volte vuoi."],
-  ["Poi", "Ti alleni sui movimenti con calma, a casa."],
+  ["Poi", "Ti alleni sui movimenti, a casa."],
   ["In presenza", "Io e il gruppo ti aiutiamo a correggere i dettagli."],
   ["Dopo", "Ripeti, chiedi, ricevi un riscontro."],
 ];
@@ -85,7 +85,7 @@ export default function MetodoRD() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <Reveal><div className="rounded-3xl border border-ivory/15 p-6 md:p-8 h-full">
               <h3 className="font-display text-3xl">Online</h3>
-              <ul className="mt-4 space-y-2 text-ivory/70"><li>— Lezioni video con dimostrazione della tecnica</li><li>— Esercizi guidati da ripetere con calma</li><li>— Confronto e correzioni sul tuo lavoro</li></ul>
+              <ul className="mt-4 space-y-2 text-ivory/70"><li>— Lezioni video con dimostrazione della tecnica</li><li>— Esercizi guidati da ripetere</li><li>— Confronto e correzioni sul tuo lavoro</li></ul>
               <div className="mt-6"><Slot kind="video" id="rd-online" label="Anteprima lezione" ratio="16/9" art="waves" /></div>
             </div></Reveal>
             <Reveal delay={0.1}><div className="rounded-3xl border border-ivory/15 p-6 md:p-8 h-full">
@@ -106,7 +106,7 @@ export default function MetodoRD() {
           <div>
             <Label n="05" t="Chi insegna" />
             <Heading text="Impari da chi lo *fa* ogni giorno." className="text-5xl md:text-6xl" />
-            <p className="mt-6 text-lg text-stone max-w-xl">Sono massaggiatrice prima ancora che formatrice. Ti insegno quello che ho studiato, provato e semplificato in oltre dieci anni, con calma e senza fretta.</p>
+            <p className="mt-6 text-lg text-stone max-w-xl">Sono massaggiatrice prima ancora che formatrice. Ti insegno quello che ho studiato, provato e semplificato in oltre dieci anni.</p>
             <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la mia storia <span className="arr">→</span></Link>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function MetodoRD() {
           <Heading text="Le mani cambiano. Si *sente*." className="text-5xl md:text-6xl max-w-3xl" />
           <div className="mt-12"><CaseStudies max={3} program="Metodo Rita Dolbakian" /></div>
           <div className="mt-16"><QuoteWall program="Metodo Rita Dolbakian" title="Le loro parole" /></div>
-          <div className="mt-16"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Tre livelli: scegli quello giusto per te." }, { t: "Pratica vera", d: "Online per studiare, in presenza per mettere le mani." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna, non una platea." }, { t: "Parole oneste", d: "Formazione sulla tecnica, nessuna promessa terapeutica." }]} /></div>
+          <div className="mt-16"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Tre livelli: scegli quello giusto per te." }, { t: "Pratica vera", d: "Online per studiare, in presenza per mettere le mani." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna, non una platea." }, { t: "Niente promesse di cura", d: "Formazione sulla tecnica, non una terapia." }]} /></div>
         </div>
       </section>
 
@@ -133,7 +133,7 @@ export default function MetodoRD() {
       </section>
 
       <Objections n="09" items={[
-        { t: "Non ho mai massaggiato", d: "Il Livello 1 parte da zero, con calma. Nessuno si aspetta che tu sappia già." },
+        { t: "Non ho mai massaggiato", d: "Il Livello 1 parte da zero. Nessuno si aspetta che tu sappia già." },
         { t: "Ho paura di sbagliare o di fare male", d: "È normale. Si impara a dosare piano, con feedback, e a riconoscere quando fermarsi." },
         { t: "Può funzionare online?", d: "Lo studio sì. Per questo la pratica è in presenza e, online, serve esercizio regolare con un riscontro." },
         { t: "Non ho uno spazio o un lettino", d: <>Ne parliamo in call per capire cosa serve davvero. <Tbc>attrezzatura richiesta</Tbc></> },
@@ -148,7 +148,7 @@ export default function MetodoRD() {
       ]} />
 
       <Faq items={[
-        { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Livello 1 è pensato per chi parte da zero e costruisce le basi con calma." },
+        { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Livello 1 è pensato per chi parte da zero e costruisce le basi." },
         { q: "È un corso online o in presenza?", a: "Entrambi: lo studio e la dimostrazione online, la pratica diretta in presenza." },
         { q: "Quanto dura il percorso?", a: <><Tbc>durata e ore per livello</Tbc></>, plain: "La durata sarà indicata per ogni livello." },
         { q: "Quanto costa?", a: <><Tbc>prezzi e formule</Tbc></>, plain: "I prezzi saranno indicati per ogni livello." },

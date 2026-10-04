@@ -9,7 +9,7 @@ import { CaseStudies, VideoWall, TrustBar, QuoteWall } from "@/components/Proof"
 export const metadata = meta("Wellness Mastery: da operatrice a imprenditrice digitale", "Wellness Mastery di Rita Dolbakian: 10 moduli, 6 bonus e garanzia 14 giorni per trasformare il tuo talento nel benessere in un'attività online solida.", "/percorsi/wellness-mastery");
 
 const modules: { t: string; talk: string; do: string; get: string }[] = [
-  { t: "Le fondamenta del tuo brand", talk: "Chi sei, per chi lavori e cosa ti rende riconoscibile. Prima di pubblicare qualsiasi cosa, si mettono in ordine le basi.", do: "Scrivi la tua frase di posizionamento e la tua bio, in parole semplici.", get: "Una base chiara da usare su profilo, scheda Google e messaggi." },
+  { t: "Le fondamenta del tuo brand", talk: "Chi sei, per chi lavori e cosa ti rende riconoscibile. Prima di pubblicare qualsiasi cosa, si preparano le basi.", do: "Scrivi la tua frase di posizionamento e la tua bio, in parole semplici.", get: "Una base chiara da usare su profilo, scheda Google e messaggi." },
   { t: "Mindset da imprenditrice", talk: "Dal «faccio massaggi» al «guido un'attività»: tempo, numeri e decisioni.", do: "Scegli le tue 3 priorità e cosa smettere di fare.", get: "Un modo di lavorare meno reattivo e più tuo." },
   { t: "L'offerta irresistibile (high ticket)", talk: "Come costruire un'offerta che si capisce al primo sguardo, con un valore e un prezzo che sai spiegare.", do: "Disegni la tua offerta: per chi è, cosa include, a che prezzo.", get: "Un'offerta pronta da presentare, senza svenderti." },
   { t: "Instagram per attrarre e vendere · parte 1", talk: "Il profilo che spiega cosa fai e a chi parli: bio, copertine, foto.", do: "Riscrivi e riordini il tuo profilo.", get: "Un profilo che si capisce in pochi secondi." },
@@ -166,7 +166,7 @@ export default function WellnessMastery() {
 
       <section className="section bg-blush/30">
         <div className="wrap grid gap-6 md:grid-cols-2">
-          <Reveal><div className="rounded-3xl bg-ivory p-8 md:p-10 h-full"><h3 className="font-display text-3xl">È per te se…</h3><ul className="mt-5 space-y-2 text-stone"><li>✓ lavori nel benessere e vuoi costruire un'attività online;</li><li>✓ sei pronta a metterti in gioco, con calma e con metodo;</li><li>✓ vuoi un affiancamento, non solo dei video.</li></ul></div></Reveal>
+          <Reveal><div className="rounded-3xl bg-ivory p-8 md:p-10 h-full"><h3 className="font-display text-3xl">È per te se…</h3><ul className="mt-5 space-y-2 text-stone"><li>✓ lavori nel benessere e vuoi costruire un'attività online;</li><li>✓ sei pronta a metterti in gioco, con metodo;</li><li>✓ vuoi un affiancamento, non solo dei video.</li></ul></div></Reveal>
           <Reveal delay={0.1}><div className="section-dark rounded-3xl p-8 md:p-10 h-full"><h3 className="font-display text-3xl">Non è per te se…</h3><ul className="mt-5 space-y-2 text-ivory/70"><li>✕ cerchi guadagni facili o garantiti;</li><li>✕ non hai tempo da dedicarci;</li><li>✕ vuoi che qualcuno faccia il lavoro al posto tuo.</li></ul></div></Reveal>
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function WellnessMastery() {
         { t: "Costa più di quanto posso spendere ora", d: <>Capisco. Ne parliamo con calma in call, senza pressione. <Tbc>rate e formule</Tbc></> },
         { t: "E se non funziona per me?", d: "C'è una garanzia di 14 giorni soddisfatti o rimborsati. E non prometto risultati che nessuno può garantire." },
         { t: "Ho paura di perdere la mia autenticità", d: "Il percorso lavora proprio al contrario: senza snaturarti, con la tua voce e i tuoi valori." },
-        { t: "Faccio già troppe cose", d: "Per questo c'è l'affiancamento e un ordine preciso: si toglie, prima di aggiungere." },
+        { t: "Faccio già troppe cose", d: "Per questo c'è l'affiancamento e una sequenza precisa: si toglie, prima di aggiungere." },
       ]} />
 
       <Compare n="14" title="Wellness Mastery *o* A.G.E.N.D.A.?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[

@@ -78,7 +78,7 @@ export default function Blog() {
           <Reveal><Slot kind="foto" id="guida-mockup" label="Guida gratuita" ratio="3/4" art="waves" className="max-w-xs mx-auto" /></Reveal>
           <div>
             <Label t="Guida gratuita" />
-            <Heading text="Se vuoi tutto in *ordine*, parti da qui." className="text-4xl md:text-5xl" />
+            <Heading text="Vuoi tutto in *un posto solo*? Parti da qui." className="text-4xl md:text-5xl" />
             <p className="mt-5 text-lg text-stone max-w-xl">«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. Una sola email, nessuno spam.</p>
             <div className="mt-8 max-w-xl"><LeadForm tipo="guida" cta="Mandami la guida" compact /></div>
           </div>

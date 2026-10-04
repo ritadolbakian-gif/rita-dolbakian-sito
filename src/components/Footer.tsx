@@ -9,7 +9,7 @@ export function Footer() {
       <div className="wrap mb-10 md:mb-14"><Image src="/media/logo-light.png" alt="Rita Dolbakian. Il tuo talento. Il tuo metodo. Più clienti." width={1971} height={537} className="w-56 sm:w-72 h-auto" /></div>
       <div className="wrap grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="mt-4 max-w-sm text-ivory/65">Sono Rita: massaggiatrice e formatrice nel benessere da oltre dieci anni. Con calma, con chiarezza.</p>
+          <p className="mt-4 max-w-sm text-ivory/65">Sono Rita: massaggiatrice e formatrice nel benessere da oltre dieci anni.</p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a className="flink" href={SITE.social.instagram} rel="noopener" target="_blank">Instagram</a>
             <a className="flink" href={SITE.social.youtube} rel="noopener" target="_blank">YouTube</a>
