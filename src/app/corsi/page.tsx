@@ -8,7 +8,11 @@ export const metadata = meta("Corsi, guide e percorsi di Rita Dolbakian", "Il ca
 export default function Corsi() {
   return (
     <>
-      <PageHero imageId="corsi-top" imageRatio="4/5" imageArt="leaf" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite." />
+      <PageHero imageId="corsi-top" imageRatio="4/5" imageArt="leaf" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
+        <a href="#affiancamento" className="btn btn-primary">Percorsi di affiancamento</a>
+        <a href="#digitali" className="btn btn-ghost">Prodotti digitali</a>
+        <a href="#gratis" className="btn btn-ghost">Gratis</a>
+      </PageHero>
       <section className="section"><div className="wrap"><CatalogoCorsi /></div></section>
       <CtaBand title="Non sai quale *scegliere*?" primary={{ href: "/percorsi", label: "Rispondi a 3 domande" }} secondary={{ href: "/call-orientamento", label: "Prenota la call" }} />
       <section className="section bg-blush/30"><div className="wrap">
