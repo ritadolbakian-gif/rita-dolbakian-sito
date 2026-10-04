@@ -5,6 +5,7 @@ import { Header, StickyCta } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll, Cursor } from "@/components/SmoothScroll";
 import { SITE } from "@/lib/site";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const serif = Instrument_Serif({ variable: "--font-serif", subsets: ["latin"], weight: "400", style: ["normal", "italic"], display: "swap" });
 const sans = Hanken_Grotesk({ variable: "--font-sans", subsets: ["latin"], display: "swap" });
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <StickyCta />
+        <CookieBanner />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NAV, SITE } from "@/lib/site";
+import { CookiePrefsLink } from "./CookieBanner";
 
 export function Footer() {
   return (
@@ -25,6 +26,7 @@ export function Footer() {
           <span className="eyebrow mb-2">Informazioni</span>
           <Link href="/privacy" className="ulink w-fit">Privacy</Link>
           <Link href="/cookie" className="ulink w-fit">Cookie</Link>
+          <CookiePrefsLink />
           <Link href="/termini" className="ulink w-fit">Termini e condizioni</Link>
           <Link href="/rimborsi" className="ulink w-fit">Rimborsi e garanzia</Link>
         </nav>
