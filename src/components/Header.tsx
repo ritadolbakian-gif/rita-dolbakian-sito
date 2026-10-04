@@ -55,7 +55,7 @@ export function Header() {
                 <div key={n.href} className="group relative">
                   <Link href={n.href} className="navlink" aria-current={cur(n.href)}>{n.label}<svg width="9" height="9" viewBox="0 0 10 10" className="transition-transform duration-300 group-hover:rotate-180" aria-hidden><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></Link>
                   <div className="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-300 absolute left-1/2 -translate-x-1/2 top-full pt-4">
-                    <div className="w-[26rem] rounded-3xl bg-ivory p-3 shadow-[0_30px_80px_-20px_rgba(11,10,9,.35)] ring-1 ring-[var(--line)]">
+                    <div className="w-[26rem] rounded-3xl bg-ivory text-ink p-3 shadow-[0_30px_80px_-20px_rgba(11,10,9,.35)] ring-1 ring-[var(--line)]">
                       {PERCORSI.map((p) => (
                         <Link key={p.href} href={p.href} className="group/i flex items-center justify-between gap-4 rounded-2xl p-4 transition-colors hover:bg-blush/50">
                           <span><span className="block font-display text-2xl leading-tight">{p.t}</span><span className="block text-sm text-stone">{p.d}</span></span>
