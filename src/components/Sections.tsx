@@ -218,3 +218,50 @@ export function InfluencerCollage({ n, title = "Chi vive di immagine sceglie *ma
     </section>
   );
 }
+
+export type ValueLayer = { k: string; t: string; d: string; items: string[] };
+/** «Cosa ricevi»: il metodo prima, poi persone e strumenti; infine il valore dei singoli componenti. */
+export function ValueBlock({ n, id = "valore", title, intro, layers, rows, total, closing, cta }: {
+  n?: string; id?: string; title: string; intro: ReactNode; layers: ValueLayer[]; rows: [string, string][]; total: string; closing: ReactNode; cta: { href: string; label: string };
+}) {
+  return (
+    <section id={id} className="section scroll-mt-28">
+      <div className="wrap">
+        <Label n={n} t="Cosa ricevi" />
+        <Heading text={title} className="text-5xl md:text-7xl max-w-4xl" />
+        <p className="mt-6 max-w-2xl text-lg text-stone">{intro}</p>
+
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          {layers.map((l, i) => (
+            <Reveal key={l.t} delay={i * 0.08}>
+              <div className={`h-full rounded-3xl p-8 ${i === 0 ? "section-dark" : "border border-[var(--line)] bg-ivory"}`}>
+                <p className={`eyebrow ${i === 0 ? "!text-rose" : ""}`}>{l.k}</p>
+                <h3 className="font-display text-3xl md:text-4xl mt-3 leading-tight">{l.t}</h3>
+                <p className={`mt-3 ${i === 0 ? "text-ivory/75" : "text-stone"}`}>{l.d}</p>
+                <ul className={`mt-5 space-y-2 text-sm ${i === 0 ? "text-ivory/85" : "text-stone"}`}>{l.items.map((x) => <li key={x}><span className="text-rose">✓</span> {x}</li>)}</ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
+          <div>
+            <p className="eyebrow mb-4">Il valore dei singoli componenti</p>
+            <dl className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
+              {rows.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
+              <div className="flex justify-between gap-6 py-4 text-lg"><dt>Somma dei componenti</dt><dd className="font-display text-3xl">{total}</dd></div>
+            </dl>
+          </div>
+          <Reveal>
+            <div className="rounded-3xl bg-blush/40 p-8 md:p-10">
+              <p className="eyebrow !text-rose">Ma il valore vero è un altro</p>
+              <div className="mt-4 space-y-4 text-lg">{closing}</div>
+              <Link href={cta.href} className="btn btn-primary mt-8">{cta.label} <span className="arr">→</span></Link>
+              <p className="mt-5 text-xs text-stone">Il prezzo lo comunico in videochiamata, dopo aver capito se il percorso fa per te. Se vuoi dividere il pagamento in rate, ne parliamo lì: <Link href="/pagamenti-rateali" className="ulink text-ink">come funziona</Link>.</p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}

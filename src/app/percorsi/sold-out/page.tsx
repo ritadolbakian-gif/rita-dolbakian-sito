@@ -1,6 +1,6 @@
 import { ReviewsSection } from "@/components/Reviews";
 import { PageNav } from "@/components/PageNav";
-import { Outcomes, Steps, Objections, Compare, DetailSteps } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps, ValueBlock } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { meta } from "@/lib/seo";
@@ -163,30 +163,11 @@ export default function SoldOut() {
         </div>
       </section>
 
-      <section id="investimento" className="section scroll-mt-28">
-        <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] items-start">
-          <div>
-            <Label n="06" t="Il valore" />
-            <Heading text="Cosa ricevi, e quanto *varrebbe* da solo." className="text-4xl md:text-6xl" />
-            <dl className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
-              {value.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
-              <div className="flex justify-between gap-6 py-4 text-lg"><dt>Valore totale</dt><dd className="font-display text-3xl">8.500 €</dd></div>
-            </dl>
-          </div>
-          <Reveal>
-            <div className="section-dark rounded-3xl p-8 md:p-10">
-              <p className="eyebrow">Valore di ciò che ricevi</p>
-              <p className="mt-3 font-display text-7xl leading-none">8.500 €</p>
-              <p className="mt-2 text-sm text-ivory/60">di valore complessivo di tutto ciò che è incluso.</p>
-              <div className="mt-8 space-y-5 text-ivory/80">
-                <p>Il prezzo lo condivido durante la videochiamata, dopo aver capito se Sold Out è il percorso giusto per te e se ci sono posti nel trimestre.</p>
-                <p>Se vuoi dividere il pagamento, ne parliamo in call: <Link href="/pagamenti-rateali" className="ulink">come funziona il pagamento a rate</Link>.</p>
-              </div>
-              <Link href="/call-orientamento" className="btn btn-primary mt-8">Prenota la videochiamata <span className="arr">→</span></Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <ValueBlock n="06" id="investimento" title="Non ricevi un corso. Ricevi *me*, un metodo e un sistema già fatto." intro="Sold Out è la mentorship più completa che offro: il Metodo A.G.E.N.D.A. completo, una call a settimana con me e tutto ciò che si può fare al posto tuo. A te restano la faccia, la voce e le tue clienti." layers={[
+        { k: "Il cuore", t: "Il metodo, applicato a te", d: "Accesso al Metodo A.G.E.N.D.A. con gli approfondimenti avanzati, più un audit di 90 minuti e una roadmap personalizzata sui tuoi 6 mesi.", items: ["Posizionamento e identità personale riconoscibile", "Esercizio guidato sulla Scala dei Valori", "Instagram e TikTok ottimizzati insieme", "Kit Pronto: 100 idee, script DM e calendario"] },
+        { k: "Accanto a te", t: "La mentorship 1:1", d: "Una call a settimana, compiti pratici e revisione dei tuoi contenuti prima che tu li pubblichi.", items: ["24 call individuali via Zoom, registrate a vita", "WhatsApp diretto con me, lun-ven", "Community privata e Q&A mensile live", "Giornata di teambuilding dal vivo"] },
+        { k: "Fatto per te", t: "Il lavoro tecnico lo facciamo noi", d: "Zero stress tecnico: quello che si può fare al posto tuo lo fa il mio team.", items: ["Landing page pronta in 5-7 giorni", "Prodotto digitale fatto e finito", "Piattaforma GoHighLevel già configurata", "4 email di newsletter scritte per te"] },
+      ]} rows={value} total="8.500 €" closing={<><p>Gli 8.500 € sono la somma dei singoli componenti, se li comprassi uno per uno.</p><p>Il valore vero è avere accanto una persona che ti guida ogni settimana e un metodo che resta tuo: sai cosa fare, in che ordine e perché, anche quando il percorso finisce.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
 
       <section id="garanzia" className="section-dark section scroll-mt-28">
         <div className="wrap max-w-4xl">

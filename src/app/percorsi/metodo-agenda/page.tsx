@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteeConditions } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteeConditions, ValueBlock } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -167,27 +167,11 @@ export default function MetodoAgenda() {
         </div>
       </section>
 
-      <section id="investimento" className="section scroll-mt-28">
-        <div className="wrap grid gap-12 lg:grid-cols-2 items-start">
-          <div>
-            <Label n="05d" t="Il valore" />
-            <Heading text="Cosa ricevi, e quanto *varrebbe* da solo." className="text-4xl md:text-6xl" />
-            <dl className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
-              {valueList.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
-              <div className="flex justify-between gap-6 py-4 text-lg"><dt>Valore totale</dt><dd className="font-display text-3xl">3.670 €</dd></div>
-            </dl>
-          </div>
-          <Reveal>
-            <div className="rounded-3xl bg-blush/40 p-8 md:p-10">
-              <p className="eyebrow">Valore di ciò che ricevi</p>
-              <p className="mt-3 font-display text-7xl leading-none">3.670 €</p>
-              <p className="mt-2 text-sm text-stone">di valore complessivo di tutto ciò che è incluso.</p>
-              <p className="mt-6 text-stone">Il prezzo lo condivido durante la videochiamata di orientamento, dopo aver capito se il percorso fa per te. Se vuoi dividere il pagamento in rate, ne parliamo lì: <Link href="/pagamenti-rateali" className="ulink text-ink">come funziona</Link>.</p>
-              <div className="mt-8"><Link href="/call-orientamento" className="btn btn-primary">Prenota la videochiamata per conoscere il prezzo <span className="arr">→</span></Link></div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <ValueBlock n="05d" id="investimento" title="Non ricevi dei file. Ricevi un *metodo*, e qualcuno accanto." intro="Il Metodo A.G.E.N.D.A. non è un insieme di video: è un sistema completo e replicabile, per riempire l'agenda con i social, un posizionamento chiaro e strategie per attirare clienti. E non lo applichi da sola." layers={[
+        { k: "Il cuore", t: "Il Metodo A.G.E.N.D.A.", d: "11 moduli che ti dicono cosa fare, in che ordine e perché. Resta tuo: lo puoi riapplicare ogni volta che cambi offerta, prezzo o canale.", items: ["Mindset, nicchia, cliente ideale e personal brand", "Offerta e prezzi, senza svenderti", "Instagram, Stories, contenuti e altri canali", "Vendita nei DM, AI e automazioni"] },
+        { k: "Accanto a te", t: "L'affiancamento", d: "Il metodo funziona se lo applichi. Per questo non resti sola davanti allo schermo.", items: ["2 call individuali al mese con me (12 in 6 mesi)", "Chat diretta con me 7 giorni su 7", "Live Q&A ogni due settimane", "Community privata WhatsApp"] },
+        { k: "Pronto da usare", t: "Gli strumenti", d: "Cinque bonus per partire subito, senza cominciare da una pagina bianca.", items: ["Calendario contenuti per 12 mesi", "Mini corso Canva e mini corso CapCut", "Script per contattare gli influencer locali", "Masterclass Pinterest"] },
+      ]} rows={valueList} total="3.670 €" closing={<><p>I 3.670 € sono solo la somma dei pezzi, venduti uno per uno.</p><p>Quello che non si vede in elenco è il metodo che li tiene insieme: un sistema che sai ripetere, e che continua a servirti anche dopo i 6 mesi.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
 
       <DetailSteps n="06" label="L'affiancamento" title="Come lavoriamo, *fase per fase*." bg="" items={[
         { t: "Fotografia", a: "Guardiamo insieme dove sei: profilo, scheda Google, messaggi, prezzi, clienti che tornano.", b: "Un quadro chiaro di cosa funziona già e di dove perdi continuità." },
