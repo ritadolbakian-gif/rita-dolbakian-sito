@@ -100,3 +100,33 @@ export function Compare({ n, title, cols, rows }: { n?: string; title: string; c
     </section>
   );
 }
+
+export type Detail = { t: string; a: ReactNode; b: ReactNode };
+
+/** Passi spiegati nel dettaglio: cosa facciamo / cosa porti a casa. */
+export function DetailSteps({ n, label = "Come funziona", title, items, note, bg = "bg-blush/30", cols = 2 }: { n?: string; label?: string; title: string; items: Detail[]; note?: ReactNode; bg?: string; cols?: 2 | 3 }) {
+  return (
+    <section className={`${bg} section`}>
+      <div className="wrap">
+        <Label n={n} t={label} />
+        <Heading text={title} className="text-5xl md:text-6xl max-w-3xl" />
+        {note && <p className="mt-4 text-sm text-stone">{note}</p>}
+        <ol className={`mt-12 grid gap-5 ${cols === 3 ? "lg:grid-cols-3" : ""} sm:grid-cols-2`}>
+          {items.map((i, k) => (
+            <li key={i.t}>
+              <Reveal delay={(k % 2) * 0.08}>
+                <div className="lift h-full rounded-3xl border border-[var(--line)] bg-ivory p-7 md:p-8">
+                  <div className="flex items-baseline gap-4"><span className="font-display text-6xl kw leading-none">{k + 1}</span><h3 className="font-display text-3xl leading-tight">{i.t}</h3></div>
+                  <p className="eyebrow mt-6">Cosa facciamo</p>
+                  <p className="mt-2 text-stone">{i.a}</p>
+                  <p className="eyebrow !text-rose mt-5">Cosa porti a casa</p>
+                  <p className="mt-2">{i.b}</p>
+                </div>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}

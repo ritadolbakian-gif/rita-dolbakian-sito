@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -87,11 +87,44 @@ export default function MetodoAgenda() {
         </div>
       </section>
 
-      <Steps n="06" title="L'affiancamento, *passo passo*." note={<Tbc>formato, durata e frequenza degli incontri</Tbc>} items={[
-        { t: "Fotografia", d: "Guardiamo insieme dove sei: profilo, scheda, messaggi, prezzi, clienti." },
-        { t: "Direzione", d: "Definiamo chi aiuti, cosa offri e come lo racconti." },
-        { t: "Percorso", d: "Mettiamo in ordine il cammino da «ti vedo» a «ti scrivo»." },
-        { t: "Messa in pratica", d: "Un passo alla volta, con correzioni lungo la strada." },
+      <DetailSteps n="06" label="L'affiancamento" title="Come lavoriamo, *fase per fase*." bg="" note={<Tbc>formato, durata e frequenza degli incontri</Tbc>} items={[
+        { t: "Fotografia", a: "Guardiamo insieme dove sei: profilo, scheda Google, messaggi, prezzi, clienti che tornano.", b: "Una fotografia onesta di cosa funziona già e di dove perdi continuità." },
+        { t: "Direzione", a: "Definiamo chi vuoi aiutare, cosa offri e perché dovrebbero scegliere te.", b: "Tre frasi chiare, che usi ovunque: nella bio, nella scheda, nei messaggi." },
+        { t: "Percorso", a: "Mettiamo in ordine il cammino da «ti vedo» a «ti scrivo»: cosa trova una persona nuova e cosa deve fare per contattarti.", b: "Un percorso semplice per chi ti cerca, con risposte pronte alle domande più comuni." },
+        { t: "Messa in pratica", a: "Un passo alla volta, con correzioni lungo la strada. Non si fa tutto insieme.", b: "Un piano per le prossime settimane e i quattro numeri da guardare per capire se funziona." },
+      ]} />
+
+      <Steps n="07" label="La call" title="I 30 minuti, *minuto per minuto*." dark note={<Tbc>svolgimento reale della call</Tbc>} items={[
+        { t: "Ti ascolto", d: "Mi racconti cosa fai, per chi e cosa non ti torna. Non devi preparare niente." },
+        { t: "Guardiamo i fatti", d: "Profilo, scheda, messaggi, prezzi: dove arrivano le richieste e dove si fermano." },
+        { t: "Cosa farei io", d: "Ti dico con sincerità da dove partirei, e cosa lascerei stare per ora." },
+        { t: "Decidi tu", d: "Se ha senso lavorare insieme, ti spiego come. Se no, hai comunque una direzione." },
+      ]} />
+
+      <Outcomes n="08" label="Cosa guardiamo" title="Sei punti. *Niente* di più." cols={3} items={[
+        { t: "Il tuo profilo", d: "Si capisce in pochi secondi cosa fai, per chi e come prenotare?" },
+        { t: "La scheda Google", d: "Foto, orari, descrizione e recensioni: chi ti cerca ti trova e si fida?" },
+        { t: "I messaggi", d: "Come rispondi a chi scrive, e dove si perdono le richieste." },
+        { t: "I prezzi", d: "Quanto chiedi, come lo spieghi e se ti lascia un margine." },
+        { t: "I clienti che tornano", d: "Chi ti ha già scelta e come lo ricontatti." },
+        { t: "Il tuo tempo", d: "Quante ore puoi davvero dedicare a farti trovare, senza consumarti." },
+      ]} />
+
+      <section className="section bg-blush/30">
+        <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div><Label n="09" t="Un esempio" /><Heading text="Com'è, *in concreto*." className="text-5xl md:text-6xl" /><p className="mt-5 text-sm text-stone max-w-sm">Scenario inventato per spiegare: non è il caso di una persona reale e non è una promessa di risultato.</p></div>
+          <Reveal><div className="rounded-3xl bg-ivory p-7 md:p-10 space-y-6">
+            <div><p className="eyebrow">Marta, massaggiatrice · prima</p><p className="mt-2 text-stone">Lavora solo con il passaparola. Un mese è piena, il successivo ha buchi. Quando le scrivono «quanto costa?» risponde con il prezzo e la persona sparisce. La sua scheda Google non ha foto.</p></div>
+            <div className="border-t border-[var(--line)] pt-6"><p className="eyebrow !text-rose">Cosa si sistema, in ordine</p><ol className="mt-2 list-decimal pl-5 space-y-1 text-stone"><li>Una frase chiara su chi aiuta e cosa offre.</li><li>La scheda Google con foto vere, orari e descrizione.</li><li>Una risposta pronta a «quanto costa?», che spiega il valore prima del prezzo.</li><li>Ogni settimana ricontatta due persone che non vede da tempo.</li></ol></div>
+            <div className="border-t border-[var(--line)] pt-6"><p className="eyebrow">Dopo qualche settimana</p><p className="mt-2 text-stone">Sa da dove arrivano le richieste, sa cosa rispondere e ha un piano per il mese successivo. Non è «tutto risolto»: è un'agenda che ha una direzione.</p></div>
+          </div></Reveal>
+        </div>
+      </section>
+
+      <Outcomes n="10" label="Dopo A.G.E.N.D.A." title="E *poi*?" cols={3} items={[
+        { t: "Prosegui da sola", d: "Hai il metodo, il piano e i numeri da guardare. Puoi andare avanti con i tuoi tempi." },
+        { t: "Passi a Wellness Mastery", d: "Se vuoi costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1." },
+        { t: "Ti serve la tecnica?", d: "C'è anche il Metodo Rita Dolbakian, per massaggiare con mani sicure." },
       ]} />
 
       <section className="section-dark section">
@@ -113,7 +146,7 @@ export default function MetodoAgenda() {
 
       <section className="section">
         <div className="wrap">
-          <Label n="07" t="Chi l'ha fatto" />
+          <Label n="11" t="Chi l'ha fatto" />
           <Heading text="Prima e dopo, nelle *loro* parole." className="text-5xl md:text-6xl max-w-3xl" />
           <div className="mt-12"><CaseStudies max={3} program="A.G.E.N.D.A." /></div>
           <div className="mt-16"><QuoteWall program="A.G.E.N.D.A." title="Le loro parole" /></div>
@@ -122,7 +155,7 @@ export default function MetodoAgenda() {
         </div>
       </section>
 
-      <Objections n="08" items={[
+      <Objections n="12" items={[
         { t: "Non ho tempo", d: "Il percorso è pensato per chi lavora già: pochi passi, fatti con regolarità, valgono più di una maratona." },
         { t: "Ho già provato altre cose e non ha funzionato", d: "Spesso mancava un ordine, non l'impegno. Si parte da una fotografia onesta di quello che c'è già." },
         { t: "Ho paura di sembrare commerciale", d: "Non serve. Il metodo parte dalla chiarezza e dall'ascolto, non dalla pressione." },
@@ -130,7 +163,7 @@ export default function MetodoAgenda() {
         { t: "E se non fa per me?", d: "Te lo dico io, in call, con sincerità. Meglio un no chiaro che un sì a metà." },
       ]} />
 
-      <Compare n="09" title="A.G.E.N.D.A. o *Wellness Mastery*?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[
+      <Compare n="13" title="A.G.E.N.D.A. o *Wellness Mastery*?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[
         { label: "Cos'è", cells: ["Il metodo e il primo affiancamento", "Il percorso completo, 10 moduli"] },
         { label: "Per chi", cells: ["Chi vuole ritrovare direzione e continuità", "Chi vuole costruire un'attività online solida"] },
         { label: "Quando", cells: ["Si parte da qui", "È il passo successivo"] },
@@ -146,6 +179,9 @@ export default function MetodoAgenda() {
         { q: "Quanto costa il percorso?", a: <>Il prezzo è indicato qui: <Tbc>prezzo e formule</Tbc></>, plain: "Il prezzo e le formule sono indicati in questa pagina." },
         { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è Wellness Mastery, il percorso più ampio per diventare imprenditrice digitale nel benessere." },
         { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
+        { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },
+        { q: "Quanto dura l'affiancamento?", a: <><Tbc>durata e numero di incontri</Tbc></>, plain: "La durata e il numero di incontri sono indicati in questa pagina." },
+        { q: "Cosa succede se alla call capisco che non fa per me?", a: "Nessun problema: nessun obbligo e nessuno spam. E ti dico comunque da dove partirei." },
         { q: "Ci sono garanzie sul risultato?", a: "Nessuno può garantire un risultato, e non lo faccio io. Il percorso ti dà metodo e affiancamento; i risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
       ]} />
       <CtaBand title="Se vuoi *ripartire* con ordine, comincia dalla call." />
