@@ -4,9 +4,18 @@ import { useEffect, useState } from "react";
 type Consent = { analytics: boolean; marketing: boolean };
 const KEY = "rd-consent-v1";
 
-function read(): Consent | null { try { const v = localStorage.getItem(KEY); return v ? JSON.parse(v) : null; } catch { return null; } }
+const SIX_MONTHS = 1000 * 60 * 60 * 24 * 180;
+function read(): Consent | null {
+  try {
+    const v = localStorage.getItem(KEY);
+    if (!v) return null;
+    const j = JSON.parse(v) as Consent & { ts?: number };
+    if (!j.ts || Date.now() - j.ts > SIX_MONTHS) return null; // dopo 6 mesi si richiede di nuovo
+    return { analytics: !!j.analytics, marketing: !!j.marketing };
+  } catch { return null; }
+}
 function save(c: Consent) {
-  try { localStorage.setItem(KEY, JSON.stringify(c)); } catch {}
+  try { localStorage.setItem(KEY, JSON.stringify({ ...c, ts: Date.now() })); } catch {}
   window.dispatchEvent(new CustomEvent("rd-consent", { detail: c })); // GA4 / Meta Pixel si agganciano qui, solo se consentito
 }
 

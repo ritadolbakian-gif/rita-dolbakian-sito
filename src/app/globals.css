@@ -233,3 +233,11 @@ details.acc .acc-body { padding: 0 0 1.75rem; max-width: 46rem; color: var(--sto
 
 .kw .suffix { font-style: normal; color: var(--ink); }
 .section-dark .kw .suffix { color: var(--ivory); }
+
+/* Documenti legali */
+.legal h2 { margin-top: 2.6rem; font-size: clamp(1.7rem, 3.4vw, 2.2rem); scroll-margin-top: 6rem; }
+.legal h3 { font-size: 1.35rem; margin-top: 1.6rem; }
+.legal h3::before { display: none; }
+.legal table { font-size: .9rem; }
+.legal td, .legal th { vertical-align: top; }
+.legal p, .legal li { font-size: 1rem; line-height: 1.7; }

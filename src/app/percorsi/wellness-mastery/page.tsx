@@ -191,6 +191,7 @@ export default function WellnessMastery() {
           <Label n="11" t="Come iniziare" />
           <Heading text="Prezzo e posti, *chiari*. Nessuna finta scarsità." className="text-4xl md:text-6xl" />
           <p className="mt-6 text-stone"><Tbc>prezzo, rate, posti reali per l'affiancamento 1:1</Tbc></p>
+          <p className="mt-4 text-sm text-stone max-w-xl mx-auto">Puoi anche pagare a rate con una società finanziaria convenzionata (per esempio Pagodil o Pagolight), salvo approvazione. Leggi come funziona nella pagina <Link href="/pagamenti-rateali" className="ulink text-ink">Pagamento a rate</Link>.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call di orientamento <span className="arr">→</span></Link></div>
         </div>
       </section>

@@ -6,7 +6,7 @@
 - Repository privato: https://github.com/ritadolbakian-gif/rita-dolbakian-sito
 
 ## 2. Bloccanti: senza questi non si pubblica
-1. **Testi legali** (privacy, cookie, termini, rimborsi): sono scheletri. Vanno scritti/validati da un consulente. Dati societari RD SRL già inseriti (P.IVA, sede, REA, PEC); manca il capitale sociale.
+1. **Testi legali** (privacy, cookie, termini di vendita, recesso e rimborsi, pagamento a rate, regolamento dei corsi): scritti in modo completo ma **vanno fatti rivedere da un avvocato** prima della pubblicazione, in particolare le parti su recesso, contratti collegati e finanziamenti. Vanno scritti/validati da un consulente. Dati societari RD SRL già inseriti (P.IVA, sede, REA, PEC); manca il capitale sociale.
 2. **Qualifica professionale e limiti di legge** per l'attività di massaggio: come presentarli nelle pagine del Metodo e della Formazione certificata.
 3. **Dati dei percorsi**: prezzi, rate, posti, durata, requisiti, sedi/calendario (Metodo Rita Dolbakian e Formazione certificata), formato dell'affiancamento A.G.E.N.D.A. e condizioni esatte della garanzia di 14 giorni.
 4. **Attestato**: tipo (es. "Attestato RD Academy"), ente reale (se esiste), validità. Nessuna parola come "riconosciuto" o "abilitante" senza un ente vero.

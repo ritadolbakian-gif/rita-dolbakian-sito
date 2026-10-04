@@ -31,7 +31,9 @@ export function Footer() {
           <Link href="/cookie" className="flink">Cookie</Link>
           <CookiePrefsLink />
           <Link href="/termini" className="flink">Termini e condizioni</Link>
-          <Link href="/rimborsi" className="flink">Rimborsi e garanzia</Link>
+          <Link href="/regolamento-corsi" className="flink">Regolamento dei corsi</Link>
+          <Link href="/pagamenti-rateali" className="flink">Pagamento a rate</Link>
+          <Link href="/rimborsi" className="flink">Recesso e rimborsi</Link>
         </nav>
       </div>
       <div className="wrap mt-16 border-t border-ivory/15 pt-6 text-xs text-ivory/50 space-y-1">
