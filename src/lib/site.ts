@@ -20,11 +20,6 @@ export const NAV = [
   { href: "/blog", label: "Blog" },
 ];
 
-export const BLOG_PREVIEW = [
-  { slug: "come-riempire-lagenda-di-una-massaggiatrice", cat: "Clienti e agenda", title: "Come riempire l'agenda di una massaggiatrice senza dipendere dal passaparola" },
-  { slug: "mesi-pieni-e-mesi-vuoti", cat: "Clienti e agenda", title: "Perché ci sono mesi pieni e mesi vuoti (e come smettere di subirli)" },
-  { slug: "quanto-far-pagare-un-massaggio", cat: "Posizionamento e prezzi", title: "Quanto far pagare un massaggio: come stabilire il prezzo giusto" },
-];
 
 /** Contatti: lasciare vuoto finché non confermati. I componenti si attivano da soli quando compilati. */
 export const CONTACT = {

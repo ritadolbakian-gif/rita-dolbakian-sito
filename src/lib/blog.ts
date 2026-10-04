@@ -1,64 +1,110 @@
+import fs from "node:fs";
+import path from "node:path";
+import { marked } from "marked";
+
+export type PostFaq = { q: string; a: string; html: string };
+export type Section = { id?: string; title?: string; html: string };
 export type Post = {
-  slug: string; title: string; cat: string; date: string; updated: string; read: number; desc: string;
-  published: boolean;
-  answer?: string;
-  sections?: { h: string; p: string[]; list?: string[] }[];
-  remember?: string[];
-  faq?: { q: string; a: string }[];
+  slug: string; title: string; metaTitle: string; metaDescription: string;
+  keyword: string; keywords: string[]; kind: "pillar" | "support"; cluster: string; category: string;
+  order: number; published: boolean; date: string; updated: string; read: number; words: number;
+  answer: string; answerPlain: string; faq: PostFaq[]; sections: Section[]; toc: { id: string; title: string }[];
 };
 
-const D = "2026-10-04";
+const DIR = path.join(process.cwd(), "content", "blog");
+export const CATEGORIES = ["Clienti e agenda", "Prezzi e posizionamento", "Instagram e contenuti", "Vendita naturale", "Tecnica e formazione"];
 
-export const POSTS: Post[] = [
-  {
-    slug: "come-riempire-lagenda-di-una-massaggiatrice", title: "Come riempire l'agenda di una massaggiatrice senza dipendere dal passaparola", cat: "Clienti e agenda", date: D, updated: D, read: 6, published: true,
-    desc: "Il passaparola aiuta, ma non basta. Ecco come costruire un flusso di richieste più prevedibile, con calma e un metodo.",
-    answer: "Per riempire l'agenda senza dipendere dal passaparola serve un percorso che le persone possano seguire anche senza conoscerti: farsi trovare, capire cosa fai, fidarsi e scriverti. Quando questo percorso è chiaro, le richieste arrivano con più continuità e meno sorprese.",
-    sections: [
-      { h: "Perché il passaparola da solo non basta?", p: ["Il passaparola è prezioso, ma non lo controlli. Arriva quando arriva, e per questo l'agenda alterna periodi pieni a periodi vuoti.", "Non è un problema di bravura. È che le tue clienti ti scoprono quando qualcuno parla di te, non quando sei tu a poterti far trovare."] },
-      { h: "Come scelgono oggi le persone?", p: ["Prima guardano. Poi confrontano. E solo dopo scrivono.", "Se nel momento in cui guardano non trovano chiarezza su chi sei, cosa fai e per chi, non scrivono. Non perché non siano interessate: perché non hanno capito."] },
-      { h: "Da dove si comincia davvero?", p: ["Prima di aprire nuovi canali, metti in ordine questi tre punti:"], list: ["Chi aiuti, descritto in una frase che si capisce.", "Cosa offri, con un nome e un prezzo chiari.", "Cosa deve fare una persona interessata per contattarti."] },
-      { h: "Quanto tempo serve?", p: ["Dipende da dove parti. L'importante è non fare tutto insieme: un passo alla volta, verificando cosa succede prima di aggiungere il successivo."] },
-    ],
-    remember: ["Il passaparola non è controllabile, un percorso chiaro sì.", "Prima chiarezza, poi canali.", "Un passo alla volta."],
-    faq: [{ q: "Devo per forza usare Instagram?", a: "No. Instagram è un canale possibile, ma conta di più avere un messaggio chiaro e una via semplice per contattarti." }, { q: "Quanto ci vuole per vedere cambiamenti?", a: "Non esiste un tempo uguale per tutte: dipende da dove parti e da quanto tempo puoi dedicare. Conta la costanza." }],
-  },
-  {
-    slug: "mesi-pieni-e-mesi-vuoti", title: "Perché ci sono mesi pieni e mesi vuoti (e come smettere di subirli)", cat: "Clienti e agenda", date: D, updated: D, read: 5, published: true,
-    desc: "Se la tua agenda va a ondate, di solito non è sfortuna: è mancanza di un sistema. Come riconoscerlo e cosa cambiare.",
-    answer: "Ci sono mesi pieni e mesi vuoti quando le richieste dipendono da eventi che non controlli, come il passaparola o un singolo contenuto che funziona. Si smette di subirli costruendo un percorso costante: farsi trovare in modo regolare e rispondere sempre allo stesso modo.",
-    sections: [
-      { h: "Perché l'agenda va a ondate?", p: ["Quando le richieste arrivano da fonti occasionali, l'agenda segue quelle fonti. Un mese una cliente parla bene di te e sei piena. Il mese dopo, nessuno.", "Il problema non è l'impegno, e nemmeno la bravura. È che manca un meccanismo regolare."] },
-      { h: "Cosa succede nei mesi vuoti?", p: ["Di solito scatta la fretta: si prova tutto, si cambia direzione ogni settimana, si abbassano i prezzi. Così il lavoro diventa ancora meno prevedibile."] },
-      { h: "Come si smette di subirli?", p: ["Si inizia dalla continuità, non dall'intensità."], list: ["Scegli un canale principale e presidialo con regolarità.", "Scrivi come rispondi a chi ti contatta, e rispondi sempre così.", "Guarda ogni mese cosa ha portato richieste, e fai più di quello."] },
-    ],
-    remember: ["Le ondate nascono da fonti occasionali.", "La fretta peggiora le cose.", "Continuità prima di intensità."],
-    faq: [{ q: "Abbassare i prezzi nei mesi vuoti aiuta?", a: "Di solito peggiora la percezione del tuo lavoro e non risolve la causa, che è la mancanza di un percorso regolare per farti trovare." }],
-  },
-  {
-    slug: "quanto-far-pagare-un-massaggio", title: "Quanto far pagare un massaggio: come stabilire il prezzo giusto", cat: "Posizionamento e prezzi", date: D, updated: D, read: 6, published: true,
-    desc: "Non esiste un prezzo uguale per tutte, ma esiste un modo ordinato per arrivarci. Costi, tempo, valore, contesto.",
-    answer: "Il prezzo giusto di un massaggio non si copia dai colleghi: si costruisce partendo dai tuoi costi reali, dal tempo che dedichi e dal valore che la cliente percepisce. Un prezzo chiaro, spiegato bene e coerente con il tuo posizionamento è più forte di uno basso.",
-    sections: [
-      { h: "Da dove si parte per stabilire un prezzo?", p: ["Dai numeri della tua attività, non dal prezzo del vicino. Conta tutto il tempo: la seduta, ma anche preparazione, pulizia, comunicazione e spostamenti."], list: ["Costi fissi: affitto, assicurazioni, utenze, formazione.", "Costi variabili: oli, biancheria, materiali.", "Tempo reale per ogni seduta, comprese le parti invisibili.", "Quanto vuoi guadagnare, e quante sedute puoi fare senza esaurirti."] },
-      { h: "Perché copiare i prezzi degli altri è un rischio?", p: ["Perché non conosci i loro costi, né il loro obiettivo. Rischi di lavorare molto per guadagnare poco, e di attrarre chi sceglie solo in base al prezzo."] },
-      { h: "Come si comunica il prezzo senza svendersi?", p: ["Spiegando cosa ricevi: durata, attenzione, cosa è incluso. Un prezzo detto con calma e chiarezza fa meno paura di un prezzo nascosto."] },
-    ],
-    remember: ["Parti dai tuoi numeri reali.", "Non copiare i prezzi altrui.", "Spiega il valore, non solo la cifra."],
-    faq: [{ q: "Esiste un prezzo medio da seguire?", a: "Può servire come riferimento di contesto, ma la tua decisione dovrebbe partire dai tuoi costi, dal tuo tempo e dal tuo posizionamento." }, { q: "Posso alzare i prezzi con le clienti attuali?", a: "Sì, con calma e spiegando il perché. Meglio farlo con preavviso e chiarezza." }],
-  },
-  ...[
-    ["instagram-per-operatrici-del-benessere", "Instagram per operatrici del benessere: da dove si comincia davvero", "Instagram e contenuti"],
-    ["rispondere-a-quanto-costa-nei-dm", "Come rispondere a chi scrive \"quanto costa?\" nei DM", "Vendita naturale"],
-    ["presentare-la-tua-offerta-senza-svendere", "Come presentare la tua offerta senza svendere il tuo lavoro", "Posizionamento e prezzi"],
-    ["prima-guardano-poi-confrontano-poi-scrivono", "Prima guardano, poi confrontano, poi scrivono: come funziona la scelta del cliente oggi", "Clienti e agenda"],
-    ["i-primi-10-clienti-online", "I primi 10 clienti online: cosa fare nelle prime 4 settimane", "Clienti e agenda"],
-    ["come-scegliere-un-corso-di-massaggio-online", "Come scegliere un corso di massaggio online: 7 domande da farsi", "Tecnica e massaggio"],
-    ["errori-dei-principianti-nel-tocco", "Massaggio e consapevolezza del tocco: gli errori più comuni dei principianti", "Tecnica e massaggio"],
-    ["intelligenza-artificiale-per-contenuti-nel-benessere", "Come usare l'intelligenza artificiale per creare contenuti nel benessere senza perdere autenticità", "Instagram e contenuti"],
-    ["da-operatrice-a-imprenditrice", "Da operatrice a imprenditrice: i 5 passaggi che nessuno ti insegna", "Mindset da imprenditrice"],
-  ].map(([slug, title, cat]) => ({ slug, title, cat, date: D, updated: D, read: 6, desc: "In arrivo.", published: false }) as Post),
-];
+const slugify = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const strip = (s: string) => s.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\*\*|__|\*|_/g, "").replace(/\s+/g, " ").trim();
 
-export const CATEGORIES = ["Clienti e agenda", "Posizionamento e prezzi", "Instagram e contenuti", "Vendita naturale", "Mindset da imprenditrice", "Tecnica e massaggio", "Storie e risultati"];
-export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);
+/** Collegamenti di approfondimento (correlati) scelti a mano, per cluster tematici. */
+const RELATED: Record<string, string[]> = {
+  "come-trovare-clienti-massaggiatrice": ["agenda-massaggiatrice-mesi-vuoti", "instagram-per-massaggiatrici", "google-business-profile-massaggiatori"],
+  "agenda-massaggiatrice-mesi-vuoti": ["come-trovare-clienti-massaggiatrice", "fidelizzare-clienti-massaggi", "google-business-profile-massaggiatori"],
+  "quanto-far-pagare-un-massaggio": ["come-rispondere-quanto-costa", "come-trovare-clienti-massaggiatrice", "fidelizzare-clienti-massaggi"],
+  "fidelizzare-clienti-massaggi": ["agenda-massaggiatrice-mesi-vuoti", "come-rispondere-quanto-costa", "come-trovare-clienti-massaggiatrice"],
+  "instagram-per-massaggiatrici": ["come-trovare-clienti-massaggiatrice", "google-business-profile-massaggiatori", "come-rispondere-quanto-costa"],
+  "come-rispondere-quanto-costa": ["quanto-far-pagare-un-massaggio", "instagram-per-massaggiatrici", "fidelizzare-clienti-massaggi"],
+  "google-business-profile-massaggiatori": ["come-trovare-clienti-massaggiatrice", "instagram-per-massaggiatrici", "agenda-massaggiatrice-mesi-vuoti"],
+  "come-scegliere-un-corso-di-massaggio": ["corso-massaggio-online-funziona", "imparare-a-massaggiare-da-zero"],
+  "corso-massaggio-online-funziona": ["come-scegliere-un-corso-di-massaggio", "imparare-a-massaggiare-da-zero"],
+  "imparare-a-massaggiare-da-zero": ["come-scegliere-un-corso-di-massaggio", "corso-massaggio-online-funziona"],
+};
+
+function parseFile(file: string): { fm: Record<string, unknown>; body: string } {
+  const raw = fs.readFileSync(path.join(DIR, file), "utf8");
+  const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (!m) throw new Error(`Frontmatter mancante: ${file}`);
+  const fm: Record<string, unknown> = {};
+  for (const line of m[1].split("\n")) {
+    const i = line.indexOf(":");
+    if (i > 0) fm[line.slice(0, i).trim()] = JSON.parse(line.slice(i + 1).trim());
+  }
+  return { fm, body: m[2] };
+}
+
+let cache: Post[] | null = null;
+
+function build(): Post[] {
+  const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".md")).sort();
+  const parsed = files.map(parseFile);
+  const published = new Set(parsed.filter((p) => p.fm.published).map((p) => p.fm.slug as string));
+
+  return parsed.map(({ fm, body }) => {
+    let md = body;
+    // blocco risposta "In breve"
+    let answer = "", answerPlain = "";
+    const am = md.match(/^> \*\*In breve\.\*\*\s*([\s\S]*?)(?:\n\n|$)/m);
+    if (am) {
+      answerPlain = strip(am[1].replace(/\n> ?/g, " "));
+      answer = marked.parseInline(am[1].replace(/\n> ?/g, " ")) as string;
+      md = md.replace(am[0], "");
+    }
+    // FAQ
+    const faq: PostFaq[] = [];
+    const fi = md.search(/^## Domande frequenti\s*$/m);
+    if (fi >= 0) {
+      const rest = md.slice(fi);
+      const next = rest.slice(5).search(/^## /m);
+      const block = next >= 0 ? rest.slice(0, next + 5) : rest;
+      md = md.replace(block, "");
+      for (const chunk of block.split(/^### /m).slice(1)) {
+        const [q, ...a] = chunk.split("\n");
+        const ans = a.join("\n").trim();
+        faq.push({ q: q.trim(), a: strip(ans), html: marked.parse(ans) as string });
+      }
+    }
+    let html = marked.parse(md.trim()) as string;
+    // id sui titoli
+    html = html.replace(/<h([23])>([\s\S]*?)<\/h\1>/g, (_m, l, t) => `<h${l} id="${slugify(strip(t))}">${t}</h${l}>`);
+    // link: esterni in nuova scheda, interni verso articoli non pubblicati -> testo
+    html = html.replace(/<a href="([^"]+)">([\s\S]*?)<\/a>/g, (_m, href, text) => {
+      if (/^https?:/.test(href)) return `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
+      const bm = href.match(/^\/blog\/([a-z0-9-]+)\/?$/);
+      if (bm && !published.has(bm[1])) return text;
+      return `<a href="${href}">${text}</a>`;
+    });
+    html = html.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, "</table></div>");
+    // sezioni per H2
+    const chunks = html.split(/(?=<h2 )/);
+    const sections: Section[] = chunks.map((c) => {
+      const hm = c.match(/^<h2 id="([^"]+)">([\s\S]*?)<\/h2>/);
+      return hm ? { id: hm[1], title: strip(hm[2]), html: c } : { html: c };
+    });
+    const toc = sections.filter((s) => s.id).map((s) => ({ id: s.id!, title: s.title! }));
+    const words = strip(html).split(" ").length + faq.reduce((n, f) => n + f.a.split(" ").length, 0) + answerPlain.split(" ").length;
+    return {
+      slug: fm.slug as string, title: fm.title as string, metaTitle: fm.metaTitle as string, metaDescription: fm.metaDescription as string,
+      keyword: fm.keyword as string, keywords: String(fm.keywords ?? "").split(",").map((k) => k.trim()).filter(Boolean),
+      kind: fm.kind as "pillar" | "support", cluster: fm.cluster as string, category: fm.category as string, order: fm.order as number,
+      published: fm.published as boolean, date: fm.date as string, updated: fm.updated as string,
+      read: Math.max(3, Math.round(words / 200)), words, answer, answerPlain, faq, sections, toc,
+    };
+  });
+}
+
+export function getAllPosts(): Post[] { return (cache ??= build()); }
+export const getPublished = () => getAllPosts().filter((p) => p.published);
+export const getUpcoming = () => getAllPosts().filter((p) => !p.published);
+export const getPost = (slug: string) => getAllPosts().find((p) => p.slug === slug);
+export const getRelated = (slug: string) => (RELATED[slug] ?? []).map((s) => getPost(s)).filter((p): p is Post => !!p && p.published);

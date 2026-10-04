@@ -20,3 +20,8 @@ Finché gli elenchi sono vuoti il sito mostra segnaposto tratteggiati.
 
 ## Moduli
 Imposta la variabile `GHL_WEBHOOK_URL` (webhook GoHighLevel) per far arrivare i lead.
+
+## Blog
+- Gli articoli stanno in `content/blog/*.md` (uno per file, con intestazione in alto). Per modificare un testo, modifica il file.
+- `published: true/false` nell'intestazione decide se l'articolo è online. Gli articoli 8, 9 e 10 sono **non pubblicati** perché hanno parti da confermare con Rita (vedi `content/DA-COMPLETARE-ARTICOLI.md`). Quando sono pronti, metti `"published": true`.
+- Le copertine si inseriscono in `src/lib/media.ts` (`blog-<slug>`), vedi `PROMPT-IMMAGINI.md`.

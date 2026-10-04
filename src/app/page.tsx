@@ -7,7 +7,7 @@ import { CountUp } from "@/components/CountUp";
 import { CaseStudies, VideoWall, Quotes, PressBar, TrustBar, RatingLd } from "@/components/Proof";
 import { LeadForm } from "@/components/LeadForm";
 import { Faq } from "@/components/Ui";
-import { BLOG_PREVIEW } from "@/lib/site";
+import { getPublished } from "@/lib/blog";
 
 const Label = ({ n, t }: { n?: string; t: string }) => <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />{n ? `${n} — ` : ""}{t}</p>;
 
@@ -232,11 +232,11 @@ export default function Home() {
             <Link href="/blog" className="ulink font-medium">Tutti gli articoli →</Link>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {BLOG_PREVIEW.map((a, i) => (
+            {getPublished().filter((p) => p.kind === "pillar" || p.order <= 3).slice(0, 3).map((a, i) => (
               <Reveal key={a.slug} delay={i * 0.1}>
                 <Link href={`/blog/${a.slug}`} className="lift zoom group block">
-                  <Slot kind="foto" id={`blog-${i + 1}`} label="Copertina articolo" ratio="4/3" art={(["waves", "orbs", "stones"] as const)[i]} />
-                  <p className="eyebrow mt-5">{a.cat}</p>
+                  <Slot kind="foto" id={`blog-${a.slug}`} label="Copertina articolo" ratio="4/3" />
+                  <p className="eyebrow mt-5">{a.category} · {a.read} min</p>
                   <h3 className="font-display text-2xl md:text-3xl mt-2 leading-tight group-hover:text-rose transition-colors">{a.title}</h3>
                 </Link>
               </Reveal>

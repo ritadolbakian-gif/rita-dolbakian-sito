@@ -35,8 +35,16 @@ export const MEDIA: Record<string, MediaItem> = {
   "gallery-4": { alt: "Dietro le quinte 4 (1:1)" },
   "gallery-5": { alt: "Dietro le quinte 5 (4:5)" },
   "gallery-6": { alt: "Dietro le quinte 6 (1:1)" },
-  // BLOG (copertine articoli si gestiscono nel file degli articoli)
-  "blog-1": { alt: "Copertina articolo 1 (4:3)" },
-  "blog-2": { alt: "Copertina articolo 2 (4:3)" },
-  "blog-3": { alt: "Copertina articolo 3 (4:3)" },
+  // BLOG: copertine degli articoli (4:3). Per la testata dell'articolo si usa la stessa immagine (16:9 ritagliata).
+  "blog-come-trovare-clienti-massaggiatrice": { alt: "Copertina articolo: come trovare clienti massaggiatrice (4:3)" },
+  "blog-agenda-massaggiatrice-mesi-vuoti": { alt: "Copertina articolo: agenda massaggiatrice mesi vuoti (4:3)" },
+  "blog-quanto-far-pagare-un-massaggio": { alt: "Copertina articolo: quanto far pagare un massaggio (4:3)" },
+  "blog-fidelizzare-clienti-massaggi": { alt: "Copertina articolo: fidelizzare clienti massaggi (4:3)" },
+  "blog-instagram-per-massaggiatrici": { alt: "Copertina articolo: instagram per massaggiatrici (4:3)" },
+  "blog-come-rispondere-quanto-costa": { alt: "Copertina articolo: come rispondere quanto costa (4:3)" },
+  "blog-google-business-profile-massaggiatori": { alt: "Copertina articolo: google business profile massaggiatori (4:3)" },
+  "blog-come-scegliere-un-corso-di-massaggio": { alt: "Copertina articolo: come scegliere un corso di massaggio (4:3)" },
+  "blog-corso-massaggio-online-funziona": { alt: "Copertina articolo: corso massaggio online funziona (4:3)" },
+  "blog-imparare-a-massaggiare-da-zero": { alt: "Copertina articolo: imparare a massaggiare da zero (4:3)" },
+  author: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian", pos: "50% 22%" },
 };

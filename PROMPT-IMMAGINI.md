@@ -88,11 +88,21 @@ A small bright training room with three massage tables arranged in a half circle
 - 6 (1:1): `A bottle of oil and a small candle on a blush linen cloth, morning light.`
 (Aggiungi sempre lo [STYLE].)
 
-**13. Copertine articoli (blog)** · `blog-1…3.webp` · 4:3 · 1600×1200 · `blog-1…3`
-```
-Minimal still life related to [TEMA], blush and ivory tones, lots of negative space, soft shadows. [STYLE]
-```
-(TEMA: agenda/calendario con matita; ondate di luce sul muro; calcolatrice e candela.)
+**13. Copertine articoli (blog)** · `blog-<slug>.webp` · 4:3 · 1600×1200 · id `blog-<slug>` (la stessa immagine è usata anche in testata, ritagliata in 16:8)
+Modello: `Minimal still life related to [TEMA], blush and ivory tones, lots of negative space, soft shadows. [STYLE]`
+
+| Slug | TEMA |
+|---|---|
+| `come-trovare-clienti-massaggiatrice` | an open appointment diary with a pencil and a cup of tea, top-down |
+| `agenda-massaggiatrice-mesi-vuoti` | a calendar page with sunlight and a shadow moving across it |
+| `quanto-far-pagare-un-massaggio` | a small calculator, a notebook and a candle on a linen cloth |
+| `fidelizzare-clienti-massaggi` | a handwritten thank-you card with a small flower, no readable text |
+| `instagram-per-massaggiatrici` | a phone on a light desk next to a ring light reflection, screen blurred |
+| `come-rispondere-quanto-costa` | a phone with a blank chat bubble on screen, soft light, no readable text |
+| `google-business-profile-massaggiatori` | a small shop door with a plant and a "welcome" mat, morning light, no readable text |
+| `come-scegliere-un-corso-di-massaggio` (non pubblicato) | folded towels and a notebook with a checklist, no readable text |
+| `corso-massaggio-online-funziona` (non pubblicato) | a laptop on a massage table showing a blurred video lesson |
+| `imparare-a-massaggiare-da-zero` (non pubblicato) | a pair of hands over a massage table, beginner posture, soft light |
 
 **14. Sfondo scuro bianco e nero** · `rita-bn.webp` · 16:9 · 2400×1350 (per sezioni scure)
 ```
