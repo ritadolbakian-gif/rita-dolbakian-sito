@@ -25,3 +25,10 @@ export const BLOG_PREVIEW = [
   { slug: "mesi-pieni-e-mesi-vuoti", cat: "Clienti e agenda", title: "Perché ci sono mesi pieni e mesi vuoti (e come smettere di subirli)" },
   { slug: "quanto-far-pagare-un-massaggio", cat: "Posizionamento e prezzi", title: "Quanto far pagare un massaggio: come stabilire il prezzo giusto" },
 ];
+
+/** Contatti: lasciare vuoto finché non confermati. I componenti si attivano da soli quando compilati. */
+export const CONTACT = {
+  email: "", // [DA CONFERMARE]
+  whatsapp: "", // solo cifre con prefisso, es. 393331234567 [DA CONFERMARE]
+  whatsappMessage: "Ciao Rita, vorrei saperne di più sui tuoi percorsi.",
+};

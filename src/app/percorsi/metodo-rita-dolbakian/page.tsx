@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
+import { CaseStudies, TrustBar } from "@/components/Proof";
 import { meta } from "@/lib/seo";
 
 export const metadata = meta("Metodo Rita Dolbakian: impara a massaggiare", "Il Metodo Rita Dolbakian per imparare a massaggiare e migliorare la tua tecnica, con formazione pratica online e in presenza.", "/percorsi/metodo-rita-dolbakian");
@@ -16,7 +17,7 @@ export default function MetodoRD() {
   return (
     <>
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
-      <PageHero dark eyebrow="Metodo Rita Dolbakian" title="Impara a *massaggiare* con mani sicure." answer="Il Metodo Rita Dolbakian è il percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo, ed è semplificato per essere seguito online e in presenza, a partire dal proprio livello.">
+      <PageHero dark eyebrow="Metodo Rita Dolbakian" title="Impara a *massaggiare*. Con mani sicure." answer="Il Metodo Rita Dolbakian è il percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo, ed è semplificato per essere seguito online e in presenza, a partire dal proprio livello.">
         <Link href="/call-orientamento" className="btn btn-primary">Parlane con Rita <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
       </PageHero>
@@ -25,13 +26,13 @@ export default function MetodoRD() {
 
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-2 items-center">
-          <Reveal><Slot kind="foto" label="Mani al lavoro, dettaglio tecnica" ratio="4/5" /></Reveal>
+          <Reveal><Slot kind="foto" id="rd-hands" label="Mani al lavoro, dettaglio tecnica" ratio="4/5" art="stones" /></Reveal>
           <div>
             <Label n="01" t="Cosa lo rende diverso" />
             <Heading text="Tecnica, *ascolto*, presenza." className="text-5xl md:text-6xl" />
             <div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-              <p>Un metodo studiato, testato e semplificato negli anni. Meno fronzoli, più chiarezza su cosa fare e perché.</p>
-              <p>Non si impara solo a ripetere dei movimenti. Si impara a sentire, a dosare, a stare con la persona che hai davanti.</p>
+              <p>Un metodo studiato, testato e semplificato in oltre dieci anni di lavoro. Meno fronzoli, più chiarezza su cosa fare e perché lo stai facendo.</p>
+              <p>Non impari a ripetere dei movimenti. Impari a sentire, a dosare la pressione, a stare con la persona che hai davanti.</p>
               <p className="text-sm"><Tbc>i tratti distintivi del metodo secondo Rita</Tbc></p>
             </div>
           </div>
@@ -63,22 +64,31 @@ export default function MetodoRD() {
             <Reveal><div className="rounded-3xl border border-ivory/15 p-8 h-full">
               <h3 className="font-display text-3xl">Online</h3>
               <ul className="mt-4 space-y-2 text-ivory/70"><li>— Lezioni video con dimostrazione della tecnica</li><li>— Esercizi guidati da ripetere con calma</li><li>— Confronto e correzioni sul tuo lavoro</li></ul>
-              <div className="mt-6"><Slot kind="video" label="Anteprima lezione" ratio="16/9" /></div>
+              <div className="mt-6"><Slot kind="video" id="rd-online" label="Anteprima lezione" ratio="16/9" art="waves" /></div>
             </div></Reveal>
             <Reveal delay={0.1}><div className="rounded-3xl border border-ivory/15 p-8 h-full">
               <h3 className="font-display text-3xl">In presenza</h3>
               <ul className="mt-4 space-y-2 text-ivory/70"><li>— Pratica diretta, mani su mani</li><li>— Gruppi piccoli, attenzione a ognuna</li><li>— Sedi e date: <Tbc>calendario e luoghi</Tbc></li></ul>
-              <div className="mt-6"><Slot kind="foto" label="Formazione in aula" ratio="16/9" /></div>
+              <div className="mt-6"><Slot kind="foto" id="rd-aula" label="Formazione in aula" ratio="16/9" art="orbs" /></div>
             </div></Reveal>
           </div>
         </div>
       </section>
 
+      <section className="section bg-blush/30">
+        <div className="wrap">
+          <Label n="04" t="Chi ha imparato" />
+          <Heading text="Le mani cambiano. Si *sente*." className="text-5xl md:text-6xl max-w-3xl" />
+          <div className="mt-12"><CaseStudies max={3} /></div>
+          <div className="mt-16"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Tre livelli: scegli quello giusto per te." }, { t: "Pratica vera", d: "Online per studiare, in presenza per mettere le mani." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna, non una platea." }, { t: "Parole oneste", d: "Formazione sulla tecnica, nessuna promessa terapeutica." }]} /></div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap grid gap-12 md:grid-cols-2">
-          <div><Label n="04" t="Per chi è" /><Heading text="Per chi *vuole* farlo bene." className="text-5xl" />
+          <div><Label n="05" t="Per chi è" /><Heading text="Per chi *vuole* farlo bene." className="text-5xl" />
             <ul className="mt-6 space-y-2 text-stone"><li>✓ Principianti che vogliono basi solide</li><li>✓ Professionisti che vogliono perfezionarsi</li><li>✓ Chi cerca un metodo chiaro e pratico</li></ul></div>
-          <div><Label n="05" t="Certificazione" /><Heading text="Cosa *ottieni* alla fine." className="text-5xl" />
+          <div><Label n="06" t="Certificazione" /><Heading text="Cosa *ottieni* alla fine." className="text-5xl" />
             <p className="mt-6 text-stone">Al termine è previsto un attestato. <Tbc>tipo di attestato (es. Attestato RD Academy), requisiti, ore</Tbc> Leggi di più su <Link href="/formazione-certificata" className="ulink text-ink">formazione certificata</Link>.</p></div>
         </div>
         <div className="wrap mt-12"><p className="text-xs text-stone max-w-3xl">Il Metodo Rita Dolbakian è formazione su tecnica manuale e benessere. Non è una formazione sanitaria e non offre promesse di tipo terapeutico. <Tbc>indicazioni legali e di qualifica professionale</Tbc></p></div>

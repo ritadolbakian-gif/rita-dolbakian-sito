@@ -1,5 +1,6 @@
 import { PageHero, Label } from "@/components/Ui";
 import { Heading } from "@/components/Motion";
+import { TrustBar } from "@/components/Proof";
 import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
 
@@ -12,9 +13,9 @@ export default function Call() {
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="space-y-10">
-            <div><Label t="Prima" /><p className="text-stone">Scegli un orario. Ricevi la conferma via email.</p></div>
-            <div><Label t="Durante" /><p className="text-stone">Parliamo di dove sei, di cosa vuoi cambiare e di cosa ha senso fare. Lavoro solo con poche persone.</p></div>
-            <div><Label t="Dopo" /><p className="text-stone">Nessun obbligo e nessuno spam. Decidi con calma.</p></div>
+            <div><Label t="Prima" /><p className="text-stone">Scegli l'orario che ti va bene. Ricevi la conferma via email, e basta.</p></div>
+            <div><Label t="Durante" /><p className="text-stone">Parliamo di dove sei, di cosa vuoi cambiare e di cosa ha senso fare. Ti dico con sincerità se posso aiutarti. Lavoro solo con poche persone.</p></div>
+            <div><Label t="Dopo" /><p className="text-stone">Nessun obbligo e nessuno spam. Hai tutto il tempo per decidere, con calma.</p></div>
             <Heading text="30 minuti. *Nessun* obbligo." className="text-4xl" as="h2" />
           </div>
           <div className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory">
@@ -22,6 +23,7 @@ export default function Call() {
           </div>
         </div>
       </section>
+      <section className="section pt-0"><div className="wrap"><TrustBar /></div></section>
     </>
   );
 }

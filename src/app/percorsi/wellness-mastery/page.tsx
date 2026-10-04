@@ -3,6 +3,7 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { meta } from "@/lib/seo";
 import Link from "next/link";
+import { CaseStudies, VideoWall, TrustBar } from "@/components/Proof";
 
 export const metadata = meta("Wellness Mastery: da operatrice a imprenditrice digitale", "Wellness Mastery di Rita Dolbakian: 10 moduli, 6 bonus e garanzia 14 giorni per trasformare il tuo talento nel benessere in un'attività online solida.", "/percorsi/wellness-mastery");
 
@@ -32,7 +33,7 @@ export default function WellnessMastery() {
   return (
     <>
       <JsonLd data={courseLd("Wellness Mastery", "Da operatrice del benessere a imprenditrice digitale: 10 moduli, 6 bonus e garanzia di 14 giorni.", "/percorsi/wellness-mastery")} />
-      <PageHero dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il percorso di Rita Dolbakian per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento individuale, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
+      <PageHero dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il percorso di Rita Dolbakian per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
@@ -41,13 +42,13 @@ export default function WellnessMastery() {
         <div className="wrap grid gap-14 lg:grid-cols-2">
           <div>
             <Label n="01" t="Ti riconosci?" />
-            <Heading text="Il talento non basta se non sai trasformarlo in un *vero* business." className="text-4xl md:text-6xl" />
+            <Heading text="Il talento non basta, se non sai trasformarlo in un *vero* business." className="text-4xl md:text-6xl" />
           </div>
           <Reveal>
             <ul className="divide-y divide-[var(--line)] border-y border-[var(--line)] text-lg">
-              {["Hai competenza, ma l'agenda è instabile.", "Fai tutto da sola e sei stanca.", "Hai paura di sembrare commerciale.", "Non sai come far capire il tuo valore e il tuo prezzo."].map((t) => <li key={t} className="py-5">{t}</li>)}
+              {["Hai competenza, ma l'agenda è instabile.", "Fai tutto da sola e sei stanca.", "Ti blocca l'idea di sembrare commerciale.", "Non sai come far capire il tuo valore, e quindi il tuo prezzo."].map((t) => <li key={t} className="py-5">{t}</li>)}
             </ul>
-            <p className="mt-6 text-stone">Non c'è bisogno di snaturarti. C'è bisogno di un metodo.</p>
+            <p className="mt-6 text-stone">Non devi snaturarti. Devi solo avere un metodo, e qualcuno accanto mentre lo costruisci.</p>
           </Reveal>
         </div>
       </section>
@@ -70,7 +71,7 @@ export default function WellnessMastery() {
       <section className="section-dark section">
         <div className="wrap">
           <Label n="03" t="Bonus" />
-          <Heading text="Sei bonus. Uno *vale* l'affiancamento." className="text-5xl md:text-7xl max-w-4xl" />
+          <Heading text="Sei bonus, per non *restare* mai sola." className="text-5xl md:text-7xl max-w-4xl" />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {bonus.map(([t, d], i) => (
               <Reveal key={t} delay={i * 0.06}><div className="lift rounded-3xl border border-ivory/15 p-7 h-full">
@@ -83,7 +84,7 @@ export default function WellnessMastery() {
 
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-2 items-center">
-          <Reveal><Slot kind="video" label="Rita presenta Wellness Mastery" ratio="16/10" /></Reveal>
+          <Reveal><Slot kind="video" id="wm-video" label="Rita presenta Wellness Mastery" ratio="16/10" art="arch" /></Reveal>
           <div>
             <Label n="04" t="Garanzia" />
             <Heading text="14 giorni *soddisfatti* o rimborsati." className="text-5xl md:text-6xl" />
@@ -92,10 +93,20 @@ export default function WellnessMastery() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="wrap">
+          <Label n="05" t="Risultati" />
+          <Heading text="Chi ha fatto il percorso, *racconta*." className="text-5xl md:text-6xl max-w-3xl" />
+          <div className="mt-12"><CaseStudies max={3} /></div>
+          <div className="mt-16"><VideoWall /></div>
+          <div className="mt-16"><TrustBar /></div>
+        </div>
+      </section>
+
       <section id="candidatura" className="section bg-blush/30">
         <div className="wrap text-center max-w-3xl">
-          <Label n="05" t="Come iniziare" />
-          <Heading text="Prezzo e posti: *chiari*, senza finta scarsità." className="text-4xl md:text-6xl" />
+          <Label n="06" t="Come iniziare" />
+          <Heading text="Prezzo e posti, *chiari*. Nessuna finta scarsità." className="text-4xl md:text-6xl" />
           <p className="mt-6 text-stone"><Tbc>prezzo, rate, posti reali per l'affiancamento 1:1</Tbc></p>
           <div className="mt-8 flex flex-wrap justify-center gap-4"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call di orientamento <span className="arr">→</span></Link></div>
         </div>

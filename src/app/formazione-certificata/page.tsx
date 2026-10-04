@@ -7,12 +7,13 @@ export const metadata = meta("Formazione certificata con Rita Dolbakian", "I per
 export default function FormazioneCertificata() {
   return (
     <>
-      <PageHero eyebrow="Formazione certificata" title="Un percorso che *finisce* con qualcosa in mano." answer={<>I percorsi di formazione pratica del Metodo Rita Dolbakian prevedono un attestato finale. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc> Qui trovi livelli, requisiti e calendario delle prossime edizioni.</>} />
+      <PageHero eyebrow="Formazione certificata" title="Un percorso che finisce con *qualcosa in mano*." answer={<>I percorsi di formazione pratica del Metodo Rita Dolbakian prevedono un attestato finale. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc> Qui trovi livelli, requisiti e calendario delle prossime edizioni.</>} />
 
       <section className="section">
         <div className="wrap">
           <Label n="01" t="Il percorso a tappe" />
-          <Heading text="Tre livelli, *una* strada." className="text-5xl md:text-7xl" />
+          <Heading text="Tre livelli. *Una* strada." className="text-5xl md:text-7xl" />
+          <p className="mt-5 text-lg text-stone max-w-xl">Ogni livello ha un obiettivo chiaro, dei requisiti e una verifica finale. Così sai sempre dove sei e cosa manca.</p>
           <div className="mt-14 grid gap-6 md:grid-cols-3 relative">
             {["Fondamenta del tocco", "Tecnica e precisione", "Perfezionamento e mestiere"].map((t, i) => (
               <Reveal key={t} delay={i * 0.1}><div className="rounded-3xl border border-[var(--line)] p-8 h-full">

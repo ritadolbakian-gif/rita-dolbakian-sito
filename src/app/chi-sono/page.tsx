@@ -1,30 +1,31 @@
 import { PageHero, Label, CtaBand, Tbc } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
+import { TrustBar, PressBar } from "@/components/Proof";
 import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
 
 export const metadata = meta("Chi è Rita Dolbakian", "Rita Dolbakian è massaggiatrice e formatrice nel benessere da oltre dieci anni. La sua storia, i suoi valori e il suo modo di lavorare.", "/chi-sono");
 
 const chapters = [
-  ["L'inizio", "Come molte, Rita è partita con il solo passaparola. Periodi pieni alternati a periodi vuoti, e la sensazione di non avere il controllo."],
-  ["La svolta", "Non mancava la tecnica. Mancava una direzione chiara. È stato il momento in cui ha smesso di andare a tentativi."],
-  ["Il metodo", "Negli anni ha studiato, testato e semplificato. Quello che funzionava è diventato un metodo, quello che non serviva è stato lasciato andare."],
-  ["Oggi", "Rita aiuta altre operatrici e operatori a fare ordine e a costruire continuità, e insegna a massaggiare con il suo metodo."],
+  { t: "L'inizio", h: "Solo *passaparola*.", d: ["Come molte, Rita è partita con il solo passaparola.", "Periodi pieni alternati a periodi vuoti. Mesi in cui lavorava tanto e mesi in cui il telefono non suonava. E la sensazione, costante, di non avere il controllo."] },
+  { t: "La svolta", h: "Una *direzione*.", d: ["Non le mancava la tecnica. Le mancava una direzione chiara.", "È stato il momento in cui ha smesso di andare a tentativi e ha iniziato a chiedersi: cosa funziona davvero, e cosa è solo rumore?"] },
+  { t: "Il metodo", h: "Studiato, testato, *semplificato*.", d: ["Negli anni ha studiato, provato, sbagliato, corretto.", "Quello che funzionava è diventato un metodo. Quello che non serviva è stato lasciato andare."] },
+  { t: "Oggi", h: "Oggi, *accanto* a te.", d: ["Rita lavora nel benessere da oltre dieci anni e oggi aiuta altre operatrici e operatori a fare ordine e a costruire continuità.", "E insegna a massaggiare con il suo metodo, online e in presenza."] },
 ];
-const values = [["Ascolto", "Prima di dire cosa fare, capire dove sei."], ["Chiarezza", "Parole semplici, passi ordinati."], ["Presenza", "Esserci davvero, non a distanza di sicurezza."], ["Pochi, ma seguiti davvero", "Scelgo di seguire poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza."]];
+const values = [["Ascolto", "Prima di dire cosa fare, capire dove sei."], ["Chiarezza", "Parole semplici, passi ordinati."], ["Presenza", "Esserci davvero, non a distanza di sicurezza."], ["Pochi, ma seguiti davvero", "Segue poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza."]];
 
 export default function ChiSono() {
   return (
     <>
-      <PageHero dark eyebrow="Chi sono" title="Massaggiatrice *prima* ancora che formatrice." answer="Rita Dolbakian lavora nel benessere da oltre dieci anni. Ha iniziato come massaggiatrice, ha vissuto le difficoltà di chi costruisce un'attività da sola, e ha trasformato quello che ha imparato in due percorsi di formazione: uno per l'attività, uno per la tecnica." />
+      <PageHero dark eyebrow="Chi sono" title="Massaggiatrice *prima* ancora che formatrice." answer="Rita Dolbakian lavora nel benessere da oltre dieci anni. Ha iniziato come massaggiatrice, ha vissuto le difficoltà di chi costruisce un'attività da sola e ha trasformato quello che ha imparato in due percorsi: uno per l'attività, uno per la tecnica." />
 
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-          <Reveal><div className="lg:sticky lg:top-28"><Slot kind="foto" label="Ritratto di Rita" ratio="4/5" /></div></Reveal>
+          <Reveal><div className="lg:sticky lg:top-28"><Slot kind="foto" id="about-portrait" label="Ritratto di Rita" ratio="4/5" art="arch" /></div></Reveal>
           <div className="space-y-16">
-            {chapters.map(([t, d], i) => (
-              <Reveal key={t}><Label n={`0${i + 1}`} t={t} /><Heading text={t === "L'inizio" ? "Solo *passaparola*." : t === "La svolta" ? "Una *direzione*." : t === "Il metodo" ? "Studiato, testato, *semplificato*." : "Oggi, *accanto* a te."} className="text-4xl md:text-5xl" as="h2" /><p className="mt-5 text-lg text-stone max-w-xl">{d}</p></Reveal>
+            {chapters.map((c, i) => (
+              <Reveal key={c.t}><Label n={`0${i + 1}`} t={c.t} /><Heading text={c.h} className="text-4xl md:text-5xl" as="h2" />{c.d.map((p) => <p key={p} className="mt-5 text-lg text-stone max-w-xl">{p}</p>)}</Reveal>
             ))}
           </div>
         </div>
@@ -41,21 +42,35 @@ export default function ChiSono() {
       </section>
 
       <section className="section">
-        <div className="wrap grid gap-12 md:grid-cols-2">
-          <div><Label n="06" t="Tappe" /><Heading text="Il *percorso* negli anni." className="text-5xl" /><p className="mt-6 text-stone"><Tbc>date e traguardi: formazioni, tappe, riconoscimenti</Tbc></p></div>
-          <div><Label n="07" t="Il team" /><Heading text="Chi *lavora* con Rita." className="text-5xl" /><p className="mt-6 text-stone"><Tbc>se esiste un team RD Academy</Tbc></p></div>
-        </div>
-        <div className="wrap mt-14 grid gap-6 md:grid-cols-3">
-          <Slot kind="video" label="Video di presentazione" ratio="16/10" className="md:col-span-2" />
-          <Slot kind="foto" label="Rita con le allieve" ratio="4/5" />
-        </div>
-        <div className="wrap mt-8 flex flex-wrap gap-6 text-sm">
-          <a className="ulink" href={SITE.social.instagram} target="_blank" rel="noopener">Instagram @rita_dolbakian</a>
-          <a className="ulink" href={SITE.social.youtube} target="_blank" rel="noopener">YouTube</a>
-          <a className="ulink" href={SITE.social.tiktok} target="_blank" rel="noopener">TikTok @rita.dolbakian</a>
+        <div className="wrap">
+          <Label n="06" t="Dietro le quinte" />
+          <Heading text="Il lavoro, *da vicino*." className="text-5xl md:text-6xl" />
+          <div className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3 items-start">
+            {[["gallery-1", "4/5", "orbs"], ["gallery-2", "1/1", "stones"], ["gallery-3", "4/5", "leaf"], ["gallery-4", "1/1", "waves"], ["gallery-5", "4/5", "arch"], ["gallery-6", "1/1", "orbs"]].map(([id, r, a], i) => (
+              <Reveal key={id} delay={(i % 3) * 0.08}><Slot id={id} label="Dietro le quinte" ratio={r} art={a as "orbs"} /></Reveal>
+            ))}
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            <Slot kind="video" id="about-video" label="Video di presentazione" ratio="16/10" className="md:col-span-2" art="arch" />
+            <Slot id="about-allieve" label="Rita con le allieve" ratio="4/5" art="leaf" />
+          </div>
         </div>
       </section>
-      <CtaBand />
+
+      <section className="section bg-blush/30">
+        <div className="wrap grid gap-12 md:grid-cols-2">
+          <div><Label n="07" t="Tappe" /><Heading text="Il *percorso* negli anni." className="text-5xl" /><p className="mt-6 text-stone"><Tbc>date e traguardi: formazioni, tappe, riconoscimenti</Tbc></p></div>
+          <div><Label n="08" t="Il team" /><Heading text="Chi *lavora* con Rita." className="text-5xl" /><p className="mt-6 text-stone"><Tbc>se esiste un team RD Academy</Tbc></p></div>
+        </div>
+        <div className="wrap mt-14"><PressBar /></div>
+        <div className="wrap mt-14"><TrustBar /></div>
+        <div className="wrap mt-10 flex flex-wrap gap-6 text-sm">
+          <a className="flink !text-ink/70 hover:!text-ink" href={SITE.social.instagram} target="_blank" rel="noopener">Instagram @rita_dolbakian</a>
+          <a className="flink !text-ink/70 hover:!text-ink" href={SITE.social.youtube} target="_blank" rel="noopener">YouTube</a>
+          <a className="flink !text-ink/70 hover:!text-ink" href={SITE.social.tiktok} target="_blank" rel="noopener">TikTok @rita.dolbakian</a>
+        </div>
+      </section>
+      <CtaBand title="Se ti riconosci in questa storia, *parliamone*." />
     </>
   );
 }

@@ -21,7 +21,7 @@ export default function Percorsi() {
 
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr] items-start">
-          <div><Label n="01" t="Orientamento" /><Heading text="Tre domande. Un consiglio *onesto*." className="text-5xl md:text-6xl" /><p className="mt-6 text-stone max-w-sm">Ti aiuto a capire da quale percorso partire. Nessun dato richiesto.</p></div>
+          <div><Label n="01" t="Orientamento" /><Heading text="Tre domande. Un consiglio *onesto*." className="text-5xl md:text-6xl" /><p className="mt-6 text-stone max-w-sm">Rispondi senza pensarci troppo: ti dico da dove partirei io. Nessun dato richiesto, nessuna email.</p></div>
           <Orientatore />
         </div>
       </section>
@@ -29,7 +29,7 @@ export default function Percorsi() {
       <section className="section bg-blush/30">
         <div className="wrap">
           <Label n="02" t="Il confronto" />
-          <Heading text="Come *scegliere* tra i percorsi?" className="text-5xl md:text-6xl" />
+          <Heading text="I tre percorsi, *a confronto*." className="text-5xl md:text-6xl" />
           <Reveal>
             <div className="mt-12 overflow-x-auto rounded-3xl bg-ivory">
               <table className="w-full min-w-[46rem] text-left">

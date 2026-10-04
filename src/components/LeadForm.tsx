@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export function LeadForm({ tipo, cta, withMessage = false, phone = true }: { tipo: "guida" | "contatti"; cta: string; withMessage?: boolean; phone?: boolean }) {
+export function LeadForm({ tipo, cta, withMessage = false, phone = true, compact = false }: { tipo: "guida" | "contatti"; cta: string; withMessage?: boolean; phone?: boolean; compact?: boolean }) {
   const [state, setState] = useState<"idle" | "sending" | "ok" | "err">("idle");
   const [msg, setMsg] = useState("");
 
@@ -27,11 +27,12 @@ export function LeadForm({ tipo, cta, withMessage = false, phone = true }: { tip
     <form onSubmit={submit} className="grid gap-6" noValidate>
       <div className="grid gap-6 sm:grid-cols-2">
         <label className="field"><span>Nome</span><input name="nome" required autoComplete="given-name" /></label>
-        <label className="field"><span>Cognome</span><input name="cognome" autoComplete="family-name" /></label>
+        {!compact && <label className="field"><span>Cognome</span><input name="cognome" autoComplete="family-name" /></label>}
+        {compact && <label className="field"><span>Email</span><input name="email" type="email" required autoComplete="email" /></label>}
       </div>
       <div className="grid gap-6 sm:grid-cols-2">
-        <label className="field"><span>Email</span><input name="email" type="email" required autoComplete="email" /></label>
-        {phone && <label className="field"><span>Telefono</span><input name="telefono" type="tel" autoComplete="tel" /></label>}
+        {!compact && <label className="field"><span>Email</span><input name="email" type="email" required autoComplete="email" /></label>}
+        {phone && !compact && <label className="field"><span>Telefono</span><input name="telefono" type="tel" autoComplete="tel" /></label>}
       </div>
       {withMessage && <label className="field"><span>Messaggio</span><textarea name="messaggio" rows={4} /></label>}
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
