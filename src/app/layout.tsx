@@ -31,7 +31,7 @@ const jsonLd = {
       sameAs: [SITE.social.instagram, SITE.social.youtube, SITE.social.tiktok],
     },
     {
-      "@type": "EducationalOrganization", "@id": `${SITE.url}/#academy`, name: "Rita Dolbakian Academy", alternateName: "RD Academy",
+      "@type": "EducationalOrganization", "@id": `${SITE.url}/#academy`, name: "Rita Dolbakian Academy", alternateName: "RD Academy", legalName: "RD SRL", vatID: "IT02097250472", address: { "@type": "PostalAddress", streetAddress: "Viale Garibaldi 42", postalCode: "51017", addressLocality: "Pescia", addressRegion: "PT", addressCountry: "IT" },
       url: SITE.url, logo: `${SITE.url}/media/logo.png`, founder: { "@id": `${SITE.url}/#rita` },
     },
     { "@type": "WebSite", "@id": `${SITE.url}/#website`, url: SITE.url, name: "Rita Dolbakian", inLanguage: "it-IT" },

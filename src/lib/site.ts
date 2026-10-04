@@ -27,3 +27,17 @@ export const CONTACT = {
   whatsapp: "", // solo cifre con prefisso, es. 393331234567 [DA CONFERMARE]
   whatsappMessage: "Ciao Rita, vorrei saperne di più sui tuoi percorsi.",
 };
+
+/** Dati societari (da visura). Il codice univoco SDI non si mostra sul sito. */
+export const COMPANY = {
+  name: "RD SRL",
+  vat: "02097250472",
+  rea: "619157",
+  sdi: "M5UXCR1",
+  pec: "rd_srl@namirialpec.it",
+  street: "Viale Garibaldi 42",
+  zip: "51017",
+  city: "Pescia",
+  province: "PT",
+  line: "RD SRL · P.IVA 02097250472 · Sede legale: Viale Garibaldi 42, 51017 Pescia (PT) · N. REA 619157 · PEC rd_srl@namirialpec.it",
+};

@@ -1,7 +1,7 @@
 import { PageHero, Label, Tbc, Faq } from "@/components/Ui";
 import { LeadForm } from "@/components/LeadForm";
 import { Slot } from "@/components/Slot";
-import { SITE, CONTACT } from "@/lib/site";
+import { SITE, CONTACT, COMPANY } from "@/lib/site";
 import { meta } from "@/lib/seo";
 
 export const metadata = meta("Contatti", "Scrivi a Rita Dolbakian Academy: modulo di contatto, WhatsApp, social e riferimenti.", "/contatti");
@@ -17,6 +17,8 @@ export default function Contatti() {
             <Slot kind="foto" id="contatti-hero" label="Rita, ritratto" ratio="4/5" art="leaf" className="max-w-xs" />
             <div><Label t="Email" />{CONTACT.email ? <a className="ulink text-ink" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> : <Tbc>email</Tbc>}</div>
             <div><Label t="WhatsApp" />{CONTACT.whatsapp ? <a className="ulink text-ink" href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener">Scrivimi su WhatsApp</a> : <Tbc>numero</Tbc>}</div>
+            <div><Label t="Sede legale" />{COMPANY.name}<br />{COMPANY.street}, {COMPANY.zip} {COMPANY.city} ({COMPANY.province})<br />P.IVA {COMPANY.vat}</div>
+            <div><Label t="PEC" /><a className="ulink text-ink" href={`mailto:${COMPANY.pec}`}>{COMPANY.pec}</a></div>
             <div><Label t="Risposta" />Rispondo di solito entro un giorno lavorativo. <Tbc>orari e tempi reali</Tbc></div>
             <div><Label t="Social" /><ul className="space-y-1"><li><a className="ulink text-ink" href={SITE.social.instagram} target="_blank" rel="noopener">Instagram</a></li><li><a className="ulink text-ink" href={SITE.social.youtube} target="_blank" rel="noopener">YouTube</a></li><li><a className="ulink text-ink" href={SITE.social.tiktok} target="_blank" rel="noopener">TikTok</a></li></ul></div>
           </div>
