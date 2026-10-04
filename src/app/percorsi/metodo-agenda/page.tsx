@@ -66,6 +66,18 @@ export default function MetodoAgenda() {
         </div>
       </section>
 
+
+      <section className="section-dark section">
+        <div className="wrap grid gap-10 lg:grid-cols-[0.6fr_1.4fr] items-center">
+          <Reveal><p className="font-display text-[clamp(5rem,16vw,11rem)] kw leading-none">80%+</p></Reveal>
+          <Reveal delay={0.1}>
+            <p className="eyebrow mb-4">Il dato che cambia tutto</p>
+            <p className="font-display text-3xl md:text-5xl leading-tight">delle donne tra i 25 e i 55 anni, il target perfetto del massaggio benessere, sceglie il proprio operatore di fiducia su Instagram.</p>
+            <p className="mt-6 text-lg text-ivory/75">Non da Google. Non dal passaparola. Da Instagram. Un sistema in 11 moduli per portarti da «brava ma invisibile» a un'agenda piena in 6 mesi, lavorando su due piattaforme: Instagram e TikTok.</p>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="section bg-blush/30">
         <div className="wrap">
           <Label n="02" t="Il metodo" />
@@ -106,7 +118,7 @@ export default function MetodoAgenda() {
       <Outcomes n="04" title="Cosa porti *a casa*" note={<Tbc>deliverable esatti del percorso e del formato</Tbc>} cols={3} items={[
         { t: "Una direzione chiara", d: "Sai chi vuoi aiutare, cosa offri e perché dovrebbero scegliere te, scritto in parole semplici." },
         { t: "Il percorso «ti vedo → ti scrivo»", d: "Sai cosa trova una persona nuova quando ti cerca e cosa deve fare per contattarti." },
-        { t: "Prezzi che reggono", d: "Un'offerta chiara e un prezzo che sai spiegare, senza svenderti." },
+        { t: "Prezzi più alti, senza perdere clienti", d: "Impari ad alzare le tariffe del 30-40% senza perdere nessun cliente, con un'offerta chiara e un prezzo che sai spiegare." },
         { t: "Risposte pronte", d: "Sai come rispondere a chi scrive «quanto costa?» senza ansia e senza forzare." },
         { t: "Un piano a passi", d: "Cosa fare questa settimana, la prossima e quella dopo, senza fare tutto insieme." },
         { t: "Continuità", d: "Una routine sostenibile, per far arrivare richieste con regolarità e non solo quando capita." },

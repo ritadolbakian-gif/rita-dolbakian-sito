@@ -103,6 +103,18 @@ export default function SoldOut() {
         </div>
       </section>
 
+
+      <section className="section-dark section">
+        <div className="wrap grid gap-10 lg:grid-cols-[0.6fr_1.4fr] items-center">
+          <Reveal><p className="font-display text-[clamp(5rem,16vw,11rem)] kw leading-none">80%+</p></Reveal>
+          <Reveal delay={0.1}>
+            <p className="eyebrow mb-4">Il dato che cambia tutto</p>
+            <p className="font-display text-3xl md:text-5xl leading-tight">delle donne tra i 25 e i 55 anni, il target perfetto del massaggio benessere, sceglie il proprio operatore di fiducia su Instagram.</p>
+            <p className="mt-6 text-lg text-ivory/75">Non da Google. Non dal passaparola. Da Instagram. Un percorso personale, per portarti da «brava ma invisibile» a «riferimento riconoscibile del tuo territorio» in 6 mesi, lavorando su due piattaforme: Instagram e TikTok.</p>
+          </Reveal>
+        </div>
+      </section>
+
       <Outcomes n="02" label="L'obiettivo" title="Cosa costruiamo *insieme* in 6 mesi." cols={3} note={<span className="text-xs">Descrizione degli obiettivi del percorso, non una promessa di risultato.</span>} items={[
         { t: "Un'identità riconoscibile", d: "Smetti di essere «una delle tante»: chi ti trova capisce subito chi sei e cosa fai di diverso." },
         { t: "Un'agenda più prevedibile", d: "Si lavora per passare dal «chissà se questo mese va bene» a richieste regolari, da clienti che scegli tu." },

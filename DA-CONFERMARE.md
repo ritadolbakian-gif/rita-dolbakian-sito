@@ -24,6 +24,6 @@
 - Wellness Mastery è stato rinominato Metodo Sold Out (/percorsi/sold-out; il vecchio indirizzo reindirizza).
 - Garanzia: nel PDF Sold Out è «Primi 2 mesi» (con condizioni e valutazione di «miglioramento concreto»); sul resto del sito era «per tutta la durata». Scegliere una linea e farla scrivere al legale: «nessun miglioramento concreto» è un criterio soggettivo.
 - Dichiarazioni di risultato e guadagno (Antonella C. oltre 7.000 €/mese, Alessia A. 1.000→2.800 €, Mariangela F. 2.000 €): servono consenso scritto e prove dei dati; mostrate con la dicitura «risultati individuali, non garantiti».
-- Non riportati perché senza fonte o promesse assolute: «80%+ delle donne sceglie l'operatore su Instagram» e «alzare le tariffe del 30-40% senza perdere nessun cliente». Se hai una fonte, si possono rimettere.
+- Riportati su richiesta, ma da verificare: «80%+ delle donne 25-55 sceglie l'operatore su Instagram» (serve una fonte citabile) e «alzare le tariffe del 30-40% senza perdere nessun cliente» (promessa assoluta, rischio sulle pratiche commerciali scorrette).
 - Prezzi di Agenda e Sold Out NON pubblicati sul sito (si comunicano in videochiamata). Sul sito resta solo il valore economico di ciò che è incluso (Agenda 3.670 €, Sold Out 8.500 €): verificare che il confronto «valore» sia sostenibile (legge sulle pratiche commerciali, prezzi di riferimento). Heylight è citata tra le finanziarie: confermare.
 - Posti Sold Out ancora disponibili nel trimestre: da compilare.
