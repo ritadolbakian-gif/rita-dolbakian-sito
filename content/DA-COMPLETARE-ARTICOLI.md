@@ -27,3 +27,20 @@ Segnaposto che ho **rimosso dal testo pubblicato** perché richiedono contenuti 
 - [Da validare con Rita in base al suo metodo.]
 - [Elenco di cautele da validare con Rita e con un professionista sanitario.]
 - [VALIDARE CON RITA: terminologia e tecniche effettivamente insegnate nel suo metodo]
+
+
+# Articoli 11–20 (nuovo documento)
+
+Pubblicati: 17, 19, 20. **Non pubblicati** perché trattano normativa, partita IVA, guadagni, centro massaggi, attestati o tecnica e il documento stesso chiede revisione di un professionista (legale, commercialista, sanitario) prima di andare online: 11, 12, 13, 14, 15, 16, 18. Per pubblicarli: revisione, poi `"published": true` nel file in `content/blog/`.
+
+## 19. Disdette e no-show: come gestirli senza perdere clienti
+- [VERIFICARE]
+- [VERIFICARE con commercialista/legale]
+
+## 20. WhatsApp Business per massaggiatori: come usarlo bene
+- [VERIFICARE con un consulente privacy]
+
+## Come pubblicare un articolo trattenuto
+1. Fai rivedere il testo dal professionista indicato (legale, commercialista, sanitario).
+2. Correggi il file in `content/blog/` e togli i segnaposto `[...]`.
+3. Metti `"published": true` nell'intestazione del file.

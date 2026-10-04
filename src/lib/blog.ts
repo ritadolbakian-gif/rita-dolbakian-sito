@@ -12,7 +12,7 @@ export type Post = {
 };
 
 const DIR = path.join(process.cwd(), "content", "blog");
-export const CATEGORIES = ["Clienti e agenda", "Prezzi e posizionamento", "Instagram e contenuti", "Vendita naturale", "Tecnica e formazione"];
+export const CATEGORIES = ["Clienti e agenda", "Prezzi e posizionamento", "Instagram e contenuti", "Vendita naturale", "Avviare l'attività", "Tecnica e formazione"];
 
 const slugify = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const strip = (s: string) => s.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\*\*|__|\*|_/g, "").replace(/\s+/g, " ").trim();
@@ -29,6 +29,9 @@ const RELATED: Record<string, string[]> = {
   "come-scegliere-un-corso-di-massaggio": ["corso-massaggio-online-funziona", "imparare-a-massaggiare-da-zero"],
   "corso-massaggio-online-funziona": ["come-scegliere-un-corso-di-massaggio", "imparare-a-massaggiare-da-zero"],
   "imparare-a-massaggiare-da-zero": ["come-scegliere-un-corso-di-massaggio", "corso-massaggio-online-funziona"],
+  "massaggiatrice-domicilio-o-studio": ["come-trovare-clienti-massaggiatrice", "quanto-far-pagare-un-massaggio", "google-business-profile-massaggiatori"],
+  "gestire-disdette-clienti": ["fidelizzare-clienti-massaggi", "agenda-massaggiatrice-mesi-vuoti", "whatsapp-business-massaggiatori"],
+  "whatsapp-business-massaggiatori": ["come-rispondere-quanto-costa", "gestire-disdette-clienti", "fidelizzare-clienti-massaggi"],
 };
 
 function parseFile(file: string): { fm: Record<string, unknown>; body: string } {
@@ -107,4 +110,11 @@ export function getAllPosts(): Post[] { return (cache ??= build()); }
 export const getPublished = () => getAllPosts().filter((p) => p.published);
 export const getUpcoming = () => getAllPosts().filter((p) => !p.published);
 export const getPost = (slug: string) => getAllPosts().find((p) => p.slug === slug);
-export const getRelated = (slug: string) => (RELATED[slug] ?? []).map((s) => getPost(s)).filter((p): p is Post => !!p && p.published);
+export function getRelated(slug: string): Post[] {
+  const manual = (RELATED[slug] ?? []).map((s) => getPost(s)).filter((p): p is Post => !!p && p.published);
+  if (manual.length >= 3) return manual;
+  const me = getPost(slug);
+  const fill = getPublished().filter((p) => p.slug !== slug && !manual.includes(p) && me && p.category === me.category);
+  const rest = getPublished().filter((p) => p.slug !== slug && !manual.includes(p) && !fill.includes(p));
+  return [...manual, ...fill, ...rest].slice(0, 3);
+}
