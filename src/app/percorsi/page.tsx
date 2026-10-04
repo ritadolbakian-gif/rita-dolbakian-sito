@@ -18,7 +18,7 @@ const rows = [
 export default function Percorsi() {
   return (
     <>
-      <PageHero eyebrow="Percorsi" title="Non tutti partono dallo *stesso* punto." answer="Rita Dolbakian offre due strade: il Metodo A.G.E.N.D.A. e Wellness Mastery per chi lavora nel benessere e vuole più continuità online, e il Metodo Rita Dolbakian per chi vuole imparare a massaggiare o perfezionare la propria tecnica, online e in presenza.">
+      <PageHero imageId="percorsi-top" imageRatio="4/5" imageArt="waves" eyebrow="Percorsi" title="Non tutti partono dallo *stesso* punto." answer="Rita Dolbakian offre due strade: il Metodo A.G.E.N.D.A. e Wellness Mastery per chi lavora nel benessere e vuole più continuità online, e il Metodo Rita Dolbakian per chi vuole imparare a massaggiare o perfezionare la propria tecnica, online e in presenza.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota la call gratuita <span className="arr">→</span></Link>
       </PageHero>
 

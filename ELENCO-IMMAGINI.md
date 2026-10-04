@@ -114,3 +114,7 @@ Pixel di riferimento: 4:5 = 1600×2000 · 4:3 = 1600×1200 · 3:4 = 1500×2000 �
 - Già inserite: 4 foto reali di Rita + logo + favicon + immagine social.
 - Da creare: circa 55 immagini (la maggior parte 🟢 still life o mani), più 3 video (presentazione Rita, lezione di prova, video Wellness Mastery) e i contenuti reali delle allieve.
 - Priorità: 1) video di presentazione, 2) foto vere in aula e con le allieve, 3) `card-*` e `percorsi-*`, 4) copertine blog, 5) il resto.
+
+## STATO (aggiornato)
+✅ Inserite: le 15 immagini che hai creato (copertine A.G.E.N.D.A. e Wellness Mastery, Rita al laptop/tablet/in videocall, sala massaggi, mani, lezioni, ritratto B/N, ecc.). Sono usate in testata delle pagine (`*-top`), nelle card, nei livelli e nella galleria.
+⚠️ Da sostituire prima del lancio con foto vere: le immagini di **aule e gruppi di allieve** (`rd-top`, `rd-hero`, `rd-aula`, `cert-top`, `cert-hero`, `corso-rd-presenza`). Sono illustrative: non vanno presentate come edizioni reali.

@@ -11,10 +11,18 @@ export function JsonLd({ data }: { data: object }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
-/** Testata di pagina: H1 unico + answer block 40–60 parole. */
-export function PageHero({ eyebrow, title, answer, dark = false, bgId, children }: { eyebrow: string; title: string; answer?: ReactNode; dark?: boolean; bgId?: string; children?: ReactNode }) {
+/** Testata di pagina: H1 unico + answer block. `imageId` = foto a destra (due colonne); `bgId` = sfondo a tutta altezza. */
+export function PageHero({ eyebrow, title, answer, dark = false, bgId, imageId, imageRatio = "4/5", imageArt = "orbs", children }: { eyebrow: string; title: string; answer?: ReactNode; dark?: boolean; bgId?: string; imageId?: string; imageRatio?: string; imageArt?: "arch" | "stones" | "waves" | "orbs" | "leaf"; children?: ReactNode }) {
+  const text = (
+    <div>
+      <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />{eyebrow}</p>
+      <Heading as="h1" text={title} className={imageId ? "text-[clamp(2.3rem,8vw,4.6rem)] max-w-3xl" : "text-[clamp(2.3rem,9.5vw,5.6rem)] max-w-5xl"} delay={0.1} immediate />
+      {answer && <Reveal delay={0.5}><p className={`mt-8 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>{answer}</p></Reveal>}
+      {children && <Reveal delay={0.6}><div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 [&>*]:justify-center">{children}</div></Reveal>}
+    </div>
+  );
   return (
-    <section data-hero-dark={dark ? "" : undefined} className={`${dark ? "section-dark" : "bg-blush/30"} relative overflow-hidden pt-28 pb-12 md:pt-44 md:pb-24`}>
+    <section data-hero-dark={dark ? "" : undefined} className={`${dark ? "section-dark" : "bg-blush/30"} relative overflow-hidden pt-28 pb-12 md:pt-40 md:pb-20`}>
       {bgId && (
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden>
           <Slot id={bgId} label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
@@ -22,10 +30,12 @@ export function PageHero({ eyebrow, title, answer, dark = false, bgId, children 
         </div>
       )}
       <div className="wrap relative">
-        <p className="eyebrow mb-6">{eyebrow}</p>
-        <Heading as="h1" text={title} className="text-[clamp(2.3rem,9.5vw,5.6rem)] max-w-5xl" delay={0.1} immediate />
-        {answer && <Reveal delay={0.5}><p className={`mt-8 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>{answer}</p></Reveal>}
-        {children && <Reveal delay={0.6}><div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 [&>*]:justify-center">{children}</div></Reveal>}
+        {imageId ? (
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+            {text}
+            <Reveal delay={0.3}><Slot kind="foto" id={imageId} label={eyebrow} ratio={imageRatio} art={imageArt} className="shadow-[0_40px_80px_-40px_rgba(11,10,9,.5)]" /></Reveal>
+          </div>
+        ) : text}
       </div>
     </section>
   );

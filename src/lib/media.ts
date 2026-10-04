@@ -57,6 +57,13 @@ export const MEDIA: Record<string, MediaItem> = {
   "contatti-hero": { src: "/media/rita-porta.webp", alt: "Rita, ritratto per la pagina contatti (4:5)" , pos: "50% 25%" },
   "risultati-hero": { alt: "Rita con una allieva (autorizzata) (16:9)" },
   "area-privata": { src: "/media/rita-divano.webp", alt: "Studio accogliente, area privata (16:9)" , pos: "30% 40%" },
+  // Foto in testata delle pagine (due colonne)
+  "agenda-top": { src: "/media/rita-conversazione.webp", alt: "Rita ascolta una professionista del benessere", pos: "68% 40%" },
+  "wm-top": { src: "/media/rita-tablet.webp", alt: "Rita con il tablet nel suo studio", pos: "42% 40%" },
+  "rd-top": { src: "/media/lezione-gruppo.webp", alt: "Rita mostra una tecnica a un piccolo gruppo (immagine illustrativa)", pos: "50% 40%" },
+  "cert-top": { src: "/media/aula-grande.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "60% 40%" },
+  "percorsi-top": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio", pos: "52% 35%" },
+  "corsi-top": { src: "/media/rita-oli.webp", alt: "Rita nel suo studio, tra gli oli", pos: "50% 30%" },
   // CHI SONO
   "about-portrait": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "about-video": { alt: "Video di presentazione (16:10)" },

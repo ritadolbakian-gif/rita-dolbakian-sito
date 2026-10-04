@@ -34,7 +34,7 @@ export default function WellnessMastery() {
   return (
     <>
       <JsonLd data={courseLd("Wellness Mastery", "Da operatrice del benessere a imprenditrice digitale: 10 moduli, 6 bonus e garanzia di 14 giorni.", "/percorsi/wellness-mastery")} />
-      <PageHero dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il percorso di Rita Dolbakian per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
+      <PageHero imageId="wm-top" imageRatio="4/5" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il percorso di Rita Dolbakian per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
