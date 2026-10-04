@@ -39,3 +39,6 @@ Same woman and mood as above, composition leaving a large clean empty area for t
 2. In `src/lib/media.ts` scrivi: `"wm-garanzia": { src: "/media/wm-garanzia.webp", alt: "Rita Dolbakian: il rischio è mio" }`.
 3. Controlla mani, occhi e che non ci siano scritte involontarie (nella versione A).
 4. Mandami i file e li inserisco io (anche gli altri formati, se vuoi usarli nelle altre pagine).
+
+## STATO
+✅ Versione con testo («Soddisfatti o rimborsati. Per tutto il percorso. Il rischio è mio.») inserita come `garanzia-testo` nelle sezioni garanzia di Wellness Mastery, Metodo A.G.E.N.D.A. e Metodo Rita Dolbakian. La versione senza testo (`wm-garanzia`) è disponibile per altri usi.

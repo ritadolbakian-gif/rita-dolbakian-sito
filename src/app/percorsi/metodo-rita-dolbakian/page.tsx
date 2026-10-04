@@ -134,7 +134,7 @@ export default function MetodoRD() {
 
       <GuaranteeBand />
 
-      <GuaranteeConditions n="09" />
+      <GuaranteeConditions n="09" id="garanzia" imageId="garanzia-testo" />
 
       <Objections n="10" items={[
         { t: "Non ho mai massaggiato", d: "Il Livello 1 parte da zero. Nessuno si aspetta che tu sappia già." },

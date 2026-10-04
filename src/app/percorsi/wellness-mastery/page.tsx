@@ -184,7 +184,7 @@ export default function WellnessMastery() {
         { t: "Sai quale passo fare dopo", d: <>Ne parliamo insieme, con calma. <Tbc>cosa è previsto dopo le 8 settimane</Tbc></> },
       ]} />
 
-      <GuaranteeConditions n="09" dark id="garanzia" imageId="wm-garanzia" />
+      <GuaranteeConditions n="09" dark id="garanzia" imageId="garanzia-testo" />
 
       <GuaranteeBand compact cta={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
 

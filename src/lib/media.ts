@@ -69,6 +69,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "cert-top": { src: "/media/rita-massaggio-1.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "55% 40%" },
   "percorsi-top": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio", pos: "52% 35%" },
   "corsi-top": { src: "/media/rita-oli.webp", alt: "Rita nel suo studio, tra gli oli", pos: "50% 30%" },
+  "garanzia-testo": { src: "/media/garanzia-testo.webp", alt: "Rita Dolbakian con la mano sul cuore: Soddisfatti o rimborsati. Per tutto il percorso. Il rischio è mio.", pos: "50% 25%" },
   "wm-garanzia": { src: "/media/wm-garanzia.webp", alt: "Rita Dolbakian con la mano sul cuore: il rischio è mio", pos: "50% 30%" },
   // CHI SONO: storia e galleria (foto reali)
   "story-bar": { src: "/media/rita-bar.webp", alt: "Rita dietro il bancone di un bar, quando lavorava come barista", pos: "50% 45%" },

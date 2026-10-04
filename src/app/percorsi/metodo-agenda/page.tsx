@@ -169,7 +169,7 @@ export default function MetodoAgenda() {
 
       <GuaranteeBand />
 
-      <GuaranteeConditions n="12" />
+      <GuaranteeConditions n="12" id="garanzia" imageId="garanzia-testo" />
 
       <Objections n="13" items={[
         { t: "Non ho tempo", d: "Il percorso è pensato per chi lavora già: pochi passi, fatti con regolarità, valgono più di una maratona." },
