@@ -59,7 +59,7 @@ export default function ChiSono() {
         </div>
       </section>
 
-      <Chapter id="bar" n="01" label="Il bar" title="Pensavo di *meritare di più*." img={<Slot kind="foto" id="story-bar" label="Rita al bar" ratio="4/5" art="orbs" />}>
+      <Chapter id="bar" n="01" label="Il bar" title="Pensavo di *meritare di più*." img={<div className="grid grid-cols-2 gap-3 md:gap-4"><Slot kind="foto" id="story-bar" label="Rita al bar" ratio="4/5" art="orbs" /><Slot kind="foto" id="story-bar-2" label="Rita al bar" ratio="4/5" art="stones" className="mt-10 md:mt-16" /></div>}>
         <p>Prima di tutto questo lavoravo in un bar. Bicchieri da preparare, bottiglie da aprire, turni che non finivano mai.</p>
         <p>Vivevo nella frustrazione. Ogni giorno la stessa domanda: «Possibile che questa sia tutta la mia vita?». Dentro di me ero sicura di valere di più, di potermi costruire qualcosa di mio. Ma non sapevo da dove cominciare.</p>
         <blockquote className="border-l-2 border-rose pl-5 font-display text-3xl italic leading-snug text-ink">Sapevo di meritare di più. Non sapevo come arrivarci.</blockquote>

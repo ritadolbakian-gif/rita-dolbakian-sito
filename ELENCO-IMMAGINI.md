@@ -118,3 +118,7 @@ Pixel di riferimento: 4:5 = 1600×2000 · 4:3 = 1600×1200 · 3:4 = 1500×2000 �
 ## STATO (aggiornato)
 ✅ Inserite: le 15 immagini che hai creato (copertine A.G.E.N.D.A. e Wellness Mastery, Rita al laptop/tablet/in videocall, sala massaggi, mani, lezioni, ritratto B/N, ecc.). Sono usate in testata delle pagine (`*-top`), nelle card, nei livelli e nella galleria.
 ⚠️ Da sostituire prima del lancio con foto vere: le immagini di **aule e gruppi di allieve** (`rd-top`, `rd-hero`, `rd-aula`, `cert-top`, `cert-hero`, `corso-rd-presenza`). Sono illustrative: non vanno presentate come edizioni reali.
+
+## STATO (aggiornamento foto reali)
+✅ Foto reali di Rita al lavoro (massaggi, riprese all'aperto, bar) inserite in Chi sono, Metodo Rita Dolbakian, Formazione certificata, card dei percorsi e Wellness Mastery.
+⚠️ Restano immagini illustrative (AI) di aule e gruppi: `cert-hero`, `rd-aula`, `corso-rd-presenza`. Da sostituire con foto vere di una edizione reale.

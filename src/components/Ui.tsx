@@ -25,15 +25,15 @@ export function PageHero({ eyebrow, title, answer, dark = false, bgId, imageId, 
     <section data-hero-dark={dark ? "" : undefined} className={`${dark ? "section-dark" : "bg-blush/30"} relative overflow-hidden pt-28 pb-12 md:pt-40 md:pb-20`}>
       {bgId && (
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden>
-          <Slot id={bgId} label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/25 to-transparent" />
+          <Slot id={bgId} priority raw sizes="58vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/30 via-25% to-transparent" />
         </div>
       )}
       <div className="wrap relative">
         {imageId ? (
           <div className={`grid items-center gap-10 lg:gap-14 ${imageRatio.startsWith("16") ? "lg:grid-cols-[0.8fr_1.2fr]" : "lg:grid-cols-[1.1fr_0.9fr]"}`}>
             {text}
-            <Reveal delay={0.3}><Slot kind="foto" id={imageId} label={eyebrow} ratio={imageRatio} art={imageArt} className="shadow-[0_40px_80px_-40px_rgba(11,10,9,.5)]" /></Reveal>
+            <Reveal delay={0.3}><Slot kind="foto" id={imageId} priority label={eyebrow} ratio={imageRatio} art={imageArt} className="shadow-[0_40px_80px_-40px_rgba(11,10,9,.5)]" /></Reveal>
           </div>
         ) : text}
       </div>

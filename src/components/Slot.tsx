@@ -8,7 +8,7 @@ import { MEDIA } from "@/lib/media";
  * Spazio per foto o video di Rita.
  * Passa `id` (vedi lib/media.ts) oppure `src` diretto. Senza file mostra un'illustrazione nei colori del brand.
  */
-export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art, src, poster, id, alt }: { kind?: "foto" | "video"; label: string; ratio?: string; className?: string; art?: ArtVariant; src?: string; poster?: string; id?: string; alt?: string }) {
+export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art, src, poster, id, alt, priority = false, sizes, raw = false }: { kind?: "foto" | "video"; label: string; ratio?: string; className?: string; art?: ArtVariant; src?: string; poster?: string; id?: string; alt?: string; priority?: boolean; sizes?: string; raw?: boolean }) {
   const reduce = useReducedMotion();
   const m = id ? MEDIA[id] : undefined;
   const file = src ?? m?.src;
@@ -33,7 +33,7 @@ export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art,
       {isVideo ? (
         <video src={file} poster={cover} controls playsInline preload="none" className="absolute inset-0 size-full object-cover" aria-label={text} />
       ) : file ? (
-        <Image src={file} alt={text} fill priority={id === "hero"} sizes="(min-width:1024px) 45vw, (min-width:640px) 70vw, 100vw" className="object-cover" style={{ objectPosition: m?.pos }} />
+        <Image src={file} alt={text} fill unoptimized={raw} priority={priority || id === "hero"} sizes={sizes ?? "(min-width:1024px) 45vw, (min-width:640px) 70vw, 100vw"} className="object-cover" style={{ objectPosition: m?.pos }} />
       ) : (
         <Art variant={art ?? pickArt(label)} />
       )}
