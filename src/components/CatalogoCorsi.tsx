@@ -8,8 +8,8 @@ const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }
   {
     id: "affiancamento", n: "01", title: "Percorsi di *affiancamento*", lead: "Lavoriamo insieme, con una guida vera: per far crescere la tua attività o per imparare a massaggiare.",
     items: [
-      { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "6 mesi, 11 moduli e affiancamento individuale per riempire la tua agenda.", fmt: "6 mesi · 11 moduli", price: "1.497 €", badge: "Fino a 24 rate", href: "/percorsi/metodo-agenda" },
-      { id: "corso-wm", t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con me: una call a settimana, 8 posti a trimestre.", fmt: "Mentorship 1:1", price: "4.997 €", badge: "8 posti a trimestre", href: "/percorsi/sold-out" },
+      { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "6 mesi, 11 moduli e affiancamento individuale per riempire la tua agenda.", fmt: "6 mesi · 11 moduli", price: "Dopo la call", badge: "Con affiancamento", href: "/percorsi/metodo-agenda" },
+      { id: "corso-wm", t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con me: una call a settimana, 8 posti a trimestre.", fmt: "Mentorship 1:1", price: "Dopo la call", badge: "8 posti a trimestre", href: "/percorsi/sold-out" },
       { id: "corso-rd-online", t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", fmt: "Video", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
       { id: "corso-rd-presenza", t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", fmt: "In presenza", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
     ],

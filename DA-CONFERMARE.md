@@ -25,5 +25,5 @@
 - Garanzia: nel PDF Sold Out è «Primi 2 mesi» (con condizioni e valutazione di «miglioramento concreto»); sul resto del sito era «per tutta la durata». Scegliere una linea e farla scrivere al legale: «nessun miglioramento concreto» è un criterio soggettivo.
 - Dichiarazioni di risultato e guadagno (Antonella C. oltre 7.000 €/mese, Alessia A. 1.000→2.800 €, Mariangela F. 2.000 €): servono consenso scritto e prove dei dati; mostrate con la dicitura «risultati individuali, non garantiti».
 - Non riportati perché senza fonte o promesse assolute: «80%+ delle donne sceglie l'operatore su Instagram» e «alzare le tariffe del 30-40% senza perdere nessun cliente». Se hai una fonte, si possono rimettere.
-- Prezzi: Agenda 1.497 € (fino a 24 rate); Sold Out 4.997 € (4.497 € in unica soluzione), finanziamento Heylight 3-24 mesi. Confermare IVA e società finanziarie.
+- Prezzi di Agenda e Sold Out NON pubblicati sul sito (si comunicano in videochiamata). Sul sito resta solo il valore economico di ciò che è incluso (Agenda 3.670 €, Sold Out 8.500 €): verificare che il confronto «valore» sia sostenibile (legge sulle pratiche commerciali, prezzi di riferimento). Heylight è citata tra le finanziarie: confermare.
 - Posti Sold Out ancora disponibili nel trimestre: da compilare.

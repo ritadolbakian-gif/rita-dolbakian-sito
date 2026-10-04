@@ -154,7 +154,7 @@ export default function SoldOut() {
       <section id="investimento" className="section scroll-mt-28">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] items-start">
           <div>
-            <Label n="06" t="Il valore reale" />
+            <Label n="06" t="Il valore" />
             <Heading text="Cosa ricevi, e quanto *varrebbe* da solo." className="text-4xl md:text-6xl" />
             <dl className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
               {value.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
@@ -163,14 +163,14 @@ export default function SoldOut() {
           </div>
           <Reveal>
             <div className="section-dark rounded-3xl p-8 md:p-10">
-              <p className="eyebrow">Il tuo investimento</p>
-              <p className="mt-3 font-display text-7xl leading-none"><span className="text-3xl text-ivory/50 line-through mr-3">8.500 €</span>4.997 €</p>
+              <p className="eyebrow">Valore di ciò che ricevi</p>
+              <p className="mt-3 font-display text-7xl leading-none">8.500 €</p>
+              <p className="mt-2 text-sm text-ivory/60">di valore complessivo di tutto ciò che è incluso.</p>
               <div className="mt-8 space-y-5 text-ivory/80">
-                <p><strong className="text-ivory">Pagamento unico: 4.497 €.</strong> 500 € di sconto se paghi in un'unica soluzione.</p>
-                <p><strong className="text-ivory">Finanziamento Heylight:</strong> da 3 a 24 mesi, soggetto ad approvazione creditizia.</p>
+                <p>Il prezzo lo condivido durante la videochiamata, dopo aver capito se Sold Out è il percorso giusto per te e se ci sono posti nel trimestre.</p>
+                <p>Se vuoi dividere il pagamento, ne parliamo in call: <Link href="/pagamenti-rateali" className="ulink">come funziona il pagamento a rate</Link>.</p>
               </div>
-              <Link href="#candidatura" className="btn btn-primary mt-8">Candidati <span className="arr">→</span></Link>
-              <p className="mt-5 text-xs text-ivory/50">Prezzi comprensivi di IVA se dovuta. <Tbc>conferma IVA e importi finali</Tbc> Maggiori informazioni sul pagamento a rate nella pagina <Link href="/pagamenti-rateali" className="ulink">Pagamento a rate</Link>.</p>
+              <Link href="/call-orientamento" className="btn btn-primary mt-8">Prenota la videochiamata <span className="arr">→</span></Link>
             </div>
           </Reveal>
         </div>
@@ -221,7 +221,7 @@ export default function SoldOut() {
         { label: "Affiancamento", cells: ["2 call individuali al mese, chat 7/7, Q&A bisettimanali", "Una call a settimana (24), revisione contenuti, WhatsApp diretto"] },
         { label: "Fatto per te", cells: ["Video corso e bonus", "Landing page, prodotto digitale, piattaforma, newsletter"] },
         { label: "Posti", cells: ["Aperto", "8 per trimestre"] },
-        { label: "Investimento", cells: ["1.497 €, fino a 24 rate", "4.997 € (4.497 € in unica soluzione)"] },
+        { label: "Prezzo", cells: ["Lo comunico in videochiamata", "Lo comunico in videochiamata"] },
       ]} />
 
       <Faq id="domande" items={[
@@ -229,7 +229,7 @@ export default function SoldOut() {
         { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il sistema in 11 moduli con affiancamento. Sold Out è il massimo affiancamento: una call a settimana, revisione dei contenuti e servizi fatti dal mio team." },
         { q: "Devo mostrarmi sui social?", a: "Sì. Il metodo si basa su un'identità personale riconoscibile: video, volto e voce, non solo grafiche." },
         { q: "Quanto tempo richiede?", a: <>Serve tempo ogni settimana: la call, i compiti e i contenuti. <Tbc>ore settimanali consigliate</Tbc></>, plain: "Serve tempo ogni settimana per la call, i compiti e i contenuti." },
-        { q: "Quanto costa e posso pagare a rate?", a: "L'investimento è di 4.997 €, oppure 4.497 € in un'unica soluzione. Puoi anche accedere a un finanziamento Heylight da 3 a 24 mesi, soggetto ad approvazione creditizia." },
+        { q: "Quanto costa e posso pagare a rate?", a: "Il prezzo lo comunico durante la videochiamata di orientamento. Se vuoi dividere il pagamento in rate, ne parliamo in quella sede." },
         { q: "C'è una garanzia?", a: "Sì, la garanzia «Primi 2 mesi»: se segui le indicazioni, frequenti le call, completi i compiti e applichi le revisioni e non vedi nessun miglioramento concreto, ti restituisco l'investimento." },
         { q: "Perché solo 8 posti?", a: "Perché è mentorship 1:1: ogni persona ha una call settimanale e supporto diretto, e il mio tempo reale è limitato." },
         { q: "Il teambuilding è incluso nel prezzo?", a: "La giornata dal vivo è inclusa. Restano esclusi i costi di viaggio e di soggiorno." },

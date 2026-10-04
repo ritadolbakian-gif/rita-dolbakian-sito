@@ -158,7 +158,7 @@ export default function MetodoAgenda() {
       <section id="investimento" className="section scroll-mt-28">
         <div className="wrap grid gap-12 lg:grid-cols-2 items-start">
           <div>
-            <Label n="05d" t="Il valore reale" />
+            <Label n="05d" t="Il valore" />
             <Heading text="Cosa ricevi, e quanto *varrebbe* da solo." className="text-4xl md:text-6xl" />
             <dl className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
               {valueList.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
@@ -167,11 +167,11 @@ export default function MetodoAgenda() {
           </div>
           <Reveal>
             <div className="rounded-3xl bg-blush/40 p-8 md:p-10">
-              <p className="eyebrow">Il tuo investimento</p>
-              <p className="mt-3 font-display text-7xl leading-none"><span className="text-3xl text-stone line-through mr-3">3.670 €</span>1.497 €</p>
-              <p className="mt-6 text-stone">In un'unica soluzione, oppure rateizzabile fino a 24 rate, salvo approvazione della società finanziaria. Come funziona: <Link href="/pagamenti-rateali" className="ulink text-ink">Pagamento a rate</Link>.</p>
-              <div className="mt-8"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call di orientamento <span className="arr">→</span></Link></div>
-              <p className="mt-4 text-xs text-stone"><Tbc>conferma IVA e condizioni di rateizzazione</Tbc></p>
+              <p className="eyebrow">Valore di ciò che ricevi</p>
+              <p className="mt-3 font-display text-7xl leading-none">3.670 €</p>
+              <p className="mt-2 text-sm text-stone">di valore complessivo di tutto ciò che è incluso.</p>
+              <p className="mt-6 text-stone">Il prezzo lo condivido durante la videochiamata di orientamento, dopo aver capito se il percorso fa per te. Se vuoi dividere il pagamento in rate, ne parliamo lì: <Link href="/pagamenti-rateali" className="ulink text-ink">come funziona</Link>.</p>
+              <div className="mt-8"><Link href="/call-orientamento" className="btn btn-primary">Prenota la videochiamata per conoscere il prezzo <span className="arr">→</span></Link></div>
             </div>
           </Reveal>
         </div>
@@ -262,7 +262,7 @@ export default function MetodoAgenda() {
         { label: "Per chi", cells: ["Chi vuole un metodo preciso per riempire l'agenda", "Chi vuole essere seguita ogni settimana e farsi fare il lavoro tecnico"] },
         { label: "Quando", cells: ["Si parte da qui", "È il passo successivo"] },
         { label: "Formato", cells: ["6 mesi · 11 moduli · 2 call al mese · chat 7/7", "6 mesi · una call a settimana · 8 posti a trimestre"] },
-        { label: "Investimento", cells: ["1.497 €, fino a 24 rate", "4.997 € (4.497 € in unica soluzione)"] },
+        { label: "Prezzo", cells: ["Lo comunico in videochiamata", "Lo comunico in videochiamata"] },
       ]} />
 
       <Faq items={[
@@ -270,7 +270,7 @@ export default function MetodoAgenda() {
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono smettere di andare a tentativi." },
         { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo e nessuno spam: è un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
-        { q: "Quanto costa il percorso?", a: "L'investimento è di 1.497 € in un'unica soluzione, oppure rateizzabile fino a 24 rate, salvo approvazione. Il valore dei singoli componenti è indicato nella sezione dedicata." },
+        { q: "Quanto costa il percorso?", a: "Il prezzo lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso è adatto a te. Il valore di tutto ciò che è incluso è indicato nella sezione dedicata." },
         { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è la mentorship 1:1 Metodo Sold Out, il massimo affiancamento, con 8 posti per trimestre." },
         { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
         { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },
