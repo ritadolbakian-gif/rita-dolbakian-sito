@@ -70,3 +70,15 @@ export const REVIEW_SOURCES = {
 /** Recensioni reali da mostrare (copiate da Google/Trustpilot, con consenso/pubbliche). */
 export type Review = { author: string; rating: 1 | 2 | 3 | 4 | 5; text: string; source: "google" | "trustpilot"; date?: string; url?: string };
 export const REVIEWS: Review[] = [];
+
+/**
+ * RISULTATO PERSONALE DI RITA (pagina Chi sono).
+ * Mostrato online solo con `confirmed: true`. In sviluppo/anteprima si vede con la scritta «da confermare».
+ * Prima di confermarlo: tieni a disposizione le fatture/prove del dato (obbligo di veridicità della pubblicità).
+ */
+export const PERSONAL_RESULT = {
+  confirmed: false, // [DA CONFERMARE: importo, periodo e documentazione]
+  amount: "15.000 €",
+  label: "in un solo mese, e poi in modo costante ogni mese",
+};
+export const showPersonalResult = () => PERSONAL_RESULT.confirmed || showDraftStats();

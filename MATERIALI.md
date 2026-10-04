@@ -36,3 +36,6 @@ Imposta la variabile `GHL_WEBHOOK_URL` (webhook GoHighLevel) per far arrivare i 
 - `RATING`: valutazione media reale (es. 4,9 su 120 recensioni): compare nel hero, nella striscia, nella sezione Recensioni e nei dati strutturati di Google. Inserirla solo se è vera e verificabile.
 - `REVIEWS`: le recensioni singole da mostrare (copiate da Google/Trustpilot).
 La sezione Recensioni è in Home, Wellness Mastery e Risultati.
+
+## Risultato personale di Rita (pagina Chi sono)
+`src/lib/proof.ts` → `PERSONAL_RESULT`: oggi `confirmed: false`, quindi la cifra «15.000 € in un solo mese, poi in modo costante» si vede solo in sviluppo/anteprima con la scritta «da confermare» e **non è pubblicata online**. Quando Rita conferma importo e periodo (con fatture a disposizione) metti `confirmed: true`. Sotto la cifra c'è il disclaimer: risultato personale, non una promessa di guadagno.
