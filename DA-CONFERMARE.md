@@ -1,7 +1,7 @@
 # Da confermare con Rita
 
 ## Urgenti (bloccano pagine)
-1. Significato delle 6 lettere di A.G.E.N.D.A. (PROPOSTA nel sito: Ascolto · Gente · Essenza · Notorietà · Dialogo · Abitudine, da far approvare a Rita). (confermato: A.G.E.N.D.A. = metodo + primo percorso di affiancamento; Wellness Mastery = percorso successivo).
+1. Significato delle 6 lettere di A.G.E.N.D.A. (nel sito: Attira · Guida · Empatia · Negozia con naturalezza · Dialogo · Affiancamento, scelto da te; da far confermare a Rita). (confermato: A.G.E.N.D.A. = metodo + primo percorso di affiancamento; Wellness Mastery = percorso successivo).
 2. Metodo Rita Dolbakian: programma reale, livelli, durata, sedi per la parte in presenza, prezzo, chi può partecipare. (Struttura proposta nel sito = BOZZA da validare.)
 3. Qualifica professionale di Rita e limiti di legge per il massaggio in Italia: come presentarli.
 4. Formazione certificata: ente, tipo di attestato (es. "Attestato RD Academy"), requisiti, ore, calendario.
