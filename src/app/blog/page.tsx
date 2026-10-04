@@ -90,7 +90,7 @@ export default function Blog() {
         { q: "Gli articoli sono consigli medici?", a: "No. Parlano di benessere, organizzazione e formazione. Non contengono indicazioni sanitarie né promesse di cura. Per questioni di salute ci si rivolge a un professionista sanitario." },
         { q: "Ogni quanto escono nuovi articoli?", a: "Nuovi articoli arrivano man mano che sono completi e verificati. Puoi seguire gli aggiornamenti con il feed RSS." },
         { q: "Posso proporre un argomento?", a: <>Sì, scrivimi dalla pagina <Link href="/contatti" className="ulink text-ink">Contatti</Link>: i temi più richiesti diventano nuovi articoli.</>, plain: "Sì, scrivi dalla pagina Contatti: i temi più richiesti diventano nuovi articoli." },
-        { q: "Dove trovo i percorsi di formazione?", a: <>Nella pagina <Link href="/percorsi" className="ulink text-ink">Percorsi</Link>: Metodo A.G.E.N.D.A., Wellness Mastery e Metodo Rita Dolbakian.</>, plain: "Nella pagina Percorsi: Metodo A.G.E.N.D.A., Wellness Mastery e Metodo Rita Dolbakian." },
+        { q: "Dove trovo i percorsi di formazione?", a: <>Nella pagina <Link href="/percorsi" className="ulink text-ink">Percorsi</Link>: Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian.</>, plain: "Nella pagina Percorsi: Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian." },
       ]} />
     </>
   );

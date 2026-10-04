@@ -12,7 +12,7 @@ const toc = [
 export default function PagamentiRateali() {
   return (
     <LegalPage eyebrow="Pagamento a rate" title="Pagare *a rate*, senza sorprese." toc={toc}
-      intro="Per alcuni corsi puoi dividere il costo in rate con una società finanziaria convenzionata, per esempio Pagodil o Pagolight. Qui ti spieghiamo come funziona, chi fa cosa e cosa devi leggere prima di accettare.">
+      intro="Per alcuni corsi puoi dividere il costo in rate con una società finanziaria convenzionata, per esempio Pagodil, Pagolight o Heylight. Qui ti spieghiamo come funziona, chi fa cosa e cosa devi leggere prima di accettare.">
       <InBreve>
         <p>Il finanziamento lo concede la <strong>società finanziaria</strong>, non RD SRL, ed è soggetto alla sua approvazione. Prima di firmare ricevi le informazioni su costi, interessi e rate (SECCI): leggile con attenzione, perché il costo totale può essere superiore al prezzo del corso.</p>
       </InBreve>
@@ -30,7 +30,7 @@ export default function PagamentiRateali() {
       <h2 id="chi">2. Chi è chi</h2>
       <ul>
         <li><strong>RD SRL (Rita Dolbakian Academy)</strong> vende il corso. Non concede finanziamenti, non fa mediazione creditizia e non partecipa alla valutazione del tuo merito creditizio.</li>
-        <li><strong>La società finanziaria</strong> (per esempio Pagodil, Pagolight) concede il finanziamento ed è responsabile delle informazioni, delle condizioni, dell'addebito delle rate e del trattamento dei tuoi dati come titolare autonomo. <Tbc>denominazione completa e sede delle finanziarie convenzionate, e iscrizione agli albi</Tbc></li>
+        <li><strong>La società finanziaria</strong> (per esempio Pagodil, Pagolight, Heylight) concede il finanziamento ed è responsabile delle informazioni, delle condizioni, dell'addebito delle rate e del trattamento dei tuoi dati come titolare autonomo. <Tbc>denominazione completa e sede delle finanziarie convenzionate, e iscrizione agli albi</Tbc></li>
       </ul>
 
       <h2 id="leggere">3. Cosa leggere prima di firmare</h2>

@@ -30,7 +30,7 @@ export default function Termini() {
         <li><strong>Professionista o cliente business:</strong> chi acquista per la propria attività (per esempio titolare di partita IVA).</li>
         <li><strong>Corso online:</strong> lezioni, materiali e strumenti messi a disposizione in modalità digitale.</li>
         <li><strong>Corso in presenza:</strong> lezione svolta dal vivo in una sede e in una data stabilite.</li>
-        <li><strong>Percorso:</strong> insieme di contenuti, incontri o affiancamento, come Metodo A.G.E.N.D.A., Wellness Mastery e Metodo Rita Dolbakian.</li>
+        <li><strong>Percorso:</strong> insieme di contenuti, incontri o affiancamento, come Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian.</li>
       </ul>
 
       <h2 id="servizi">3. I servizi e cosa non sono</h2>
@@ -52,7 +52,7 @@ export default function Termini() {
       <p>Puoi pagare con i metodi indicati al momento dell'acquisto: <Tbc>carta, bonifico, PayPal o altri</Tbc>. Il pagamento in un'unica soluzione si addebita alla conferma dell'ordine; per il bonifico l'accesso si attiva dopo l'accredito. <Tbc>eventuale rateizzazione diretta con RD SRL, senza finanziaria</Tbc></p>
 
       <h2 id="rate">7. Pagamento a rate con società finanziaria (Pagodil, Pagolight e simili)</h2>
-      <p>Per alcuni corsi puoi scegliere di pagare a rate tramite una società finanziaria convenzionata (per esempio Pagodil o Pagolight). Funziona così:</p>
+      <p>Per alcuni corsi puoi scegliere di pagare a rate tramite una società finanziaria convenzionata (per esempio Pagodil, Pagolight o Heylight). Funziona così:</p>
       <ul>
         <li><strong>Servizio facoltativo.</strong> È un'opzione di pagamento, non un obbligo. Puoi sempre scegliere un altro metodo, se disponibile.</li>
         <li><strong>La finanziaria decide.</strong> La concessione del finanziamento è soggetta alla valutazione e all'approvazione della società finanziaria. Se non viene approvato, il corso non si attiva con questa modalità e puoi scegliere un altro metodo di pagamento.</li>
@@ -88,7 +88,7 @@ export default function Termini() {
       </ul>
 
       <h2 id="affiancamento">12. Affiancamento individuale (1:1)</h2>
-      <p>Dove previsto (per esempio le 8 settimane di Wellness Mastery o l'affiancamento A.G.E.N.D.A.), gli incontri si svolgono in videochiamata secondo un calendario concordato. <Tbc>numero, durata e frequenza degli incontri; regole di spostamento e di assenza</Tbc> L'affiancamento è un supporto formativo: le decisioni sulla tua attività restano tue.</p>
+      <p>Dove previsto (per esempio i 6 mesi di mentorship Sold Out o l'affiancamento A.G.E.N.D.A.), gli incontri si svolgono in videochiamata secondo un calendario concordato. <Tbc>numero, durata e frequenza degli incontri; regole di spostamento e di assenza</Tbc> L'affiancamento è un supporto formativo: le decisioni sulla tua attività restano tue.</p>
 
       <h2 id="attestato">13. L'attestato</h2>
       <p>Dove previsto, al termine del percorso rilasci un <strong>attestato di partecipazione di Rita Dolbakian Academy</strong>. Non è un titolo di studio né una qualifica abilitante all'esercizio di una professione e non sostituisce le autorizzazioni o i requisiti che la legge richiede per svolgere un'attività. <Tbc>formula e requisiti per il rilascio</Tbc></p>
@@ -102,7 +102,7 @@ export default function Termini() {
       </ul>
 
       <h2 id="ip">15. Diritti sui contenuti</h2>
-      <p>Programmi, video, testi, schemi, materiali e marchi (compreso «Metodo A.G.E.N.D.A.», «Wellness Mastery», «Metodo Rita Dolbakian» e «Rita Dolbakian Academy») sono di RD SRL o dei rispettivi titolari e sono protetti dalla normativa sul diritto d'autore e sui marchi. L'acquisto non trasferisce alcun diritto, salvo la licenza d'uso della sezione 11. <Tbc>stato della registrazione dei marchi</Tbc></p>
+      <p>Programmi, video, testi, schemi, materiali e marchi (compreso «Metodo A.G.E.N.D.A.», «Metodo Sold Out», «Metodo Rita Dolbakian» e «Rita Dolbakian Academy») sono di RD SRL o dei rispettivi titolari e sono protetti dalla normativa sul diritto d'autore e sui marchi. L'acquisto non trasferisce alcun diritto, salvo la licenza d'uso della sezione 11. <Tbc>stato della registrazione dei marchi</Tbc></p>
 
       <h2 id="responsabilita">16. Responsabilità</h2>
       <p>Nulla in queste condizioni esclude o limita la nostra responsabilità nei casi in cui la legge non lo consente, per esempio per dolo o colpa grave, per i danni alla persona o per i diritti inderogabili del consumatore. Per il resto: le tecniche e i consigli del corso vanno applicati con prudenza e sotto la tua responsabilità, nel rispetto della normativa che regola la tua attività; non rispondiamo dei risultati economici della tua attività né dell'uso che fai dei contenuti in modo difforme dalle indicazioni. Per i clienti business la responsabilità è limitata, nei limiti consentiti, all'importo pagato per il corso. <Tbc>polizza di responsabilità civile e coperture assicurative per i corsi in presenza</Tbc></p>

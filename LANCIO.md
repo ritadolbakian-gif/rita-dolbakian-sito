@@ -1,7 +1,7 @@
 # Lista di controllo per andare online
 
 ## 1. Cosa c'è già
-- Sito completo: Home, Percorsi (hub, A.G.E.N.D.A., Wellness Mastery, Metodo Rita Dolbakian), Corsi, Formazione certificata, Chi sono, Risultati, Blog (7 articoli pubblicati, 3 pronti), Guida gratuita, Call, Contatti, Area Privata, pagine legali.
+- Sito completo: Home, Percorsi (hub, A.G.E.N.D.A., Metodo Sold Out, Metodo Rita Dolbakian), Corsi, Formazione certificata, Chi sono, Risultati, Blog (7 articoli pubblicati, 3 pronti), Guida gratuita, Call, Contatti, Area Privata, pagine legali.
 - Mobile ottimizzato, menu, logo, favicon, immagine social, SEO (titoli, descrizioni, dati strutturati, sitemap, llms.txt, RSS), FAQ in ogni pagina.
 - Repository privato: https://github.com/ritadolbakian-gif/rita-dolbakian-sito
 
@@ -15,7 +15,7 @@
 6. **Moduli funzionanti**: webhook GoHighLevel in `GHL_WEBHOOK_URL`. Provare guida, contatti e prenotazione call con una prova vera.
 
 ## 3. Da ricevere da Rita
-- Conferma delle sei parole di A.G.E.N.D.A. (fatta) e dei contenuti dei 10 moduli e delle 8 settimane di Wellness Mastery (oggi sono una bozza scritta da me).
+- Conferma delle sei parole di A.G.E.N.D.A. (fatta) e dei contenuti dei 10 moduli e deli 6 mesi di mentorship Sold Out (oggi sono una bozza scritta da me).
 - Programma reale e vocabolario tecnico del Metodo Rita Dolbakian.
 - Casi studio e testimonianze con nome, cognome, foto e **autorizzazione scritta** (`src/lib/proof.ts`). Consenso a citare il percorso con David Valmori, se vuole usarlo.
 - Foto vere in aula e con le allieve, attestato reale, video di presentazione (vedi `ELENCO-IMMAGINI.md`).

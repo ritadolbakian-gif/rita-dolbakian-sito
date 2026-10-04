@@ -7,18 +7,18 @@ import { Orientatore } from "@/components/Orientatore";
 import { Slot } from "@/components/Slot";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta("Percorsi di formazione per il benessere", "Tutti i percorsi di Rita Dolbakian: Metodo A.G.E.N.D.A., Wellness Mastery e Metodo Rita Dolbakian. Scopri da quale partire.", "/percorsi");
+export const metadata = meta("Percorsi di formazione per il benessere", "Tutti i percorsi di Rita Dolbakian: Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian. Scopri da quale partire.", "/percorsi");
 
 const rows = [
   { n: "Metodo A.G.E.N.D.A.", who: "Operatrici e operatori del benessere", get: "Direzione, continuità, clienti qualificati", fmt: "Affiancamento (primo percorso)", href: "/percorsi/metodo-agenda" },
-  { n: "Wellness Mastery", who: "Chi vuole fare impresa online nel benessere", get: "Brand, offerta, social, vendita, automazione", fmt: "10 moduli · 6 bonus · soddisfatti o rimborsati", href: "/percorsi/wellness-mastery" },
+  { n: "Metodo Sold Out", who: "Chi vuole il massimo affiancamento", get: "Call settimanale con me, landing page, prodotto digitale, piattaforma", fmt: "Mentorship 1:1 · 6 mesi · 8 posti a trimestre", href: "/percorsi/sold-out" },
   { n: "Metodo Rita Dolbakian", who: "Chi vuole imparare a massaggiare o perfezionarsi", get: "Tecnica manuale, ascolto del tocco, pratica", fmt: "Online e in presenza", href: "/percorsi/metodo-rita-dolbakian" },
 ];
 
 export default function Percorsi() {
   return (
     <>
-      <PageHero imageId="percorsi-top" imageRatio="4/5" imageArt="waves" eyebrow="Percorsi" title="Quale percorso fa per *te*?" answer="Ho costruito due strade. Il Metodo A.G.E.N.D.A. e Wellness Mastery sono per chi lavora nel benessere e vuole più continuità online. Il Metodo Rita Dolbakian è per chi vuole imparare a massaggiare o perfezionare la propria tecnica, online e in presenza. Ti aiuto a capire da quale partire.">
+      <PageHero imageId="percorsi-top" imageRatio="4/5" imageArt="waves" eyebrow="Percorsi" title="Quale percorso fa per *te*?" answer="Ho costruito due strade. Il Metodo A.G.E.N.D.A. e il Metodo Sold Out sono per chi lavora nel benessere e vuole riempire l'agenda. Il Metodo Rita Dolbakian è per chi vuole imparare a massaggiare o perfezionare la propria tecnica, online e in presenza. Ti aiuto a capire da quale partire.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
       </PageHero>
 
@@ -36,7 +36,7 @@ export default function Percorsi() {
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {[
               { id: "percorsi-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare direzione e continuità nella tua attività.", tag: "Per chi lavora nel benessere", href: "/percorsi/metodo-agenda", art: "orbs" as const },
-              { id: "percorsi-wm", t: "Wellness Mastery", d: "Il percorso completo: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1.", tag: "Soddisfatti o rimborsati", href: "/percorsi/wellness-mastery", art: "arch" as const },
+              { id: "percorsi-wm", t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi: il percorso più completo, con solo 8 posti a trimestre.", tag: "Soddisfatti o rimborsati", href: "/percorsi/sold-out", art: "arch" as const },
               { id: "percorsi-rd", t: "Metodo Rita Dolbakian", d: "Imparare a massaggiare e perfezionare la tecnica, online e in presenza.", tag: "Per le tue mani", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.1}>
@@ -94,9 +94,9 @@ export default function Percorsi() {
       </div></section>
 
       <Faq items={[
-        { q: "Qual è la differenza tra Metodo A.G.E.N.D.A. e Wellness Mastery?", a: "Il Metodo A.G.E.N.D.A. è il metodo e il primo percorso di affiancamento per ritrovare direzione e continuità. Wellness Mastery è il percorso successivo, più ampio, per diventare imprenditrice digitale nel benessere." },
+        { q: "Qual è la differenza tra Metodo A.G.E.N.D.A. e Metodo Sold Out?", a: "Il Metodo A.G.E.N.D.A. è il metodo e il primo percorso di affiancamento per ritrovare direzione e continuità. Metodo Sold Out è il percorso successivo: una mentorship 1:1 di 6 mesi con me, con 8 posti a trimestre." },
         { q: "C'è una garanzia?", a: "Sì, su tutti i percorsi: soddisfatti o rimborsati per tutta la durata. Il rischio è mio, a una condizione: partecipi agli incontri e agli eventi e svolgi le attività richieste, e lo dimostri." },
-        { q: "Devo già lavorare nel benessere?", a: "Per A.G.E.N.D.A. e Wellness Mastery sì: sono pensati per chi ha già una competenza. Per imparare a massaggiare c'è il Metodo Rita Dolbakian." },
+        { q: "Devo già lavorare nel benessere?", a: "Per A.G.E.N.D.A. e Metodo Sold Out sì: sono pensati per chi ha già una competenza. Per imparare a massaggiare c'è il Metodo Rita Dolbakian." },
         { q: "Da dove si comincia?", a: "Dalla guida gratuita o dalla call di orientamento di circa 30 minuti, senza obbligo. Da lì si capisce insieme quale percorso ha senso." },
       ]} />
       <CtaBand />

@@ -6,14 +6,14 @@ export type Testimonial = {
   name: string;           // Nome e cognome (con autorizzazione)
   role: string;           // es. "Massaggiatrice, Milano"
   quote: string;          // Citazione autorizzata
-  program: "A.G.E.N.D.A." | "Wellness Mastery" | "Metodo Rita Dolbakian";
+  program: "A.G.E.N.D.A." | "Sold Out" | "Metodo Rita Dolbakian";
   photo?: string;         // /media/... (1:1 o 4:5)
   video?: string;         // /media/....mp4
   poster?: string;        // copertina del video
 };
 
 export type CaseStudy = {
-  program?: "A.G.E.N.D.A." | "Wellness Mastery" | "Metodo Rita Dolbakian";
+  program?: "A.G.E.N.D.A." | "Sold Out" | "Metodo Rita Dolbakian";
   number: string;         // es. "+12"
   label: string;          // es. "clienti in 60 giorni"
   name: string;
@@ -25,7 +25,12 @@ export type CaseStudy = {
 };
 
 export const TESTIMONIALS: Testimonial[] = [];
-export const CASES: CaseStudy[] = [];
+// Casi forniti da Rita (presentazioni di offerta). [DA CONFERMARE: autorizzazione scritta di ciascuna allieva e prova dei dati]
+export const CASES: CaseStudy[] = [
+  { number: "240.000", label: "visualizzazioni in una settimana, con circa 1.000 nuovi follower in target", name: "Antonella C.", role: "Massaggiatrice, Milano", quote: "È partita da zero: nessun posizionamento e nessun profilo social attivo. Abbiamo aperto insieme il suo TikTok. Oggi dichiara oltre 7.000 € al mese di guadagno fisso ricorrente." },
+  { number: "2.800 €", label: "al mese a luglio, dai 1.000 € fissi di prima", name: "Alessia A.", role: "Massaggiatrice, Milano", quote: "Ha ridefinito la sua offerta e costruito un posizionamento vero sui social. Oggi le richieste sono costanti e arrivano già convinte, non più da inseguire." },
+  { number: "2.000 €", label: "al mese di fatturato ricorrente", name: "Mariangela F.", role: "Massaggiatrice, Andria", quote: "Ha clienti costanti e pacchetti continui, non più mesi altalenanti tra pieno e vuoto." },
+];
 
 /** Testate o collaborazioni REALI. */
 export const PRESS: { name: string; href?: string }[] = [];
@@ -44,8 +49,8 @@ export type Stat = { id: string; value: number; prefix?: string; suffix?: string
 export const STATS: Stat[] = [
   { id: "anni", value: 10, suffix: "+", label: "anni di esperienza nel benessere", confirmed: true },
   { id: "studenti", value: 100, prefix: "+", label: "studenti formati", confirmed: false }, // [DA CONFERMARE: numero reale]
-  { id: "moduli", value: 10, label: "moduli in Wellness Mastery", confirmed: true },
-  { id: "bonus", value: 6, label: "bonus inclusi nel percorso", confirmed: true },
+  { id: "moduli", value: 11, label: "moduli nel Metodo A.G.E.N.D.A.", confirmed: true },
+  { id: "bonus", value: 5, label: "bonus inclusi nel Metodo A.G.E.N.D.A.", confirmed: true },
 ];
 export const showDraftStats = () => process.env.NEXT_PUBLIC_SHOW_DRAFT === "1" || process.env.NODE_ENV !== "production";
 export const visibleStats = () => STATS.filter((s) => s.confirmed || showDraftStats());

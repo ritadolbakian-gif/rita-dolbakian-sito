@@ -16,7 +16,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
   "card-guida": { src: "/media/guida-mockup.webp", alt: "Copertina guida gratuita (4:3)", pos: "50% 32%" },
   "card-call": { src: "/media/rita-videocall.webp", alt: "Rita in call di orientamento (4:3)" , pos: "40% 40%" },
-  "card-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
+  "card-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "card-rd": { src: "/media/rita-massaggio-1.webp", alt: "Metodo Rita Dolbakian (4:3)", pos: "55% 40%" },
   "guida-copertina": { alt: "Copertina piatta della guida (3:4)" },
   "guida-rita": { src: "/media/rita-tunica.webp", alt: "Rita Dolbakian, autrice della guida", pos: "50% 22%" },
@@ -32,17 +32,17 @@ export const MEDIA: Record<string, MediaItem> = {
   "guida-mockup": { src: "/media/guida-mockup.webp", alt: "La guida gratuita «Il Sistema Clienti per Operatori del Benessere» di Rita Dolbakian" },
   // PERCORSI
   "agenda-hero": { src: "/media/rita-conversazione.webp", alt: "Rita in affiancamento (4:3)" , pos: "60% 40%" },
-  "wm-video": { alt: "Rita presenta Wellness Mastery (video 16:10)" },
+  "wm-video": { alt: "Rita presenta Metodo Sold Out (video 16:10)" },
   "rd-hands": { alt: "Mani al lavoro, dettaglio tecnica (4:5)" },
   "rd-online": { src: "/media/lezione-due.webp", alt: "Anteprima lezione online (video 16:9)"  },
   "rd-aula": { src: "/media/aula-grande.webp", alt: "Formazione in presenza, aula (16:9)"  },
   // PERCORSI (hub + pagine)
   "percorsi-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
-  "percorsi-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
+  "percorsi-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "percorsi-rd": { src: "/media/rita-massaggio-5.webp", alt: "Card Metodo Rita Dolbakian (4:3)", pos: "70% 45%" },
   "agenda-prima": { src: "/media/agenda-prima.webp", alt: "Prima: pochi clienti, agenda disordinata, stress" },
   "agenda-dopo": { src: "/media/agenda-dopo.webp", alt: "Dopo: agenda piena, prezzi più alti, più serenità" },
-  "wm-hero": { src: "/media/rita-tablet.webp", alt: "Rita in studio con tablet, Wellness Mastery (4:5)" , pos: "42% 40%" },
+  "wm-hero": { src: "/media/rita-tablet.webp", alt: "Rita in studio con tablet, Metodo Sold Out (4:5)" , pos: "42% 40%" },
   "wm-fase-1": { alt: "Fase 1, fondamenta (4:3)" },
   "wm-fase-2": { src: "/media/rita-social-2.webp", alt: "Fase 2, visibilità (4:3)", pos: "50% 60%" },
   "wm-fase-3": { alt: "Fase 3, vendita e sistema (4:3)" },
@@ -60,7 +60,7 @@ export const MEDIA: Record<string, MediaItem> = {
   // CORSI (catalogo)
   "corso-guida": { src: "/media/guida-mockup.webp", alt: "Copertina corso: guida gratuita (4:3)", pos: "50% 32%" },
   "corso-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
-  "corso-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
+  "corso-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "corso-rd-online": { src: "/media/rita-massaggio-3.webp", alt: "Copertina corso: Metodo RD online (4:3)", pos: "70% 40%" },
   "corso-rd-presenza": { src: "/media/aula-grande.webp", alt: "Copertina corso: Metodo RD in presenza (4:3)"  },
   // ALTRE PAGINE
@@ -70,7 +70,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "area-privata": { src: "/media/rita-divano.webp", alt: "Studio accogliente, area privata (16:9)" , pos: "30% 40%" },
   // Foto in testata delle pagine (due colonne)
   "agenda-top": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
-  "wm-top": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
+  "wm-top": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "rd-top": { src: "/media/rita-massaggio-1.webp", alt: "Rita mostra una tecnica a un piccolo gruppo (immagine illustrativa)", pos: "55% 40%" },
   "cert-top": { src: "/media/rita-massaggio-1.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "55% 40%" },
   "percorsi-top": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio", pos: "52% 35%" },
@@ -117,7 +117,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "blog-whatsapp-business-massaggiatori": { src: "/media/blog-whatsapp-business-massaggiatori.webp", alt: "Copertina: whatsapp business massaggiatori" },
   author: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian", pos: "50% 22%" },
   "agenda-cover": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
-  "wm-cover": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
+  "wm-cover": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "home-bg": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "0% 30%" },
   "chi-sono-bg": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "0% 30%" },
 };

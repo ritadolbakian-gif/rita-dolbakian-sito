@@ -17,11 +17,37 @@ const letters = [
   { l: "A", w: "Automazione", d: "Fidelizzazione, scontrino medio più alto e gestione dell'agenda con strumenti che lavorano per te.", p: "Un'agenda più piena e regolare." },
 ];
 
+const modulesList: [string, string, string][] = [
+  ["00", "Introduzione", "Roadmap dei 6 mesi, errori da evitare, come usare il percorso al massimo."],
+  ["01", "Mindset", "Superare la paura di esporsi, convinzioni sul denaro, mindfulness."],
+  ["02", "Fondamenta business", "Nicchia, cliente ideale, massaggio differenziante, personal brand."],
+  ["03", "Parte pratica", "Cabina, attrezzatura, abbigliamento, accoglienza del cliente, caparra."],
+  ["04", "Offerta irresistibile", "Ricerca di mercato, costruzione dei pacchetti, aumento dei prezzi."],
+  ["05", "Instagram", "Profilo ottimizzato, algoritmo, crescita organica, contenuti strategici."],
+  ["06", "Instagram Stories", "Struttura, storytelling, stories di vendita, gestione delle richieste."],
+  ["07", "Content creation", "Piano editoriale, script video, template di contenuti, brainstorming."],
+  ["08", "Espansione canali", "TikTok, Facebook, YouTube, LinkedIn, Google My Business."],
+  ["09", "Vendita e DM", "Gestione richieste, chiusura clienti, follow-up, lead non chiusi."],
+  ["10", "AI e automazioni", "ChatGPT per i contenuti, automazioni di marketing, organizzazione del lavoro."],
+];
+
+const bonusList: [string, string][] = [
+  ["Calendario contenuti 12 mesi", "Un piano editoriale già pronto: sai cosa pubblicare ogni giorno per un anno."],
+  ["Mini corso Canva", "Crea contenuti grafici professionali anche senza esperienza di grafica."],
+  ["Mini corso CapCut", "Monta video per TikTok e Reel in modo semplice e veloce."],
+  ["Script chiusura influencer", "Template pronti per contattare manager e influencer locali e proporre collaborazioni."],
+  ["Masterclass Pinterest", "Come usare Pinterest per attirare traffico organico e nuovi clienti."],
+];
+
+const valueList: [string, string][] = [
+  ["Video corso Metodo A.G.E.N.D.A. (11 moduli)", "997 €"], ["Affiancamento individuale via chat 7/7 (6 mesi)", "697 €"], ["2 call individuali al mese con Rita (12 call)", "897 €"], ["Community privata WhatsApp", "197 €"], ["Live Q&A bisettimanali", "297 €"], ["Calendario contenuti 12 mesi", "197 €"], ["Mini corso Canva", "97 €"], ["Mini corso CapCut", "97 €"], ["Script chiusura influencer", "97 €"], ["Masterclass Pinterest", "97 €"],
+];
+
 export default function MetodoAgenda() {
   return (
     <>
       <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Metodo e primo percorso di affiancamento per operatrici e operatori del benessere che vogliono continuità e clienti qualificati online.", "/percorsi/metodo-agenda")} />
-      <PageHero imageId="agenda-top" imageRatio="16/9" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Vuoi un'agenda che *regge* anche nei mesi difficili?" answer="Il Metodo A.G.E.N.D.A. è il mio metodo per operatrici e operatori del benessere che vogliono smettere di andare a tentativi. È il primo percorso di affiancamento: si parte da una call di orientamento e si arriva a un'agenda con più direzione e clienti più qualificati.">
+      <PageHero imageId="agenda-top" imageRatio="16/9" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Vuoi un'agenda che *regge* anche nei mesi difficili?" answer="Il Metodo A.G.E.N.D.A. è il mio sistema per riempire l'agenda usando social, posizionamento professionale e strategie di acquisizione clienti. 6 mesi, 11 moduli e affiancamento individuale incluso. Si parte da una call di orientamento.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
       </PageHero>
@@ -91,15 +117,67 @@ export default function MetodoAgenda() {
           <Label n="05" t="Come funziona" />
           <Heading text="Dalla guida al percorso, *un passo alla volta*." className="text-5xl md:text-6xl max-w-3xl" />
           <ol className="mt-12 grid gap-8 md:grid-cols-3">
-            {[["La guida gratuita", "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Circa 30 minuti. Mi racconti dove sei, ti dico se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Wellness Mastery."]].map(([t, d], i) => (
+            {[["La guida gratuita", "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Circa 30 minuti. Mi racconti dove sei, ti dico se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Metodo Sold Out."]].map(([t, d], i) => (
               <li key={t}><Reveal delay={i * 0.1}><span className="font-display text-6xl kw">0{i + 1}</span><h3 className="font-display text-3xl mt-2">{t}</h3><p className="mt-3 text-stone">{d}</p></Reveal></li>
             ))}
           </ol>
-          <Reveal><p className="mt-12 text-stone">Dopo A.G.E.N.D.A. il passo naturale è <Link href="/percorsi/wellness-mastery" className="ulink text-ink">Wellness Mastery</Link>.</p></Reveal>
+          <Reveal><p className="mt-12 text-stone">Se vuoi il massimo affiancamento, c'è la mentorship 1:1 <Link href="/percorsi/sold-out" className="ulink text-ink">Metodo Sold Out</Link>.</p></Reveal>
         </div>
       </section>
 
-      <DetailSteps n="06" label="L'affiancamento" title="Come lavoriamo, *fase per fase*." bg="" note={<Tbc>formato, durata e frequenza degli incontri</Tbc>} items={[
+      <section id="incluso" className="section scroll-mt-28">
+        <div className="wrap">
+          <Label n="05b" t="Cosa è incluso" />
+          <Heading text="11 moduli. Tutto quello che serve, *nulla di più*." className="text-5xl md:text-6xl max-w-4xl" />
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {modulesList.map(([n, t, d], i) => (
+              <li key={n}><Reveal delay={(i % 3) * 0.06}><div className="rounded-3xl border border-[var(--line)] p-6 h-full"><span className="font-display text-5xl kw leading-none">{n}</span><h3 className="font-display text-2xl mt-3">{t}</h3><p className="mt-2 text-sm text-stone">{d}</p></div></Reveal></li>
+            ))}
+          </ul>
+          <p className="mt-6 text-xs text-stone">Per chi è alle prime armi con la tecnologia, i mini corsi Canva e CapCut sono nei bonus.</p>
+        </div>
+      </section>
+
+      <section className="section-dark section">
+        <div className="wrap">
+          <Label n="05c" t="Bonus e supporto" />
+          <Heading text="Cinque bonus. E non *resti* sola." className="text-5xl md:text-6xl max-w-4xl" />
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {bonusList.map(([t, d], i) => (
+              <Reveal key={t} delay={i * 0.06}><div className="rounded-3xl border border-ivory/15 p-7 h-full"><span className="eyebrow">Bonus {i + 1}</span><h3 className="font-display text-2xl mt-3">{t}</h3><p className="mt-2 text-ivory/65 text-[0.95rem]">{d}</p></div></Reveal>
+            ))}
+          </div>
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            {[["Affiancamento individuale via chat, 7 giorni su 7", "Accesso diretto a me ogni giorno. Supporto personalizzato sulla tua situazione, non risposte generiche."], ["2 chiamate individuali al mese con me", "Sessioni 1:1 dedicate a te: analisi dei contenuti, strategia personalizzata, supporto per sbloccare gli ostacoli."], ["Community privata WhatsApp", "Confronto quotidiano con altri massaggiatori che stanno costruendo la loro attività."], ["Live Q&A bisettimanali", "Sessioni di gruppo ogni due settimane: domande, analisi di casi reali e aggiornamenti sulle strategie."]].map(([t, d], i) => (
+              <Reveal key={t} delay={i * 0.06}><div className="rounded-3xl bg-ivory/10 p-7 h-full"><h3 className="font-display text-2xl">{t}</h3><p className="mt-2 text-ivory/70">{d}</p></div></Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="investimento" className="section scroll-mt-28">
+        <div className="wrap grid gap-12 lg:grid-cols-2 items-start">
+          <div>
+            <Label n="05d" t="Il valore reale" />
+            <Heading text="Cosa ricevi, e quanto *varrebbe* da solo." className="text-4xl md:text-6xl" />
+            <dl className="mt-8 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+              {valueList.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
+              <div className="flex justify-between gap-6 py-4 text-lg"><dt>Valore totale</dt><dd className="font-display text-3xl">3.670 €</dd></div>
+            </dl>
+          </div>
+          <Reveal>
+            <div className="rounded-3xl bg-blush/40 p-8 md:p-10">
+              <p className="eyebrow">Il tuo investimento</p>
+              <p className="mt-3 font-display text-7xl leading-none"><span className="text-3xl text-stone line-through mr-3">3.670 €</span>1.497 €</p>
+              <p className="mt-6 text-stone">In un'unica soluzione, oppure rateizzabile fino a 24 rate, salvo approvazione della società finanziaria. Come funziona: <Link href="/pagamenti-rateali" className="ulink text-ink">Pagamento a rate</Link>.</p>
+              <div className="mt-8"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call di orientamento <span className="arr">→</span></Link></div>
+              <p className="mt-4 text-xs text-stone"><Tbc>conferma IVA e condizioni di rateizzazione</Tbc></p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <DetailSteps n="06" label="L'affiancamento" title="Come lavoriamo, *fase per fase*." bg="" items={[
         { t: "Fotografia", a: "Guardiamo insieme dove sei: profilo, scheda Google, messaggi, prezzi, clienti che tornano.", b: "Un quadro chiaro di cosa funziona già e di dove perdi continuità." },
         { t: "Direzione", a: "Definiamo chi vuoi aiutare, cosa offri e perché dovrebbero scegliere te.", b: "Tre frasi chiare, che usi ovunque: nella bio, nella scheda, nei messaggi." },
         { t: "Percorso", a: "Costruiamo il cammino da «ti vedo» a «ti scrivo»: cosa trova una persona nuova e cosa deve fare per contattarti.", b: "Un percorso semplice per chi ti cerca, con risposte pronte alle domande più comuni." },
@@ -135,7 +213,7 @@ export default function MetodoAgenda() {
 
       <Outcomes n="10" label="Dopo A.G.E.N.D.A." title="E *poi*?" cols={3} items={[
         { t: "Prosegui da sola", d: "Hai il metodo, il piano e i numeri da guardare. Puoi andare avanti con i tuoi tempi." },
-        { t: "Passi a Wellness Mastery", d: "Se vuoi costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1." },
+        { t: "Passi a Sold Out", d: "Se vuoi il massimo affiancamento: mentorship 1:1 di 6 mesi con me, 8 posti a trimestre." },
         { t: "Ti serve la tecnica?", d: "C'è anche il Metodo Rita Dolbakian, per massaggiare con mani sicure." },
       ]} />
 
@@ -179,12 +257,12 @@ export default function MetodoAgenda() {
         { t: "E se non fa per me?", d: "Te lo dico io, in call. Meglio un no chiaro che un sì a metà." },
       ]} />
 
-      <Compare n="14" title="A.G.E.N.D.A. o *Wellness Mastery*?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[
-        { label: "Cos'è", cells: ["Il metodo e il primo affiancamento", "Il percorso completo, 10 moduli"] },
-        { label: "Per chi", cells: ["Chi vuole ritrovare direzione e continuità", "Chi vuole costruire un'attività online solida"] },
+      <Compare n="14" title="A.G.E.N.D.A. o *Sold Out*?" cols={["Metodo A.G.E.N.D.A.", "Metodo Sold Out"]} rows={[
+        { label: "Cos'è", cells: ["Il sistema in 11 moduli, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
+        { label: "Per chi", cells: ["Chi vuole un metodo preciso per riempire l'agenda", "Chi vuole essere seguita ogni settimana e farsi fare il lavoro tecnico"] },
         { label: "Quando", cells: ["Si parte da qui", "È il passo successivo"] },
-        { label: "Formato", cells: [<Tbc key="a">formato</Tbc>, "10 moduli · 6 bonus · 8 settimane di affiancamento 1:1"] },
-        { label: "Garanzia", cells: ["Soddisfatti o rimborsati, per tutto il percorso", "Soddisfatti o rimborsati, per tutto il percorso"] },
+        { label: "Formato", cells: ["6 mesi · 11 moduli · 2 call al mese · chat 7/7", "6 mesi · una call a settimana · 8 posti a trimestre"] },
+        { label: "Investimento", cells: ["1.497 €, fino a 24 rate", "4.997 € (4.497 € in unica soluzione)"] },
       ]} />
 
       <Faq items={[
@@ -192,11 +270,11 @@ export default function MetodoAgenda() {
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono smettere di andare a tentativi." },
         { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo e nessuno spam: è un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
-        { q: "Quanto costa il percorso?", a: <>Il prezzo è indicato qui: <Tbc>prezzo e formule</Tbc></>, plain: "Il prezzo e le formule sono indicati in questa pagina." },
-        { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è Wellness Mastery, il percorso più ampio per diventare imprenditrice digitale nel benessere." },
+        { q: "Quanto costa il percorso?", a: "L'investimento è di 1.497 € in un'unica soluzione, oppure rateizzabile fino a 24 rate, salvo approvazione. Il valore dei singoli componenti è indicato nella sezione dedicata." },
+        { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è la mentorship 1:1 Metodo Sold Out, il massimo affiancamento, con 8 posti per trimestre." },
         { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
         { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },
-        { q: "Quanto dura l'affiancamento?", a: <><Tbc>durata e numero di incontri</Tbc></>, plain: "La durata e il numero di incontri sono indicati in questa pagina." },
+        { q: "Quanto dura l'affiancamento?", a: "Il percorso dura 6 mesi, con 2 chiamate individuali al mese (12 in totale), chat 7 giorni su 7, community privata e Q&A bisettimanali." },
         { q: "Cosa succede se alla call capisco che non fa per me?", a: "Nessun problema: nessun obbligo e nessuno spam. E ti dico comunque da dove partirei." },
         { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Il rischio è mio. La condizione è che tu partecipi agli incontri e svolga le attività richieste, e lo dimostri." },
         { q: "Ci sono garanzie sul risultato economico?", a: "Nessuno può garantire guadagni o numero di clienti, e non lo faccio io. La garanzia riguarda la tua soddisfazione per il percorso. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },

@@ -33,7 +33,8 @@ export default function Rimborsi() {
       <p>In questi casi resta comunque valida la garanzia «soddisfatti o rimborsati» descritta sotto, alle sue condizioni.</p>
 
       <h2 id="garanzia">4. Garanzia «soddisfatti o rimborsati» per tutta la durata del percorso</h2>
-      <p>Tutti i nostri percorsi (Metodo A.G.E.N.D.A., Wellness Mastery, Metodo Rita Dolbakian) includono una <strong>garanzia commerciale «soddisfatti o rimborsati»</strong>. Vale <strong>per tutta la durata del percorso</strong>, non solo per i primi giorni: finché stai seguendo il percorso, se non sei soddisfatta, puoi chiedere il rimborso. Il rischio è nostro. È un impegno <strong>in più</strong> rispetto ai tuoi diritti di legge e non li riduce.</p>
+      <p>Tutti i nostri percorsi (Metodo A.G.E.N.D.A., Metodo Rita Dolbakian) includono una <strong>garanzia commerciale «soddisfatti o rimborsati»</strong>. Vale <strong>per tutta la durata del percorso</strong>, non solo per i primi giorni: finché stai seguendo il percorso, se non sei soddisfatta, puoi chiedere il rimborso. Il rischio è nostro. È un impegno <strong>in più</strong> rispetto ai tuoi diritti di legge e non li riduce.</p>
+      <p>Per la mentorship <strong>Metodo Sold Out</strong> vale la garanzia «Primi 2 mesi» descritta nella pagina del percorso. <Tbc>conferma della garanzia di ciascun percorso</Tbc></p>
       <ul>
         <li><strong>Quando chiederla:</strong> durante il percorso o entro <Tbc>numero di giorni dalla fine del percorso</Tbc> dalla sua conclusione.</li>
         <li><strong>Come chiederla:</strong> scrivi alla PEC o all'indirizzo <Tbc>email assistenza</Tbc>, indicando nome ed email usati per l'iscrizione e, se vuoi, il motivo. Un breve confronto con noi è gradito ma non obbligatorio. <Tbc>se il confronto è previsto</Tbc></li>

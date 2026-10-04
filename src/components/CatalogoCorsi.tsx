@@ -1,46 +1,60 @@
-"use client";
 import Link from "next/link";
-import { useState } from "react";
 import { Slot } from "./Slot";
+import { Heading, Reveal } from "./Motion";
 
-type P = { id: string; t: string; d: string; pillar: "Business" | "Tecnica"; fmt: string; price: string; badge?: string; href: string };
-const ITEMS: P[] = [
-  { id: "prodotto-stories", t: "Instagram Stories che vendono", d: "Il manuale operativo per riempire l'agenda con le Stories.", pillar: "Business", fmt: "Guida", price: "37 €", badge: "Garanzia 14 giorni", href: "/prodotti/instagram-stories-che-vendono" },
-  { id: "prodotto-calcolatore", t: "Wellness Profit Calculator", d: "Il foglio di calcolo per il regime forfettario.", pillar: "Business", fmt: "Guida", price: "Da confermare", href: "/prodotti/wellness-profit-calculator" },
-  { id: "corso-guida", t: "Il Sistema Clienti per Operatori del Benessere", d: "La guida pratica per fare i primi 10 clienti online.", pillar: "Business", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
-  { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare continuità.", pillar: "Business", fmt: "Affiancamento", price: "Dopo la call", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-agenda" },
-  { id: "corso-wm", t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", pillar: "Business", fmt: "Video + affiancamento", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/wellness-mastery" },
-  { id: "corso-rd-online", t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", pillar: "Tecnica", fmt: "Video", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian" },
-  { id: "corso-rd-presenza", t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", pillar: "Tecnica", fmt: "In presenza", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian" },
+type P = { id: string; t: string; d: string; fmt: string; price: string; badge?: string; href: string };
+
+const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }[] = [
+  {
+    id: "affiancamento", n: "01", title: "Percorsi di *affiancamento*", lead: "Lavoriamo insieme, con una guida vera: per far crescere la tua attività o per imparare a massaggiare.",
+    items: [
+      { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "6 mesi, 11 moduli e affiancamento individuale per riempire la tua agenda.", fmt: "6 mesi · 11 moduli", price: "1.497 €", badge: "Fino a 24 rate", href: "/percorsi/metodo-agenda" },
+      { id: "corso-wm", t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con me: una call a settimana, 8 posti a trimestre.", fmt: "Mentorship 1:1", price: "4.997 €", badge: "8 posti a trimestre", href: "/percorsi/sold-out" },
+      { id: "corso-rd-online", t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", fmt: "Video", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
+      { id: "corso-rd-presenza", t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", fmt: "In presenza", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
+    ],
+  },
+  {
+    id: "digitali", n: "02", title: "Prodotti *digitali*", lead: "Manuali e strumenti da usare subito, con i tuoi tempi, a un prezzo contenuto.",
+    items: [
+      { id: "prodotto-stories", t: "Instagram Stories che vendono", d: "Il manuale operativo per riempire l'agenda con le Stories.", fmt: "Manuale", price: "37 €", badge: "Garanzia 14 giorni", href: "/prodotti/instagram-stories-che-vendono" },
+      { id: "prodotto-calcolatore", t: "Wellness Profit Calculator", d: "Il foglio di calcolo per il regime forfettario.", fmt: "Foglio XLS", price: "Da confermare", href: "/prodotti/wellness-profit-calculator" },
+    ],
+  },
+  {
+    id: "gratis", n: "03", title: "Per iniziare, *gratis*", lead: "Un primo passo senza impegno, per capire da dove partire.",
+    items: [
+      { id: "corso-guida", t: "Il Sistema Clienti per Operatori del Benessere", d: "La guida pratica per fare i primi 10 clienti online.", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
+      { id: "card-call", t: "Call di orientamento", d: "30 minuti con me per capire da dove partire. Nessun obbligo.", fmt: "Videochiamata", price: "Gratis", badge: "Gratis", href: "/call-orientamento" },
+    ],
+  },
 ];
 
 export function CatalogoCorsi() {
-  const [pillar, setPillar] = useState("Tutti");
-  const [fmt, setFmt] = useState("Tutti");
-  const list = ITEMS.filter((i) => (pillar === "Tutti" || i.pillar === pillar) && (fmt === "Tutti" || i.fmt.includes(fmt)));
-  const chip = (cur: string, v: string, set: (s: string) => void) => (
-    <button key={v} onClick={() => set(v)} aria-pressed={cur === v} className={`rounded-full border px-5 min-h-11 text-sm transition-colors ${cur === v ? "bg-ink text-ivory border-ink" : "border-[var(--line)] hover:border-ink"}`}>{v}</button>
-  );
   return (
-    <>
-      <div className="flex flex-wrap gap-x-10 gap-y-4">
-        <div className="flex flex-wrap gap-2 items-center"><span className="eyebrow mr-2">Area</span>{["Tutti", "Business", "Tecnica"].map((v) => chip(pillar, v, setPillar))}</div>
-        <div className="flex flex-wrap gap-2 items-center"><span className="eyebrow mr-2">Formato</span>{["Tutti", "Video", "In presenza", "Guida", "Affiancamento"].map((v) => chip(fmt, v, setFmt))}</div>
-      </div>
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
-        {list.map((p) => (
-          <Link key={p.t} href={p.href} className="lift zoom group block rounded-3xl bg-blush/30 p-5">
-            <div className="relative"><Slot kind="foto" id={p.id} label="Copertina corso" ratio="16/9" />{p.badge && <span className="absolute top-3 left-3 bg-ink text-ivory text-xs rounded-full px-3 py-1">{p.badge}</span>}</div>
-            <div className="p-3 pt-5">
-              <p className="eyebrow">{p.pillar} · {p.fmt}</p>
-              <h3 className="font-display text-3xl mt-2 leading-tight">{p.t}</h3>
-              <p className="mt-2 text-stone text-[0.95rem]">{p.d}</p>
-              <p className="mt-5 flex justify-between text-sm font-medium"><span>{p.price}</span><span className="transition-transform duration-500 group-hover:translate-x-2">Voglio saperne di più →</span></p>
-            </div>
-          </Link>
-        ))}
-        {list.length === 0 && <p className="text-stone">Nessun corso con questi filtri. Prova a cambiarli.</p>}
-      </div>
-    </>
+    <div className="space-y-20 md:space-y-28">
+      {GROUPS.map((g) => (
+        <section key={g.id} id={g.id} className="scroll-mt-28">
+          <p className="eyebrow mb-4">{g.n}</p>
+          <Heading text={g.title} className="text-4xl md:text-6xl" />
+          <p className="mt-4 text-stone max-w-xl">{g.lead}</p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {g.items.map((p, i) => (
+              <Reveal key={p.t} delay={(i % 3) * 0.08}>
+                <Link href={p.href} className="lift zoom group block h-full rounded-3xl bg-blush/30 p-5">
+                  <div className="relative"><Slot kind="foto" id={p.id} label="Copertina" ratio="16/9" />{p.badge && <span className="absolute top-3 left-3 bg-ink text-ivory text-xs rounded-full px-3 py-1">{p.badge}</span>}</div>
+                  <div className="p-3 pt-5">
+                    <p className="eyebrow">{p.fmt}</p>
+                    <h3 className="font-display text-3xl mt-2 leading-tight">{p.t}</h3>
+                    <p className="mt-2 text-stone text-[0.95rem]">{p.d}</p>
+                    <p className="mt-5 flex justify-between text-sm font-medium"><span>{p.price}</span><span className="transition-transform duration-500 group-hover:translate-x-2">Scopri di più →</span></p>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
   );
 }

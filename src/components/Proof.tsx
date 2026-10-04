@@ -16,10 +16,10 @@ export function CaseStudies({ max, program }: { max?: number; program?: string }
           ? list.map((c, i) => (
               <Reveal key={c.name} delay={i * 0.1}>
                 <article className="rounded-3xl border border-[var(--line)] p-6 h-full flex flex-col">
-                  <Slot kind={c.video ? "video" : "foto"} label={c.name} src={c.video ?? c.photo} poster={c.poster} ratio="4/3" />
-                  <p className="font-display text-7xl mt-6 kw leading-none">{c.number}</p>
+                  {(c.video || c.photo) && <Slot kind={c.video ? "video" : "foto"} label={c.name} src={c.video ?? c.photo} poster={c.poster} ratio="4/3" />}
+                  <p className={`font-display text-7xl kw leading-none ${c.photo || c.video ? "mt-6" : ""}`}>{c.number}</p>
                   <p className="text-sm text-stone mt-1">{c.label}</p>
-                  <blockquote className="mt-5 flex-1 text-lg">«{c.quote}»</blockquote>
+                  <blockquote className="mt-5 flex-1 text-lg">{c.quote}</blockquote>
                   <p className="mt-5 font-medium">{c.name}</p>
                   <p className="text-sm text-stone">{c.role}</p>
                 </article>

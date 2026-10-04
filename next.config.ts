@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
+  async redirects() {
+    return [{ source: "/percorsi/wellness-mastery", destination: "/percorsi/sold-out", permanent: true }];
+  },
   async headers() {
     return [
       {

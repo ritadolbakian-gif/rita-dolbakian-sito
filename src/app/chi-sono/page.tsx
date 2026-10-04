@@ -93,7 +93,7 @@ export default function ChiSono() {
 
       <Chapter id="oggi" n="05" label="Oggi" title="Oggi lo insegno *a te*." img={<Slot kind="foto" id="story-oggi" label="Rita oggi" ratio="4/5" art="arch" />}>
         <p>Oggi lavoro nel benessere da oltre dieci anni. Ho trasformato quello che ho imparato in due percorsi: uno per la tua attività, uno per le tue mani.</p>
-        <p>Con il <Link href="/percorsi/metodo-agenda" className="ulink text-ink">Metodo A.G.E.N.D.A.</Link> e <Link href="/percorsi/wellness-mastery" className="ulink text-ink">Wellness Mastery</Link> ti aiuto a farti trovare e scegliere. Con il <Link href="/percorsi/metodo-rita-dolbakian" className="ulink text-ink">Metodo Rita Dolbakian</Link> ti insegno a massaggiare con mani sicure. Seguo poche persone alla volta, perché voglio esserci davvero.</p>
+        <p>Con il <Link href="/percorsi/metodo-agenda" className="ulink text-ink">Metodo A.G.E.N.D.A.</Link> e <Link href="/percorsi/sold-out" className="ulink text-ink">Metodo Sold Out</Link> ti aiuto a farti trovare e scegliere. Con il <Link href="/percorsi/metodo-rita-dolbakian" className="ulink text-ink">Metodo Rita Dolbakian</Link> ti insegno a massaggiare con mani sicure. Seguo poche persone alla volta, perché voglio esserci davvero.</p>
         <div className="flex flex-wrap gap-3 pt-2"><Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link><Link href="/percorsi" className="btn btn-ghost">Scegli il tuo percorso</Link></div>
       </Chapter>
 
@@ -144,7 +144,7 @@ export default function ChiSono() {
         { q: "Chi sei?", a: "Sono Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni. Prima lavoravo in un bar. Ho scelto il massaggio, ho faticato a trovare clienti e ho imparato a usare i social per farmi trovare." },
         { q: "Perché hai lasciato il bar?", a: "Perché ero frustrata e sapevo di meritare di più. Volevo costruire qualcosa di mio, con le mie mani." },
         { q: "Come hai trovato i tuoi clienti?", a: "All'inizio solo con il passaparola, e andando a tentativi. Poi ho imparato a usare i social e a costruire un percorso chiaro, dal «ti vedo» al «ti scrivo»." },
-        { q: "Di cosa ti occupi oggi?", a: "Aiuto operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Wellness Mastery) e insegno a massaggiare con il mio metodo, online e in presenza." },
+        { q: "Di cosa ti occupi oggi?", a: "Aiuto operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Metodo Sold Out) e insegno a massaggiare con il mio metodo, online e in presenza." },
         { q: "Perché segui poche persone alla volta?", a: "Perché il lavoro vero richiede ascolto, attenzione e presenza. Preferisco seguire poche persone davvero, che molte a distanza." },
         { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento di circa 30 minuti, senza obbligo. Da lì capiamo insieme quale percorso ha senso." },
         { q: "Dove ti trovo sui social?", a: "Su Instagram @rita_dolbakian, su YouTube e su TikTok @rita.dolbakian." },

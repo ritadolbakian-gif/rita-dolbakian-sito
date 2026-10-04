@@ -120,7 +120,7 @@ export default function Home() {
             {[
               { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
               { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Una chiacchierata per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
-              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi, Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Scegli il tuo percorso" },
+              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi il massimo affiancamento, la mentorship 1:1 Metodo Sold Out.", href: "/percorsi", cta: "Scegli il tuo percorso" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
                 <Link href={s.href} className="group p-8 md:p-10 h-full flex flex-col hover:bg-blush/30 transition-colors duration-500">
@@ -145,7 +145,7 @@ export default function Home() {
             {[
               { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita", art: "waves" as const, id: "card-guida" },
               { t: "Call di orientamento", d: "Il confronto per scegliere la strada giusta.", tag: "30 minuti", href: "/call-orientamento", art: "orbs" as const, id: "card-call" },
-              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "Soddisfatti o rimborsati", href: "/percorsi/wellness-mastery", art: "arch" as const, id: "card-wm" },
+              { t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi: da brava ma invisibile a riferimento del tuo territorio.", tag: "8 posti a trimestre", href: "/percorsi/sold-out", art: "arch" as const, id: "card-wm" },
               { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
