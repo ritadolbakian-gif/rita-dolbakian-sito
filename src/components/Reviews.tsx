@@ -14,6 +14,8 @@ function Trustpilot() {
     if (!businessUnitId) return;
     const on = (e: Event) => { const c = (e as CustomEvent).detail; if (c?.marketing) setOk(true); };
     window.addEventListener("rd-consent", on);
+    // consenso già dato in precedenza (lettura di localStorage dopo il mount)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     try { const v = JSON.parse(localStorage.getItem("rd-consent-v1") || "null"); if (v?.marketing) setOk(true); } catch {}
     return () => window.removeEventListener("rd-consent", on);
   }, [businessUnitId]);
