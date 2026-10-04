@@ -43,7 +43,7 @@ export default function Home() {
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
                 <Link href={c.href} className={`lift group block rounded-[1.75rem] p-5 md:p-6 h-full ${c.dark ? "section-dark" : "bg-blush/60"}`}>
-                  <div className="zoom"><Slot kind="foto" id={c.id} label={c.slot} ratio="16/11" art={c.art} /></div>
+                  <div className="zoom"><Slot kind="foto" id={c.id} label={c.slot} ratio="16/9" art={c.art} /></div>
                   <div className="p-3 md:p-4 pt-6">
                     <p className="eyebrow">{c.icon} {c.k}</p>
                     <h3 className="font-display text-4xl md:text-5xl mt-3">{c.t}</h3>
@@ -145,7 +145,7 @@ export default function Home() {
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
                 <Link href={p.href} className="lift zoom group flex h-full flex-col rounded-3xl border border-ivory/15 p-4 hover:border-rose">
-                  <Slot kind="foto" id={p.id} label={p.t} ratio="4/3" art={p.art} />
+                  <Slot kind="foto" id={p.id} label={p.t} ratio="16/9" art={p.art} />
                   <div className="p-3 pt-5 flex-1 flex flex-col">
                     <span className="eyebrow">0{i + 1}</span>
                     <h3 className="font-display text-3xl mt-2">{p.t}</h3>

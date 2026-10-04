@@ -28,7 +28,7 @@ export function CatalogoCorsi() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
         {list.map((p) => (
           <Link key={p.t} href={p.href} className="lift zoom group block rounded-3xl bg-blush/30 p-5">
-            <div className="relative"><Slot kind="foto" id={p.id} label="Copertina corso" ratio="4/3" />{p.badge && <span className="absolute top-3 left-3 bg-ink text-ivory text-xs rounded-full px-3 py-1">{p.badge}</span>}</div>
+            <div className="relative"><Slot kind="foto" id={p.id} label="Copertina corso" ratio="16/9" />{p.badge && <span className="absolute top-3 left-3 bg-ink text-ivory text-xs rounded-full px-3 py-1">{p.badge}</span>}</div>
             <div className="p-3 pt-5">
               <p className="eyebrow">{p.pillar} · {p.fmt}</p>
               <h3 className="font-display text-3xl mt-2 leading-tight">{p.t}</h3>

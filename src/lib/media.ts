@@ -10,13 +10,13 @@ export type MediaItem = { src?: string; poster?: string; alt: string; pos?: stri
 export const MEDIA: Record<string, MediaItem> = {
   // HOME
   hero: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian, ritratto in camice (4:5, verticale)", pos: "50% 25%" },
-  "path-agenda": { src: "/media/rita-laptop.webp", alt: "Rita al lavoro in studio (16:11)" , pos: "50% 35%" },
+  "path-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "path-rd": { src: "/media/mani-asciugamano.webp", alt: "Mani al lavoro, dettaglio della tecnica (16:11)"  },
   "rita-studio": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
   "card-guida": { alt: "Copertina guida gratuita (4:3)" },
   "card-call": { src: "/media/rita-videocall.webp", alt: "Rita in call di orientamento (4:3)" , pos: "40% 40%" },
-  "card-wm": { src: "/media/rita-laptop.webp", alt: "Wellness Mastery (4:3)" , pos: "50% 35%" },
+  "card-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "card-rd": { src: "/media/sala-massaggi.webp", alt: "Metodo Rita Dolbakian (4:3)"  },
   "guida-mockup": { alt: "Mockup della guida «Il Sistema Clienti» (3:4)" },
   // PERCORSI
@@ -26,8 +26,8 @@ export const MEDIA: Record<string, MediaItem> = {
   "rd-online": { src: "/media/lezione-due.webp", alt: "Anteprima lezione online (video 16:9)"  },
   "rd-aula": { src: "/media/aula-grande.webp", alt: "Formazione in presenza, aula (16:9)"  },
   // PERCORSI (hub + pagine)
-  "percorsi-agenda": { src: "/media/rita-conversazione.webp", alt: "Card Metodo A.G.E.N.D.A. (4:3)" , pos: "60% 40%" },
-  "percorsi-wm": { src: "/media/rita-laptop.webp", alt: "Card Wellness Mastery (4:3)" , pos: "50% 35%" },
+  "percorsi-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "percorsi-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "percorsi-rd": { src: "/media/mani-asciugamano.webp", alt: "Card Metodo Rita Dolbakian (4:3)"  },
   "agenda-prima": { alt: "Agenda confusa, prima (1:1)" },
   "agenda-dopo": { alt: "Agenda ordinata, dopo (1:1)" },
@@ -48,8 +48,8 @@ export const MEDIA: Record<string, MediaItem> = {
   "cert-attestato": { alt: "L'attestato reale (4:3)" },
   // CORSI (catalogo)
   "corso-guida": { alt: "Copertina corso: guida gratuita (4:3)" },
-  "corso-agenda": { src: "/media/rita-conversazione.webp", alt: "Copertina corso: A.G.E.N.D.A. (4:3)" , pos: "60% 40%" },
-  "corso-wm": { src: "/media/rita-tablet.webp", alt: "Copertina corso: Wellness Mastery (4:3)" , pos: "45% 40%" },
+  "corso-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "corso-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "corso-rd-online": { src: "/media/lezione-due.webp", alt: "Copertina corso: Metodo RD online (4:3)" , pos: "62% 55%" },
   "corso-rd-presenza": { src: "/media/aula-grande.webp", alt: "Copertina corso: Metodo RD in presenza (4:3)"  },
   // ALTRE PAGINE

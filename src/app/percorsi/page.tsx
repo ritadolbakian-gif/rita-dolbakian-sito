@@ -41,7 +41,7 @@ export default function Percorsi() {
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.1}>
                 <Link href={c.href} className="lift zoom group block rounded-3xl border border-[var(--line)] p-4 h-full">
-                  <Slot id={c.id} label={c.t} ratio="4/3" art={c.art} />
+                  <Slot id={c.id} label={c.t} ratio="16/9" art={c.art} />
                   <div className="p-4 pt-6"><p className="eyebrow !text-rose">{c.tag}</p><h3 className="font-display text-3xl mt-2">{c.t}</h3><p className="mt-3 text-stone">{c.d}</p><span className="mt-5 inline-flex gap-2 font-medium">Scopri il percorso <span className="transition-transform duration-500 group-hover:translate-x-2">→</span></span></div>
                 </Link>
               </Reveal>
