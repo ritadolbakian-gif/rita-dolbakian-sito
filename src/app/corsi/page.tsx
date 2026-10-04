@@ -1,4 +1,4 @@
-import { PageHero, CtaBand } from "@/components/Ui";
+import { PageHero, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { CatalogoCorsi } from "@/components/CatalogoCorsi";
 import { meta } from "@/lib/seo";
 
@@ -10,6 +10,14 @@ export default function Corsi() {
       <PageHero eyebrow="Corsi" title="Tutto il percorso, *in un posto*." answer="Il catalogo di Rita Dolbakian riunisce la guida gratuita, il Metodo A.G.E.N.D.A., Wellness Mastery e il Metodo Rita Dolbakian. Filtra per area, business o tecnica, e per formato, video, in presenza, guida o affiancamento." />
       <section className="section"><div className="wrap"><CatalogoCorsi /></div></section>
       <CtaBand title="Non sai quale *scegliere*?" primary={{ href: "/percorsi", label: "Fai il test di orientamento" }} secondary={{ href: "/call-orientamento", label: "Prenota la call" }} />
+      <Faq items={[
+        { q: "Come scelgo il corso giusto?", a: "Dipende da cosa vuoi cambiare: se vuoi più clienti per la tua attività, parti dal Metodo A.G.E.N.D.A. o da Wellness Mastery. Se vuoi imparare a massaggiare, il Metodo Rita Dolbakian. Il test di orientamento nella pagina Percorsi ti aiuta a decidere." },
+        { q: "C'è qualcosa di gratuito per iniziare?", a: "Sì: la guida «Il Sistema Clienti per Operatori del Benessere» e la call di orientamento di circa 30 minuti, senza obbligo." },
+        { q: "Quali sono i prezzi?", a: <>I prezzi sono indicati nella pagina di ogni percorso. <Tbc>prezzi e formule di pagamento</Tbc></>, plain: "I prezzi sono indicati nella pagina di ogni percorso." },
+        { q: "Posso seguire i corsi online?", a: "Sì: i percorsi per l'attività sono pensati per essere seguiti online. Per la tecnica di massaggio, lo studio è online e la pratica in presenza." },
+        { q: "Devo già lavorare nel benessere?", a: "Per A.G.E.N.D.A. e Wellness Mastery sì: servono competenza e un'attività, anche appena avviata. Per il Metodo Rita Dolbakian si può partire da zero." },
+        { q: "Come accedo ai corsi dopo l'acquisto?", a: "Dall'Area Privata, con le credenziali che ricevi via email dopo l'iscrizione." },
+      ]} />
     </>
   );
 }

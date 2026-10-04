@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Orientatore } from "@/components/Orientatore";
+import { Slot } from "@/components/Slot";
 import { meta } from "@/lib/seo";
 
 export const metadata = meta("Percorsi di formazione per il benessere", "Tutti i percorsi di Rita Dolbakian: Metodo A.G.E.N.D.A., Wellness Mastery e Metodo Rita Dolbakian. Scopri da quale partire.", "/percorsi");
@@ -26,9 +27,30 @@ export default function Percorsi() {
         </div>
       </section>
 
+      <section className="section pt-0">
+        <div className="wrap">
+          <Label n="02" t="I tre percorsi" />
+          <Heading text="Scegli la *strada*." className="text-5xl md:text-6xl" />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {[
+              { id: "percorsi-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare direzione e continuità nella tua attività.", tag: "Per chi lavora nel benessere", href: "/percorsi/metodo-agenda", art: "orbs" as const },
+              { id: "percorsi-wm", t: "Wellness Mastery", d: "Il percorso completo: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1.", tag: "Da operatrice a imprenditrice", href: "/percorsi/wellness-mastery", art: "arch" as const },
+              { id: "percorsi-rd", t: "Metodo Rita Dolbakian", d: "Imparare a massaggiare e perfezionare la tecnica, online e in presenza.", tag: "Per le tue mani", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const },
+            ].map((c, i) => (
+              <Reveal key={c.t} delay={i * 0.1}>
+                <Link href={c.href} className="lift zoom group block rounded-3xl border border-[var(--line)] p-4 h-full">
+                  <Slot id={c.id} label={c.t} ratio="4/3" art={c.art} />
+                  <div className="p-4 pt-6"><p className="eyebrow !text-rose">{c.tag}</p><h3 className="font-display text-3xl mt-2">{c.t}</h3><p className="mt-3 text-stone">{c.d}</p><span className="mt-5 inline-flex gap-2 font-medium">Scopri il percorso <span className="transition-transform duration-500 group-hover:translate-x-2">→</span></span></div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section bg-blush/30">
         <div className="wrap">
-          <Label n="02" t="Il confronto" />
+          <Label n="03" t="Il confronto" />
           <Heading text="I tre percorsi, *a confronto*." className="text-5xl md:text-6xl" />
           <Reveal>
             <div className="mt-12 hidden md:block overflow-x-auto rounded-3xl bg-ivory">

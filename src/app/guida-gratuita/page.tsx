@@ -1,4 +1,5 @@
-import { PageHero, Label } from "@/components/Ui";
+import Link from "next/link";
+import { PageHero, Label, Faq } from "@/components/Ui";
 import { TrustBar } from "@/components/Proof";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -26,6 +27,13 @@ export default function Guida() {
         <ul className="mt-8 grid gap-4 md:grid-cols-2 text-lg text-stone max-w-4xl">{["Lavori nel benessere e vuoi più clienti online.", "Hai competenza ma l'agenda è instabile.", "Non sai da dove cominciare.", "Vuoi un metodo, non motivazione."].map((t) => <li key={t} className="rounded-2xl bg-ivory p-5">✓ {t}</li>)}</ul>
       </div></section>
       <section className="section"><div className="wrap"><TrustBar items={[{ t: "Gratuita", d: "Nessun pagamento, nessuna carta." }, { t: "Una sola email", d: "Ti scrivo per mandarti la guida." }, { t: "Pratica", d: "Passi concreti, non teoria." }, { t: "Con calma", d: "Si legge in poco tempo, si applica un passo alla volta." }]} /></div></section>
+      <Faq items={[
+        { q: "La guida è davvero gratuita?", a: "Sì. Non c'è nessun pagamento e non serve la carta." },
+        { q: "Cosa ricevo, e come?", a: "Ricevi via email la guida «Il Sistema Clienti per Operatori del Benessere». Se non la vedi, controlla anche la cartella spam." },
+        { q: "Mi arriveranno tante email?", a: "No. Ti scrivo per mandarti la guida. Le comunicazioni successive solo se scegli di riceverle, e puoi cancellarti con un clic." },
+        { q: "Per chi è la guida?", a: "Per chi lavora nel benessere e vuole fare i primi 10 clienti online, partendo dal punto giusto." },
+        { q: "Come vengono usati i miei dati?", a: <>Solo per inviarti quello che hai chiesto, come spiegato nell'<Link href="/privacy" className="ulink text-ink">informativa privacy</Link>.</>, plain: "Solo per inviarti quello che hai chiesto, come spiegato nell'informativa privacy." },
+      ]} />
     </>
   );
 }

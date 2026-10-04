@@ -26,7 +26,7 @@ export function PageHero({ eyebrow, title, answer, dark = false, children }: { e
 
 export type QA = { q: string; a: ReactNode; plain?: string };
 
-export function Faq({ items, title = "Domande *frequenti*", dark = false }: { items: QA[]; title?: string; dark?: boolean }) {
+export function Faq({ items, title = "Domande e *risposte*", dark = false }: { items: QA[]; title?: string; dark?: boolean }) {
   const ld = {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: items.map((i) => ({ "@type": "Question", name: i.q, acceptedAnswer: { "@type": "Answer", text: i.plain ?? (typeof i.a === "string" ? i.a : "") } })),
@@ -35,7 +35,7 @@ export function Faq({ items, title = "Domande *frequenti*", dark = false }: { it
     <section className={`${dark ? "section-dark" : ""} section`}>
       <JsonLd data={ld} />
       <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-        <div><Label t="FAQ" /><Heading text={title} className="text-5xl md:text-6xl" /></div>
+        <div><Label t="Domande e risposte" /><Heading text={title} className="text-5xl md:text-6xl" /></div>
         <div className="border-t border-[var(--line)]">
           {items.map((i) => (
             <details key={i.q} className="acc">

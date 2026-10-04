@@ -1,5 +1,6 @@
-import { PageHero, Label } from "@/components/Ui";
-import { Heading } from "@/components/Motion";
+import { PageHero, Label, Faq, Tbc } from "@/components/Ui";
+import { Heading, Reveal } from "@/components/Motion";
+import { Slot } from "@/components/Slot";
 import { TrustBar } from "@/components/Proof";
 import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
@@ -17,6 +18,7 @@ export default function Call() {
             <div><Label t="Durante" /><p className="text-stone">Parliamo di dove sei, di cosa vuoi cambiare e di cosa ha senso fare. Ti dico con sincerità se posso aiutarti. Lavoro solo con poche persone.</p></div>
             <div><Label t="Dopo" /><p className="text-stone">Nessun obbligo e nessuno spam. Hai tutto il tempo per decidere, con calma.</p></div>
             <Heading text="30 minuti. *Nessun* obbligo." className="text-4xl" as="h2" />
+            <Reveal><Slot kind="foto" id="call-hero" label="Rita sorride alla videochiamata" ratio="4/5" art="orbs" className="max-w-xs" /></Reveal>
           </div>
           <div className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory">
             <iframe src={SITE.bookingUrl} title="Prenota la call di orientamento" loading="lazy" className="w-full border-0" style={{ minHeight: 780 }} />
@@ -24,6 +26,14 @@ export default function Call() {
         </div>
       </section>
       <section className="section pt-0"><div className="wrap"><TrustBar /></div></section>
+      <Faq items={[
+        { q: "La call è gratuita?", a: "Sì. Dura circa 30 minuti e non c'è nessun obbligo." },
+        { q: "È una telefonata di vendita?", a: "No. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva. È un confronto calmo e onesto." },
+        { q: "Come mi preparo?", a: "Basta che pensi a dove sei oggi con la tua attività e a cosa vorresti cambiare. Non serve preparare altro." },
+        { q: "E se dopo la call il percorso non fa per me?", a: "Va benissimo: nessun obbligo e nessuno spam. Ti dico con sincerità se e come posso aiutarti." },
+        { q: "Come si svolge, e dove?", a: <>Si svolge in videochiamata. <Tbc>piattaforma e link</Tbc></>, plain: "Si svolge in videochiamata." },
+        { q: "Posso spostare o annullare la prenotazione?", a: "Sì: puoi farlo dal link che ricevi nella email di conferma." },
+      ]} />
     </>
   );
 }

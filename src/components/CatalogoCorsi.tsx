@@ -3,13 +3,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { Slot } from "./Slot";
 
-type P = { t: string; d: string; pillar: "Business" | "Tecnica"; fmt: string; price: string; badge?: string; href: string };
+type P = { id: string; t: string; d: string; pillar: "Business" | "Tecnica"; fmt: string; price: string; badge?: string; href: string };
 const ITEMS: P[] = [
-  { t: "Il Sistema Clienti per Operatori del Benessere", d: "La guida pratica per fare i primi 10 clienti online.", pillar: "Business", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
-  { t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare continuità.", pillar: "Business", fmt: "Affiancamento", price: "Dopo la call", badge: "Su candidatura", href: "/percorsi/metodo-agenda" },
-  { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", pillar: "Business", fmt: "Video + affiancamento", price: "Da confermare", badge: "Più richiesto", href: "/percorsi/wellness-mastery" },
-  { t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", pillar: "Tecnica", fmt: "Video", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
-  { t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", pillar: "Tecnica", fmt: "In presenza", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
+  { id: "corso-guida", t: "Il Sistema Clienti per Operatori del Benessere", d: "La guida pratica per fare i primi 10 clienti online.", pillar: "Business", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
+  { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare continuità.", pillar: "Business", fmt: "Affiancamento", price: "Dopo la call", badge: "Su candidatura", href: "/percorsi/metodo-agenda" },
+  { id: "corso-wm", t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", pillar: "Business", fmt: "Video + affiancamento", price: "Da confermare", badge: "Più richiesto", href: "/percorsi/wellness-mastery" },
+  { id: "corso-rd-online", t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", pillar: "Tecnica", fmt: "Video", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
+  { id: "corso-rd-presenza", t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", pillar: "Tecnica", fmt: "In presenza", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
 ];
 
 export function CatalogoCorsi() {
@@ -28,7 +28,7 @@ export function CatalogoCorsi() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
         {list.map((p) => (
           <Link key={p.t} href={p.href} className="lift zoom group block rounded-3xl bg-blush/30 p-5">
-            <div className="relative"><Slot kind="foto" label="Copertina corso" ratio="4/3" />{p.badge && <span className="absolute top-3 left-3 bg-ink text-ivory text-xs rounded-full px-3 py-1">{p.badge}</span>}</div>
+            <div className="relative"><Slot kind="foto" id={p.id} label="Copertina corso" ratio="4/3" />{p.badge && <span className="absolute top-3 left-3 bg-ink text-ivory text-xs rounded-full px-3 py-1">{p.badge}</span>}</div>
             <div className="p-3 pt-5">
               <p className="eyebrow">{p.pillar} · {p.fmt}</p>
               <h3 className="font-display text-3xl mt-2 leading-tight">{p.t}</h3>

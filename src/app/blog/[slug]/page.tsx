@@ -34,7 +34,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
   const url = `${SITE.url}/blog/${slug}`;
   const isTech = p.cluster === "D";
   const last = p.sections.length - 1;
-  const tocItems = p.faq.length ? [...p.toc.slice(0, -1), { id: "faq", title: "Domande frequenti" }, ...p.toc.slice(-1)] : p.toc;
+  const tocItems = p.faq.length ? [...p.toc, { id: "faq", title: "Domande e risposte" }] : p.toc;
   const midAt = Math.min(3, last - 1); // dopo la 3ª sezione H2
 
   const ld = [
@@ -99,24 +99,26 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
             <div className="prose-rd mt-10">
               {p.sections.map((s, i) => (
                 <div key={s.id ?? "intro"}>
-                  {i === last && p.faq.length > 0 && (
-                    <section aria-labelledby="faq" className="mt-14">
-                      <h2 id="faq">Domande frequenti</h2>
-                      <div className="border-t border-[var(--line)] not-prose">
-                        {p.faq.map((f) => (
-                          <details key={f.q} className="acc">
-                            <summary><h3 className="font-display text-[1.4rem] md:text-2xl leading-snug">{f.q}</h3><span className="plus" aria-hidden>+</span></summary>
-                            <div className="acc-body prose-rd !text-stone" dangerouslySetInnerHTML={{ __html: f.html }} />
-                          </details>
-                        ))}
-                      </div>
-                    </section>
-                  )}
                   <section className={i === last && last > 0 ? "closing rounded-3xl bg-blush/40 p-6 md:p-10" : undefined} dangerouslySetInnerHTML={{ __html: s.html }} />
                   {i === midAt && <MidCta />}
                 </div>
               ))}
             </div>
+
+            {p.faq.length > 0 && (
+              <section aria-labelledby="faq" className="mt-16">
+                <p className="eyebrow mb-4">Domande e risposte</p>
+                <h2 id="faq" className="font-display text-4xl md:text-5xl leading-[1.05] scroll-mt-24">Le domande <em className="kw">più frequenti</em>.</h2>
+                <div className="mt-8 border-t border-[var(--line)]">
+                  {p.faq.map((f) => (
+                    <details key={f.q} className="acc">
+                      <summary><h3 className="font-display text-[1.4rem] md:text-2xl leading-snug">{f.q}</h3><span className="plus" aria-hidden>+</span></summary>
+                      <div className="acc-body prose-rd !text-stone" dangerouslySetInnerHTML={{ __html: f.html }} />
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
 
             <div className="mt-10 flex flex-wrap gap-3">
               {isTech ? <Link href="/percorsi/metodo-rita-dolbakian" className="btn btn-primary">Scopri il Metodo Rita Dolbakian <span className="arr">→</span></Link> : <Link href="/guida-gratuita" className="btn btn-primary">Scarica la guida gratuita <span className="arr">→</span></Link>}

@@ -38,7 +38,22 @@ export default function WellnessMastery() {
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
 
-      <section className="section">
+      <section className="py-10 md:py-14">
+        <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">
+          <Reveal><Slot kind="foto" id="wm-hero" label="Rita in studio con tablet" ratio="4/5" art="arch" className="max-w-md mx-auto lg:mx-0" /></Reveal>
+          <Reveal delay={0.1}>
+            <p className="eyebrow mb-4">Il percorso in sintesi</p>
+            <dl className="grid grid-cols-2 gap-px bg-[var(--line)] rounded-3xl overflow-hidden border border-[var(--line)]">
+              {[["10", "moduli"], ["6", "bonus"], ["8", "settimane di affiancamento 1:1"], ["14", "giorni di garanzia"]].map(([n, l]) => (
+                <div key={l} className="bg-ivory p-6"><dt className="font-display text-6xl kw leading-none">{n}</dt><dd className="mt-2 text-sm text-stone">{l}</dd></div>
+              ))}
+            </dl>
+            <p className="mt-6 text-stone max-w-lg">Un percorso ordinato in tre fasi: costruisci le fondamenta, ti fai trovare, impari a vendere con naturalezza e a liberare tempo.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section pt-8">
         <div className="wrap grid gap-14 lg:grid-cols-2">
           <div>
             <Label n="01" t="Ti riconosci?" />
@@ -57,7 +72,15 @@ export default function WellnessMastery() {
         <div className="wrap">
           <Label n="02" t="Il programma" />
           <Heading text="Dieci moduli, un *percorso* ordinato." className="text-5xl md:text-7xl" />
-          <div className="mt-12 border-t border-[var(--line)] max-w-4xl">
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[["wm-fase-1", "Fase 1", "Fondamenta", "Moduli 1–3: brand, mindset, offerta.", "stones"], ["wm-fase-2", "Fase 2", "Visibilità", "Moduli 4–7: Instagram, contenuti, altri social.", "waves"], ["wm-fase-3", "Fase 3", "Vendita e sistema", "Moduli 8–10: collaborazioni, DM, automazione.", "orbs"]].map(([id, f, t, d, a], i) => (
+              <Reveal key={id} delay={i * 0.08}><div className="lift zoom bg-ivory rounded-3xl p-4 h-full">
+                <Slot id={id} label={t} ratio="4/3" art={a as "stones"} />
+                <div className="p-3 pt-5"><p className="eyebrow">{f}</p><p className="font-display text-3xl mt-1">{t}</p><p className="mt-1 text-sm text-stone">{d}</p></div>
+              </div></Reveal>
+            ))}
+          </div>
+          <div className="mt-14 border-t border-[var(--line)] max-w-4xl">
             {modules.map(([t, d], i) => (
               <details key={t} className="acc" open={i === 0}>
                 <summary><h3 className="font-display text-2xl md:text-3xl"><span className="kw mr-3">{String(i + 1).padStart(2, "0")}</span>{t}</h3><span className="plus" aria-hidden>+</span></summary>
@@ -100,6 +123,13 @@ export default function WellnessMastery() {
           <div className="mt-12"><CaseStudies max={3} /></div>
           <div className="mt-16"><VideoWall /></div>
           <div className="mt-16"><TrustBar /></div>
+        </div>
+      </section>
+
+      <section className="section bg-blush/30">
+        <div className="wrap grid gap-6 md:grid-cols-2">
+          <Reveal><div className="rounded-3xl bg-ivory p-8 md:p-10 h-full"><h3 className="font-display text-3xl">È per te se…</h3><ul className="mt-5 space-y-2 text-stone"><li>✓ lavori nel benessere e vuoi costruire un'attività online;</li><li>✓ sei pronta a metterti in gioco, con calma e con metodo;</li><li>✓ vuoi un affiancamento, non solo dei video.</li></ul></div></Reveal>
+          <Reveal delay={0.1}><div className="section-dark rounded-3xl p-8 md:p-10 h-full"><h3 className="font-display text-3xl">Non è per te se…</h3><ul className="mt-5 space-y-2 text-ivory/70"><li>✕ cerchi guadagni facili o garantiti;</li><li>✕ non hai tempo da dedicarci;</li><li>✕ vuoi che qualcuno faccia il lavoro al posto tuo.</li></ul></div></Reveal>
         </div>
       </section>
 

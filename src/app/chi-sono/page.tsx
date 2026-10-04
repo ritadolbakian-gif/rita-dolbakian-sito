@@ -1,4 +1,4 @@
-import { PageHero, Label, CtaBand, Tbc } from "@/components/Ui";
+import { PageHero, Label, CtaBand, Tbc, Faq } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { TrustBar, PressBar } from "@/components/Proof";
@@ -71,6 +71,13 @@ export default function ChiSono() {
         </div>
       </section>
       <CtaBand title="Se ti riconosci in questa storia, *parliamone*." />
+      <Faq items={[
+        { q: "Chi è Rita Dolbakian?", a: "Rita è una massaggiatrice e formatrice nel benessere da oltre dieci anni. Ha iniziato con il solo passaparola e ha costruito, studiando e provando, un metodo per dare continuità all'attività." },
+        { q: "Di cosa si occupa oggi?", a: "Aiuta operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Wellness Mastery) e insegna a massaggiare con il suo metodo, online e in presenza." },
+        { q: "Perché segue poche persone alla volta?", a: "Perché il lavoro vero richiede ascolto, attenzione e presenza. Preferisce seguire poche persone davvero, che molte a distanza." },
+        { q: "Come posso lavorare con lei?", a: "Si parte dalla guida gratuita o dalla call di orientamento di circa 30 minuti, senza obbligo. Da lì si capisce insieme quale percorso ha senso." },
+        { q: "Dove trovo Rita sui social?", a: "Su Instagram @rita_dolbakian, su YouTube e su TikTok @rita.dolbakian." },
+      ]} />
     </>
   );
 }

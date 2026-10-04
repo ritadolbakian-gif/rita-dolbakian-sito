@@ -54,7 +54,19 @@ export default function MetodoAgenda() {
 
       <section className="section">
         <div className="wrap">
-          <Label n="03" t="Come funziona" />
+          <Label n="03" t="Prima e dopo" />
+          <Heading text="Cosa *cambia*, e cosa no." className="text-5xl md:text-6xl max-w-3xl" />
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <Reveal><div className="rounded-3xl border border-[var(--line)] p-4 h-full"><Slot id="agenda-prima" label="Agenda confusa" ratio="4/3" art="waves" /><div className="p-4 pt-6"><p className="eyebrow">Prima</p><ul className="mt-3 space-y-2 text-stone"><li>— Solo passaparola, quando arriva.</li><li>— Un mese pieno, il successivo vuoto.</li><li>— Messaggi a cui non sai come rispondere.</li><li>— La sensazione di andare a tentativi.</li></ul></div></div></Reveal>
+            <Reveal delay={0.1}><div className="rounded-3xl bg-blush/40 p-4 h-full"><Slot id="agenda-dopo" label="Agenda ordinata" ratio="4/3" art="orbs" /><div className="p-4 pt-6"><p className="eyebrow !text-rose">Dopo</p><ul className="mt-3 space-y-2 text-stone"><li>— Un percorso chiaro da «ti vedo» a «ti scrivo».</li><li>— Richieste più regolari e più qualificate.</li><li>— Risposte pronte, dette con calma.</li><li>— Una direzione, un passo alla volta.</li></ul></div></div></Reveal>
+          </div>
+          <p className="mt-6 text-xs text-stone max-w-2xl">Descrizione del percorso, non una promessa di risultato: ogni situazione di partenza è diversa.</p>
+        </div>
+      </section>
+
+      <section className="section bg-blush/30">
+        <div className="wrap">
+          <Label n="04" t="Come funziona" />
           <Heading text="Dalla guida al percorso, *senza* fretta." className="text-5xl md:text-6xl max-w-3xl" />
           <ol className="mt-12 grid gap-8 md:grid-cols-3">
             {[["La guida gratuita", "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Circa 30 minuti. Mi racconti dove sei, ti dico con sincerità se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Wellness Mastery."]].map(([t, d], i) => (
@@ -84,7 +96,7 @@ export default function MetodoAgenda() {
 
       <section className="section">
         <div className="wrap">
-          <Label n="04" t="Chi l'ha fatto" />
+          <Label n="05" t="Chi l'ha fatto" />
           <Heading text="Prima e dopo, nelle *loro* parole." className="text-5xl md:text-6xl max-w-3xl" />
           <div className="mt-12"><CaseStudies max={3} /></div>
           <div className="mt-16"><TrustBar /></div>
