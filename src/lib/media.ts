@@ -14,7 +14,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "path-rd": { src: "/media/rita-massaggio-4.webp", alt: "Mani al lavoro, dettaglio della tecnica (16:11)", pos: "60% 45%" },
   "rita-studio": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
-  "card-guida": { alt: "Copertina guida gratuita (4:3)" },
+  "card-guida": { src: "/media/guida-mockup.webp", alt: "Copertina guida gratuita (4:3)", pos: "50% 32%" },
   "card-call": { src: "/media/rita-videocall.webp", alt: "Rita in call di orientamento (4:3)" , pos: "40% 40%" },
   "card-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "card-rd": { src: "/media/rita-massaggio-1.webp", alt: "Metodo Rita Dolbakian (4:3)", pos: "55% 40%" },
@@ -23,7 +23,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "guida-pag-1": { alt: "Anteprima pagina interna 1 (4:3)" },
   "guida-pag-2": { alt: "Anteprima pagina interna 2 (4:3)" },
   "guida-pag-3": { alt: "Anteprima pagina interna 3 (4:3)" },
-  "guida-mockup": { alt: "Mockup della guida «Il Sistema Clienti» (3:4)" },
+  "guida-mockup": { src: "/media/guida-mockup.webp", alt: "La guida gratuita «Il Sistema Clienti per Operatori del Benessere» di Rita Dolbakian" },
   // PERCORSI
   "agenda-hero": { src: "/media/rita-conversazione.webp", alt: "Rita in affiancamento (4:3)" , pos: "60% 40%" },
   "wm-video": { alt: "Rita presenta Wellness Mastery (video 16:10)" },
@@ -52,7 +52,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "cert-livello-3": { src: "/media/rita-massaggio-5.webp", alt: "Livello 3 (4:3)", pos: "70% 45%" },
   "cert-attestato": { alt: "L'attestato reale (4:3)" },
   // CORSI (catalogo)
-  "corso-guida": { alt: "Copertina corso: guida gratuita (4:3)" },
+  "corso-guida": { src: "/media/guida-mockup.webp", alt: "Copertina corso: guida gratuita (4:3)", pos: "50% 32%" },
   "corso-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "corso-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "corso-rd-online": { src: "/media/rita-massaggio-3.webp", alt: "Copertina corso: Metodo RD online (4:3)", pos: "70% 40%" },
