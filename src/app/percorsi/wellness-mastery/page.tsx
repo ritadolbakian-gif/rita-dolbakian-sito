@@ -64,7 +64,7 @@ export default function WellnessMastery() {
           </div>
           <Reveal>
             <ul className="divide-y divide-[var(--line)] border-y border-[var(--line)] text-lg">
-              {["Hai competenza, ma l'agenda è instabile.", "Fai tutto da sola e sei stanca.", "Ti blocca l'idea di sembrare commerciale.", "Non sai come far capire il tuo valore, e quindi il tuo prezzo."].map((t) => <li key={t} className="py-5">{t}</li>)}
+              {["Lavori dal lunedì al sabato. Il sabato sera hai ancora messaggi a cui rispondere.", "Hai pagato un corso su Instagram. Non l'hai finito.", "Ti blocca l'idea di scrivere «costa tot» a una persona.", "Fai tutto da sola: massaggi, social, prezzi, fatture."].map((t) => <li key={t} className="py-5">{t}</li>)}
             </ul>
             <p className="mt-6 text-stone">Non devi snaturarti. Devi solo avere un metodo, e qualcuno accanto mentre lo costruisci.</p>
           </Reveal>

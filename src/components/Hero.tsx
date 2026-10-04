@@ -30,7 +30,7 @@ export function Hero() {
             Metodo per chi lavora nel benessere e vuole clienti con continuità. Tecnica per chi vuole imparare a massaggiare davvero. Sono Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni: ti accompagno io, passo dopo passo.
           </motion.p>
           <motion.div {...fade(1.05)} className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Link href="/call-orientamento" className="btn btn-primary justify-center">Prenota la call gratuita <span className="arr">→</span></Link>
+            <Link href="/call-orientamento" className="btn btn-primary justify-center">Prenota 30 minuti gratis <span className="arr">→</span></Link>
             <Link href="/percorsi" className="btn btn-ghost justify-center">Scopri i percorsi</Link>
           </motion.div>
           <motion.p {...fade(1.2)} className="mt-6 text-sm text-stone">30 minuti · nessun obbligo · nessuno spam</motion.p>

@@ -15,7 +15,7 @@ export default function MetodoAgenda() {
     <>
       <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Metodo e primo percorso di affiancamento per operatrici e operatori del benessere che vogliono continuità e clienti qualificati online.", "/percorsi/metodo-agenda")} />
       <PageHero imageId="agenda-top" imageRatio="4/5" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Ritrova *continuità* nella tua attività." answer="Il Metodo A.G.E.N.D.A. è il mio metodo per operatrici e operatori del benessere che vogliono smettere di andare a tentativi. È il primo percorso di affiancamento: si parte da una call di orientamento e si arriva a un'agenda con più ordine, più direzione e clienti più qualificati.">
-        <Link href="/call-orientamento" className="btn btn-primary">Prenota la call gratuita <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Scarica la guida</Link>
       </PageHero>
 
@@ -27,8 +27,8 @@ export default function MetodoAgenda() {
             <Label n="01" t="Il problema" />
             <Heading text="Non ti manca la tecnica. Ti manca una *direzione*." className="text-5xl md:text-6xl" />
             <Reveal delay={0.1}><div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-              <p>Solo passaparola. Mesi pieni e mesi vuoti. La sensazione di non avere il controllo di quello che succede alla tua agenda.</p>
-              <p>Non è mancanza di impegno, e quasi mai di bravura. È che nessuno ti ha mostrato come mettere in ordine quello che già sai fare. Ed è proprio da lì che si parte.</p>
+              <p>Un mese non respiri. Il mese dopo il telefono sta zitto. A fine mese fai i conti e non sai se hai guadagnato o ti sei solo stancata.</p>
+              <p>Non è colpa tua. Nessuno ti ha mai insegnato a farti trovare e a farti scegliere. Si impara. E si parte da una cosa alla volta.</p>
             </div></Reveal>
           </div>
           <Reveal><Slot kind="foto" id="agenda-hero" label="Rita in affiancamento / call" ratio="4/3" art="orbs" /></Reveal>

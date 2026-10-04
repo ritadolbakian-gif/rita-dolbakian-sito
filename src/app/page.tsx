@@ -38,8 +38,8 @@ export default function Home() {
           <Reveal delay={0.15}><p className="mt-5 text-lg text-stone max-w-xl">Una strada è per la tua attività. L'altra è per le tue mani. Scegli quella che ti somiglia oggi: l'altra ti aspetta.</p></Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
-              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", t: "Metodo A.G.E.N.D.A.", d: "Smetti di andare a tentativi. Con il mio metodo dai direzione alla tua attività, a partire da un primo affiancamento: dalla call a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
-              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo che ho semplificato in oltre dieci anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
+              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", cta: "Guarda come funziona il Metodo", t: "Metodo A.G.E.N.D.A.", d: "Smetti di andare a tentativi. Con il mio metodo dai direzione alla tua attività, a partire da un primo affiancamento: dalla call a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
+              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", cta: "Guarda i tre livelli", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo che ho semplificato in oltre dieci anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
                 <Link href={c.href} className={`lift group block rounded-[1.75rem] p-5 md:p-6 h-full ${c.dark ? "section-dark" : "bg-blush/60"}`}>
@@ -48,7 +48,7 @@ export default function Home() {
                     <p className="eyebrow">{c.icon} {c.k}</p>
                     <h3 className="font-display text-4xl md:text-5xl mt-3">{c.t}</h3>
                     <p className={`mt-4 ${c.dark ? "text-ivory/70" : "text-stone"}`}>{c.d}</p>
-                    <span className="mt-6 inline-flex items-center gap-3 font-medium">Scopri il percorso <span className="transition-transform duration-500 group-hover:translate-x-2">→</span></span>
+                    <span className="mt-6 inline-flex items-center gap-3 font-medium">{c.cta} <span className="transition-transform duration-500 group-hover:translate-x-2">→</span></span>
                   </div>
                 </Link>
               </Reveal>
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="self-end">
             <p className="text-ivory/70 mb-8">Se lavori nel benessere e ti riconosci in almeno una di queste situazioni, sei nel posto giusto:</p>
             <ul className="divide-y divide-ivory/15 border-y border-ivory/15">
-              {["L'agenda è instabile e non sai come sarà il mese prossimo.", "I clienti arrivano solo con il passaparola, quando arrivano.", "Mesi pieni, poi mesi vuoti, poi di nuovo pieni.", "Fai tante cose, ma senza una direzione.", "Fai fatica a far capire quanto vale quello che fai."].map((t, i) => (
+              {["La domenica sera guardi la settimana dopo: tre buchi in agenda.", "Ti scrivono «quanto costa?», rispondi con il prezzo, e non ti rispondono più.", "A marzo sei piena. Ad aprile il telefono sta zitto.", "Hai aperto Instagram, una scheda Google, forse TikTok. Nessuno ti ha detto da dove cominciare.", "A un'amica sei «bravissima». A un cliente nuovo non sai spiegare perché dovrebbe scegliere te."].map((t, i) => (
                 <Reveal key={t} delay={i * 0.07}>
                   <li className="flex gap-5 py-5"><span className="font-display text-2xl kw w-8 shrink-0">0{i + 1}</span><span>{t}</span></li>
                 </Reveal>
@@ -84,7 +84,7 @@ export default function Home() {
         <div className="wrap text-center max-w-4xl">
           <Label n="03" t="Come si sceglie oggi" />
           <Heading text="Prima guardano. Poi confrontano. *E solo dopo* scrivono." className="text-5xl md:text-7xl" />
-          <Reveal delay={0.2}><p className="mt-8 text-lg text-stone max-w-2xl mx-auto">Se tutto questo accade senza che tu lo guidi, l'agenda resta imprevedibile. Se invece lo costruisci, le richieste smettono di essere un colpo di fortuna. Si può fare. Te lo mostro io, con calma e con un metodo.</p></Reveal>
+          <Reveal delay={0.2}><p className="mt-8 text-lg text-stone max-w-2xl mx-auto">Una persona sente parlare di te. Ti cerca. Trova un profilo fermo, una scheda senza foto, nessun prezzo. Non ti scrive. Non perché non sei brava: perché non ha capito. Il passaparola ti porta il nome. Il resto lo costruisci tu, e te lo mostro io.</p></Reveal>
         </div>
       </section>
 
@@ -113,9 +113,9 @@ export default function Home() {
           <Heading text="Tre passi. *Nessuna* fretta." className="text-5xl md:text-7xl" />
           <div className="mt-14 grid gap-px bg-[var(--line)] md:grid-cols-3 border border-[var(--line)] rounded-3xl overflow-hidden">
             {[
-              { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Scarica la guida" },
-              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Un confronto calmo e onesto per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota la call" },
-              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi, Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Vedi i percorsi" },
+              { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
+              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Un confronto calmo e onesto per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
+              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi, Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Scegli il tuo percorso" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
                 <Link href={s.href} className="group p-8 md:p-10 h-full flex flex-col hover:bg-blush/30 transition-colors duration-500">
@@ -258,8 +258,8 @@ export default function Home() {
           <Reveal delay={0.2}>
             <p className="mt-8 text-xl font-display italic text-ivory/80">Con calma. Con chiarezza.</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link href="/call-orientamento" className="btn btn-primary">Prenota la tua call di orientamento <span className="arr">→</span></Link>
-              <Link href="/guida-gratuita" className="btn btn-ghost">Scarica la guida gratuita</Link>
+              <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
+              <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
             </div>
           </Reveal>
         </div>
