@@ -17,7 +17,10 @@ export function CookieBanner() {
 
   useEffect(() => {
     const cur = read();
+    // lettura di localStorage solo dopo il mount (evita mismatch di idratazione)
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (!cur) setOpen(true); else { setC(cur); window.dispatchEvent(new CustomEvent("rd-consent", { detail: cur })); }
+    /* eslint-enable react-hooks/set-state-in-effect */
     const reopen = () => { setCustom(true); setOpen(true); };
     window.addEventListener("rd-open-cookies", reopen);
     return () => window.removeEventListener("rd-open-cookies", reopen);

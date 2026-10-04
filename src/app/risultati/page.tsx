@@ -1,5 +1,5 @@
 import { PageHero, Label, CtaBand, Tbc } from "@/components/Ui";
-import { Heading, Reveal } from "@/components/Motion";
+import { Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { meta } from "@/lib/seo";
 
