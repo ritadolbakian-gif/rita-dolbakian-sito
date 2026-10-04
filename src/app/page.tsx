@@ -141,26 +141,46 @@ export default function Home() {
         <div className="wrap relative">
           <Label n="06" t="I percorsi" />
           <Heading text="Quale percorso ti serve *adesso*?" className="text-5xl md:text-7xl max-w-4xl" />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal>
+            <Link href="/percorsi/metodo-agenda" className="lift zoom group mt-14 grid gap-8 rounded-[2rem] border border-rose/60 bg-ivory/[0.04] p-5 md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div className="relative"><Slot kind="foto" id="corso-agenda" label="Metodo A.G.E.N.D.A." ratio="16/9" art="orbs" priority /><span className="absolute left-3 top-3 rounded-full bg-rose px-3 py-1 text-xs text-white">Il percorso da cui partire</span></div>
+              <div>
+                <p className="eyebrow !text-rose">Metodo A.G.E.N.D.A. · 6 mesi · 11 moduli</p>
+                <h3 className="font-display text-4xl md:text-6xl mt-3 leading-[1.02]">Riempi l'agenda, <span className="kw">un passo alla volta</span>.</h3>
+                <p className="mt-4 text-ivory/70 max-w-lg">Il mio sistema per farti trovare, farti scegliere e far tornare i clienti, con affiancamento individuale e senza svenderti.</p>
+                <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-ivory/80 max-w-md">
+                  {["Attrazione", "Generazione fiducia", "Esposizione", "Nutrimento", "Differenziazione", "Automazione"].map((x) => <li key={x}><span className="text-rose">✓</span> {x}</li>)}
+                </ul>
+                <p className="mt-5 text-sm text-ivory/60">2 call individuali al mese · chat con me 7 giorni su 7 · 5 bonus</p>
+                <span className="btn btn-primary mt-7">Scopri il Metodo A.G.E.N.D.A. <span className="arr">→</span></span>
+              </div>
+            </Link>
+          </Reveal>
+          <div className="mt-5 grid gap-5 md:grid-cols-2">
             {[
-              { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita", art: "waves" as const, id: "card-guida" },
-              { t: "Call di orientamento", d: "Il confronto per scegliere la strada giusta.", tag: "30 minuti", href: "/call-orientamento", art: "orbs" as const, id: "card-call" },
-              { t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi: da brava ma invisibile a riferimento del tuo territorio.", tag: "8 posti a trimestre", href: "/percorsi/sold-out", art: "arch" as const, id: "card-wm" },
-              { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
+              { t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con me: una call a settimana e il lavoro tecnico fatto al posto tuo.", tag: "Il massimo affiancamento · 8 posti a trimestre", href: "/percorsi/sold-out", art: "arch" as const, id: "card-wm" },
+              { t: "Metodo Rita Dolbakian", d: "Per imparare a massaggiare e perfezionare la tecnica, online e in presenza.", tag: "Per le tue mani", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
-                <Link href={p.href} className="lift zoom group flex h-full flex-col rounded-3xl border border-ivory/15 p-4 hover:border-rose">
-                  <Slot kind="foto" id={p.id} label={p.t} ratio="16/9" art={p.art} />
-                  <div className="p-3 pt-5 flex-1 flex flex-col">
-                    <span className="eyebrow">0{i + 1}</span>
-                    <h3 className="font-display text-3xl mt-2">{p.t}</h3>
+                <Link href={p.href} className="lift zoom group flex h-full flex-col rounded-3xl border border-ivory/15 p-4 hover:border-rose sm:flex-row sm:items-center sm:gap-5">
+                  <div className="sm:w-2/5 shrink-0"><Slot kind="foto" id={p.id} label={p.t} ratio="4/3" art={p.art} /></div>
+                  <div className="p-3 pt-5 sm:pt-3 flex-1 flex flex-col">
+                    <h3 className="font-display text-3xl">{p.t}</h3>
                     <p className="mt-2 text-ivory/65 text-[0.95rem] flex-1">{p.d}</p>
-                    <p className="mt-5 flex items-center justify-between text-sm"><span className="text-rose">{p.tag}</span><span className="transition-transform duration-500 group-hover:translate-x-2">→</span></p>
+                    <p className="mt-4 flex items-center justify-between text-sm"><span className="text-rose">{p.tag}</span><span className="transition-transform duration-500 group-hover:translate-x-2">→</span></p>
                   </div>
                 </Link>
               </Reveal>
             ))}
           </div>
+          <Reveal>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-ivory/15 pt-6 text-ivory/70">
+              <span className="eyebrow">Per iniziare</span>
+              <Link href="/guida-gratuita" className="ulink text-ivory">Guida gratuita</Link>
+              <Link href="/call-orientamento" className="ulink text-ivory">Call di orientamento · 30 minuti</Link>
+              <Link href="/corsi" className="ulink text-ivory">Tutti i corsi e i prodotti</Link>
+            </div>
+          </Reveal>
           <p className="mt-8 text-ivory/60 text-sm">Cerchi un attestato? <Link href="/formazione-certificata" className="ulink">Scopri la formazione certificata</Link>.</p>
         </div>
       </section>
