@@ -1,14 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NAV, SITE } from "@/lib/site";
 import { CookiePrefsLink } from "./CookieBanner";
 
 export function Footer() {
   return (
     <footer className="section-dark pt-20 pb-28 sm:pb-10 overflow-hidden">
-      <p aria-hidden className="outline-text wrap text-[clamp(3.5rem,13vw,12rem)] leading-[0.9] mb-16 whitespace-nowrap">Rita Dolbakian</p>
+      <div className="wrap mb-16"><Image src="/media/logo-light.png" alt="Rita Dolbakian. Il tuo talento. Il tuo metodo. Più clienti." width={1971} height={537} className="w-full max-w-3xl h-auto" /></div>
       <div className="wrap grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="font-display text-4xl">Rita <em className="kw">Dolbakian</em></p>
           <p className="mt-4 max-w-sm text-ivory/65">Massaggiatrice e formatrice nel benessere da oltre dieci anni. Con calma, con chiarezza.</p>
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a className="flink" href={SITE.social.instagram} rel="noopener" target="_blank">Instagram</a>
