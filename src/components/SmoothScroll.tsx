@@ -1,13 +1,25 @@
 "use client";
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
+import { usePathname } from "next/navigation";
+
+let current: Lenis | null = null;
 
 export function SmoothScroll() {
+  const pathname = usePathname();
+  // Ogni nuova pagina parte dall'alto (salvo link con #ancora)
   useEffect(() => {
+    if (window.location.hash) return;
+    if (current) current.scrollTo(0, { immediate: true, force: true });
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  useEffect(() => {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const lenis = new Lenis({ lerp: 0.09 });
+    current = lenis;
     let id = requestAnimationFrame(function raf(t) { lenis.raf(t); id = requestAnimationFrame(raf); });
-    return () => { cancelAnimationFrame(id); lenis.destroy(); };
+    return () => { cancelAnimationFrame(id); lenis.destroy(); current = null; };
   }, []);
   return null;
 }
