@@ -227,3 +227,6 @@ details.acc .acc-body { padding: 0 0 1.75rem; max-width: 46rem; color: var(--sto
 }
 
 @layer components { @media (max-width: 639px) { .btn { width: 100%; justify-content: center; } } }
+
+.hdr-light .navlink:hover, .hdr-light .group:hover > .navlink, .hdr-light .group:focus-within > .navlink { background: rgba(250,247,244,.14); }
+.hdr-light .navlink[aria-current="page"] { color: var(--blush); }

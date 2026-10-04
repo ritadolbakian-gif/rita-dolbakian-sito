@@ -6,8 +6,9 @@ import { JsonLd, Tbc } from "./Ui";
 const DISCLAIMER = "Risultati dichiarati dalle allieve. Le testimonianze riflettono esperienze individuali e non costituiscono garanzia di risultato.";
 
 /** Casi studio: numero grande + nome e cognome. Mostra i dati reali di lib/proof.ts, altrimenti i segnaposto. */
-export function CaseStudies({ max }: { max?: number }) {
-  const list = max ? CASES.slice(0, max) : CASES;
+export function CaseStudies({ max, program }: { max?: number; program?: string }) {
+  const pool = program && CASES.some((c) => c.program === program) ? CASES.filter((c) => c.program === program) : CASES;
+  const list = max ? pool.slice(0, max) : pool;
   return (
     <div>
       <div className="grid gap-6 md:grid-cols-3">
@@ -120,5 +121,37 @@ export function TrustBar({ items }: { items?: { t: string; d: string }[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/** Testimonianze scritte. Con dati reali le mostra; altrimenti mostra spazi segnaposto chiaramente riservati. */
+export function QuoteWall({ program, max = 3, title }: { program?: string; max?: number; title?: string }) {
+  const pool = program && TESTIMONIALS.some((t) => t.program === program) ? TESTIMONIALS.filter((t) => t.program === program) : TESTIMONIALS;
+  const list = pool.slice(0, max);
+  return (
+    <div>
+      {title && <p className="eyebrow mb-5">{title}</p>}
+      <div className="grid gap-5 md:grid-cols-3">
+        {list.length > 0
+          ? list.map((t, i) => (
+              <Reveal key={t.name} delay={i * 0.08}>
+                <figure className="rounded-3xl bg-blush/40 p-7 h-full flex flex-col">
+                  <span className="font-display text-6xl kw leading-none" aria-hidden>“</span>
+                  <blockquote className="font-display text-2xl leading-snug flex-1 -mt-2">{t.quote}</blockquote>
+                  <figcaption className="mt-6 text-sm"><span className="font-medium">{t.name}</span> · <span className="text-stone">{t.role}</span><br /><span className="eyebrow">{t.program}</span></figcaption>
+                </figure>
+              </Reveal>
+            ))
+          : Array.from({ length: max }).map((_, i) => (
+              <Reveal key={i} delay={i * 0.08}>
+                <figure className="rounded-3xl border border-dashed border-rose/50 p-7 h-full flex flex-col">
+                  <span className="font-display text-6xl kw leading-none" aria-hidden>“</span>
+                  <blockquote className="text-stone flex-1 -mt-2">Qui va una testimonianza reale e autorizzata. <Tbc>citazione</Tbc></blockquote>
+                  <figcaption className="mt-6 text-sm">[Nome Cognome] · <span className="text-stone">[ruolo, città]</span></figcaption>
+                </figure>
+              </Reveal>
+            ))}
+      </div>
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+import { QuoteWall } from "@/components/Proof";
 import { PageHero, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { CatalogoCorsi } from "@/components/CatalogoCorsi";
 import { meta } from "@/lib/seo";
@@ -10,6 +11,11 @@ export default function Corsi() {
       <PageHero eyebrow="Corsi" title="Tutto il percorso, *in un posto*." answer="Il catalogo di Rita Dolbakian riunisce la guida gratuita, il Metodo A.G.E.N.D.A., Wellness Mastery e il Metodo Rita Dolbakian. Filtra per area, business o tecnica, e per formato, video, in presenza, guida o affiancamento." />
       <section className="section"><div className="wrap"><CatalogoCorsi /></div></section>
       <CtaBand title="Non sai quale *scegliere*?" primary={{ href: "/percorsi", label: "Fai il test di orientamento" }} secondary={{ href: "/call-orientamento", label: "Prenota la call" }} />
+      <section className="section bg-blush/30"><div className="wrap">
+        <p className="eyebrow mb-5">Cosa dicono le allieve</p>
+        <QuoteWall />
+      </div></section>
+
       <Faq items={[
         { q: "Come scelgo il corso giusto?", a: "Dipende da cosa vuoi cambiare: se vuoi più clienti per la tua attività, parti dal Metodo A.G.E.N.D.A. o da Wellness Mastery. Se vuoi imparare a massaggiare, il Metodo Rita Dolbakian. Il test di orientamento nella pagina Percorsi ti aiuta a decidere." },
         { q: "C'è qualcosa di gratuito per iniziare?", a: "Sì: la guida «Il Sistema Clienti per Operatori del Benessere» e la call di orientamento di circa 30 minuti, senza obbligo." },

@@ -1,3 +1,5 @@
+import { QuoteWall } from "@/components/Proof";
+import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -126,6 +128,17 @@ export default function FormazioneCertificata() {
         </div>
         <div className="wrap mt-14"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Ne parliamo prima, in call." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna." }, { t: "Attestato chiaro", d: "Scritto cosa è e cosa no." }, { t: "Nessuna promessa sanitaria", d: "Formazione su tecnica e benessere." }]} /></div>
       </section>
+
+      <Objections n="07" title="Domande che *conviene* farsi." items={[
+        { t: "Mi serve davvero un attestato?", d: "Dipende da cosa vuoi fare. Per alcuni è un traguardo personale, per altri un passo verso un'attività. In call ne parliamo." },
+        { t: "È riconosciuto?", d: <>Dico le cose come stanno: è un attestato della nostra Academy e va presentato per quello che è. <Tbc>eventuale ente certificatore reale</Tbc></> },
+        { t: "Posso farlo mentre lavoro?", d: <>Il percorso è pensato in tappe. <Tbc>calendario e carico settimanale</Tbc></> },
+      ]} />
+
+      <section className="section bg-blush/30"><div className="wrap">
+        <p className="eyebrow mb-5">Dopo il percorso</p>
+        <QuoteWall program="Metodo Rita Dolbakian" />
+      </div></section>
 
       <Faq items={[
         { q: "Che valore ha l'attestato?", a: <>È un attestato rilasciato da Rita Dolbakian Academy a fine percorso. Non è un titolo abilitante. <Tbc>conferma del tipo di attestato</Tbc></>, plain: "È un attestato rilasciato da Rita Dolbakian Academy a fine percorso. Non è un titolo abilitante." },

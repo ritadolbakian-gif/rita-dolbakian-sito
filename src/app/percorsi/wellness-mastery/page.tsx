@@ -1,9 +1,10 @@
+import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { meta } from "@/lib/seo";
 import Link from "next/link";
-import { CaseStudies, VideoWall, TrustBar } from "@/components/Proof";
+import { CaseStudies, VideoWall, TrustBar, QuoteWall } from "@/components/Proof";
 
 export const metadata = meta("Wellness Mastery: da operatrice a imprenditrice digitale", "Wellness Mastery di Rita Dolbakian: 10 moduli, 6 bonus e garanzia 14 giorni per trasformare il tuo talento nel benessere in un'attività online solida.", "/percorsi/wellness-mastery");
 
@@ -37,6 +38,8 @@ export default function WellnessMastery() {
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
+
+      <section className="pt-10 md:pt-14"><div className="wrap"><Slot kind="foto" id="wm-cover" label="Wellness Mastery" ratio="16/9" art="arch" className="!rounded-[1.5rem] md:!rounded-[2rem]" /></div></section>
 
       <section className="py-10 md:py-14">
         <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">
@@ -91,9 +94,21 @@ export default function WellnessMastery() {
         </div>
       </section>
 
+      <Outcomes n="03" title="Cosa cambia, *alla fine*" cols={3} note={<Tbc>contenuti dettagliati dei moduli e degli strumenti</Tbc>} items={[
+        { t: "Un brand che si riconosce", d: "Chi sei, per chi lavori e come ti fai ricordare, in modo coerente ovunque." },
+        { t: "Un'offerta chiara", d: "Un'offerta che si capisce al primo sguardo, con un valore che non devi giustificare." },
+        { t: "Instagram che lavora per te", d: "Un profilo che spiega cosa fai e contenuti che attraggono le persone giuste." },
+        { t: "Contenuti senza ansia", d: "Una strategia semplice: cosa dire, quando, e come restare autentica." },
+        { t: "Collaborazioni utili", d: "Collaborazioni impostate con metodo, non lasciate al caso." },
+        { t: "Vendita naturale nei DM", d: "Rispondere, accompagnare, proporre. Senza forzare e senza svenderti." },
+        { t: "Tempo liberato", d: "Automazione e AI per togliere il superfluo, mantenendo la tua voce." },
+        { t: "Un numero in più", d: "Con il Wellness Profit Calculator sai quanto guadagni davvero e a cosa serve ogni prezzo." },
+        { t: "Qualcuno accanto", d: "8 settimane di affiancamento 1:1, per non fare tutto da sola." },
+      ]} />
+
       <section className="section-dark section">
         <div className="wrap">
-          <Label n="03" t="Bonus" />
+          <Label n="04" t="Bonus" />
           <Heading text="Sei bonus, per non *restare* mai sola." className="text-5xl md:text-7xl max-w-4xl" />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {bonus.map(([t, d], i) => (
@@ -109,7 +124,7 @@ export default function WellnessMastery() {
         <div className="wrap grid gap-14 lg:grid-cols-2 items-center">
           <Reveal><Slot kind="video" id="wm-video" label="Rita presenta Wellness Mastery" ratio="16/10" art="arch" /></Reveal>
           <div>
-            <Label n="04" t="Garanzia" />
+            <Label n="05" t="Garanzia" />
             <Heading text="14 giorni *soddisfatti* o rimborsati." className="text-5xl md:text-6xl" />
             <p className="mt-6 text-lg text-stone max-w-lg">Se entro 14 giorni senti che non fa per te, puoi chiedere il rimborso. <Tbc>condizioni esatte della garanzia</Tbc> Vedi la <Link href="/rimborsi" className="ulink text-ink">politica di rimborso</Link>.</p>
           </div>
@@ -118,9 +133,10 @@ export default function WellnessMastery() {
 
       <section className="section">
         <div className="wrap">
-          <Label n="05" t="Risultati" />
+          <Label n="06" t="Risultati" />
           <Heading text="Chi ha fatto il percorso, *racconta*." className="text-5xl md:text-6xl max-w-3xl" />
-          <div className="mt-12"><CaseStudies max={3} /></div>
+          <div className="mt-12"><CaseStudies max={3} program="Wellness Mastery" /></div>
+          <div className="mt-16"><QuoteWall program="Wellness Mastery" title="Le loro parole" /></div>
           <div className="mt-16"><VideoWall /></div>
           <div className="mt-16"><TrustBar /></div>
         </div>
@@ -135,12 +151,34 @@ export default function WellnessMastery() {
 
       <section id="candidatura" className="section bg-blush/30">
         <div className="wrap text-center max-w-3xl">
-          <Label n="06" t="Come iniziare" />
+          <Label n="07" t="Come iniziare" />
           <Heading text="Prezzo e posti, *chiari*. Nessuna finta scarsità." className="text-4xl md:text-6xl" />
           <p className="mt-6 text-stone"><Tbc>prezzo, rate, posti reali per l'affiancamento 1:1</Tbc></p>
           <div className="mt-8 flex flex-wrap justify-center gap-4"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call di orientamento <span className="arr">→</span></Link></div>
         </div>
       </section>
+
+      <Outcomes n="08" label="Cosa serve" title="Per iniziare ti *serve* poco." cols={4} items={[
+        { t: "Un'attività nel benessere", d: "Anche appena avviata: serve una competenza da raccontare." },
+        { t: "Un po' di tempo", d: <><Tbc>ore settimanali consigliate</Tbc></> },
+        { t: "Uno smartphone e un computer", d: "Per seguire i moduli e creare i contenuti." },
+        { t: "La voglia di metterti in gioco", d: "Il metodo c'è. Serve la tua presenza." },
+      ]} />
+
+      <Objections n="09" items={[
+        { t: "Non sono brava con la tecnologia", d: "I moduli sono pensati per chi parte da zero, con mini corsi su Canva e CapCut per le basi." },
+        { t: "Costa più di quanto posso spendere ora", d: <>Capisco. Ne parliamo con calma in call, senza pressione. <Tbc>rate e formule</Tbc></> },
+        { t: "E se non funziona per me?", d: "C'è una garanzia di 14 giorni soddisfatti o rimborsati. E non prometto risultati che nessuno può garantire." },
+        { t: "Ho paura di perdere la mia autenticità", d: "Il percorso lavora proprio al contrario: senza snaturarti, con la tua voce e i tuoi valori." },
+        { t: "Faccio già troppe cose", d: "Per questo c'è l'affiancamento e un ordine preciso: si toglie, prima di aggiungere." },
+      ]} />
+
+      <Compare n="10" title="Wellness Mastery *o* A.G.E.N.D.A.?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[
+        { label: "Cos'è", cells: ["Il metodo e il primo affiancamento", "Il percorso completo, 10 moduli"] },
+        { label: "Per chi", cells: ["Chi vuole ritrovare direzione e continuità", "Chi vuole costruire un'attività online solida"] },
+        { label: "Formato", cells: [<Tbc key="a">formato</Tbc>, "10 moduli · 6 bonus · 8 settimane 1:1"] },
+        { label: "Garanzia", cells: [<Tbc key="b">garanzia</Tbc>, "14 giorni soddisfatti o rimborsati"] },
+      ]} />
 
       <Faq items={[
         { q: "Che cos'è Wellness Mastery?", a: "È il percorso di Rita Dolbakian per operatrici del benessere che vogliono costruire un'attività online solida. Ha 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1." },

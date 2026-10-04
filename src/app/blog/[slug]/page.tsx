@@ -7,6 +7,7 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { Toc, ShareBar } from "@/components/BlogClient";
 import { LeadForm } from "@/components/LeadForm";
+import { Quotes } from "@/components/Proof";
 import { meta } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -138,6 +139,8 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
             </div>
           </div>
         </div>
+
+        <div className="wrap max-w-5xl pb-4"><Quotes /></div>
 
         {related.length > 0 && (
           <section className="section bg-blush/30">

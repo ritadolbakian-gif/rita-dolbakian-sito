@@ -1,3 +1,5 @@
+import { QuoteWall } from "@/components/Proof";
+import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -85,6 +87,11 @@ export default function Percorsi() {
           </div>
         </div>
       </section>
+
+      <section className="section"><div className="wrap">
+        <p className="eyebrow mb-5">Cosa dicono le allieve</p>
+        <QuoteWall />
+      </div></section>
 
       <Faq items={[
         { q: "Qual è la differenza tra Metodo A.G.E.N.D.A. e Wellness Mastery?", a: "Il Metodo A.G.E.N.D.A. è il metodo e il primo percorso di affiancamento per ritrovare direzione e continuità. Wellness Mastery è il percorso successivo, più ampio, per diventare imprenditrice digitale nel benessere." },

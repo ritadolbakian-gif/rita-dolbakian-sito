@@ -26,21 +26,28 @@ export function Header() {
   const path = usePathname();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
+  const [onDark, setOnDark] = useState(false);
   useEffect(() => {
-    const on = () => setSolid(window.scrollY > 40);
+    const on = () => {
+      setSolid(window.scrollY > 40);
+      const el = document.querySelector("[data-hero-dark]");
+      setOnDark(!!el && el.getBoundingClientRect().bottom > 70);
+    };
     on();
+    const t = window.setTimeout(on, 150); // dopo il render della nuova pagina
     window.addEventListener("scroll", on, { passive: true });
-    return () => window.removeEventListener("scroll", on);
-  }, []);
+    return () => { window.clearTimeout(t); window.removeEventListener("scroll", on); };
+  }, [path]);
+  const light = onDark && !solid;
   useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; }, [open]);
   const cur = (href: string) => (path === href || (href !== "/" && path.startsWith(href)) ? "page" : undefined);
 
   return (
     <>
       <Progress />
-      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${solid ? "bg-ivory/80 backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2" : "py-3 md:py-5"}`}>
+      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${light ? "hdr-light text-ivory" : ""} ${solid ? "bg-ivory/80 backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2" : "py-3 md:py-5"}`}>
         <div className="wrap flex items-center justify-between gap-4">
-          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src="/media/logo-compact.png" alt="Rita Dolbakian" width={1971} height={372} priority className={`w-auto transition-all duration-500 ${solid ? "h-10 md:h-11" : "h-11 md:h-14"}`} /></Link>
+          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src={light ? "/media/logo-light-compact.png" : "/media/logo-compact.png"} alt="Rita Dolbakian" width={1971} height={372} priority className={`w-auto transition-all duration-500 ${solid ? "h-10 md:h-11" : "h-11 md:h-14"}`} /></Link>
 
           <nav className="hidden xl:flex items-center" aria-label="Principale">
             {NAV.map((n) =>
@@ -66,10 +73,10 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Link href="/area-privata" className="hidden md:inline-flex items-center gap-2 rounded-full border border-ink/20 px-4 min-h-11 text-sm transition-colors duration-300 hover:bg-ink hover:text-ivory hover:border-ink"><Lock />Area Privata</Link>
+            <Link href="/area-privata" className={`hidden md:inline-flex items-center gap-2 rounded-full border px-4 min-h-11 text-sm transition-colors duration-300 ${light ? "border-ivory/40 hover:bg-ivory hover:text-ink hover:border-ivory" : "border-ink/20 hover:bg-ink hover:text-ivory hover:border-ink"}`}><Lock />Area Privata</Link>
             <Link href="/call-orientamento" className="btn btn-primary hidden md:inline-flex !min-h-11 !py-2.5">Prenota la call <span className="arr">→</span></Link>
             <button onClick={() => setOpen(true)} className="xl:hidden min-h-11 min-w-11 grid place-items-center" aria-label="Apri il menu" aria-expanded={open}>
-              <span className="block w-7 space-y-2"><span className="block h-px bg-ink" /><span className="block h-px bg-ink w-5 ml-auto" /></span>
+              <span className="block w-7 space-y-2"><span className={`block h-px ${light ? "bg-ivory" : "bg-ink"}`} /><span className={`block h-px w-5 ml-auto ${light ? "bg-ivory" : "bg-ink"}`} /></span>
             </button>
           </div>
         </div>

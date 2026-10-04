@@ -14,7 +14,7 @@ export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art,
   const file = src ?? m?.src;
   const cover = poster ?? m?.poster;
   const text = alt ?? m?.alt ?? label;
-  const isVideo = kind === "video" && !!file;
+  const isVideo = kind === "video" && !!file && /\.(mp4|webm|mov)$/i.test(file);
   return (
     <motion.div
       className={`slot ${className}`}

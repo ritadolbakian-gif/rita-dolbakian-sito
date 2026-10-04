@@ -13,6 +13,7 @@ export type Testimonial = {
 };
 
 export type CaseStudy = {
+  program?: "A.G.E.N.D.A." | "Wellness Mastery" | "Metodo Rita Dolbakian";
   number: string;         // es. "+12"
   label: string;          // es. "clienti in 60 giorni"
   name: string;

@@ -1,3 +1,4 @@
+import { QuoteWall } from "@/components/Proof";
 import { PageHero, Label, Faq, Tbc } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -26,6 +27,11 @@ export default function Call() {
         </div>
       </section>
       <section className="section pt-0"><div className="wrap"><TrustBar /></div></section>
+      <section className="section pt-0"><div className="wrap">
+        <p className="eyebrow mb-5">Dopo la call, hanno detto</p>
+        <QuoteWall />
+      </div></section>
+
       <Faq items={[
         { q: "La call è gratuita?", a: "Sì. Dura circa 30 minuti e non c'è nessun obbligo." },
         { q: "È una telefonata di vendita?", a: "No. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva. È un confronto calmo e onesto." },

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Heading, Reveal } from "./Motion";
+import { Slot } from "./Slot";
 
 export const Tbc = ({ children }: { children: ReactNode }) => <span className="tbc">[DA CONFERMARE: {children}]</span>;
 
@@ -11,10 +12,16 @@ export function JsonLd({ data }: { data: object }) {
 }
 
 /** Testata di pagina: H1 unico + answer block 40–60 parole. */
-export function PageHero({ eyebrow, title, answer, dark = false, children }: { eyebrow: string; title: string; answer?: ReactNode; dark?: boolean; children?: ReactNode }) {
+export function PageHero({ eyebrow, title, answer, dark = false, bgId, children }: { eyebrow: string; title: string; answer?: ReactNode; dark?: boolean; bgId?: string; children?: ReactNode }) {
   return (
-    <section className={`${dark ? "section-dark" : "bg-blush/30"} pt-28 pb-12 md:pt-44 md:pb-24`}>
-      <div className="wrap">
+    <section data-hero-dark={dark ? "" : undefined} className={`${dark ? "section-dark" : "bg-blush/30"} relative overflow-hidden pt-28 pb-12 md:pt-44 md:pb-24`}>
+      {bgId && (
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden>
+          <Slot id={bgId} label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/25 to-transparent" />
+        </div>
+      )}
+      <div className="wrap relative">
         <p className="eyebrow mb-6">{eyebrow}</p>
         <Heading as="h1" text={title} className="text-[clamp(2.3rem,9.5vw,5.6rem)] max-w-5xl" delay={0.1} immediate />
         {answer && <Reveal delay={0.5}><p className={`mt-8 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>{answer}</p></Reveal>}

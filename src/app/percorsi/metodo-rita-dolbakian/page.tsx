@@ -1,8 +1,9 @@
+import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { CaseStudies, TrustBar } from "@/components/Proof";
+import { CaseStudies, TrustBar, QuoteWall } from "@/components/Proof";
 import { meta } from "@/lib/seo";
 
 export const metadata = meta("Metodo Rita Dolbakian: impara a massaggiare", "Il Metodo Rita Dolbakian per imparare a massaggiare e migliorare la tua tecnica: tre livelli, studio online e pratica in presenza.", "/percorsi/metodo-rita-dolbakian");
@@ -70,9 +71,16 @@ export default function MetodoRD() {
         </div>
       </section>
 
+      <Outcomes n="03" title="Cosa porti *a casa*" cols={4} items={[
+        { t: "Mani più sicure", d: "Sai cosa fare, in che ordine e perché." },
+        { t: "Un tocco ascoltato", d: "Dosi la pressione e il ritmo in base alla persona." },
+        { t: "Un metodo ripetibile", d: "Sequenze che puoi rifare con costanza e qualità." },
+        { t: "Fiducia nel tuo lavoro", d: "Perché sai spiegare cosa fai e come lo fai." },
+      ]} />
+
       <section className="section-dark section">
         <div className="wrap">
-          <Label n="03" t="Come si impara" />
+          <Label n="04" t="Come si impara" />
           <Heading text="Online *e* in presenza." className="text-5xl md:text-7xl" />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <Reveal><div className="rounded-3xl border border-ivory/15 p-6 md:p-8 h-full">
@@ -96,7 +104,7 @@ export default function MetodoRD() {
         <div className="wrap grid gap-14 lg:grid-cols-[0.8fr_1.2fr] items-center">
           <Reveal><Slot kind="foto" id="rd-docente" label="Rita come insegnante" ratio="4/5" art="leaf" /></Reveal>
           <div>
-            <Label n="04" t="Chi insegna" />
+            <Label n="05" t="Chi insegna" />
             <Heading text="Impari da chi lo *fa* ogni giorno." className="text-5xl md:text-6xl" />
             <p className="mt-6 text-lg text-stone max-w-xl">Rita Dolbakian è massaggiatrice prima ancora che formatrice. Insegna quello che ha studiato, provato e semplificato in oltre dieci anni, con calma e senza fretta.</p>
             <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la sua storia <span className="arr">→</span></Link>
@@ -106,22 +114,38 @@ export default function MetodoRD() {
 
       <section className="section bg-blush/30">
         <div className="wrap">
-          <Label n="05" t="Chi ha imparato" />
+          <Label n="06" t="Chi ha imparato" />
           <Heading text="Le mani cambiano. Si *sente*." className="text-5xl md:text-6xl max-w-3xl" />
-          <div className="mt-12"><CaseStudies max={3} /></div>
+          <div className="mt-12"><CaseStudies max={3} program="Metodo Rita Dolbakian" /></div>
+          <div className="mt-16"><QuoteWall program="Metodo Rita Dolbakian" title="Le loro parole" /></div>
           <div className="mt-16"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Tre livelli: scegli quello giusto per te." }, { t: "Pratica vera", d: "Online per studiare, in presenza per mettere le mani." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna, non una platea." }, { t: "Parole oneste", d: "Formazione sulla tecnica, nessuna promessa terapeutica." }]} /></div>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap grid gap-12 md:grid-cols-2">
-          <div><Label n="06" t="Per chi è" /><Heading text="Per chi *vuole* farlo bene." className="text-5xl" />
+          <div><Label n="07" t="Per chi è" /><Heading text="Per chi *vuole* farlo bene." className="text-5xl" />
             <ul className="mt-6 space-y-2 text-stone"><li>✓ Principianti che vogliono basi solide</li><li>✓ Professionisti che vogliono perfezionarsi</li><li>✓ Chi cerca un metodo chiaro e pratico</li></ul></div>
-          <div><Label n="07" t="Certificazione" /><Heading text="Cosa *ottieni* alla fine." className="text-5xl" />
+          <div><Label n="08" t="Certificazione" /><Heading text="Cosa *ottieni* alla fine." className="text-5xl" />
             <p className="mt-6 text-stone">Al termine è previsto un attestato. <Tbc>tipo di attestato (es. Attestato RD Academy), requisiti, ore</Tbc> Leggi di più su <Link href="/formazione-certificata" className="ulink text-ink">formazione certificata</Link>.</p></div>
         </div>
         <div className="wrap mt-12"><p className="text-xs text-stone max-w-3xl">Il Metodo Rita Dolbakian è formazione su tecnica manuale e benessere. Non è una formazione sanitaria e non offre promesse di tipo terapeutico. <Tbc>indicazioni legali e di qualifica professionale</Tbc></p></div>
       </section>
+
+      <Objections n="09" items={[
+        { t: "Non ho mai massaggiato", d: "Il Livello 1 parte da zero, con calma. Nessuno si aspetta che tu sappia già." },
+        { t: "Ho paura di sbagliare o di fare male", d: "È normale. Si impara a dosare piano, con feedback, e a riconoscere quando fermarsi." },
+        { t: "Può funzionare online?", d: "Lo studio sì. Per questo la pratica è in presenza e, online, serve esercizio regolare con un riscontro." },
+        { t: "Non ho uno spazio o un lettino", d: <>Ne parliamo in call per capire cosa serve davvero. <Tbc>attrezzatura richiesta</Tbc></> },
+        { t: "Non ho un titolo", d: "Per i requisiti di accesso e per l'attività professionale ti dico con precisione cosa serve, in call." },
+      ]} />
+
+      <Compare n="10" title="I tre livelli, *a confronto*" cols={["Livello 1", "Livello 2", "Livello 3"]} rows={[
+        { label: "Per chi", cells: ["Chi parte da zero", "Chi ha le basi", "Chi massaggia già"] },
+        { label: "Obiettivo", cells: ["Sentire cosa fanno le mani", "Lavorare con sicurezza e fluidità", "Affinare e raccontare il proprio stile"] },
+        { label: "Durata", cells: [<Tbc key="1">ore</Tbc>, <Tbc key="2">ore</Tbc>, <Tbc key="3">ore</Tbc>] },
+        { label: "Requisiti", cells: [<Tbc key="4">requisiti</Tbc>, <Tbc key="5">requisiti</Tbc>, <Tbc key="6">requisiti</Tbc>] },
+      ]} />
 
       <Faq items={[
         { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Livello 1 è pensato per chi parte da zero e costruisce le basi con calma." },
