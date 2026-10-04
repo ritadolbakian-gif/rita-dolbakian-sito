@@ -31,22 +31,27 @@ export function Heading({ text, as: Tag = "h2", className = "", delay = 0, immed
     if (lead) { words[words.length - 1].suffix = lead[0]; p = p.slice(lead[0].length); }
     p.replace(/\*/g, "").split(" ").filter(Boolean).forEach((w) => words.push({ w, kw, k: i++ }));
   });
+  const MTag = motion[Tag];
   return (
-    <Tag className={`font-display ${className}`} aria-label={text.replace(/\*/g, "")}>
+    <MTag
+      className={`font-display ${className}`}
+      aria-label={text.replace(/\*/g, "")}
+      initial={reduce ? false : "hidden"}
+      {...(immediate ? { animate: "show" } : { whileInView: "show", viewport: { once: true, margin: "-60px" } })}
+      variants={{ hidden: {}, show: { transition: { staggerChildren: 0.045, delayChildren: delay } } }}
+    >
       <span aria-hidden>
         {words.map(({ w, kw, k, glue, suffix }) => (
           <span key={k} className={`inline-block overflow-hidden align-bottom pb-[0.12em] -mb-[0.12em] ${glue ? "" : "mr-[0.26em]"}`}>
             <motion.span
               className={`inline-block ${kw ? "kw" : ""}`}
-              initial={reduce ? false : { y: "110%" }}
-              {...(immediate ? { animate: { y: 0 } } : { whileInView: { y: 0 }, viewport: { once: true, margin: "-60px" } })}
-              transition={{ duration: 0.9, delay: delay + k * 0.045, ease }}
+              variants={{ hidden: { y: "110%" }, show: { y: 0, transition: { duration: 0.9, ease } } }}
             >
               {w}{suffix && <span className="suffix">{suffix}</span>}
             </motion.span>
           </span>
         ))}
       </span>
-    </Tag>
+    </MTag>
   );
 }
