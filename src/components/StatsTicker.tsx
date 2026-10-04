@@ -5,6 +5,7 @@ export function StatsTicker() {
   const draft = showDraftStats();
   const items: { k: string; big: string; label: string; draft?: boolean }[] = [
     ...visibleStats().map((s) => ({ k: s.id, big: `${s.prefix ?? ""}${s.value}${s.suffix ?? ""}`, label: s.label, draft: !s.confirmed })),
+    { k: "garanzia", big: "✓", label: "soddisfatti o rimborsati, per tutto il percorso" },
     { k: "call", big: "30'", label: "di call gratuita, senza impegno" },
     ...(RATING ? [{ k: "rating", big: `${RATING.value.toString().replace(".", ",")}★`, label: `su ${RATING.source} · ${RATING.count} recensioni` }] : []),
   ];

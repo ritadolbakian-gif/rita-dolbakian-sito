@@ -7,7 +7,7 @@ export const metadata = meta("Regolamento dei corsi in presenza e online", "Rego
 
 const toc = [
   { id: "ambito", t: "A chi si applica" }, { id: "iscrizione", t: "Iscrizione e presenze" }, { id: "comportamento", t: "Comportamento" }, { id: "igiene", t: "Igiene e sicurezza" },
-  { id: "pratiche", t: "Pratiche tra allievi e salute" }, { id: "privacy", t: "Riservatezza, foto e video" }, { id: "online", t: "Corsi online" }, { id: "attestato", t: "Attestato" }, { id: "sanzioni", t: "Cosa succede se non viene rispettato" },
+  { id: "pratiche", t: "Pratiche tra allievi e salute" }, { id: "privacy", t: "Riservatezza, foto e video" }, { id: "online", t: "Corsi online" }, { id: "attestato", t: "Attestato" }, { id: "partecipazione", t: "Partecipazione e garanzia" }, { id: "sanzioni", t: "Cosa succede se non viene rispettato" },
 ];
 
 export default function Regolamento() {
@@ -67,7 +67,10 @@ export default function Regolamento() {
       <h2 id="attestato">8. Attestato</h2>
       <p>L'attestato di partecipazione è rilasciato a chi rispetta la presenza minima e completa il percorso. Non è un titolo abilitante. <Tbc>criteri di valutazione finale</Tbc></p>
 
-      <h2 id="sanzioni">9. Cosa succede se il regolamento non viene rispettato</h2>
+      <h2 id="partecipazione">9. Partecipazione attiva e garanzia</h2>
+      <p>Le presenze agli incontri su Zoom e agli eventi, e le attività consegnate, vengono registrate: servono a erogare il corso e a verificare i requisiti della garanzia «soddisfatti o rimborsati» (vedi <Link href="/rimborsi">Recesso, garanzia e rimborsi</Link>). Per avere diritto alla garanzia partecipa agli incontri, agli eventi e svolgi le attività richieste. In caso di assenza, avvisaci e recupera quando possibile.</p>
+
+      <h2 id="sanzioni">10. Cosa succede se il regolamento non viene rispettato</h2>
       <p>Per prima cosa ti chiediamo di rimediare. In caso di comportamenti gravi o ripetuti, che mettono a rischio la sicurezza o il lavoro del gruppo, possiamo allontanare la persona dal corso. In questi casi non spetta il rimborso della parte non fruita, salvo quanto la legge riconosce al consumatore.</p>
     </LegalPage>
   );

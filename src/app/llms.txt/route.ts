@@ -7,7 +7,7 @@ export function GET() {
 
 ## Percorsi
 - [Metodo A.G.E.N.D.A.](${SITE.url}/percorsi/metodo-agenda): il metodo in sei passi (Attira, Guida, Empatia, Negozia con naturalezza, Dialogo, Affiancamento) e il primo percorso di affiancamento per operatrici e operatori del benessere che vogliono continuità e clienti qualificati online.
-- [Wellness Mastery](${SITE.url}/percorsi/wellness-mastery): percorso successivo, "Da operatrice del benessere a imprenditrice digitale" (10 moduli, 6 bonus, garanzia 14 giorni).
+- [Wellness Mastery](${SITE.url}/percorsi/wellness-mastery): percorso successivo, "Da operatrice del benessere a imprenditrice digitale" (10 moduli, 6 bonus, garanzia soddisfatti o rimborsati per tutta la durata del percorso, a condizione di partecipare e svolgere le attività).
 - [Metodo Rita Dolbakian](${SITE.url}/percorsi/metodo-rita-dolbakian): formazione per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.
 
 ## Per iniziare

@@ -143,8 +143,8 @@ export default function Home() {
             {[
               { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita", art: "waves" as const, id: "card-guida" },
               { t: "Call di orientamento", d: "Il confronto per scegliere la strada giusta.", tag: "30 minuti", href: "/call-orientamento", art: "orbs" as const, id: "card-call" },
-              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "Soddisfatti o rimborsati in 14 giorni", href: "/percorsi/wellness-mastery", art: "arch" as const, id: "card-wm" },
-              { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Online + presenza", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
+              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "Soddisfatti o rimborsati", href: "/percorsi/wellness-mastery", art: "arch" as const, id: "card-wm" },
+              { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
                 <Link href={p.href} className="lift zoom group flex h-full flex-col rounded-3xl border border-ivory/15 p-4 hover:border-rose">
@@ -165,7 +165,7 @@ export default function Home() {
 
       <ReviewsSection />
 
-      <GuaranteeBand compact cta={{ href: "/percorsi/wellness-mastery", label: "Vedi Wellness Mastery" }} />
+      <GuaranteeBand compact cta={{ href: "/percorsi", label: "Scegli il tuo percorso" }} />
 
       {/* 07 — Prove sociali */}
       <section className="section">
@@ -228,7 +228,7 @@ export default function Home() {
         { q: "Devo già avere clienti o un seguito sui social?", a: "No. Serve avere una competenza nel benessere. Da lì, un passo alla volta, si costruisce tutto il resto." },
         { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Metodo Rita Dolbakian parte dalle fondamenta del tocco e prosegue per livelli, online e in presenza." },
         { q: "Mi garantisci dei risultati?", a: "No, e diffido di chi lo fa. Ti do un metodo e un affiancamento. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
-        { q: "Posso cambiare idea dopo l'acquisto?", a: "Wellness Mastery ha una garanzia di 14 giorni soddisfatti o rimborsati." },
+        { q: "Posso cambiare idea dopo l'acquisto?", a: "Sì. Per i consumatori c'è il recesso di legge di 14 giorni. In più, su tutti i percorsi, c'è la garanzia soddisfatti o rimborsati per tutta la durata del percorso: a patto che tu partecipi (Zoom, eventi) e svolga le attività richieste." },
       ]} />
 
       {/* 11 — Blog */}

@@ -6,10 +6,10 @@ import { Slot } from "./Slot";
 type P = { id: string; t: string; d: string; pillar: "Business" | "Tecnica"; fmt: string; price: string; badge?: string; href: string };
 const ITEMS: P[] = [
   { id: "corso-guida", t: "Il Sistema Clienti per Operatori del Benessere", d: "La guida pratica per fare i primi 10 clienti online.", pillar: "Business", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
-  { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare continuità.", pillar: "Business", fmt: "Affiancamento", price: "Dopo la call", badge: "Su candidatura", href: "/percorsi/metodo-agenda" },
-  { id: "corso-wm", t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", pillar: "Business", fmt: "Video + affiancamento", price: "Da confermare", badge: "Rimborso in 14 giorni", href: "/percorsi/wellness-mastery" },
-  { id: "corso-rd-online", t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", pillar: "Tecnica", fmt: "Video", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
-  { id: "corso-rd-presenza", t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", pillar: "Tecnica", fmt: "In presenza", price: "Da confermare", href: "/percorsi/metodo-rita-dolbakian" },
+  { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare continuità.", pillar: "Business", fmt: "Affiancamento", price: "Dopo la call", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-agenda" },
+  { id: "corso-wm", t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", pillar: "Business", fmt: "Video + affiancamento", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/wellness-mastery" },
+  { id: "corso-rd-online", t: "Metodo Rita Dolbakian · online", d: "Imparare a massaggiare con lezioni video e confronto.", pillar: "Tecnica", fmt: "Video", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian" },
+  { id: "corso-rd-presenza", t: "Metodo Rita Dolbakian · in presenza", d: "Pratica diretta in gruppi piccoli.", pillar: "Tecnica", fmt: "In presenza", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-rita-dolbakian" },
 ];
 
 export function CatalogoCorsi() {

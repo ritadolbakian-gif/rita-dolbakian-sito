@@ -132,24 +132,21 @@ export function DetailSteps({ n, label = "Come funziona", title, items, note, bg
   );
 }
 
-/** Fascia di enfasi sulla garanzia: soddisfatti o rimborsati in 14 giorni. */
+/** Fascia di enfasi sulla garanzia: soddisfatti o rimborsati per tutta la durata del percorso. */
 export function GuaranteeBand({ compact = false, cta }: { compact?: boolean; cta?: { href: string; label: string } }) {
   return (
-    <section className={`relative overflow-hidden bg-rose text-white ${compact ? "py-10 md:py-12" : "py-14 md:py-20"}`} aria-label="Garanzia soddisfatti o rimborsati in 14 giorni">
+    <section className={`relative overflow-hidden bg-rose text-white ${compact ? "py-10 md:py-12" : "py-14 md:py-20"}`} aria-label="Garanzia soddisfatti o rimborsati per tutta la durata del percorso">
       <div className="orb size-[26rem] bg-white/15 -left-24 -top-24 hidden md:block" aria-hidden />
       <div className={`wrap relative grid items-center gap-6 md:gap-12 ${compact ? "md:grid-cols-[auto_1fr_auto]" : "md:grid-cols-[auto_1fr]"}`}>
         <Reveal>
-          <div className="flex items-end gap-3 leading-none">
-            <span className={`font-display ${compact ? "text-8xl" : "text-[9rem] md:text-[12rem]"}`}>14</span>
-            <span className="pb-3 font-display text-3xl italic md:pb-6">giorni</span>
-          </div>
+          <p className={`font-display leading-[0.92] ${compact ? "text-5xl md:text-6xl" : "text-6xl md:text-8xl"}`}>Per tutto<br /><em className="!text-white">il percorso</em></p>
         </Reveal>
         <Reveal delay={0.1}>
           <div>
             <p className="eyebrow !text-white/80">Garanzia</p>
             <h2 className={`font-display mt-2 leading-[1.02] ${compact ? "text-3xl md:text-4xl" : "text-4xl md:text-6xl"}`}>Soddisfatti <em className="!text-white">o rimborsati</em>.</h2>
-            <p className={`mt-3 max-w-xl text-white/90 ${compact ? "text-[0.97rem]" : "text-lg"}`}>Provi Wellness Mastery per 14 giorni. Se senti che non fa per te, me lo dici e ricevi il rimborso. Il rischio lo prendo io, non tu.</p>
-            {!compact && <p className="mt-3 text-sm text-white/75">Condizioni complete nella <Link href="/rimborsi" className="underline underline-offset-4">politica di rimborso</Link>.</p>}
+            <p className={`mt-3 max-w-xl text-white/90 ${compact ? "text-[0.97rem]" : "text-lg"}`}>Vale su tutti i miei percorsi e per tutta la loro durata, non solo per qualche giorno. Se non sei soddisfatta, ti rimborso: il rischio è mio. A una condizione: partecipi davvero, e lo dimostri.</p>
+            {!compact && <p className="mt-3 text-sm text-white/80">Cosa devi fare è scritto qui sotto e nella <Link href="/rimborsi" className="underline underline-offset-4">pagina Recesso e garanzia</Link>. Il recesso di legge di 14 giorni resta valido, in più.</p>}
           </div>
         </Reveal>
         {compact && cta && <Reveal delay={0.2}><Link href={cta.href} className="btn !bg-white !text-ink hover:!bg-ink hover:!text-white">{cta.label} <span className="arr">→</span></Link></Reveal>}
@@ -160,5 +157,39 @@ export function GuaranteeBand({ compact = false, cta }: { compact?: boolean; cta
 
 /** Pillola da mettere vicino ai pulsanti. */
 export function GuaranteePill() {
-  return <span className="inline-flex items-center gap-2 rounded-full bg-rose px-5 min-h-12 text-sm font-medium text-white shadow-lg"><span aria-hidden>✓</span> Soddisfatti o rimborsati in 14 giorni</span>;
+  return <span className="inline-flex items-center gap-2 rounded-full bg-rose px-5 min-h-12 text-sm font-medium text-white shadow-lg"><span aria-hidden>✓</span> Soddisfatti o rimborsati, per tutto il percorso</span>;
+}
+
+/** Le condizioni della garanzia, spiegate in chiaro: la prova di partecipazione. */
+export function GuaranteeConditions({ n, dark = false }: { n?: string; dark?: boolean }) {
+  const items: Item[] = [
+    { t: "Partecipi agli incontri", d: "Segui le sessioni su Zoom e gli incontri previsti dal tuo percorso. La presenza risulta dai registri della piattaforma." },
+    { t: "Partecipi agli eventi", d: "Ci sei alle giornate, ai workshop e agli appuntamenti inclusi nel percorso." },
+    { t: "Svolgi le attività richieste", d: "Fai le task e gli esercizi che ti vengono assegnati, e li consegni nei modi e nei tempi indicati." },
+    { t: "Lo dimostri", d: "Se non sei soddisfatta, ci scrivi. Guardiamo insieme presenze e attività svolte: se risultano, ricevi il rimborso." },
+  ];
+  return (
+    <section className={`${dark ? "section-dark" : "bg-blush/30"} section`}>
+      <div className="wrap">
+        <Label n={n} t="Come funziona la garanzia" />
+        <Heading text="Il rischio è mio. Ti chiedo di *esserci*." className="text-5xl md:text-6xl max-w-3xl" />
+        <p className={`mt-5 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>Un percorso funziona se lo fai. Per questo la garanzia vale per chi partecipa e svolge le attività: chi lo fa e non è soddisfatto viene rimborsato, senza discussioni.</p>
+        <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--line)] md:grid-cols-2 lg:grid-cols-4">
+          {items.map((i, k) => (
+            <li key={i.t} className={dark ? "bg-ink" : "bg-ivory"}>
+              <Reveal delay={k * 0.08}>
+                <div className="p-7 h-full">
+                  <span className="font-display text-6xl kw leading-none">{k + 1}</span>
+                  <h3 className="font-display text-2xl mt-3">{i.t}</h3>
+                  <p className={`mt-2 text-sm ${dark ? "text-ivory/65" : "text-stone"}`}>{i.d}</p>
+                </div>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
+        <p className={`mt-6 max-w-3xl text-sm ${dark ? "text-ivory/60" : "text-stone"}`}>La garanzia riguarda la tua soddisfazione per il percorso, non è una promessa di risultati economici. Non si applica a chi non partecipa o non svolge le attività, o viola il regolamento. Il recesso di legge di 14 giorni (per i consumatori) è un diritto separato e resta sempre valido. Condizioni complete: <Link href="/rimborsi" className="underline underline-offset-4">Recesso, garanzia e rimborsi</Link>.</p>
+        <p className="mt-2 text-xs"><span className="tbc">[DA CONFERMARE: soglia minima di partecipazione, tempi per chiedere il rimborso, rimborso integrale o al netto dei bonus]</span></p>
+      </div>
+    </section>
+  );
 }

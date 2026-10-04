@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, GuaranteeBand, GuaranteeConditions } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -132,7 +132,11 @@ export default function MetodoRD() {
         <div className="wrap mt-12"><p className="text-xs text-stone max-w-3xl">Il Metodo Rita Dolbakian è formazione su tecnica manuale e benessere. Non è una formazione sanitaria e non offre promesse di tipo terapeutico. <Tbc>indicazioni legali e di qualifica professionale</Tbc></p></div>
       </section>
 
-      <Objections n="09" items={[
+      <GuaranteeBand />
+
+      <GuaranteeConditions n="09" />
+
+      <Objections n="10" items={[
         { t: "Non ho mai massaggiato", d: "Il Livello 1 parte da zero. Nessuno si aspetta che tu sappia già." },
         { t: "Ho paura di sbagliare o di fare male", d: "È normale. Si impara a dosare piano, con feedback, e a riconoscere quando fermarsi." },
         { t: "Può funzionare online?", d: "Lo studio sì. Per questo la pratica è in presenza e, online, serve esercizio regolare con un riscontro." },
@@ -140,7 +144,7 @@ export default function MetodoRD() {
         { t: "Non ho un titolo", d: "Per i requisiti di accesso e per l'attività professionale ti dico con precisione cosa serve, in call." },
       ]} />
 
-      <Compare n="10" title="I tre livelli, *a confronto*" cols={["Livello 1", "Livello 2", "Livello 3"]} rows={[
+      <Compare n="11" title="I tre livelli, *a confronto*" cols={["Livello 1", "Livello 2", "Livello 3"]} rows={[
         { label: "Per chi", cells: ["Chi parte da zero", "Chi ha le basi", "Chi massaggia già"] },
         { label: "Obiettivo", cells: ["Sentire cosa fanno le mani", "Lavorare con sicurezza e fluidità", "Affinare e raccontare il proprio stile"] },
         { label: "Durata", cells: [<Tbc key="1">ore</Tbc>, <Tbc key="2">ore</Tbc>, <Tbc key="3">ore</Tbc>] },
@@ -157,6 +161,7 @@ export default function MetodoRD() {
         { q: "Posso fare solo il livello che mi interessa?", a: "Sì, puoi partire dal livello più adatto a te. In call di orientamento ne parliamo." },
         { q: "Cosa serve per seguire le lezioni online?", a: "Uno spazio dove esercitarti e una persona di fiducia su cui provare. Per i dettagli, ne parliamo in call." },
         { q: "Posso poi aprire la mia attività?", a: "Il percorso aiuta a costruire competenza. Per aprire un'attività servono i requisiti previsti dalla legge: chiedi in call." },
+        { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Il rischio è mio. Serve partecipare agli incontri (online e in presenza) e svolgere gli esercizi richiesti, e dimostrarlo." },
         { q: "Il metodo è una terapia?", a: "No. È formazione su tecnica manuale e benessere. Non offre promesse di cura né indicazioni mediche." },
       ]} />
       <CtaBand title="Prima di scegliere, *parliamone*." primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />

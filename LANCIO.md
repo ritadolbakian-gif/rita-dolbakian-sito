@@ -8,7 +8,8 @@
 ## 2. Bloccanti: senza questi non si pubblica
 1. **Testi legali** (privacy, cookie, termini di vendita, recesso e rimborsi, pagamento a rate, regolamento dei corsi): scritti in modo completo ma **vanno fatti rivedere da un avvocato** prima della pubblicazione, in particolare le parti su recesso, contratti collegati e finanziamenti. Vanno scritti/validati da un consulente. Dati societari RD SRL già inseriti (P.IVA, sede, REA, PEC); manca il capitale sociale.
 2. **Qualifica professionale e limiti di legge** per l'attività di massaggio: come presentarli nelle pagine del Metodo e della Formazione certificata.
-3. **Dati dei percorsi**: prezzi, rate, posti, durata, requisiti, sedi/calendario (Metodo Rita Dolbakian e Formazione certificata), formato dell'affiancamento A.G.E.N.D.A. e condizioni esatte della garanzia di 14 giorni.
+3. **Garanzia «soddisfatti o rimborsati» per tutta la durata**: confermare soglia minima di partecipazione (incontri e task), entro quanti giorni dalla fine si può chiedere, rimborso integrale o al netto dei bonus, e come si registrano presenze e consegne (Zoom, piattaforma).
+3b. **Dati dei percorsi**: prezzi, rate, posti, durata, requisiti, sedi/calendario (Metodo Rita Dolbakian e Formazione certificata), formato dell'affiancamento A.G.E.N.D.A. e condizioni esatte della garanzia di 14 giorni.
 4. **Attestato**: tipo (es. "Attestato RD Academy"), ente reale (se esiste), validità. Nessuna parola come "riconosciuto" o "abilitante" senza un ente vero.
 5. **Contatti**: email, numero WhatsApp (`src/lib/site.ts`, `CONTACT`), orari.
 6. **Moduli funzionanti**: webhook GoHighLevel in `GHL_WEBHOOK_URL`. Provare guida, contatti e prenotazione call con una prova vera.

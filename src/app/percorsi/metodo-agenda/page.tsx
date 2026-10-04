@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare, DetailSteps } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteeConditions } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -167,7 +167,11 @@ export default function MetodoAgenda() {
         </div>
       </section>
 
-      <Objections n="12" items={[
+      <GuaranteeBand />
+
+      <GuaranteeConditions n="12" />
+
+      <Objections n="13" items={[
         { t: "Non ho tempo", d: "Il percorso è pensato per chi lavora già: pochi passi, fatti con regolarità, valgono più di una maratona." },
         { t: "Ho già provato altre cose e non ha funzionato", d: "Spesso mancava un ordine, non l'impegno. Si parte da quello che c'è già." },
         { t: "Ho paura di sembrare commerciale", d: "Non serve. Il metodo parte dall'ascolto, non dalla pressione." },
@@ -175,12 +179,12 @@ export default function MetodoAgenda() {
         { t: "E se non fa per me?", d: "Te lo dico io, in call. Meglio un no chiaro che un sì a metà." },
       ]} />
 
-      <Compare n="13" title="A.G.E.N.D.A. o *Wellness Mastery*?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[
+      <Compare n="14" title="A.G.E.N.D.A. o *Wellness Mastery*?" cols={["Metodo A.G.E.N.D.A.", "Wellness Mastery"]} rows={[
         { label: "Cos'è", cells: ["Il metodo e il primo affiancamento", "Il percorso completo, 10 moduli"] },
         { label: "Per chi", cells: ["Chi vuole ritrovare direzione e continuità", "Chi vuole costruire un'attività online solida"] },
         { label: "Quando", cells: ["Si parte da qui", "È il passo successivo"] },
         { label: "Formato", cells: [<Tbc key="a">formato</Tbc>, "10 moduli · 6 bonus · 8 settimane di affiancamento 1:1"] },
-        { label: "Garanzia", cells: [<Tbc key="b">garanzia</Tbc>, "14 giorni soddisfatti o rimborsati"] },
+        { label: "Garanzia", cells: ["Soddisfatti o rimborsati, per tutto il percorso", "Soddisfatti o rimborsati, per tutto il percorso"] },
       ]} />
 
       <Faq items={[
@@ -194,7 +198,8 @@ export default function MetodoAgenda() {
         { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },
         { q: "Quanto dura l'affiancamento?", a: <><Tbc>durata e numero di incontri</Tbc></>, plain: "La durata e il numero di incontri sono indicati in questa pagina." },
         { q: "Cosa succede se alla call capisco che non fa per me?", a: "Nessun problema: nessun obbligo e nessuno spam. E ti dico comunque da dove partirei." },
-        { q: "Ci sono garanzie sul risultato?", a: "Nessuno può garantire un risultato, e non lo faccio io. Il percorso ti dà metodo e affiancamento; i risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
+        { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Il rischio è mio. La condizione è che tu partecipi agli incontri e svolga le attività richieste, e lo dimostri." },
+        { q: "Ci sono garanzie sul risultato economico?", a: "Nessuno può garantire guadagni o numero di clienti, e non lo faccio io. La garanzia riguarda la tua soddisfazione per il percorso. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
       ]} />
       <CtaBand title="Se vuoi *ripartire*, comincia dalla call." />
     </>

@@ -28,7 +28,7 @@ export default function Privacy() {
         <li><strong>Dati che ci fornisci tu:</strong> nome, cognome, email, telefono e il contenuto dei messaggi, quando compili un modulo (guida gratuita, contatti) o prenoti la call di orientamento.</li>
         <li><strong>Dati di acquisto e fatturazione:</strong> dati anagrafici, indirizzo, codice fiscale o partita IVA, codice SDI o PEC, corso scelto, importi e modalità di pagamento. Non conserviamo i numeri delle carte di pagamento.</li>
         <li><strong>Dati sul pagamento rateale:</strong> se scegli di pagare a rate con una società finanziaria (per esempio Pagodil o Pagolight), la richiesta di finanziamento è gestita direttamente dalla società finanziaria. A noi arriva l'esito (approvato o non approvato) e le informazioni necessarie ad attivare il corso.</li>
-        <li><strong>Dati sui corsi:</strong> iscrizione, presenze, verifiche, attestati. Per i corsi in presenza possono essere trattati anche foto e video (solo con il tuo consenso) e informazioni sulla salute, se ce le comunichi, per svolgere le esercitazioni pratiche in sicurezza (vedi la sezione 6).</li>
+        <li><strong>Dati sui corsi:</strong> iscrizione, presenze agli incontri su Zoom e agli eventi, attività e compiti consegnati, verifiche, attestati. Servono a erogare il corso e, se la richiedi, a verificare i requisiti della garanzia «soddisfatti o rimborsati». Per i corsi in presenza possono essere trattati anche foto e video (solo con il tuo consenso) e informazioni sulla salute, se ce le comunichi, per svolgere le esercitazioni pratiche in sicurezza (vedi la sezione 6).</li>
         <li><strong>Dati raccolti con cookie e strumenti simili:</strong> secondo la <a href="/cookie">Cookie Policy</a> e solo se hai dato il consenso, quando richiesto.</li>
         <li><strong>Comunicazioni:</strong> email, messaggi su WhatsApp e altri canali che ci scrivi.</li>
       </ul>
@@ -39,7 +39,7 @@ export default function Privacy() {
           <thead><tr><th>Finalità</th><th>Base giuridica</th><th>Conservazione</th></tr></thead>
           <tbody>
             <tr><td>Rispondere a richieste, prenotare la call di orientamento, inviarti la guida gratuita</td><td>Misure precontrattuali / esecuzione di quanto richiesto (art. 6.1.b GDPR)</td><td>Fino a 24 mesi dall'ultimo contatto <Tbc>durata</Tbc></td></tr>
-            <tr><td>Iscriverti ai corsi e ai percorsi, erogarli, darti assistenza, rilasciare l'attestato</td><td>Esecuzione del contratto (art. 6.1.b)</td><td>Per la durata del contratto, poi i tempi di legge</td></tr>
+            <tr><td>Iscriverti ai corsi e ai percorsi, erogarli, registrare presenze e attività, verificare i requisiti della garanzia «soddisfatti o rimborsati», darti assistenza, rilasciare l'attestato</td><td>Esecuzione del contratto (art. 6.1.b)</td><td>Per la durata del contratto, poi i tempi di legge</td></tr>
             <tr><td>Adempimenti fiscali, contabili e amministrativi (fatture, scritture)</td><td>Obbligo di legge (art. 6.1.c)</td><td>10 anni (art. 2220 c.c.)</td></tr>
             <tr><td>Gestire pagamenti e rateizzazioni, anche tramite società finanziarie convenzionate</td><td>Esecuzione del contratto (art. 6.1.b)</td><td>Per la durata del contratto e i tempi di legge</td></tr>
             <tr><td>Sicurezza nelle esercitazioni pratiche dei corsi in presenza (informazioni sulla salute)</td><td>Consenso esplicito (art. 9.2.a)</td><td>Fino alla fine del corso <Tbc>durata</Tbc></td></tr>

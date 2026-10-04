@@ -31,7 +31,7 @@ export const CASES: CaseStudy[] = [];
 export const PRESS: { name: string; href?: string }[] = [];
 
 /** Compila SOLO se hai recensioni reali e verificabili (abilita lo schema AggregateRating). */
-export const RATING: { value: number; count: number; source: string } | null = null;
+export const RATING: { value: number; count: number; source: string } | null = { value: 4.3, count: 7, source: "Trustpilot" }; // letto sul profilo Trustpilot il 4 ottobre 2026: aggiornalo quando cambia
 
 /**
  * NUMERI IN EVIDENZA (striscia in alto, contatori).
@@ -46,7 +46,6 @@ export const STATS: Stat[] = [
   { id: "studenti", value: 100, prefix: "+", label: "studenti formati", confirmed: false }, // [DA CONFERMARE: numero reale]
   { id: "moduli", value: 10, label: "moduli in Wellness Mastery", confirmed: true },
   { id: "bonus", value: 6, label: "bonus inclusi nel percorso", confirmed: true },
-  { id: "garanzia", value: 14, label: "giorni: soddisfatti o rimborsati", confirmed: true },
 ];
 export const showDraftStats = () => process.env.NEXT_PUBLIC_SHOW_DRAFT === "1" || process.env.NODE_ENV !== "production";
 export const visibleStats = () => STATS.filter((s) => s.confirmed || showDraftStats());
@@ -57,12 +56,12 @@ export const visibleStats = () => STATS.filter((s) => s.confirmed || showDraftSt
  */
 export const REVIEW_SOURCES = {
   google: {
-    profileUrl: "",   // es. https://g.page/r/XXXX oppure il link della scheda su Google Maps
+    profileUrl: "https://www.google.com/search?q=Rita+Dolbakian+recensioni",   // meglio il link diretto della scheda Google (g.page/r/…)
     reviewUrl: "",    // link "Scrivi una recensione" della scheda (https://g.page/r/XXXX/review)
   },
   trustpilot: {
-    profileUrl: "",   // es. https://it.trustpilot.com/review/tuodominio.it
-    reviewUrl: "",    // es. https://it.trustpilot.com/evaluate/tuodominio.it
+    profileUrl: "https://it.trustpilot.com/review/rd-academy.it",
+    reviewUrl: "https://it.trustpilot.com/evaluate/rd-academy.it",
     businessUnitId: "", // dal pannello Trustpilot > Integrazioni > TrustBox
     templateId: "5419b6a8b0d04a076446a9ad", // modello "Micro Review Count" (cambia se usi un altro)
   },

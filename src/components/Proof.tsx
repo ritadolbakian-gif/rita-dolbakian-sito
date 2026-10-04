@@ -99,8 +99,9 @@ export function PressBar() {
 
 /** Valutazione aggregata: solo con dati reali e verificabili. */
 export function RatingLd() {
-  if (!RATING) return null;
-  return <JsonLd data={{ "@context": "https://schema.org", "@type": "EducationalOrganization", name: "Rita Dolbakian Academy", aggregateRating: { "@type": "AggregateRating", ratingValue: RATING.value, reviewCount: RATING.count } }} />;
+  // Volutamente vuoto: Google non ammette le stelle (AggregateRating) per le recensioni "autoreferenziali"
+  // di un'organizzazione sul proprio sito. La valutazione si mostra solo come testo.
+  return null;
 }
 
 /** Striscia di rassicurazioni, sempre vera. */
@@ -108,7 +109,7 @@ export function TrustBar({ items }: { items?: { t: string; d: string }[] }) {
   const list = items ?? [
     { t: "Nessun obbligo", d: "La call dura circa 30 minuti ed è gratuita." },
     { t: "Poche persone alla volta", d: "Così posso seguire ognuna con attenzione." },
-    { t: "Soddisfatti o rimborsati", d: "14 giorni di garanzia su Wellness Mastery." },
+    { t: "Soddisfatti o rimborsati", d: "Per tutta la durata del percorso, se partecipi e svolgi le attività." },
     { t: "Niente promesse di guadagno", d: "Ti do un metodo e un affiancamento. I risultati dipendono anche da te." },
   ];
   return (

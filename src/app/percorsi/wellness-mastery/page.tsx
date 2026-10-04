@@ -1,5 +1,5 @@
 import { ReviewsSection } from "@/components/Reviews";
-import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteePill } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteePill, GuaranteeConditions } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -7,7 +7,7 @@ import { meta } from "@/lib/seo";
 import Link from "next/link";
 import { CaseStudies, VideoWall, TrustBar, QuoteWall } from "@/components/Proof";
 
-export const metadata = meta("Wellness Mastery: da operatrice a imprenditrice digitale", "Wellness Mastery di Rita Dolbakian: 10 moduli, 6 bonus e garanzia 14 giorni per trasformare il tuo talento nel benessere in un'attività online solida.", "/percorsi/wellness-mastery");
+export const metadata = meta("Wellness Mastery: da operatrice a imprenditrice digitale", "Wellness Mastery di Rita Dolbakian: 10 moduli, 6 bonus e garanzia soddisfatti o rimborsati per tutto il percorso per trasformare il tuo talento nel benessere in un'attività online solida.", "/percorsi/wellness-mastery");
 
 const modules: { t: string; talk: string; do: string; get: string }[] = [
   { t: "Le fondamenta del tuo brand", talk: "Chi sei, per chi lavori e cosa ti rende riconoscibile. Prima di pubblicare qualsiasi cosa, si preparano le basi.", do: "Scrivi la tua frase di posizionamento e la tua bio, in parole semplici.", get: "Una base chiara da usare su profilo, scheda Google e messaggi." },
@@ -34,8 +34,8 @@ const bonus: { t: string; serve: string; quando: string }[] = [
 export default function WellnessMastery() {
   return (
     <>
-      <JsonLd data={courseLd("Wellness Mastery", "Da operatrice del benessere a imprenditrice digitale: 10 moduli, 6 bonus e garanzia di 14 giorni.", "/percorsi/wellness-mastery")} />
-      <PageHero imageId="wm-top" imageRatio="16/9" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il mio percorso per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
+      <JsonLd data={courseLd("Wellness Mastery", "Da operatrice del benessere a imprenditrice digitale: 10 moduli, 6 bonus e garanzia soddisfatti o rimborsati per tutta la durata.", "/percorsi/wellness-mastery")} />
+      <PageHero imageId="wm-top" imageRatio="16/9" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il mio percorso per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati per tutta la durata del percorso. Senza svenderti, senza burnout e senza più fare tutto da sola.">
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
         <GuaranteePill />
@@ -49,7 +49,7 @@ export default function WellnessMastery() {
           <Reveal delay={0.1}>
             <p className="eyebrow mb-4">Il percorso in sintesi</p>
             <dl className="grid grid-cols-2 gap-px bg-[var(--line)] rounded-3xl overflow-hidden border border-[var(--line)]">
-              {[["10", "moduli"], ["6", "bonus"], ["8", "settimane di affiancamento 1:1"], ["14", "giorni di garanzia"]].map(([n, l]) => (
+              {[["10", "moduli"], ["6", "bonus"], ["8", "settimane di affiancamento 1:1"], ["Tutto", "il percorso: soddisfatti o rimborsati"]].map(([n, l]) => (
                 <div key={l} className="bg-ivory p-6"><dt className="font-display text-6xl kw leading-none">{n}</dt><dd className="mt-2 text-sm text-stone">{l}</dd></div>
               ))}
             </dl>
@@ -148,8 +148,8 @@ export default function WellnessMastery() {
           <Reveal><Slot kind="video" id="wm-video" label="Rita presenta Wellness Mastery" ratio="16/10" art="arch" /></Reveal>
           <div>
             <Label n="07" t="Garanzia" />
-            <Heading text="14 giorni *soddisfatti* o rimborsati." className="text-5xl md:text-6xl" />
-            <p className="mt-6 text-lg text-stone max-w-lg">Se entro 14 giorni senti che non fa per te, puoi chiedere il rimborso. <Tbc>condizioni esatte della garanzia</Tbc> Vedi la <Link href="/rimborsi" className="ulink text-ink">politica di rimborso</Link>.</p>
+            <Heading text="Soddisfatti *o rimborsati*, per tutto il percorso." className="text-5xl md:text-6xl" />
+            <p className="mt-6 text-lg text-stone max-w-lg">Se durante il percorso senti che non fa per te, chiedi il rimborso: il rischio è mio. Basta che tu abbia partecipato agli incontri e agli eventi e svolto le attività richieste. Vedi la <Link href="/rimborsi" className="ulink text-ink">politica di rimborso</Link>.</p>
           </div>
         </div>
       </section>
@@ -180,12 +180,7 @@ export default function WellnessMastery() {
         { t: "Sai quale passo fare dopo", d: <>Ne parliamo insieme, con calma. <Tbc>cosa è previsto dopo le 8 settimane</Tbc></> },
       ]} />
 
-      <Steps n="10" label="Garanzia" title="La garanzia, *in pratica*." dark note={<Tbc>procedura e condizioni esatte della garanzia di 14 giorni</Tbc>} items={[
-        { t: "Inizi il percorso", d: "Guardi i primi moduli e provi gli strumenti." },
-        { t: "Entro 14 giorni decidi", d: "Se senti che non fa per te, me lo dici." },
-        { t: "Mi scrivi", d: "Una richiesta semplice, senza giustificazioni." },
-        { t: "Ricevi il rimborso", d: "Soddisfatti o rimborsati, come promesso." },
-      ]} />
+      <GuaranteeConditions n="10" dark />
 
       <GuaranteeBand compact cta={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
 
@@ -209,7 +204,7 @@ export default function WellnessMastery() {
       <Objections n="13" items={[
         { t: "Non sono brava con la tecnologia", d: "I moduli sono pensati per chi parte da zero, con mini corsi su Canva e CapCut per le basi." },
         { t: "Costa più di quanto posso spendere ora", d: <>Capisco. Ne parliamo con calma in call, senza pressione. <Tbc>rate e formule</Tbc></> },
-        { t: "E se non funziona per me?", d: "C'è una garanzia di 14 giorni soddisfatti o rimborsati. E non prometto risultati che nessuno può garantire." },
+        { t: "E se non funziona per me?", d: "C'è la garanzia soddisfatti o rimborsati, per tutta la durata del percorso, se hai partecipato e svolto le attività. Non prometto risultati economici, che nessuno può garantire." },
         { t: "Ho paura di perdere la mia autenticità", d: "Il percorso lavora proprio al contrario: senza snaturarti, con la tua voce e i tuoi valori." },
         { t: "Faccio già troppe cose", d: "Per questo c'è l'affiancamento e una sequenza precisa: si toglie, prima di aggiungere." },
       ]} />
@@ -218,7 +213,7 @@ export default function WellnessMastery() {
         { label: "Cos'è", cells: ["Il metodo e il primo affiancamento", "Il percorso completo, 10 moduli"] },
         { label: "Per chi", cells: ["Chi vuole ritrovare direzione e continuità", "Chi vuole costruire un'attività online solida"] },
         { label: "Formato", cells: [<Tbc key="a">formato</Tbc>, "10 moduli · 6 bonus · 8 settimane 1:1"] },
-        { label: "Garanzia", cells: [<Tbc key="b">garanzia</Tbc>, "14 giorni soddisfatti o rimborsati"] },
+        { label: "Garanzia", cells: ["Soddisfatti o rimborsati, per tutto il percorso", "Soddisfatti o rimborsati, per tutto il percorso"] },
       ]} />
 
       <Faq items={[
@@ -226,7 +221,8 @@ export default function WellnessMastery() {
         { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il primo affiancamento per ritrovare direzione. Wellness Mastery è il percorso successivo, più ampio e completo." },
         { q: "Serve già avere un profilo Instagram?", a: "No. Il percorso parte dalle fondamenta del brand e costruisce passo dopo passo." },
         { q: "Quanto tempo richiede?", a: <>Il percorso è pensato per chi lavora già. <Tbc>durata e carico settimanale</Tbc></>, plain: "Il percorso è pensato per chi lavora già." },
-        { q: "C'è una garanzia?", a: "Sì: 14 giorni soddisfatti o rimborsati." },
+        { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Il rischio è mio. La condizione è che tu partecipi (Zoom, eventi), svolga le attività richieste e lo dimostri." },
+        { q: "Come dimostro di aver partecipato?", a: "Non devi preparare nulla: le presenze agli incontri su Zoom e agli eventi e le attività consegnate risultano dai registri della piattaforma. Se ti serve, ti diamo un riepilogo." },
         { q: "Posso pagare a rate?", a: <><Tbc>rate disponibili</Tbc></>, plain: "Le rate disponibili saranno indicate in fase di iscrizione." },
         { q: "Serve un'attività già avviata?", a: "È pensato per chi lavora già nel benessere. Se parti da zero, parlane prima nella call di orientamento." },
         { q: "Come funziona una settimana tipo?", a: "Guardi il video del modulo, fai l'esercizio, ti confronti con me nell'affiancamento 1:1 e poi misuri cosa funziona prima di passare al modulo successivo." },
