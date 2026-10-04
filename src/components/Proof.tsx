@@ -91,7 +91,7 @@ export function PressBar() {
   if (!PRESS.length) return null;
   return (
     <div className="border-y border-[var(--line)] py-8">
-      <p className="eyebrow text-center mb-5">Dicono di Rita / Hanno collaborato con lei</p>
+      <p className="eyebrow text-center mb-5">Dicono di me / Hanno collaborato con me</p>
       <ul className="flex flex-wrap justify-center gap-x-12 gap-y-4 font-display text-3xl text-stone">{PRESS.map((p) => <li key={p.name}>{p.href ? <a href={p.href} rel="noopener" target="_blank">{p.name}</a> : p.name}</li>)}</ul>
     </div>
   );
@@ -107,9 +107,9 @@ export function RatingLd() {
 export function TrustBar({ items }: { items?: { t: string; d: string }[] }) {
   const list = items ?? [
     { t: "Nessun obbligo", d: "La call dura circa 30 minuti ed è gratuita." },
-    { t: "Poche persone alla volta", d: "Per seguire ognuna con attenzione." },
+    { t: "Poche persone alla volta", d: "Così posso seguire ognuna con attenzione." },
     { t: "Garanzia di 14 giorni", d: "Su Wellness Mastery: soddisfatti o rimborsati." },
-    { t: "Parole oneste", d: "Niente promesse di guadagno: metodo e affiancamento." },
+    { t: "Parole oneste", d: "Non prometto guadagni: ti do metodo e affiancamento." },
   ];
   return (
     <ul className="grid gap-px bg-[var(--line)] border border-[var(--line)] rounded-3xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4">

@@ -14,7 +14,7 @@ export default function MetodoAgenda() {
   return (
     <>
       <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Metodo e primo percorso di affiancamento per operatrici e operatori del benessere che vogliono continuità e clienti qualificati online.", "/percorsi/metodo-agenda")} />
-      <PageHero imageId="agenda-top" imageRatio="4/5" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Ritrova *continuità* nella tua attività." answer="Il Metodo A.G.E.N.D.A. è il metodo di Rita Dolbakian per operatrici e operatori del benessere che vogliono smettere di andare a tentativi. È il primo percorso di affiancamento: si parte da una call di orientamento e si arriva a un'agenda con più ordine, più direzione e clienti più qualificati.">
+      <PageHero imageId="agenda-top" imageRatio="4/5" imageArt="orbs" dark eyebrow="Metodo A.G.E.N.D.A." title="Ritrova *continuità* nella tua attività." answer="Il Metodo A.G.E.N.D.A. è il mio metodo per operatrici e operatori del benessere che vogliono smettere di andare a tentativi. È il primo percorso di affiancamento: si parte da una call di orientamento e si arriva a un'agenda con più ordine, più direzione e clienti più qualificati.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota la call gratuita <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Scarica la guida</Link>
       </PageHero>
@@ -141,13 +141,13 @@ export default function MetodoAgenda() {
       ]} />
 
       <Faq items={[
-        { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il metodo di Rita Dolbakian per dare direzione e continuità a un'attività nel benessere. È anche il primo percorso di affiancamento." },
+        { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere. È anche il primo percorso di affiancamento." },
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono smettere di andare a tentativi." },
         { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo e nessuno spam: è un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, con calma, senza dare nulla per scontato." },
         { q: "Quanto costa il percorso?", a: <>Il prezzo è indicato qui: <Tbc>prezzo e formule</Tbc></>, plain: "Il prezzo e le formule sono indicati in questa pagina." },
         { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è Wellness Mastery, il percorso più ampio per diventare imprenditrice digitale nel benessere." },
-        { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>conferma di Rita</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
+        { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
         { q: "Ci sono garanzie sul risultato?", a: "Nessuno può garantire un risultato, e non lo faccio io. Il percorso ti dà metodo e affiancamento; i risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
       ]} />
       <CtaBand title="Se vuoi *ripartire* con ordine, comincia dalla call." />

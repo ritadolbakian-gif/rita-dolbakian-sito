@@ -28,7 +28,7 @@ export default function FormazioneCertificata() {
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Course", name: "Formazione certificata Rita Dolbakian Academy", description: "Percorso a tre livelli di formazione pratica sul massaggio, con attestato finale.", provider: { "@type": "EducationalOrganization", name: "Rita Dolbakian Academy" }, inLanguage: "it-IT" }} />
       <PageHero imageId="cert-top" imageRatio="4/3" imageArt="orbs" dark eyebrow="Formazione certificata" title="Un percorso che finisce con *qualcosa in mano*." answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
-        <Link href="/call-orientamento" className="btn btn-primary">Parlane con Rita <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Parliamone insieme <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
       </PageHero>
 
@@ -100,7 +100,7 @@ export default function FormazioneCertificata() {
             <ul className="mt-8 space-y-4 text-ivory/75 max-w-lg">
               <li>✦ L'attestato di Rita Dolbakian Academy <Tbc>formato e dicitura</Tbc></li>
               <li>✦ Il materiale delle lezioni <Tbc>cosa è incluso</Tbc></li>
-              <li>✦ Il confronto con Rita e con le altre allieve <Tbc>durata del supporto</Tbc></li>
+              <li>✦ Il confronto con me e con le altre allieve <Tbc>durata del supporto</Tbc></li>
               <li>✦ Un codice per verificare l'autenticità dell'attestato <Tbc>se attivato</Tbc></li>
             </ul>
           </div>

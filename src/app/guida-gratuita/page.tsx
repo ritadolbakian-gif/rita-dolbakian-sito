@@ -12,7 +12,7 @@ export const metadata = meta("Guida gratuita: i primi 10 clienti online", "Scari
 export default function Guida() {
   return (
     <>
-      <PageHero eyebrow="Guida gratuita" title="I primi 10 clienti *online*. Con ordine." answer={"«Il Sistema Clienti per Operatori del Benessere» è la guida pratica gratuita di Rita Dolbakian per fare i primi 10 clienti online. Ti spiega da dove cominciare, con calma e senza dare nulla per scontato."} />
+      <PageHero eyebrow="Guida gratuita" title="I primi 10 clienti *online*. Con ordine." answer={"«Il Sistema Clienti per Operatori del Benessere» è la mia guida pratica gratuita per fare i primi 10 clienti online. Ti spiego da dove cominciare, con calma e senza dare nulla per scontato."} />
       <section className="section">
         <div className="wrap grid gap-16 lg:grid-cols-[0.9fr_1.1fr] items-start">
           <Reveal><Slot kind="foto" id="guida-mockup" label="Mockup della guida" ratio="3/4" art="waves" className="max-w-sm mx-auto" /></Reveal>
@@ -29,7 +29,7 @@ export default function Guida() {
       </div></section>
       <section className="section"><div className="wrap"><TrustBar items={[{ t: "Gratuita", d: "Nessun pagamento, nessuna carta." }, { t: "Una sola email", d: "Ti scrivo per mandarti la guida." }, { t: "Pratica", d: "Passi concreti, non teoria." }, { t: "Con calma", d: "Si legge in poco tempo, si applica un passo alla volta." }]} /></div></section>
       <section className="section pt-0"><div className="wrap">
-        <p className="eyebrow mb-5">Cosa dicono di Rita</p>
+        <p className="eyebrow mb-5">Cosa dicono di me</p>
         <QuoteWall />
       </div></section>
 

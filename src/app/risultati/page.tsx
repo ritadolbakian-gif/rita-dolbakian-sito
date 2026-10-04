@@ -10,7 +10,7 @@ export default function Risultati() {
   return (
     <>
       <RatingLd />
-      <PageHero eyebrow="Risultati" title="Le storie di chi ha *cambiato* direzione." answer="Qui trovi i casi studio e le testimonianze delle allieve di Rita Dolbakian, con nome, cognome e autorizzazione. Sono esperienze individuali: raccontano un percorso, non promettono un risultato uguale per tutte." />
+      <PageHero eyebrow="Risultati" title="Le storie di chi ha *cambiato* direzione." answer="Qui trovi i casi studio e le testimonianze delle allieve che hanno lavorato con me, con nome, cognome e autorizzazione. Sono esperienze individuali: raccontano un percorso, non promettono un risultato uguale per tutte." />
       <section className="section">
         <div className="wrap">
           <Slot kind="foto" id="risultati-hero" label="Rita con una allieva (autorizzata)" ratio="16/7" art="waves" className="mb-14" />

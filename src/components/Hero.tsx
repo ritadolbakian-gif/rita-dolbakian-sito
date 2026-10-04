@@ -27,7 +27,7 @@ export function Hero() {
           <motion.p {...fade(0.1)} className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-10 bg-rose" />Rita Dolbakian Academy</motion.p>
           <Heading as="h1" text="Il benessere è il tuo mestiere. *L'agenda piena* è il tuo diritto." className="text-[clamp(2.9rem,7.2vw,6.4rem)]" delay={0.2} immediate />
           <motion.p {...fade(0.9)} className="mt-8 max-w-xl text-lg text-stone">
-            Metodo per chi lavora nel benessere e vuole clienti con continuità. Tecnica per chi vuole imparare a massaggiare davvero. Con Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni.
+            Metodo per chi lavora nel benessere e vuole clienti con continuità. Tecnica per chi vuole imparare a massaggiare davvero. Sono Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni: ti accompagno io, passo dopo passo.
           </motion.p>
           <motion.div {...fade(1.05)} className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link href="/call-orientamento" className="btn btn-primary justify-center">Prenota la call gratuita <span className="arr">→</span></Link>

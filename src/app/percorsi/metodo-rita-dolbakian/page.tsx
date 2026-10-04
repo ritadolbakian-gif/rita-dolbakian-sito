@@ -17,7 +17,7 @@ const levels = [
 const day = [
   ["Prima", "Guardi la lezione online, quante volte vuoi."],
   ["Poi", "Ti alleni sui movimenti con calma, a casa."],
-  ["In presenza", "Rita e il gruppo ti aiutano a correggere i dettagli."],
+  ["In presenza", "Io e il gruppo ti aiutiamo a correggere i dettagli."],
   ["Dopo", "Ripeti, chiedi, ricevi un riscontro."],
 ];
 
@@ -25,12 +25,12 @@ export default function MetodoRD() {
   return (
     <>
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
-      <PageHero imageId="rd-top" imageRatio="4/3" imageArt="stones" dark eyebrow="Metodo Rita Dolbakian" title="Impara a *massaggiare*. Con mani sicure." answer="Il Metodo Rita Dolbakian è il percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
-        <Link href="/call-orientamento" className="btn btn-primary">Parlane con Rita <span className="arr">→</span></Link>
+      <PageHero imageId="rd-top" imageRatio="4/3" imageArt="stones" dark eyebrow="Metodo Rita Dolbakian" title="Impara a *massaggiare*. Con mani sicure." answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
+        <Link href="/call-orientamento" className="btn btn-primary">Parliamone insieme <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
       </PageHero>
 
-      <section className="py-4"><div className="wrap"><p className="text-center text-sm text-stone rounded-2xl border border-dashed border-rose/60 p-4">Struttura dei livelli in bozza: <Tbc>validazione di Rita su programma, durata, sedi e prezzi</Tbc></p></div></section>
+      <section className="py-4"><div className="wrap"><p className="text-center text-sm text-stone rounded-2xl border border-dashed border-rose/60 p-4">Struttura dei livelli in bozza: <Tbc>mia validazione su programma, durata, sedi e prezzi</Tbc></p></div></section>
 
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-2 items-center">
@@ -39,9 +39,9 @@ export default function MetodoRD() {
             <Label n="01" t="Cosa lo rende diverso" />
             <Heading text="Tecnica, *ascolto*, presenza." className="text-5xl md:text-6xl" />
             <div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-              <p>Un metodo studiato, testato e semplificato in oltre dieci anni di lavoro. Meno fronzoli, più chiarezza su cosa fare e perché lo stai facendo.</p>
+              <p>Un metodo che ho studiato, testato e semplificato in oltre dieci anni di lavoro. Meno fronzoli, più chiarezza su cosa fare e perché lo stai facendo.</p>
               <p>Non impari a ripetere dei movimenti. Impari a sentire, a dosare la pressione, a stare con la persona che hai davanti.</p>
-              <p className="text-sm"><Tbc>i tratti distintivi del metodo secondo Rita</Tbc></p>
+              <p className="text-sm"><Tbc>i tratti distintivi del mio metodo</Tbc></p>
             </div>
           </div>
         </div>
@@ -106,8 +106,8 @@ export default function MetodoRD() {
           <div>
             <Label n="05" t="Chi insegna" />
             <Heading text="Impari da chi lo *fa* ogni giorno." className="text-5xl md:text-6xl" />
-            <p className="mt-6 text-lg text-stone max-w-xl">Rita Dolbakian è massaggiatrice prima ancora che formatrice. Insegna quello che ha studiato, provato e semplificato in oltre dieci anni, con calma e senza fretta.</p>
-            <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la sua storia <span className="arr">→</span></Link>
+            <p className="mt-6 text-lg text-stone max-w-xl">Sono massaggiatrice prima ancora che formatrice. Ti insegno quello che ho studiato, provato e semplificato in oltre dieci anni, con calma e senza fretta.</p>
+            <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la mia storia <span className="arr">→</span></Link>
           </div>
         </div>
       </section>

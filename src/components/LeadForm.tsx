@@ -37,7 +37,7 @@ export function LeadForm({ tipo, cta, withMessage = false, phone = true, compact
       {withMessage && <label className="field"><span>Messaggio</span><textarea name="messaggio" rows={4} /></label>}
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
       <label className="flex gap-3 items-start text-sm text-stone"><input type="checkbox" name="privacy" required className="mt-1 size-5 accent-[var(--rose)]" /><span>Ho letto l'<a href="/privacy" className="ulink">informativa privacy</a> e acconsento al trattamento dei dati per ricevere quello che ho richiesto.</span></label>
-      <label className="flex gap-3 items-start text-sm text-stone"><input type="checkbox" name="marketing" className="mt-1 size-5 accent-[var(--rose)]" /><span>Voglio ricevere ogni tanto email con contenuti e novità di Rita (facoltativo).</span></label>
+      <label className="flex gap-3 items-start text-sm text-stone"><input type="checkbox" name="marketing" className="mt-1 size-5 accent-[var(--rose)]" /><span>Voglio ricevere ogni tanto email con contenuti e novità da parte mia (facoltativo).</span></label>
       <div>
         <button className="btn btn-primary" disabled={state === "sending"}>{state === "sending" ? "Invio…" : cta} <span className="arr">→</span></button>
         {state === "err" && <p role="alert" className="mt-4 text-sm text-rose">{msg}</p>}

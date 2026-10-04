@@ -28,7 +28,7 @@ export default function Blog() {
         author: { "@type": "Person", name: "Rita Dolbakian" },
         blogPost: posts.map((p) => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE.url}/blog/${p.slug}`, datePublished: p.date })),
       }} />
-      <PageHero eyebrow="Il blog" title="Idee per *lavorare* con più calma." answer="Il blog di Rita Dolbakian raccoglie guide pratiche per chi lavora nel benessere: come trovare clienti, stabilizzare l'agenda, stabilire i prezzi, usare Instagram e la scheda Google, e come scegliere un corso di massaggio. Un tema alla volta, con parole semplici.">
+      <PageHero eyebrow="Il blog" title="Idee per *lavorare* con più calma." answer="In questo blog raccolgo guide pratiche per chi lavora nel benessere: come trovare clienti, stabilizzare l'agenda, stabilire i prezzi, usare Instagram e la scheda Google, e come scegliere un corso di massaggio. Un tema alla volta, con parole semplici.">
         <Link href={`/blog/${featured.slug}`} className="btn btn-primary">Inizia dalla guida principale <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Scarica la guida gratuita</Link>
       </PageHero>
@@ -64,7 +64,7 @@ export default function Blog() {
       {upcoming.length > 0 && (
         <section className="section-dark section">
           <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <div><Label n="03" t="Prossimamente" /><Heading text="La parte su *tecnica* e formazione." className="text-4xl md:text-5xl" /><p className="mt-5 text-ivory/65 max-w-sm">Sto completando questi articoli con Rita, perché su tecnica e formazione ogni dettaglio deve essere preciso.</p></div>
+            <div><Label n="03" t="Prossimamente" /><Heading text="La parte su *tecnica* e formazione." className="text-4xl md:text-5xl" /><p className="mt-5 text-ivory/65 max-w-sm">Sto completando questi articoli con cura, perché su tecnica e formazione ogni dettaglio deve essere preciso.</p></div>
             <ul className="divide-y divide-ivory/15 border-y border-ivory/15">
               {upcoming.map((p) => <li key={p.slug} className="py-5 flex items-start justify-between gap-6"><span className="font-display text-2xl leading-snug">{p.title}</span><span className="eyebrow shrink-0 mt-2">In arrivo</span></li>)}
             </ul>
@@ -86,7 +86,7 @@ export default function Blog() {
       </section>
 
       <Faq title="Sul *blog*." items={[
-        { q: "Chi scrive gli articoli?", a: "Gli articoli sono di Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni, e sono pensati per chi lavora nel benessere." },
+        { q: "Chi scrive gli articoli?", a: "Gli articoli li scrivo io, Rita Dolbakian: massaggiatrice e formatrice nel benessere da oltre dieci anni. Sono pensati per chi lavora nel benessere." },
         { q: "Gli articoli sono consigli medici?", a: "No. Parlano di benessere, organizzazione e formazione. Non contengono indicazioni sanitarie né promesse di cura. Per questioni di salute ci si rivolge a un professionista sanitario." },
         { q: "Ogni quanto escono nuovi articoli?", a: "Nuovi articoli arrivano man mano che sono completi e verificati. Puoi seguire gli aggiornamenti con il feed RSS." },
         { q: "Posso proporre un argomento?", a: <>Sì, scrivimi dalla pagina <Link href="/contatti" className="ulink text-ink">Contatti</Link>: i temi più richiesti diventano nuovi articoli.</>, plain: "Sì, scrivi dalla pagina Contatti: i temi più richiesti diventano nuovi articoli." },

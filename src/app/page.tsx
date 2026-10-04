@@ -38,8 +38,8 @@ export default function Home() {
           <Reveal delay={0.15}><p className="mt-5 text-lg text-stone max-w-xl">Una strada è per la tua attività. L'altra è per le tue mani. Scegli quella che ti somiglia oggi: l'altra ti aspetta.</p></Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
-              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", t: "Metodo A.G.E.N.D.A.", d: "Smetti di andare a tentativi. Il metodo che dà direzione alla tua attività, a partire da un primo affiancamento: dalla call a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
-              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo semplificato in oltre dieci anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
+              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", t: "Metodo A.G.E.N.D.A.", d: "Smetti di andare a tentativi. Con il mio metodo dai direzione alla tua attività, a partire da un primo affiancamento: dalla call a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
+              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo che ho semplificato in oltre dieci anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
                 <Link href={c.href} className={`lift group block rounded-[1.75rem] p-5 md:p-6 h-full ${c.dark ? "section-dark" : "bg-blush/60"}`}>
@@ -84,7 +84,7 @@ export default function Home() {
         <div className="wrap text-center max-w-4xl">
           <Label n="03" t="Come si sceglie oggi" />
           <Heading text="Prima guardano. Poi confrontano. *E solo dopo* scrivono." className="text-5xl md:text-7xl" />
-          <Reveal delay={0.2}><p className="mt-8 text-lg text-stone max-w-2xl mx-auto">Se tutto questo accade senza che tu lo guidi, l'agenda resta imprevedibile. Se invece lo costruisci, le richieste smettono di essere un colpo di fortuna. Si può fare, con calma e con un metodo.</p></Reveal>
+          <Reveal delay={0.2}><p className="mt-8 text-lg text-stone max-w-2xl mx-auto">Se tutto questo accade senza che tu lo guidi, l'agenda resta imprevedibile. Se invece lo costruisci, le richieste smettono di essere un colpo di fortuna. Si può fare. Te lo mostro io, con calma e con un metodo.</p></Reveal>
         </div>
       </section>
 
@@ -93,14 +93,14 @@ export default function Home() {
         <div className="wrap grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal><Slot kind="foto" id="rita-studio" label="Rita, ritratto in studio" ratio="4/5" art="leaf" /></Reveal>
           <div>
-            <Label n="04" t="Chi è Rita" />
-            <Heading text="Massaggiatrice *prima* ancora che formatrice." className="text-5xl md:text-6xl" />
+            <Label n="04" t="Chi sono" />
+            <Heading text="Sono una massaggiatrice *prima* ancora che formatrice." className="text-5xl md:text-6xl" />
             <Reveal delay={0.15}>
               <div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-                <p>Ha iniziato come molte: solo passaparola, periodi pieni e periodi vuoti, la sensazione di non avere il controllo.</p>
-                <p>Non le mancava la tecnica. Le mancava una direzione. Ha studiato, testato, semplificato. Oggi aiuta altre persone a fare ordine e a costruire continuità, senza snaturarsi.</p>
+                <p>Ho iniziato come molte di voi: solo passaparola, periodi pieni e periodi vuoti, la sensazione di non avere il controllo.</p>
+                <p>Non mi mancava la tecnica. Mi mancava una direzione. Ho studiato, testato, semplificato. Oggi aiuto altre persone a fare ordine e a costruire continuità, senza snaturarsi.</p>
               </div>
-              <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la sua storia <span className="arr">→</span></Link>
+              <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la mia storia <span className="arr">→</span></Link>
             </Reveal>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
             {[
               { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Scarica la guida" },
               { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Un confronto calmo e onesto per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota la call" },
-              { n: "3", t: "Il percorso con Rita", d: "Il Metodo A.G.E.N.D.A. come primo affiancamento. Poi Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Vedi i percorsi" },
+              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi, Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Vedi i percorsi" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
                 <Link href={s.href} className="group p-8 md:p-10 h-full flex flex-col hover:bg-blush/30 transition-colors duration-500">
@@ -220,7 +220,7 @@ export default function Home() {
         { q: "La call di orientamento costa qualcosa?", a: "No. È gratuita, dura circa 30 minuti e non c'è nessun obbligo. Non è una lezione né una telefonata commerciale aggressiva: è un confronto." },
         { q: "Devo già avere clienti o un seguito sui social?", a: "No. Serve avere una competenza nel benessere. Da lì, un passo alla volta, si costruisce tutto il resto." },
         { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Metodo Rita Dolbakian parte dalle fondamenta del tocco e prosegue per livelli, online e in presenza." },
-        { q: "Mi garantite dei risultati?", a: "No, e diffido di chi lo fa. Ti do un metodo e un affiancamento. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
+        { q: "Mi garantisci dei risultati?", a: "No, e diffido di chi lo fa. Ti do un metodo e un affiancamento. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
         { q: "Posso cambiare idea dopo l'acquisto?", a: "Wellness Mastery ha una garanzia di 14 giorni soddisfatti o rimborsati." },
       ]} />
 

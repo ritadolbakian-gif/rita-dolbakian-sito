@@ -57,7 +57,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
     <aside className="not-prose my-12 rounded-3xl bg-ink text-ivory p-7 md:p-9 section-dark">
       <p className="eyebrow">{isTech ? "Se vuoi imparare con un metodo" : "Guida gratuita"}</p>
       <p className="font-display text-3xl md:text-4xl mt-3 leading-[1.08]">{isTech ? <>Mani sicure, <em className="kw">tocco consapevole</em>.</> : <>I primi 10 clienti online, <em className="kw">con ordine</em>.</>}</p>
-      <p className="mt-3 text-ivory/70 text-[0.95rem]">{isTech ? "Scopri il Metodo Rita Dolbakian: tre livelli, online e in presenza." : "La guida pratica di Rita per chi lavora nel benessere. Gratis, una sola email."}</p>
+      <p className="mt-3 text-ivory/70 text-[0.95rem]">{isTech ? "Scopri il Metodo Rita Dolbakian: tre livelli, online e in presenza." : "La mia guida pratica per chi lavora nel benessere. Gratis, una sola email."}</p>
       <Link href={isTech ? "/percorsi/metodo-rita-dolbakian" : "/guida-gratuita"} className="btn btn-primary mt-6 !min-h-12">{isTech ? "Scopri il metodo" : "Scarica la guida"} <span className="arr">→</span></Link>
     </aside>
   );
@@ -133,8 +133,8 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
               <div>
                 <p className="eyebrow">L'autrice</p>
                 <p className="font-display text-3xl mt-1">Rita Dolbakian</p>
-                <p className="text-stone mt-2">Massaggiatrice e formatrice nel benessere da oltre dieci anni. Aiuta operatrici e operatori a costruire continuità, e insegna a massaggiare con il suo metodo.</p>
-                <Link href="/chi-sono" className="ulink mt-3 inline-block font-medium">La sua storia →</Link>
+                <p className="text-stone mt-2">Sono Rita: massaggiatrice e formatrice nel benessere da oltre dieci anni. Aiuto operatrici e operatori a costruire continuità, e insegno a massaggiare con il mio metodo.</p>
+                <Link href="/chi-sono" className="ulink mt-3 inline-block font-medium">La mia storia →</Link>
               </div>
             </div>
           </div>

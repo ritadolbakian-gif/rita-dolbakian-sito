@@ -37,7 +37,7 @@ export function GuidePopup() {
         <button onClick={() => setOpen(false)} aria-label="Chiudi" className="absolute right-4 top-4 size-11 grid place-items-center text-xl">✕</button>
         <p className="eyebrow">Prima di andare</p>
         <h2 className="font-display text-4xl mt-3 leading-[1.05]">I primi 10 clienti online, <em className="kw">con ordine</em>.</h2>
-        <p className="mt-3 text-stone text-[0.95rem]">Ti mando la guida pratica di Rita. Gratis, una sola email, senza spam.</p>
+        <p className="mt-3 text-stone text-[0.95rem]">Ti mando la mia guida pratica. Gratis, una sola email, senza spam.</p>
         <div className="mt-6"><LeadForm tipo="guida" cta="Mandami la guida" compact /></div>
         <button onClick={() => setOpen(false)} className="mt-4 text-sm text-stone">No grazie, forse un'altra volta</button>
       </div>

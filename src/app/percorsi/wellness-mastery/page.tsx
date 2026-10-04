@@ -22,7 +22,7 @@ const modules = [
 ];
 
 const bonus = [
-  ["8 settimane di affiancamento 1:1", "Un percorso personale accanto a Rita."],
+  ["8 settimane di affiancamento 1:1", "Un percorso personale accanto a me."],
   ["Template per le collaborazioni con influencer", "Modelli pronti per partire con ordine."],
   ["Wellness Profit Calculator", "Per capire numeri e prezzi della tua attività."],
   ["Mini corso Canva", "Per creare contenuti chiari e curati da sola."],
@@ -34,7 +34,7 @@ export default function WellnessMastery() {
   return (
     <>
       <JsonLd data={courseLd("Wellness Mastery", "Da operatrice del benessere a imprenditrice digitale: 10 moduli, 6 bonus e garanzia di 14 giorni.", "/percorsi/wellness-mastery")} />
-      <PageHero imageId="wm-top" imageRatio="4/5" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il percorso di Rita Dolbakian per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
+      <PageHero imageId="wm-top" imageRatio="4/5" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il mio percorso per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
@@ -181,7 +181,7 @@ export default function WellnessMastery() {
       ]} />
 
       <Faq items={[
-        { q: "Che cos'è Wellness Mastery?", a: "È il percorso di Rita Dolbakian per operatrici del benessere che vogliono costruire un'attività online solida. Ha 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1." },
+        { q: "Che cos'è Wellness Mastery?", a: "È il mio percorso per operatrici del benessere che vogliono costruire un'attività online solida. Ha 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1." },
         { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il primo affiancamento per ritrovare direzione. Wellness Mastery è il percorso successivo, più ampio e completo." },
         { q: "Serve già avere un profilo Instagram?", a: "No. Il percorso parte dalle fondamenta del brand e costruisce passo dopo passo." },
         { q: "Quanto tempo richiede?", a: <>Il percorso è pensato per chi lavora già. <Tbc>durata e carico settimanale</Tbc></>, plain: "Il percorso è pensato per chi lavora già." },
