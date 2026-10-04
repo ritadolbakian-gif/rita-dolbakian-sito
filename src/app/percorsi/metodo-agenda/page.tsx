@@ -8,7 +8,14 @@ import { meta } from "@/lib/seo";
 
 export const metadata = meta("Metodo A.G.E.N.D.A. per operatrici del benessere", "Il Metodo A.G.E.N.D.A. di Rita Dolbakian: il primo percorso di affiancamento per ritrovare continuità e clienti qualificati nel benessere.", "/percorsi/metodo-agenda");
 
-const letters = ["A", "G", "E", "N", "D", "A"];
+const letters = [
+  { l: "A", w: "Ascolto", d: "Si parte da dove sei davvero. Prima di consigliarti qualsiasi cosa, guardo la tua situazione così com'è.", p: "Una fotografia onesta: profilo, scheda Google, messaggi, prezzi, clienti." },
+  { l: "G", w: "Gente", d: "Una cosa è fare bene il tuo lavoro, un'altra è sapere per chi. Scegli le persone che vuoi servire.", p: "Descrivi la tua cliente ideale in una frase." },
+  { l: "E", w: "Essenza", d: "Cosa offri e cosa ti rende riconoscibile: il tuo valore, detto in parole semplici, con un prezzo che sai spiegare.", p: "Un'offerta chiara, una frase di posizionamento e un prezzo." },
+  { l: "N", w: "Notorietà", d: "Farti conoscere con calma da chi ti cerca. Non serve essere ovunque: serve essere chiara dove ti trovano.", p: "Profilo, scheda Google, contenuti essenziali e qualche collaborazione." },
+  { l: "D", w: "Dialogo", d: "Quando qualcuno ti scrive comincia la parte più delicata: ascoltare, rispondere, proporre senza forzare.", p: "Risposte pronte a «quanto costa?» e agli altri dubbi." },
+  { l: "A", w: "Abitudine", d: "La continuità nasce da gesti piccoli e regolari, non da sprint: ricontatti, numeri da guardare, tempo protetto in agenda.", p: "Una routine settimanale e quattro numeri da annotare." },
+];
 
 export default function MetodoAgenda() {
   return (
@@ -38,14 +45,20 @@ export default function MetodoAgenda() {
           <Label n="02" t="Il metodo" />
           <Heading text="Sei lettere. Un *ordine* da seguire." className="text-5xl md:text-7xl" />
           <p className="mt-6 text-lg text-stone max-w-xl">Ogni lettera è un passo. Non si salta niente e non si corre: si costruisce una cosa alla volta, nell'ordine giusto.</p>
-          <p className="mt-3 text-sm"><Tbc>significato di ogni lettera e testo, 2 righe ciascuna</Tbc></p>
+          <Reveal delay={0.1}>
+            <p className="mt-10 font-display text-3xl md:text-5xl leading-tight" aria-label="Ascolto, Gente, Essenza, Notorietà, Dialogo, Abitudine">
+              {letters.map((x, i) => <span key={i} className="mr-4 inline-block"><span className="kw">{x.l}</span>{x.w.slice(1)}{i < letters.length - 1 && <span className="text-rose"> · </span>}</span>)}
+            </p>
+          </Reveal>
+          <p className="mt-3 text-sm"><Tbc>proposta di significato delle lettere, da approvare</Tbc></p>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {letters.map((l, i) => (
+            {letters.map((x, i) => (
               <Reveal key={i} delay={i * 0.06}>
-                <div className="bg-ivory rounded-3xl p-8 h-full lift">
-                  <span className="font-display text-8xl kw leading-none">{l}</span>
-                  <p className="eyebrow mt-4">Passo 0{i + 1}</p>
-                  <p className="mt-3 text-stone text-[0.95rem]"><Tbc>titolo e descrizione</Tbc></p>
+                <div className="bg-ivory rounded-3xl p-8 h-full lift flex flex-col">
+                  <div className="flex items-baseline gap-4"><span className="font-display text-8xl kw leading-none">{x.l}</span><span className="eyebrow">Passo 0{i + 1}</span></div>
+                  <h3 className="font-display text-4xl mt-3">{x.w}</h3>
+                  <p className="mt-3 text-stone text-[0.97rem] flex-1">{x.d}</p>
+                  <p className="mt-5 border-t border-[var(--line)] pt-4 text-sm"><span className="eyebrow !text-rose mr-2">In pratica</span>{x.p}</p>
                 </div>
               </Reveal>
             ))}
@@ -172,7 +185,7 @@ export default function MetodoAgenda() {
       ]} />
 
       <Faq items={[
-        { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere. È anche il primo percorso di affiancamento." },
+        { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere, in sei passi: Ascolto, Gente, Essenza, Notorietà, Dialogo, Abitudine. È anche il primo percorso di affiancamento." },
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono smettere di andare a tentativi." },
         { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo e nessuno spam: è un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, con calma, senza dare nulla per scontato." },
