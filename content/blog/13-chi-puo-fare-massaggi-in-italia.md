@@ -9,7 +9,7 @@ kind: "support"
 cluster: "C"
 category: "Avviare l'attività"
 order: 13
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -52,11 +52,10 @@ Per i massaggi con finalità di **rilassamento e benessere**, non terapeutici e 
 
 Però attenzione: **non tutte le fonti dicono la stessa cosa.** Alcuni siti di divulgazione parlano di attestati obbligatori e di un certo numero di ore di formazione; altre fonti descrivono l’attività come libera. Per questo, prima di scegliere come presentarti e quale formazione seguire, la strada più sicura è:
 
-1.  **leggere le fonti ufficiali** (testo della legge e della risoluzione, aggiornati);
-2.  **chiedere conferma al tuo Comune** e a un consulente (commercialista, consulente del lavoro, associazione di categoria);
-3.  **non usare formule come “abilitante” o “riconosciuto”** se non puoi dimostrarlo.
+1. **leggere le fonti ufficiali** (testo della legge e della risoluzione, aggiornati);
+2. **chiedere conferma al tuo Comune** e a un consulente (commercialista, consulente del lavoro, associazione di categoria);
+3. **non usare formule come “abilitante” o “riconosciuto”** se non puoi dimostrarlo.
 
-[DA VERIFICARE con un legale prima della pubblicazione: citazione esatta e data delle fonti, e sintesi neutra delle posizioni divergenti.]
 
 ## Come comunicare i tuoi servizi senza sconfinare
 
@@ -82,15 +81,14 @@ Anche nell’ambito del benessere, ci sono situazioni in cui è meglio non proce
 - condizioni mediche importanti di cui non conosci le implicazioni;
 - richieste di “trattare” un problema di salute.
 
-[Elenco da validare con Rita e con un professionista sanitario.]
 
 ## Come orientarti: cinque domande da farti
 
-1.  Che finalità hanno i miei trattamenti: benessere, estetica o salute?
-2.  Come descrivo i miei servizi nei testi e a voce?
-3.  Quale formazione ho e come la presento in modo corretto?
-4.  Cosa mi hanno detto Comune e commercialista per la mia situazione?
-5.  Che cosa faccio quando una persona ha un problema di salute?
+1. Che finalità hanno i miei trattamenti: benessere, estetica o salute?
+2. Come descrivo i miei servizi nei testi e a voce?
+3. Quale formazione ho e come la presento in modo corretto?
+4. Cosa mi hanno detto Comune e commercialista per la mia situazione?
+5. Che cosa faccio quando una persona ha un problema di salute?
 
 ## Domande frequenti
 

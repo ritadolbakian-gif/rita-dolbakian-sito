@@ -9,7 +9,7 @@ kind: "support"
 cluster: "C"
 category: "Avviare l'attività"
 order: 18
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -34,15 +34,15 @@ La risposta cambia **requisiti, costi e adempimenti**. In particolare, se i serv
 
 Un ordine sensato, da adattare:
 
-1.  **Valida la domanda.** Hai già clienti? Quante richieste ricevi? C’è una zona in cui ne arriverebbero di più?
-2.  **Definisci l’offerta e i prezzi.** Quali servizi, a che prezzo, con quali pacchetti ([come fissare il prezzo](/blog/quanto-far-pagare-un-massaggio)).
-3.  **Fai un piano economico.** Costi, ricavi attesi, soglia di pareggio.
-4.  **Verifica i requisiti.** Con Comune, ASL (se pertinente), commercialista e associazioni di categoria.
-5.  **Cerca e valuta il locale.** Posizione, destinazione d’uso, costi, contratto.
-6.  **Sistema gli aspetti amministrativi.** Partita IVA, codice ATECO, comunicazioni, assicurazioni ([guida orientativa](/blog/partita-iva-massaggiatore)).
-7.  **Allestisci lo spazio.** Arredi, attrezzatura, igiene, privacy.
-8.  **Prepara la comunicazione.** Scheda Google, profilo social, sito, listino ([guida alla scheda Google](/blog/google-business-profile-massaggiatori)).
-9.  **Apri in modo graduale**, con un periodo di avvio in cui monitori i numeri.
+1. **Valida la domanda.** Hai già clienti? Quante richieste ricevi? C’è una zona in cui ne arriverebbero di più?
+2. **Definisci l’offerta e i prezzi.** Quali servizi, a che prezzo, con quali pacchetti ([come fissare il prezzo](/blog/quanto-far-pagare-un-massaggio)).
+3. **Fai un piano economico.** Costi, ricavi attesi, soglia di pareggio.
+4. **Verifica i requisiti.** Con Comune, ASL (se pertinente), commercialista e associazioni di categoria.
+5. **Cerca e valuta il locale.** Posizione, destinazione d’uso, costi, contratto.
+6. **Sistema gli aspetti amministrativi.** Partita IVA, codice ATECO, comunicazioni, assicurazioni ([guida orientativa](/blog/partita-iva-massaggiatore)).
+7. **Allestisci lo spazio.** Arredi, attrezzatura, igiene, privacy.
+8. **Prepara la comunicazione.** Scheda Google, profilo social, sito, listino ([guida alla scheda Google](/blog/google-business-profile-massaggiatori)).
+9. **Apri in modo graduale**, con un periodo di avvio in cui monitori i numeri.
 
 ## Le voci di costo da mettere nel piano
 
@@ -78,10 +78,10 @@ Non inseriamo cifre, perché variano molto da città a città e nel tempo. Ma ec
 
 Il **punto di pareggio** è quante sedute devi fare ogni mese per coprire i costi fissi e variabili. Il metodo:
 
-1.  Somma i **costi fissi mensili**.
-2.  Calcola il **margine medio per seduta** (prezzo meno i costi variabili di una seduta).
-3.  Dividi i costi fissi per il margine: ottieni il numero di sedute mensili necessarie **solo per pareggiare**.
-4.  Confrontalo con quante sedute pensi di riuscire a fare in modo realistico.
+1. Somma i **costi fissi mensili**.
+2. Calcola il **margine medio per seduta** (prezzo meno i costi variabili di una seduta).
+3. Dividi i costi fissi per il margine: ottieni il numero di sedute mensili necessarie **solo per pareggiare**.
+4. Confrontalo con quante sedute pensi di riuscire a fare in modo realistico.
 
 Se il numero è vicino alla tua capacità massima, il progetto è rischioso. Se è molto sotto, hai margine. Ricorda che nei mesi deboli i costi fissi restano.
 

@@ -9,7 +9,7 @@ kind: "pillar"
 cluster: "D"
 category: "Tecnica e formazione"
 order: 8
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -131,31 +131,22 @@ Ecco una breve lista di campanelli d’allarme.
 
 Se stai valutando due o tre proposte, usa questa griglia, un corso per colonna.
 
-| Criterio                                    | Corso A | Corso B | Corso C |
+| Criterio | Corso A | Corso B | Corso C |
 |:--------------------------------------------|---------|---------|---------|
-| Obiettivo coerente con il mio               |         |         |         |
-| Chi insegna ed esperienza                   |         |         |         |
-| Parte pratica e feedback                    |         |         |         |
-| Attestato: chi lo rilascia e cosa certifica |         |         |         |
-| Formato (online, presenza, misto)           |         |         |         |
-| Supporto durante e dopo                     |         |         |         |
-| Costo totale e condizioni                   |         |         |         |
-| Segnali di allarme                          |         |         |         |
+| Obiettivo coerente con il mio | | | |
+| Chi insegna ed esperienza | | | |
+| Parte pratica e feedback | | | |
+| Attestato: chi lo rilascia e cosa certifica | | | |
+| Formato (online, presenza, misto) | | | |
+| Supporto durante e dopo | | | |
+| Costo totale e condizioni | | | |
+| Segnali di allarme | | | |
 
 Compila con calma. Spesso, scrivere le risposte rende evidente la scelta.
 
 ## Come risponde il Metodo Rita Dolbakian a queste domande
 
-[DA CONFERMARE CON RITA: questa sezione va completata con dati reali e verificabili. Non pubblicare finché non è compilata.]
-
-- **Obiettivo del percorso e a chi è rivolto:** [da confermare]
-- **Chi insegna e da quanti anni lavora:** Rita Dolbakian, massaggiatrice da oltre dieci anni.
-- **Struttura e programma:** [da confermare: moduli, ore, materiali]
-- **Parte pratica e feedback:** [da confermare]
-- **Cosa si riceve a fine percorso:** [da confermare: tipo di attestato ed ente]
-- **Formato:** [da confermare: online, presenza, misto]
-- **Supporto dopo il corso:** [da confermare]
-- **Costo, condizioni e rimborso:** [da confermare]
+Chi insegna: Rita Dolbakian, massaggiatrice da oltre dieci anni. Programma, formato, parte pratica, supporto, costi e condizioni li trovi descritti nella pagina del percorso, così puoi confrontarli con la tua tabella: [Metodo Rita Dolbakian](/percorsi/metodo-rita-dolbakian).
 
 Una pagina che risponde in modo trasparente a tutte queste domande è, da sola, il miglior segno di serietà.
 

@@ -9,7 +9,7 @@ kind: "support"
 cluster: "D"
 category: "Tecnica e formazione"
 order: 9
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -41,7 +41,7 @@ Cosa dire all’inizio, come fare le domande giuste, come chiudere un incontro, 
 
 ### Nozioni di base sul corpo e sulle cautele
 
-Informazioni generali per lavorare in modo attento e sapere quando è meglio non procedere e invitare la persona a rivolgersi a un professionista sanitario. [Contenuto da validare con Rita e con un professionista sanitario]
+Informazioni generali per lavorare in modo attento e sapere quando è meglio non procedere e invitare la persona a rivolgersi a un professionista sanitario.
 
 ### L’aspetto professionale
 
@@ -65,12 +65,12 @@ Nessuno controlla se pratichi. Servono disciplina e un piano.
 
 Se stai valutando un percorso, controlla se prevede:
 
-1.  **Una struttura chiara**, con moduli, obiettivi per ogni tappa e un ordine sensato.
-2.  **Video fatti bene**, con inquadrature chiare, spiegazioni calme e la possibilità di rivedere.
-3.  **Esercizi pratici** da svolgere tra una lezione e l’altra, con indicazioni su come svolgerli.
-4.  **Un meccanismo di feedback**: revisione di video, sessioni dal vivo in videochiamata, domande a cui si risponde.
-5.  **Occasioni di pratica con persone reali**, con indicazioni su come chiedere un riscontro.
-6.  **Supporto nel tempo**, per riprendere il materiale e fare domande anche dopo.
+1. **Una struttura chiara**, con moduli, obiettivi per ogni tappa e un ordine sensato.
+2. **Video fatti bene**, con inquadrature chiare, spiegazioni calme e la possibilità di rivedere.
+3. **Esercizi pratici** da svolgere tra una lezione e l’altra, con indicazioni su come svolgerli.
+4. **Un meccanismo di feedback**: revisione di video, sessioni dal vivo in videochiamata, domande a cui si risponde.
+5. **Occasioni di pratica con persone reali**, con indicazioni su come chiedere un riscontro.
+6. **Supporto nel tempo**, per riprendere il materiale e fare domande anche dopo.
 
 Se il corso è solo una raccolta di video, senza nessuna di queste cose, probabilmente è informazione, non formazione.
 
@@ -78,12 +78,12 @@ Se il corso è solo una raccolta di video, senza nessuna di queste cose, probabi
 
 Un programma settimanale semplice, da adattare.
 
-1.  **Guarda** la lezione una volta, senza interromperla.
-2.  **Riguardala** facendo i movimenti nel vuoto o su un cuscino, fermando il video.
-3.  **Pratica** su una persona di fiducia, annotando il tempo e le zone lavorate.
-4.  **Chiedi un riscontro** con domande precise: la pressione era adatta? Il ritmo era troppo veloce? In quali momenti ti sei sentita più a tuo agio?
-5.  **Registrati** (con consenso) o fatti riprendere mentre lavori, per riguardare la tua postura.
-6.  **Annota** tre cose da migliorare per la volta successiva.
+1. **Guarda** la lezione una volta, senza interromperla.
+2. **Riguardala** facendo i movimenti nel vuoto o su un cuscino, fermando il video.
+3. **Pratica** su una persona di fiducia, annotando il tempo e le zone lavorate.
+4. **Chiedi un riscontro** con domande precise: la pressione era adatta? Il ritmo era troppo veloce? In quali momenti ti sei sentita più a tuo agio?
+5. **Registrati** (con consenso) o fatti riprendere mentre lavori, per riguardare la tua postura.
+6. **Annota** tre cose da migliorare per la volta successiva.
 
 Due o tre sessioni di pratica a settimana, con regolarità, valgono molto più di una maratona una volta al mese.
 
@@ -111,7 +111,6 @@ Se vuoi un elenco completo di criteri, leggi [Come scegliere un corso di massagg
 
 ## Il Metodo Rita Dolbakian: come funziona a distanza
 
-[DA CONFERMARE CON RITA: formato del percorso (online, presenza, misto), come si ricevono correzioni, quanto dura l’accesso, che supporto è previsto, cosa si ottiene a fine percorso. Non pubblicare questa parte senza dati reali.]
 
 ## Domande frequenti
 

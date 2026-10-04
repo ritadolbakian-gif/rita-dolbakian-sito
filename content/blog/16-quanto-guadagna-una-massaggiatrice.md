@@ -9,7 +9,7 @@ kind: "support"
 cluster: "B"
 category: "Prezzi e posizionamento"
 order: 16
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -27,7 +27,7 @@ Se cerchi online, trovi intervalli molto ampi e fonti diverse: stipendi di dipen
 - chi **lavora in proprio** incassa in base a quante sedute fa e a quanto le fa pagare, e deve sottrarre costi, tasse e contributi;
 - chi lavora **part-time** o come secondo lavoro ha numeri molto diversi da chi lo fa a tempo pieno.
 
-Per questo, ogni intervallo che trovi va letto con una domanda: *a quale situazione si riferisce?* Se un articolo cita dati pubblici, controlla fonte, data e metodo. [Se si cita una fonte, inserire qui link e data.]
+Per questo, ogni intervallo che trovi va letto con una domanda: *a quale situazione si riferisce?* Se un articolo cita dati pubblici, controlla fonte, data e metodo.
 
 ## Le cinque variabili che contano davvero
 
@@ -55,7 +55,7 @@ Due professioniste con la stessa bravura e lo stesso prezzo possono guadagnare m
 
 Immagina due professioniste, Anna e Marta, che lavorano in proprio e applicano lo stesso prezzo di 50 € a seduta. Ipotizziamo, **solo per l’esempio**, questi dati mensili:
 
-|  | Anna | Marta |
+| | Anna | Marta |
 |:---|:---|:---|
 | Sedute fatte in un mese | 24 | 40 |
 | Fatturato | 1.200 € | 2.000 € |
@@ -73,12 +73,12 @@ Questi numeri sono inventati per spiegare il meccanismo. Il tuo caso va calcolat
 
 ## Come stimare il tuo guadagno netto: un metodo in 6 passaggi
 
-1.  **Scrivi le ore che puoi realmente dedicare** ai clienti ogni settimana (non quelle teoriche).
-2.  **Stima le sedute realistiche** togliendo disdette, tempi di preparazione, ferie.
-3.  **Moltiplica per il prezzo medio** che applichi (tenendo conto di eventuali pacchetti o sconti).
-4.  **Sottrai i costi mensili** dell’attività, scrivendoli uno per uno.
-5.  **Sottrai tasse e contributi**, con la stima fatta insieme al commercialista.
-6.  **Dividi per le ore totali di lavoro** (comprese quelle non retribuite: comunicazione, amministrazione, spostamenti) per capire quanto vale davvero un’ora del tuo tempo.
+1. **Scrivi le ore che puoi realmente dedicare** ai clienti ogni settimana (non quelle teoriche).
+2. **Stima le sedute realistiche** togliendo disdette, tempi di preparazione, ferie.
+3. **Moltiplica per il prezzo medio** che applichi (tenendo conto di eventuali pacchetti o sconti).
+4. **Sottrai i costi mensili** dell’attività, scrivendoli uno per uno.
+5. **Sottrai tasse e contributi**, con la stima fatta insieme al commercialista.
+6. **Dividi per le ore totali di lavoro** (comprese quelle non retribuite: comunicazione, amministrazione, spostamenti) per capire quanto vale davvero un’ora del tuo tempo.
 
 Quest’ultimo passaggio sorprende molte persone: l’ora “vera” è spesso più bassa del prezzo della seduta, perché il lavoro non è solo la seduta.
 

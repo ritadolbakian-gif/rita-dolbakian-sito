@@ -9,7 +9,7 @@ kind: "pillar"
 cluster: "C"
 category: "Avviare l'attività"
 order: 12
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -53,12 +53,12 @@ Una buona professionista non smette mai di formarsi. Parti da una base solida, p
 
 Qui serve cautela: le regole dipendono dalla tua situazione. In generale, per esercitare in modo continuativo servono aperture e adempimenti fiscali. Ecco le domande da portare a un commercialista:
 
-1.  **Che forma di attività mi conviene** (lavoro autonomo con partita IVA, altre soluzioni)?
-2.  **Quale codice ATECO** è più adatto a ciò che offro?
-3.  **Quale regime fiscale** posso e conviene usare?
-4.  **Quali comunicazioni o iscrizioni** sono necessarie nel mio Comune e per il tipo di attività?
-5.  **Quale assicurazione** conviene valutare (per esempio di responsabilità civile)?
-6.  **Come gestisco fatture, scontrini o ricevute?**
+1. **Che forma di attività mi conviene** (lavoro autonomo con partita IVA, altre soluzioni)?
+2. **Quale codice ATECO** è più adatto a ciò che offro?
+3. **Quale regime fiscale** posso e conviene usare?
+4. **Quali comunicazioni o iscrizioni** sono necessarie nel mio Comune e per il tipo di attività?
+5. **Quale assicurazione** conviene valutare (per esempio di responsabilità civile)?
+6. **Come gestisco fatture, scontrini o ricevute?**
 
 Per un primo orientamento sulla partita IVA leggi [Partita IVA per massaggiatori: da dove si parte](/blog/partita-iva-massaggiatore). Ricorda che è una guida orientativa e che la decisione va presa con un professionista.
 
@@ -68,10 +68,10 @@ Per un primo orientamento sulla partita IVA leggi [Partita IVA per massaggiatori
 
 ### Una base minima di presenza
 
-1.  **Un’offerta chiara**: cosa proponi, a chi, quanto costa.
-2.  **Una scheda Google** curata, se lavori sul territorio ([guida](/blog/google-business-profile-massaggiatori)).
-3.  **Un profilo social** che spiega chi sei e come lavori ([Instagram per massaggiatrici](/blog/instagram-per-massaggiatrici)).
-4.  **Un modo semplice per prenotare**: un numero WhatsApp, un modulo.
+1. **Un’offerta chiara**: cosa proponi, a chi, quanto costa.
+2. **Una scheda Google** curata, se lavori sul territorio ([guida](/blog/google-business-profile-massaggiatori)).
+3. **Un profilo social** che spiega chi sei e come lavori ([Instagram per massaggiatrici](/blog/instagram-per-massaggiatrici)).
+4. **Un modo semplice per prenotare**: un numero WhatsApp, un modulo.
 
 ### I primi dieci clienti
 

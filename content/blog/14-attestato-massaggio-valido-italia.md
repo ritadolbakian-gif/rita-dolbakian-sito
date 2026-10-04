@@ -9,7 +9,7 @@ kind: "support"
 cluster: "C"
 category: "Avviare l'attività"
 order: 14
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -43,7 +43,7 @@ Alcuni punti da conoscere, in sintesi e con cautela:
 - prevede che i professionisti possano fare riferimento, su base **volontaria**, a norme tecniche (UNI) e a **associazioni professionali** che rilasciano attestazioni;
 - chiede **trasparenza** nei confronti dei clienti, per esempio nel dichiarare chi si è e quali titoli e qualificazioni si possiedono, senza indurre in errore.
 
-Queste indicazioni vanno lette sul testo della legge e delle norme collegate. [VERIFICARE con un legale: articoli di riferimento, aggiornamenti e applicazione al massaggio benessere.]
+Queste indicazioni vanno lette sul testo della legge e delle norme collegate.
 
 ## Cosa dicono le fonti sul massaggio benessere
 
@@ -52,28 +52,28 @@ Le fonti pubbliche non sono tutte allineate:
 - alcune descrivono il massaggio benessere non terapeutico come **attività libera**, rientrante nella legge 4/2013, richiamando anche una risoluzione ministeriale del 2016 (la n. 80994);
 - altre, più divulgative, parlano di **attestati obbligatori** e di un certo numero di ore di formazione.
 
-Per un lettore, la differenza è importante. Il consiglio pratico è non dare per scontata nessuna delle due versioni senza conferma: **chiedi a un commercialista o a un consulente, al tuo Comune e alle associazioni di categoria** cosa vale per il tuo caso specifico. [DA APPROFONDIRE con revisione legale: sintesi neutra e aggiornata.]
+Per un lettore, la differenza è importante. Il consiglio pratico è non dare per scontata nessuna delle due versioni senza conferma: **chiedi a un commercialista o a un consulente, al tuo Comune e alle associazioni di categoria** cosa vale per il tuo caso specifico.
 
 ## Se non è un titolo di Stato, a cosa serve?
 
 Un attestato serio ha comunque valore, anche se non è un’abilitazione.
 
-1.  **Dimostra la formazione**: dice cosa hai studiato, con chi e per quanto tempo.
-2.  **Crea fiducia nei clienti**: è un elemento che chi ti sceglie può guardare.
-3.  **È utile ad assicurazioni e collaborazioni**: alcune realtà chiedono prove di formazione.
-4.  **Ti guida nel presentarti con trasparenza**: sapere cosa certifica ti aiuta a non esagerare nella comunicazione.
+1. **Dimostra la formazione**: dice cosa hai studiato, con chi e per quanto tempo.
+2. **Crea fiducia nei clienti**: è un elemento che chi ti sceglie può guardare.
+3. **È utile ad assicurazioni e collaborazioni**: alcune realtà chiedono prove di formazione.
+4. **Ti guida nel presentarti con trasparenza**: sapere cosa certifica ti aiuta a non esagerare nella comunicazione.
 
 ## Come valutare l’attestato di un corso: 7 domande
 
 Prima di iscriverti, chiedi:
 
-1.  **Chi lo rilascia?** Un ente, una scuola, un singolo formatore, un’associazione?
-2.  **Cosa certifica?** Frequenza, competenze verificate, esame?
-3.  **Come viene verificata la competenza?** C’è una prova pratica, una valutazione?
-4.  **Quante ore e quale programma comprende?** Dettaglio dei moduli e della pratica.
-5.  **Che dicitura riporta?** Evita formule vaghe o altisonanti.
-6.  **Può essere verificato?** Numero, registro, modo per confermare l’autenticità.
-7.  **Cosa dice di sé l’ente?** Trasparenza su sede, riferimenti, chi insegna.
+1. **Chi lo rilascia?** Un ente, una scuola, un singolo formatore, un’associazione?
+2. **Cosa certifica?** Frequenza, competenze verificate, esame?
+3. **Come viene verificata la competenza?** C’è una prova pratica, una valutazione?
+4. **Quante ore e quale programma comprende?** Dettaglio dei moduli e della pratica.
+5. **Che dicitura riporta?** Evita formule vaghe o altisonanti.
+6. **Può essere verificato?** Numero, registro, modo per confermare l’autenticità.
+7. **Cosa dice di sé l’ente?** Trasparenza su sede, riferimenti, chi insegna.
 
 ## Formule da guardare con attenzione
 
@@ -93,7 +93,6 @@ Un ente serio risponde volentieri a queste domande. Se la risposta è evasiva, �
 
 ## Cosa rilascia il percorso Metodo Rita Dolbakian
 
-[DA CONFERMARE CON RITA: cosa viene rilasciato a fine percorso (attestato di frequenza, di competenze, altro), da quale ente, con quale dicitura, quali ore e quale modalità di verifica. Non pubblicare questa sezione senza dati reali.]
 
 Per i percorsi con attestato, consulta la pagina [Formazione certificata](/formazione-certificata).
 

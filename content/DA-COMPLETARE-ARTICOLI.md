@@ -44,3 +44,10 @@ Pubblicati: 17, 19, 20. **Non pubblicati** perché trattano normativa, partita I
 1. Fai rivedere il testo dal professionista indicato (legale, commercialista, sanitario).
 2. Correggi il file in `content/blog/` e togli i segnaposto `[...]`.
 3. Metti `"published": true` nell'intestazione del file.
+
+## Pubblicazione 04/10/2026
+Pubblicati tutti i 20 articoli. Per 08–16 e 18 i segnaposto editoriali sono stati rimossi dal testo, ma restano da far rivedere prima di considerarli definitivi:
+- 13 (chi può fare massaggi in Italia), 14 (attestato valido), 15 (P.IVA), 12 (diventare massaggiatrice), 18 (centro massaggi): revisione di un legale/commercialista (norme, regimi fiscali, cifre).
+- 09 e 10: revisione di un professionista sanitario (cautele, controindicazioni).
+- 16 (guadagni): nessuna cifra citata senza fonte.
+- 08: la sezione sul Metodo Rita rimanda alla pagina del percorso.

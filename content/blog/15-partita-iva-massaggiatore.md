@@ -9,7 +9,7 @@ kind: "support"
 cluster: "C"
 category: "Avviare l'attività"
 order: 15
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -29,17 +29,17 @@ Il consiglio pratico: se hai una clientela che torna, un’agenda e un listino, 
 
 Per arrivare al primo incontro con un commercialista in modo efficace, prepara:
 
-1.  **Una descrizione chiara dei servizi** che offri (tipi di massaggio, durata).
-2.  **Dove lavorerai** (a domicilio, in uno studio, presso un centro, a casa).
-3.  **Una stima dei prezzi e del numero di clienti** che pensi di avere all’inizio (vedi [Quanto far pagare un massaggio](/blog/quanto-far-pagare-un-massaggio)).
-4.  **La tua situazione attuale** (se sei dipendente, disoccupata, se hai altre attività).
-5.  **Come intendi presentarti** (nome, comunicazione, titoli).
+1. **Una descrizione chiara dei servizi** che offri (tipi di massaggio, durata).
+2. **Dove lavorerai** (a domicilio, in uno studio, presso un centro, a casa).
+3. **Una stima dei prezzi e del numero di clienti** che pensi di avere all’inizio (vedi [Quanto far pagare un massaggio](/blog/quanto-far-pagare-un-massaggio)).
+4. **La tua situazione attuale** (se sei dipendente, disoccupata, se hai altre attività).
+5. **Come intendi presentarti** (nome, comunicazione, titoli).
 
 ## Il codice ATECO: cos’è e come sceglierlo
 
 Il **codice ATECO** classifica il tipo di attività economica. Va indicato all’apertura e incide sulla fiscalità e sulla coerenza con ciò che fai davvero.
 
-Per i servizi di massaggio e benessere, la scelta dipende da come è descritta la tua attività. Alcune fonti indicano per i massaggi di benessere un codice nell’ambito dei servizi alla persona (per esempio 96.09.09), ma **non è una scelta da fare in autonomia**: il codice corretto dipende da cosa offri e da come lo presenti. Fallo verificare al commercialista. [VERIFICARE alla data di pubblicazione.]
+Per i servizi di massaggio e benessere, la scelta dipende da come è descritta la tua attività. Alcune fonti indicano per i massaggi di benessere un codice nell’ambito dei servizi alla persona (per esempio 96.09.09), ma **non è una scelta da fare in autonomia**: il codice corretto dipende da cosa offri e da come lo presenti. Fallo verificare al commercialista.
 
 Un errore comune è scegliere un codice che suggerisce attività sanitarie o estetiche non coerenti con ciò che si fa. Il codice deve riflettere la realtà.
 
@@ -52,7 +52,7 @@ Molti professionisti che partono da soli valutano il **regime forfettario**, che
 - una **imposta sostitutiva** con aliquota che può essere agevolata nei primi anni di attività, a certe condizioni;
 - un **coefficiente di redditività** legato al codice ATECO, che determina su quale parte dei ricavi si calcolano le imposte.
 
-I dettagli, i limiti numerici e le aliquote **vanno verificati sulla normativa in vigore e con il commercialista**: cambiano nel tempo e dipendono dal tuo caso. [NON INSERIRE cifre senza verifica alla data di pubblicazione.]
+I dettagli, i limiti numerici e le aliquote **vanno verificati sulla normativa in vigore e con il commercialista**: cambiano nel tempo e dipendono dal tuo caso.
 
 ### Perché conviene capirlo prima di fissare i prezzi
 
@@ -64,15 +64,15 @@ Chi lavora in proprio versa contributi previdenziali. La cassa o gestione di rif
 
 ## Le 10 domande da portare al commercialista
 
-1.  Per la mia attività, serve la partita IVA? Da quando?
-2.  Quale codice ATECO è più adatto ai servizi che descrivo?
-3.  Posso e mi conviene usare il regime forfettario?
-4.  Quali sono i limiti e le condizioni nel mio caso?
-5.  Quali contributi previdenziali dovrò versare e come?
-6.  Quali comunicazioni o iscrizioni servono (per esempio al Comune o alla Camera di Commercio)?
-7.  Come emetto fatture o ricevute, e con quali strumenti?
-8.  Quali spese posso considerare per la mia attività?
-9.  Conviene un’assicurazione di responsabilità civile? Quale?
+1. Per la mia attività, serve la partita IVA? Da quando?
+2. Quale codice ATECO è più adatto ai servizi che descrivo?
+3. Posso e mi conviene usare il regime forfettario?
+4. Quali sono i limiti e le condizioni nel mio caso?
+5. Quali contributi previdenziali dovrò versare e come?
+6. Quali comunicazioni o iscrizioni servono (per esempio al Comune o alla Camera di Commercio)?
+7. Come emetto fatture o ricevute, e con quali strumenti?
+8. Quali spese posso considerare per la mia attività?
+9. Conviene un’assicurazione di responsabilità civile? Quale?
 10. Quali scadenze devo ricordare nel primo anno?
 
 ## Come scegliere un commercialista

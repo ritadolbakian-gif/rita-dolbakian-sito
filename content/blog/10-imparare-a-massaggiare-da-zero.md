@@ -9,7 +9,7 @@ kind: "support"
 cluster: "D"
 category: "Tecnica e formazione"
 order: 10
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -70,11 +70,11 @@ Per cominciare, non cercare di imparare dieci tecniche. Scegli **una sequenza br
 
 Una sequenza di base ha di solito tre momenti:
 
-1.  **Contatto e apertura**: movimenti lenti e ampi per far abituare la persona al tuo tocco.
-2.  **Lavoro centrale**: movimenti un po’ più specifici, sempre nel rispetto della sensibilità della persona.
-3.  **Chiusura**: ritorno a movimenti ampi e lenti, per concludere con calma.
+1. **Contatto e apertura**: movimenti lenti e ampi per far abituare la persona al tuo tocco.
+2. **Lavoro centrale**: movimenti un po’ più specifici, sempre nel rispetto della sensibilità della persona.
+3. **Chiusura**: ritorno a movimenti ampi e lenti, per concludere con calma.
 
-Nel linguaggio dei corsi di base molte delle tecniche prendono nomi come scorrimenti, impastamenti e frizioni: sono movimenti fondamentali che si affinano con la pratica. [VALIDARE CON RITA: terminologia e tecniche effettivamente insegnate nel suo metodo].
+Nel linguaggio dei corsi di base molte delle tecniche prendono nomi come scorrimenti, impastamenti e frizioni: sono movimenti fondamentali che si affinano con la pratica.
 
 ## Che cosa serve per iniziare
 
@@ -107,7 +107,7 @@ Un buon massaggiatore sa anche quando fermarsi. In generale, **non massaggiare e
 - riferisce condizioni mediche importanti e non sai come comportarti;
 - ti chiede una cura per un problema di salute.
 
-Il massaggio per il benessere non è una terapia e non va presentato come tale: non promettere guarigioni e non dare indicazioni mediche. [Elenco di cautele da validare con Rita e con un professionista sanitario.]
+Il massaggio per il benessere non è una terapia e non va presentato come tale: non promettere guarigioni e non dare indicazioni mediche.
 
 ## Un piano di pratica di 30 giorni
 
@@ -147,9 +147,9 @@ Non esiste una risposta valida per tutti. Dipende da quanto ti eserciti, da quan
 
 Si può iniziare anche da soli, informandosi e facendo pratica. Ma per farlo bene e in sicurezza, un percorso guidato ha tre vantaggi:
 
-1.  **Struttura**: sai cosa imparare e in che ordine.
-2.  **Correzione**: qualcuno ti segnala errori che da sola non vedi.
-3.  **Sicurezza**: impari anche cosa non fare.
+1. **Struttura**: sai cosa imparare e in che ordine.
+2. **Correzione**: qualcuno ti segnala errori che da sola non vedi.
+3. **Sicurezza**: impari anche cosa non fare.
 
 Come scegliere un percorso lo trovi nella guida [Come scegliere un corso di massaggio: 8 domande](/blog/come-scegliere-un-corso-di-massaggio), mentre per capire cosa si può imparare a distanza leggi [Corso di massaggio online: funziona davvero?](/blog/corso-massaggio-online-funziona).
 
@@ -177,7 +177,7 @@ Dipende da cosa intendi per lavorare, dall’esperienza che hai e dagli aspetti 
 
 ### Quale massaggio conviene imparare per primo?
 
-Chiediti prima cosa vuoi offrire e a chi. Per cominciare, un massaggio rilassante di base è spesso un buon punto di partenza, perché insegna postura, ritmo e ascolto. [Da validare con Rita in base al suo metodo.]
+Chiediti prima cosa vuoi offrire e a chi. Per cominciare, un massaggio rilassante di base è spesso un buon punto di partenza, perché insegna postura, ritmo e ascolto.
 
 ## Da dove cominciare oggi
 

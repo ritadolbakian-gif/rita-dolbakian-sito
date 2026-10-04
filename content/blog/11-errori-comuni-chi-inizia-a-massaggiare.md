@@ -9,7 +9,7 @@ kind: "support"
 cluster: "D"
 category: "Tecnica e formazione"
 order: 11
-published: false
+published: true
 date: "2026-10-04"
 updated: "2026-10-04"
 ---
@@ -71,7 +71,7 @@ Iniziare subito senza chiedere nulla è un errore frequente. Qualche domanda pri
 - Hai fastidi, ferite o situazioni di cui devo tenere conto?
 - Preferisci una pressione leggera, media o decisa?
 
-Se emerge qualcosa che esce dal tuo ambito (dolore intenso, febbre, problemi di salute importanti), non procedere e invita la persona a rivolgersi a un medico o a un professionista sanitario. [VALIDARE CON RITA e con un professionista sanitario]
+Se emerge qualcosa che esce dal tuo ambito (dolore intenso, febbre, problemi di salute importanti), non procedere e invita la persona a rivolgersi a un medico o a un professionista sanitario.
 
 ## 7. Trascurare ambiente e igiene
 
@@ -116,10 +116,10 @@ La tentazione è collezionare tecniche: ne impari una, poi un’altra, poi un’
 
 Un metodo semplice in quattro mosse:
 
-1.  **Scegli un solo errore** su cui lavorare questa settimana.
-2.  **Chiedi un riscontro mirato** alla persona che ricevi (non “ti è piaciuto?”, ma “la pressione sulla schiena era adatta?”).
-3.  **Registra** una sessione, con consenso, e guarda la tua postura.
-4.  **Annota** una cosa che è andata meglio. Il progresso si vede quando lo scrivi.
+1. **Scegli un solo errore** su cui lavorare questa settimana.
+2. **Chiedi un riscontro mirato** alla persona che ricevi (non “ti è piaciuto?”, ma “la pressione sulla schiena era adatta?”).
+3. **Registra** una sessione, con consenso, e guarda la tua postura.
+4. **Annota** una cosa che è andata meglio. Il progresso si vede quando lo scrivi.
 
 ## Quando serve una guida
 
