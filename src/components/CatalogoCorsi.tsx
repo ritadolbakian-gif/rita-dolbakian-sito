@@ -18,7 +18,7 @@ const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }
     id: "digitali", n: "02", title: "Prodotti *digitali*", lead: "Manuali e strumenti da usare subito, con i tuoi tempi, a un prezzo contenuto.",
     items: [
       { id: "prodotto-stories", t: "Instagram Stories che vendono", d: "Il manuale operativo per riempire l'agenda con le Stories.", fmt: "Manuale", price: "37 €", badge: "Garanzia 14 giorni", href: "/prodotti/instagram-stories-che-vendono" },
-      { id: "prodotto-calcolatore", t: "Wellness Profit Calculator", d: "Il foglio di calcolo per il regime forfettario.", fmt: "Foglio XLS", price: "Da confermare", href: "/prodotti/wellness-profit-calculator" },
+      { id: "prodotto-calcolatore", t: "Wellness Profit Calculator", d: "Il foglio di calcolo per il regime forfettario.", fmt: "Foglio XLS", price: "In arrivo", badge: "In arrivo", href: "/prodotti/wellness-profit-calculator" },
     ],
   },
   {

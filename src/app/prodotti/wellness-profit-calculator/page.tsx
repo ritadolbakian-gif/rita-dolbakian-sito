@@ -10,13 +10,14 @@ export default function Page() {
     <ProductPage
       name="Wellness Profit Calculator"
       slug="wellness-profit-calculator"
-      eyebrow="Foglio di calcolo · regime forfettario"
+      eyebrow="In arrivo · foglio di calcolo per il regime forfettario"
       title="I tuoi numeri, *finalmente* chiari."
       answer="Un foglio di calcolo (XLS) pensato per chi lavora nel benessere in regime forfettario, per capire quanto entra, quanto resta e quanto serve davvero."
       imageId="prodotto-calcolatore"
-      price={<Tbc>prezzo</Tbc>}
+      comingSoon
+      price=""
       checkout={CHECKOUT.calcolatore}
-      cta="Acquista il calcolatore"
+      cta="Avvisami quando esce"
       painTitle="Sai quanto *resta* davvero?"
       painNote="Tra tasse, contributi e spese è facile perdere il conto. Senza numeri chiari è difficile decidere i prezzi."
       pains={["Non sai quanto devi tenere da parte per tasse e contributi.", "Fissi i prezzi a sensazione.", "Non sai quanti clienti ti servono al mese.", "I conti li fai a fine anno, quando è tardi."]}

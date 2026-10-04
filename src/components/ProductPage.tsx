@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { PageHero, Label, Faq, JsonLd, type QA } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
+import { LeadForm } from "@/components/LeadForm";
 import type { Item } from "@/components/Sections";
 
 export type ProductProps = {
@@ -11,7 +12,7 @@ export type ProductProps = {
   solutionTitle: string; solution: ReactNode; benefits: Item[];
   forWho: string[]; notForWho?: string[];
   bonus?: { t: string; d: ReactNode };
-  guarantee: ReactNode; faq: QA[]; description: string; extra?: ReactNode;
+  guarantee: ReactNode; comingSoon?: boolean; faq: QA[]; description: string; extra?: ReactNode;
 };
 
 export function CheckoutButton({ href, children, className = "btn btn-primary" }: { href: string; children: ReactNode; className?: string }) {
@@ -26,7 +27,7 @@ export function ProductPage(p: ProductProps) {
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Product", name: p.name, description: p.description, brand: { "@type": "Brand", name: "RD Academy" } }} />
       <PageHero eyebrow={p.eyebrow} title={p.title} answer={p.answer} imageId={p.imageId} imageRatio="16/9" imageArt="waves">
-        <CheckoutButton href={p.checkout}>{p.cta}</CheckoutButton>
+        {p.comingSoon ? <a href="#acquista" className="btn btn-primary">Avvisami quando esce <span className="arr">→</span></a> : <CheckoutButton href={p.checkout}>{p.cta}</CheckoutButton>}
         <a href="#dentro" className="btn btn-ghost">Cosa trovi dentro</a>
       </PageHero>
 
@@ -68,13 +69,23 @@ export function ProductPage(p: ProductProps) {
 
       <section id="acquista" className="section bg-blush/30 scroll-mt-24">
         <div className="wrap max-w-3xl text-center">
-          <Label t="Acquista" />
+          <Label t={p.comingSoon ? "In arrivo" : "Acquista"} />
           <Heading text={`${p.name}`} className="text-5xl md:text-6xl justify-center" />
-          <p className="mt-6 font-display text-6xl">{p.oldPrice && <span className="text-3xl text-stone line-through mr-3">{p.oldPrice}</span>}{p.price}</p>
-          {p.bonus && <p className="mt-6 text-stone"><strong className="text-ink">Bonus: {p.bonus.t}.</strong> {p.bonus.d}</p>}
-          <div className="mt-8 flex justify-center"><CheckoutButton href={p.checkout}>{p.cta}</CheckoutButton></div>
-          <p className="mt-6 text-sm text-stone">{p.guarantee}</p>
-          <p className="mt-2 text-xs text-stone">Il pagamento avviene su una pagina di checkout sicura. Descrizione del prodotto, non promessa di risultato.</p>
+          {p.comingSoon ? (
+            <>
+              <p className="mt-6 font-display text-5xl">In arrivo</p>
+              <p className="mt-4 text-stone">Non è ancora disponibile. Lascia la tua email e ti scrivo appena esce, senza altro spam.</p>
+              <div className="mt-8 text-left max-w-xl mx-auto"><LeadForm tipo="contatti" cta="Avvisami quando esce" phone={false} compact /></div>
+            </>
+          ) : (
+            <>
+              <p className="mt-6 font-display text-6xl">{p.oldPrice && <span className="text-3xl text-stone line-through mr-3">{p.oldPrice}</span>}{p.price}</p>
+              {p.bonus && <p className="mt-6 text-stone"><strong className="text-ink">Bonus: {p.bonus.t}.</strong> {p.bonus.d}</p>}
+              <div className="mt-8 flex justify-center"><CheckoutButton href={p.checkout}>{p.cta}</CheckoutButton></div>
+              <p className="mt-6 text-sm text-stone">{p.guarantee}</p>
+              <p className="mt-2 text-xs text-stone">Il pagamento avviene su una pagina di checkout sicura. Descrizione del prodotto, non promessa di risultato.</p>
+            </>
+          )}
         </div>
       </section>
 
