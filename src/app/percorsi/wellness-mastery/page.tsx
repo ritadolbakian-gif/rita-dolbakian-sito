@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare, DetailSteps } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteePill } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -37,7 +37,10 @@ export default function WellnessMastery() {
       <PageHero imageId="wm-top" imageRatio="16/9" imageArt="arch" dark eyebrow="Wellness Mastery" title="Da operatrice del benessere a *imprenditrice* digitale." answer="Wellness Mastery è il mio percorso per chi lavora nel benessere e vuole costruire un'attività online solida: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1, con garanzia soddisfatti o rimborsati di 14 giorni. Senza svenderti, senza burnout e senza più fare tutto da sola.">
         <Link href="#candidatura" className="btn btn-primary">Inizia da qui <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
+        <GuaranteePill />
       </PageHero>
+
+      <GuaranteeBand />
 
       <section className="py-10 md:py-14">
         <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">
@@ -180,6 +183,8 @@ export default function WellnessMastery() {
         { t: "Mi scrivi", d: "Una richiesta semplice, senza giustificazioni." },
         { t: "Ricevi il rimborso", d: "Soddisfatti o rimborsati, come promesso." },
       ]} />
+
+      <GuaranteeBand compact cta={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
 
       <section id="candidatura" className="section bg-blush/30">
         <div className="wrap text-center max-w-3xl">

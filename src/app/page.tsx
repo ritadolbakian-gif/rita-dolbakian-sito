@@ -7,6 +7,7 @@ import { CountUp } from "@/components/CountUp";
 import { CaseStudies, VideoWall, Quotes, PressBar, TrustBar, RatingLd } from "@/components/Proof";
 import { LeadForm } from "@/components/LeadForm";
 import { Faq } from "@/components/Ui";
+import { GuaranteeBand } from "@/components/Sections";
 import { getPublished } from "@/lib/blog";
 
 const Label = ({ n, t }: { n?: string; t: string }) => <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />{n ? `${n} — ` : ""}{t}</p>;
@@ -20,7 +21,7 @@ export default function Home() {
 
       <section className="py-14 md:py-20">
         <div className="wrap grid grid-cols-2 gap-y-10 md:grid-cols-4 text-center md:text-left">
-          {[[10, "+", "anni di lavoro nel benessere"], [10, "", "moduli in Wellness Mastery"], [6, "", "bonus inclusi nel percorso"], [14, "", "giorni di garanzia, soddisfatti o rimborsati"]].map(([n, s, l], i) => (
+          {[[10, "+", "anni di lavoro nel benessere"], [10, "", "moduli in Wellness Mastery"], [6, "", "bonus inclusi nel percorso"], [14, "", "giorni: soddisfatti o rimborsati (Wellness Mastery)"]].map(([n, s, l], i) => (
             <Reveal key={i} delay={i * 0.08}>
               <p className="font-display text-6xl md:text-7xl kw leading-none"><CountUp to={n as number} suffix={s as string} /></p>
               <p className="mt-3 text-sm text-stone max-w-[14rem] mx-auto md:mx-0">{l}</p>
@@ -140,7 +141,7 @@ export default function Home() {
             {[
               { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita", art: "waves" as const, id: "card-guida" },
               { t: "Call di orientamento", d: "Il confronto per scegliere la strada giusta.", tag: "30 minuti", href: "/call-orientamento", art: "orbs" as const, id: "card-call" },
-              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "10 moduli · 6 bonus", href: "/percorsi/wellness-mastery", art: "arch" as const, id: "card-wm" },
+              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "Soddisfatti o rimborsati in 14 giorni", href: "/percorsi/wellness-mastery", art: "arch" as const, id: "card-wm" },
               { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Online + presenza", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
@@ -159,6 +160,8 @@ export default function Home() {
           <p className="mt-8 text-ivory/60 text-sm">Cerchi un attestato? <Link href="/formazione-certificata" className="ulink">Scopri la formazione certificata</Link>.</p>
         </div>
       </section>
+
+      <GuaranteeBand compact cta={{ href: "/percorsi/wellness-mastery", label: "Vedi Wellness Mastery" }} />
 
       {/* 07 — Prove sociali */}
       <section className="section">

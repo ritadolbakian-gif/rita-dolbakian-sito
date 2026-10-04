@@ -108,7 +108,7 @@ export function TrustBar({ items }: { items?: { t: string; d: string }[] }) {
   const list = items ?? [
     { t: "Nessun obbligo", d: "La call dura circa 30 minuti ed è gratuita." },
     { t: "Poche persone alla volta", d: "Così posso seguire ognuna con attenzione." },
-    { t: "Garanzia di 14 giorni", d: "Su Wellness Mastery: soddisfatti o rimborsati." },
+    { t: "Soddisfatti o rimborsati", d: "14 giorni di garanzia su Wellness Mastery." },
     { t: "Parole oneste", d: "Non prometto guadagni: ti do metodo e affiancamento." },
   ];
   return (

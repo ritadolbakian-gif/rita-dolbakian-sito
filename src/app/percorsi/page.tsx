@@ -36,7 +36,7 @@ export default function Percorsi() {
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {[
               { id: "percorsi-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare direzione e continuità nella tua attività.", tag: "Per chi lavora nel benessere", href: "/percorsi/metodo-agenda", art: "orbs" as const },
-              { id: "percorsi-wm", t: "Wellness Mastery", d: "Il percorso completo: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1.", tag: "Da operatrice a imprenditrice", href: "/percorsi/wellness-mastery", art: "arch" as const },
+              { id: "percorsi-wm", t: "Wellness Mastery", d: "Il percorso completo: 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1.", tag: "Soddisfatti o rimborsati in 14 giorni", href: "/percorsi/wellness-mastery", art: "arch" as const },
               { id: "percorsi-rd", t: "Metodo Rita Dolbakian", d: "Imparare a massaggiare e perfezionare la tecnica, online e in presenza.", tag: "Per le tue mani", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.1}>

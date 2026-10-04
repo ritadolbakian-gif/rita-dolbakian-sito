@@ -50,7 +50,6 @@ export default function MetodoAgenda() {
               {letters.map((x, i) => <span key={i} className="mr-4 inline-block"><span className="kw">{x.l}</span>{x.w.slice(1)}{i < letters.length - 1 && <span className="text-rose"> · </span>}</span>)}
             </p>
           </Reveal>
-          <p className="mt-3 text-sm"><Tbc>conferma finale del significato delle lettere</Tbc></p>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {letters.map((x, i) => (
               <Reveal key={i} delay={i * 0.06}>
