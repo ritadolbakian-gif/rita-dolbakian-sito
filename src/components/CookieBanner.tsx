@@ -52,5 +52,5 @@ export function CookieBanner() {
 }
 
 export function CookiePrefsLink() {
-  return <button onClick={() => window.dispatchEvent(new Event("rd-open-cookies"))} className="ulink w-fit text-left">Preferenze cookie</button>;
+  return <button onClick={() => window.dispatchEvent(new Event("rd-open-cookies"))} className="flink text-left">Preferenze cookie</button>;
 }

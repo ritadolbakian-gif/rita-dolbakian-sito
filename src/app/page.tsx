@@ -3,9 +3,10 @@ import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
+import { CountUp } from "@/components/CountUp";
 import { BLOG_PREVIEW } from "@/lib/site";
 
-const Label = ({ n, t }: { n: string; t: string }) => <p className="eyebrow mb-6">{n} — {t}</p>;
+const Label = ({ n, t }: { n: string; t: string }) => <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />{n} — {t}</p>;
 
 export default function Home() {
   return (
@@ -13,19 +14,32 @@ export default function Home() {
       <Hero />
       <Marquee items={["Agenda piena", "Prezzi giusti", "Clienti qualificati", "Massaggio", "Metodo", "Continuità", "Presenza"]} />
 
+      {/* Numeri reali */}
+      <section className="py-14 md:py-20">
+        <div className="wrap grid grid-cols-2 gap-y-10 md:grid-cols-4 text-center md:text-left">
+          {[[10, "+", "anni di lavoro nel benessere"], [10, "", "moduli in Wellness Mastery"], [6, "", "bonus inclusi nel percorso"], [14, "", "giorni di garanzia soddisfatti o rimborsati"]].map(([n, s, l], i) => (
+            <Reveal key={i} delay={i * 0.08}>
+              <p className="font-display text-6xl md:text-7xl kw leading-none"><CountUp to={n as number} suffix={s as string} /></p>
+              <p className="mt-3 text-sm text-stone max-w-[14rem] mx-auto md:mx-0">{l}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* 01 — Le due strade */}
-      <section className="section">
+      <section className="section pt-8">
         <div className="wrap">
           <Label n="01" t="Le due strade" />
           <Heading text="Da dove vuoi *partire*?" className="text-5xl md:text-7xl max-w-3xl" />
+          <Reveal delay={0.15}><p className="mt-5 text-lg text-stone max-w-xl">Una strada è per la tua attività. L'altra è per le tue mani. Scegli quella che ti somiglia oggi: l'altra ti aspetta.</p></Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
-              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", t: "Metodo A.G.E.N.D.A.", d: "Il metodo per trovare direzione e continuità. È il primo percorso di affiancamento: dall'orientamento a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro con una cliente / in studio", dark: true },
-              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", t: "Metodo Rita Dolbakian", d: "Imparare a massaggiare e perfezionare la tua tecnica con il suo metodo. Online e in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro (dettaglio tecnica)", dark: false },
+              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", t: "Metodo A.G.E.N.D.A.", d: "Il metodo per dare direzione alla tua attività e smettere di andare a tentativi. È il primo affiancamento: dalla call di orientamento a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", art: "orbs" as const, dark: true },
+              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, o affina la tua tecnica, con un metodo semplificato in dieci anni di lavoro. Si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", art: "stones" as const, dark: false },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
                 <Link href={c.href} className={`lift group block rounded-[1.75rem] p-5 md:p-6 h-full ${c.dark ? "section-dark" : "bg-blush/60"}`}>
-                  <div className="zoom"><Slot kind="foto" label={c.slot} ratio="16/11" /></div>
+                  <div className="zoom"><Slot kind="foto" label={c.slot} ratio="16/11" art={c.art} /></div>
                   <div className="p-3 md:p-4 pt-6">
                     <p className="eyebrow">{c.icon} {c.k}</p>
                     <h3 className="font-display text-4xl md:text-5xl mt-3">{c.t}</h3>
@@ -40,16 +54,17 @@ export default function Home() {
       </section>
 
       {/* 02 — Riconoscimento */}
-      <section className="section-dark section">
-        <div className="wrap grid gap-14 lg:grid-cols-[1fr_1fr]">
+      <section className="section-dark section overflow-hidden">
+        <div className="orb bg-rose/20 size-[30rem] -left-40 top-10" aria-hidden />
+        <div className="wrap relative grid gap-14 lg:grid-cols-[1fr_1fr]">
           <div>
             <Label n="02" t="Ti riconosci?" />
             <Heading text="Non è un problema di impegno. E molto spesso *non è nemmeno* un problema di bravura." className="text-4xl md:text-6xl" />
           </div>
           <div className="self-end">
-            <p className="text-ivory/70 mb-8">Se lavori nel benessere e ti riconosci in almeno una di queste situazioni:</p>
+            <p className="text-ivory/70 mb-8">Se lavori nel benessere e ti riconosci in almeno una di queste situazioni, sei nel posto giusto:</p>
             <ul className="divide-y divide-ivory/15 border-y border-ivory/15">
-              {["La tua agenda è instabile e non sai come sarà il mese prossimo.", "I clienti arrivano solo con il passaparola.", "Alterni mesi pieni a mesi vuoti.", "Fai tante cose, ma senza una direzione.", "Fai fatica a far capire il valore di quello che fai."].map((t, i) => (
+              {["L'agenda è instabile e non sai come sarà il mese prossimo.", "I clienti arrivano solo con il passaparola, quando arrivano.", "Mesi pieni, poi mesi vuoti, poi di nuovo pieni.", "Fai tante cose, ma senza una direzione.", "Fai fatica a far capire quanto vale quello che fai."].map((t, i) => (
                 <Reveal key={t} delay={i * 0.07}>
                   <li className="flex gap-5 py-5"><span className="font-display text-2xl kw w-8 shrink-0">0{i + 1}</span><span>{t}</span></li>
                 </Reveal>
@@ -64,46 +79,46 @@ export default function Home() {
         <div className="wrap text-center max-w-4xl">
           <Label n="03" t="Come si sceglie oggi" />
           <Heading text="Prima guardano. Poi confrontano. *E solo dopo* scrivono." className="text-5xl md:text-7xl" />
-          <Reveal delay={0.2}><p className="mt-8 text-lg text-stone max-w-2xl mx-auto">Se questo percorso non è sotto il tuo controllo, l'agenda resta imprevedibile. La buona notizia: si può costruire, con calma e con un metodo.</p></Reveal>
+          <Reveal delay={0.2}><p className="mt-8 text-lg text-stone max-w-2xl mx-auto">Se tutto questo accade senza che tu lo guidi, l'agenda resta imprevedibile. Se invece lo costruisci, le richieste smettono di essere un colpo di fortuna. Si può fare, con calma e con un metodo.</p></Reveal>
         </div>
       </section>
 
       {/* 04 — Chi è Rita */}
-      <section className="section bg-blush/35">
+      <section className="section bg-blush/35 overflow-hidden">
         <div className="wrap grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal><Slot kind="foto" label="Rita, ritratto in studio" ratio="4/5" /></Reveal>
+          <Reveal><Slot kind="foto" label="Rita, ritratto in studio" ratio="4/5" art="leaf" /></Reveal>
           <div>
             <Label n="04" t="Chi è Rita" />
             <Heading text="Massaggiatrice *prima* ancora che formatrice." className="text-5xl md:text-6xl" />
             <Reveal delay={0.15}>
               <div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-                <p>Ha iniziato come molte: solo passaparola, periodi pieni alternati a periodi vuoti, la sensazione di non avere il controllo.</p>
-                <p>Non mancava la tecnica. Mancava una direzione chiara. Negli anni ha studiato, testato e semplificato. Oggi aiuta altri a fare ordine e a costruire continuità.</p>
+                <p>Ha iniziato come molte: solo passaparola, periodi pieni e periodi vuoti, la sensazione di non avere il controllo.</p>
+                <p>Non le mancava la tecnica. Le mancava una direzione. Ha studiato, testato, semplificato. Oggi aiuta altre persone a fare ordine e a costruire continuità, senza snaturarsi.</p>
               </div>
-              <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la mia storia <span className="arr">→</span></Link>
+              <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la sua storia <span className="arr">→</span></Link>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* 05 — Percorso in 3 passi */}
+      {/* 05 — Come funziona */}
       <section className="section">
         <div className="wrap">
           <Label n="05" t="Come funziona" />
           <Heading text="Tre passi. *Nessuna* fretta." className="text-5xl md:text-7xl" />
           <div className="mt-14 grid gap-px bg-[var(--line)] md:grid-cols-3 border border-[var(--line)] rounded-3xl overflow-hidden">
             {[
-              { n: "1", t: "La guida gratuita", d: "\"Il Sistema Clienti per Operatori del Benessere\": la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Scarica la guida" },
+              { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Scarica la guida" },
               { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Un confronto calmo e onesto per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota la call" },
-              { n: "3", t: "Il percorso con Rita", d: "Metodo A.G.E.N.D.A. come primo affiancamento, poi Wellness Mastery per diventare imprenditrice digitale.", href: "/percorsi", cta: "Vedi i percorsi" },
+              { n: "3", t: "Il percorso con Rita", d: "Il Metodo A.G.E.N.D.A. come primo affiancamento. Poi Wellness Mastery, per diventare imprenditrice digitale.", href: "/percorsi", cta: "Vedi i percorsi" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
-                <div className="p-8 md:p-10 h-full flex flex-col">
+                <Link href={s.href} className="group p-8 md:p-10 h-full flex flex-col hover:bg-blush/30 transition-colors duration-500">
                   <span className="font-display text-7xl kw">{s.n}</span>
                   <h3 className="font-display text-3xl mt-4">{s.t}</h3>
                   <p className="mt-3 text-stone flex-1">{s.d}</p>
-                  <Link href={s.href} className="ulink mt-6 w-fit font-medium">{s.cta} →</Link>
-                </div>
+                  <span className="mt-6 font-medium inline-flex gap-2">{s.cta} <span className="transition-transform duration-500 group-hover:translate-x-2">→</span></span>
+                </Link>
               </Reveal>
             ))}
           </div>
@@ -111,24 +126,26 @@ export default function Home() {
       </section>
 
       {/* 06 — Percorsi */}
-      <section className="section-dark section">
-        <div className="wrap">
+      <section className="section-dark section overflow-hidden">
+        <div className="orb bg-rose/20 size-[28rem] -right-40 bottom-0" aria-hidden />
+        <div className="wrap relative">
           <Label n="06" t="I percorsi" />
           <Heading text="Non tutti partono dallo *stesso* punto." className="text-5xl md:text-7xl max-w-4xl" />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita" },
-              { t: "Call di orientamento", d: "Il confronto per scegliere la strada giusta.", tag: "30 minuti", href: "/call-orientamento" },
-              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "10 moduli · 6 bonus", href: "/percorsi/wellness-mastery" },
-              { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Online + presenza", href: "/percorsi/metodo-rita-dolbakian" },
+              { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita", art: "waves" as const },
+              { t: "Call di orientamento", d: "Il confronto per scegliere la strada giusta.", tag: "30 minuti", href: "/call-orientamento", art: "orbs" as const },
+              { t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", tag: "10 moduli · 6 bonus", href: "/percorsi/wellness-mastery", art: "arch" as const },
+              { t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza.", tag: "Online + presenza", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
-                <Link href={p.href} className="lift group flex h-full min-h-72 flex-col justify-between rounded-3xl border border-ivory/15 p-7 hover:border-rose">
-                  <span className="eyebrow">0{i + 1}</span>
-                  <div>
-                    <h3 className="font-display text-3xl">{p.t}</h3>
-                    <p className="mt-2 text-ivory/65 text-[0.95rem]">{p.d}</p>
-                    <p className="mt-5 flex items-center justify-between text-sm"><span className="kw not-italic text-rose">{p.tag}</span><span className="transition-transform duration-500 group-hover:translate-x-2">→</span></p>
+                <Link href={p.href} className="lift zoom group flex h-full flex-col rounded-3xl border border-ivory/15 p-4 hover:border-rose">
+                  <Slot kind="foto" label={p.t} ratio="4/3" art={p.art} />
+                  <div className="p-3 pt-5 flex-1 flex flex-col">
+                    <span className="eyebrow">0{i + 1}</span>
+                    <h3 className="font-display text-3xl mt-2">{p.t}</h3>
+                    <p className="mt-2 text-ivory/65 text-[0.95rem] flex-1">{p.d}</p>
+                    <p className="mt-5 flex items-center justify-between text-sm"><span className="text-rose">{p.tag}</span><span className="transition-transform duration-500 group-hover:translate-x-2">→</span></p>
                   </div>
                 </Link>
               </Reveal>
@@ -147,9 +164,9 @@ export default function Home() {
             {[0, 1, 2].map((i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <div className="rounded-3xl border border-[var(--line)] p-6">
-                  <Slot kind={i === 0 ? "video" : "foto"} label="Allieva (autorizzata)" ratio="4/3" />
+                  <Slot kind={i === 0 ? "video" : "foto"} label="Allieva (autorizzata)" ratio="4/3" art={(["orbs", "waves", "leaf"] as const)[i]} />
                   <p className="font-display text-6xl mt-6 kw">[+X]</p>
-                  <p className="mt-2 text-stone text-sm">[DA CONFERMARE: risultato reale, nome, cognome, ruolo, autorizzazione scritta]</p>
+                  <p className="mt-2 text-stone text-sm"><span className="tbc">[DA CONFERMARE: risultato reale, nome, cognome, ruolo, autorizzazione scritta]</span></p>
                 </div>
               </Reveal>
             ))}
@@ -179,7 +196,7 @@ export default function Home() {
                 <li>✕ pensi basti aspettare il momento giusto;</li>
                 <li>✕ non vuoi mettere in discussione il tuo approccio.</li>
               </ul>
-              <p className="mt-6 text-sm text-ivory/55">Rita sceglie di seguire poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza.</p>
+              <p className="mt-6 text-sm text-ivory/55">Rita segue poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza.</p>
             </div></Reveal>
           </div>
         </div>
@@ -196,7 +213,7 @@ export default function Home() {
             {BLOG_PREVIEW.map((a, i) => (
               <Reveal key={a.slug} delay={i * 0.1}>
                 <Link href={`/blog/${a.slug}`} className="lift zoom group block">
-                  <Slot kind="foto" label="Copertina articolo" ratio="4/3" />
+                  <Slot kind="foto" label="Copertina articolo" ratio="4/3" art={(["waves", "orbs", "stones"] as const)[i]} />
                   <p className="eyebrow mt-5">{a.cat}</p>
                   <h3 className="font-display text-2xl md:text-3xl mt-2 leading-tight group-hover:text-rose transition-colors">{a.title}</h3>
                 </Link>
@@ -206,7 +223,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10 — Guida + CTA finale */}
+      {/* Testo gigante */}
+      <section className="section-dark pt-16 overflow-hidden" aria-hidden>
+        <div className="marquee-track marquee-rev">
+          {[0, 1].map((n) => <div key={n} className="flex shrink-0">{Array.from({ length: 4 }).map((_, i) => <span key={i} className="outline-text text-[clamp(4rem,12vw,10rem)] leading-none px-8 whitespace-nowrap">Con calma <span className="text-rose" style={{ WebkitTextStroke: 0 }}>✦</span> Con chiarezza <span className="text-rose" style={{ WebkitTextStroke: 0 }}>✦</span></span>)}</div>)}
+        </div>
+      </section>
+
+      {/* 10 — CTA finale */}
       <section className="section-dark section text-center">
         <div className="wrap max-w-4xl">
           <Label n="10" t="Un primo passo" />

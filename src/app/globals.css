@@ -8,7 +8,9 @@
   --stone: #6e6560;
   --line: rgba(11, 10, 9, 0.12);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --art-1: #f6e6e6; --art-2: #ebc7cc; --art-3: #f3b9c6; --art-fg: #faf7f4; --art-line: rgba(11,10,9,.22);
 }
+.section-dark { --art-1: #231d1b; --art-2: #0b0a09; --art-3: #5b1f33; --art-fg: #faf7f4; --art-line: rgba(250,247,244,.28); }
 
 @theme inline {
   --color-ink: var(--ink);
@@ -89,25 +91,15 @@ body {
 .section-dark .btn-ghost:hover { background: var(--ivory); color: var(--ink); border-color: var(--ivory); }
 
 /* Underline link */
-.ulink { background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; transition: background-size .4s var(--ease); }
-.ulink:hover { background-size: 0 1px; }
+.ulink { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s var(--ease); }
+.ulink:hover { background-size: 100% 1px; }
 
-/* Placeholder media slot */
-.slot {
-  position: relative; overflow: hidden; border-radius: 1.25rem;
-  background:
-    repeating-linear-gradient(135deg, rgba(212,87,122,.07) 0 14px, transparent 14px 28px),
-    var(--blush);
-  display: grid; place-items: center; text-align: center;
-  color: var(--ink);
-}
-.section-dark .slot {
-  background:
-    repeating-linear-gradient(135deg, rgba(250,247,244,.05) 0 14px, transparent 14px 28px),
-    #1a1715;
-  color: var(--ivory);
-}
-.slot-label { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; opacity: .7; padding: 1rem; }
+/* Spazio media (foto/video) */
+.slot { position: relative; overflow: hidden; border-radius: 1.25rem; background: var(--art-2); }
+.slot .art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.slot-tag { position: absolute; left: .75rem; bottom: .75rem; max-width: calc(100% - 1.5rem); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; background: rgba(250,247,244,.82); color: var(--ink); backdrop-filter: blur(6px); padding: .35rem .7rem; border-radius: 999px; }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.float { animation: floaty 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 
 /* Card hover */
 .lift { transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
@@ -161,3 +153,23 @@ details.acc .acc-body { padding: 0 0 1.75rem; max-width: 46rem; color: var(--sto
 .field span { display: block; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--stone); margin-bottom: .4rem; }
 .field input, .field textarea { width: 100%; background: transparent; border: 0; border-bottom: 1px solid rgba(11,10,9,.3); padding: .7rem 0; font: inherit; min-height: 44px; border-radius: 0; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--rose); }
+
+/* Navigazione senza sottolineature */
+.navlink { position: relative; display: inline-flex; align-items: center; gap: .35rem; padding: .55rem 1rem; border-radius: 999px; font-size: .9rem; transition: background .35s var(--ease), color .35s var(--ease); }
+.navlink:hover, .group:focus-within > .navlink, .group:hover > .navlink { background: rgba(11,10,9,.06); }
+.navlink[aria-current="page"] { color: var(--rose); }
+.navlink[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: .15rem; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: var(--rose); }
+.flink { display: inline-flex; align-items: center; gap: .5rem; width: fit-content; color: rgba(250,247,244,.72); transition: color .35s var(--ease), transform .35s var(--ease); }
+.flink::before { content: ""; width: 0; height: 1px; background: var(--rose); transition: width .35s var(--ease); }
+.flink:hover { color: var(--ivory); transform: translateX(2px); }
+.flink:hover::before { width: .9rem; }
+
+/* Barra di avanzamento scroll */
+.progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 80; background: var(--rose); transform-origin: 0 50%; }
+
+/* Testo contornato gigante */
+.outline-text { font-family: var(--font-serif); -webkit-text-stroke: 1px rgba(250,247,244,.35); color: transparent; }
+.marquee-rev { animation-direction: reverse; animation-duration: 55s; }
+
+/* Aloni decorativi */
+.orb { position: absolute; border-radius: 50%; filter: blur(70px); pointer-events: none; animation: floaty 9s ease-in-out infinite; }
