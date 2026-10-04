@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Heading, Reveal } from "./Motion";
 import { Label } from "./Ui";
+import { Slot } from "./Slot";
 import Link from "next/link";
 
 export type Item = { t: string; d: ReactNode };
@@ -161,7 +162,7 @@ export function GuaranteePill() {
 }
 
 /** Le condizioni della garanzia, spiegate in chiaro: la prova di partecipazione. */
-export function GuaranteeConditions({ n, dark = false }: { n?: string; dark?: boolean }) {
+export function GuaranteeConditions({ n, dark = false, id, imageId }: { n?: string; dark?: boolean; id?: string; imageId?: string }) {
   const items: Item[] = [
     { t: "Partecipi agli incontri", d: "Segui le sessioni su Zoom e gli incontri previsti dal tuo percorso. La presenza risulta dai registri della piattaforma." },
     { t: "Partecipi agli eventi", d: "Ci sei alle giornate, ai workshop e agli appuntamenti inclusi nel percorso." },
@@ -169,11 +170,16 @@ export function GuaranteeConditions({ n, dark = false }: { n?: string; dark?: bo
     { t: "Lo dimostri", d: "Se non sei soddisfatta, ci scrivi. Guardiamo insieme presenze e attività svolte: se risultano, ricevi il rimborso." },
   ];
   return (
-    <section className={`${dark ? "section-dark" : "bg-blush/30"} section`}>
+    <section id={id} className={`${dark ? "section-dark" : "bg-blush/30"} section scroll-mt-28`}>
       <div className="wrap">
-        <Label n={n} t="Come funziona la garanzia" />
-        <Heading text="Il rischio è mio. Ti chiedo di *esserci*." className="text-5xl md:text-6xl max-w-3xl" />
-        <p className={`mt-5 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>Un percorso funziona se lo fai. Per questo la garanzia vale per chi partecipa e svolge le attività: chi lo fa e non è soddisfatto viene rimborsato, senza discussioni.</p>
+        <div className={imageId ? "grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14" : ""}>
+          <div>
+            <Label n={n} t="Come funziona la garanzia" />
+            <Heading text="Il rischio è mio. Ti chiedo di *esserci*." className="text-5xl md:text-6xl max-w-3xl" />
+            <p className={`mt-5 max-w-2xl text-lg ${dark ? "text-ivory/75" : "text-stone"}`}>Un percorso funziona se lo fai. Per questo la garanzia vale per chi partecipa e svolge le attività: chi lo fa e non è soddisfatto viene rimborsato, senza discussioni.</p>
+          </div>
+          {imageId && <Reveal delay={0.2}><Slot id={imageId} label="Garanzia: il rischio è mio" ratio="4/5" art="leaf" className="max-w-sm lg:ml-auto" /></Reveal>}
+        </div>
         <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--line)] md:grid-cols-2 lg:grid-cols-4">
           {items.map((i, k) => (
             <li key={i.t} className={dark ? "bg-ink" : "bg-ivory"}>

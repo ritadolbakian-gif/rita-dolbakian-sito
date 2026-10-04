@@ -64,6 +64,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "cert-top": { src: "/media/aula-grande.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "60% 40%" },
   "percorsi-top": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio", pos: "52% 35%" },
   "corsi-top": { src: "/media/rita-oli.webp", alt: "Rita nel suo studio, tra gli oli", pos: "50% 30%" },
+  "wm-garanzia": { alt: "Il rischio è mio: Rita sorridente e rassicurante (4:5)" },
   // CHI SONO
   "about-portrait": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "about-video": { alt: "Video di presentazione (16:10)" },

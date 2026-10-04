@@ -1,4 +1,5 @@
 import { ReviewsSection } from "@/components/Reviews";
+import { PageNav } from "@/components/PageNav";
 import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteePill, GuaranteeConditions } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -43,6 +44,8 @@ export default function WellnessMastery() {
 
       <GuaranteeBand />
 
+      <PageNav items={[{ id: "programma", t: "Programma" }, { id: "bonus", t: "Bonus" }, { id: "garanzia", t: "Garanzia" }, { id: "recensioni", t: "Recensioni" }, { id: "iscrizione", t: "Come iniziare" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota 30 minuti" }} />
+
       <section className="py-10 md:py-14">
         <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">
           <Reveal><Slot kind="foto" id="wm-hero" label="Rita in studio con tablet" ratio="4/5" art="arch" className="max-w-md mx-auto lg:mx-0" /></Reveal>
@@ -55,6 +58,18 @@ export default function WellnessMastery() {
             </dl>
             <p className="mt-6 text-stone max-w-lg">Un percorso ordinato in tre fasi: costruisci le fondamenta, ti fai trovare, impari a vendere con naturalezza e a liberare tempo.</p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section pt-0">
+        <div className="wrap grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
+          <Reveal><Slot kind="video" id="wm-video" label="Rita presenta Wellness Mastery" ratio="16/10" art="arch" /></Reveal>
+          <div>
+            <p className="eyebrow mb-4 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />Guardami</p>
+            <Heading text="Ti racconto *come funziona*." className="text-4xl md:text-5xl" />
+            <p className="mt-5 text-lg text-stone max-w-md">Pochi minuti per capire cosa fai, cosa ricevi e come ti accompagno. Se preferisci leggere, trovi tutto qui sotto.</p>
+            <div className="mt-6 flex flex-wrap gap-3"><Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link></div>
+          </div>
         </div>
       </section>
 
@@ -73,7 +88,7 @@ export default function WellnessMastery() {
         </div>
       </section>
 
-      <section className="section bg-blush/30">
+      <section id="programma" className="section bg-blush/30 scroll-mt-28">
         <div className="wrap">
           <Label n="02" t="Il programma" />
           <Heading text="Dieci moduli, un *percorso* ordinato." className="text-5xl md:text-7xl" />
@@ -128,7 +143,7 @@ export default function WellnessMastery() {
         { t: "Qualcuno accanto", d: "8 settimane di affiancamento 1:1, per non fare tutto da sola." },
       ]} />
 
-      <section className="section-dark section">
+      <section id="bonus" className="section-dark section scroll-mt-28">
         <div className="wrap">
           <Label n="06" t="Bonus" />
           <Heading text="Sei bonus, per non *restare* mai sola." className="text-5xl md:text-7xl max-w-4xl" />
@@ -144,19 +159,8 @@ export default function WellnessMastery() {
       </section>
 
       <section className="section">
-        <div className="wrap grid gap-14 lg:grid-cols-2 items-center">
-          <Reveal><Slot kind="video" id="wm-video" label="Rita presenta Wellness Mastery" ratio="16/10" art="arch" /></Reveal>
-          <div>
-            <Label n="07" t="Garanzia" />
-            <Heading text="Soddisfatti *o rimborsati*, per tutto il percorso." className="text-5xl md:text-6xl" />
-            <p className="mt-6 text-lg text-stone max-w-lg">Se durante il percorso senti che non fa per te, chiedi il rimborso: il rischio è mio. Basta che tu abbia partecipato agli incontri e agli eventi e svolto le attività richieste. Vedi la <Link href="/rimborsi" className="ulink text-ink">politica di rimborso</Link>.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="wrap">
-          <Label n="08" t="Risultati" />
+          <Label n="07" t="Risultati" />
           <Heading text="Chi ha fatto il percorso, *racconta*." className="text-5xl md:text-6xl max-w-3xl" />
           <div className="mt-12"><CaseStudies max={3} program="Wellness Mastery" /></div>
           <div className="mt-16"><QuoteWall program="Wellness Mastery" title="Le loro parole" /></div>
@@ -174,17 +178,24 @@ export default function WellnessMastery() {
 
       <ReviewsSection />
 
-      <Outcomes n="09" label="Dopo il percorso" title="E *dopo* le 8 settimane?" cols={3} items={[
+      <Outcomes n="08" label="Dopo il percorso" title="E *dopo* le 8 settimane?" cols={3} items={[
         { t: "Hai un sistema, non solo dei video", d: "Brand, offerta, contenuti e risposte restano tuoi e li puoi aggiornare." },
         { t: "Sai cosa misurare", d: "Contatti, prime sedute e clienti che tornano: i numeri che contano davvero." },
         { t: "Sai quale passo fare dopo", d: <>Ne parliamo insieme, con calma. <Tbc>cosa è previsto dopo le 8 settimane</Tbc></> },
       ]} />
 
-      <GuaranteeConditions n="10" dark />
+      <GuaranteeConditions n="09" dark id="garanzia" imageId="wm-garanzia" />
 
       <GuaranteeBand compact cta={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
 
-      <section id="candidatura" className="section bg-blush/30">
+      <Steps n="10" label="Dopo l'iscrizione" title="Cosa succede *il giorno dopo*." note={<Tbc>tempi e modalità reali di accesso e di avvio</Tbc>} items={[
+        { t: "Ricevi l'accesso", d: "Una email con le credenziali per l'Area Privata, dove trovi moduli e materiali." },
+        { t: "Ti do il benvenuto", d: "Il primo incontro per conoscerci, fissare l'obiettivo e organizzare il calendario." },
+        { t: "Parti dal primo modulo", d: "Guardi il video e fai il primo esercizio: già da subito applichi quello che impari." },
+        { t: "Ti affianco", d: "Da qui ci sono io, nelle sessioni 1:1 e negli eventi del percorso." },
+      ]} />
+
+      <section id="candidatura" className="section bg-blush/30 scroll-mt-28"><span id="iscrizione" className="block -mt-28 pt-28" aria-hidden />
         <div className="wrap text-center max-w-3xl">
           <Label n="11" t="Come iniziare" />
           <Heading text="Prezzo e posti, *chiari*. Nessuna finta scarsità." className="text-4xl md:text-6xl" />
@@ -216,7 +227,7 @@ export default function WellnessMastery() {
         { label: "Garanzia", cells: ["Soddisfatti o rimborsati, per tutto il percorso", "Soddisfatti o rimborsati, per tutto il percorso"] },
       ]} />
 
-      <Faq items={[
+      <Faq id="domande" items={[
         { q: "Che cos'è Wellness Mastery?", a: "È il mio percorso per operatrici del benessere che vogliono costruire un'attività online solida. Ha 10 moduli, 6 bonus e 8 settimane di affiancamento 1:1." },
         { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il primo affiancamento per ritrovare direzione. Wellness Mastery è il percorso successivo, più ampio e completo." },
         { q: "Serve già avere un profilo Instagram?", a: "No. Il percorso parte dalle fondamenta del brand e costruisce passo dopo passo." },

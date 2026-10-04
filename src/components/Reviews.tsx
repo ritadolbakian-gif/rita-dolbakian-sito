@@ -40,7 +40,7 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
   const g = REVIEW_SOURCES.google, t = REVIEW_SOURCES.trustpilot;
   const has = g.profileUrl || g.reviewUrl || t.profileUrl || t.reviewUrl || t.businessUnitId || REVIEWS.length || RATING;
   return (
-    <section className="section bg-blush/30">
+    <section id="recensioni" className="section bg-blush/30 scroll-mt-28">
       <div className="wrap">
         <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />Recensioni</p>
         <Heading text={title} className="text-5xl md:text-6xl max-w-3xl" />

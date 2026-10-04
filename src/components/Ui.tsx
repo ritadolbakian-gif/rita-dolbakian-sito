@@ -43,13 +43,13 @@ export function PageHero({ eyebrow, title, answer, dark = false, bgId, imageId, 
 
 export type QA = { q: string; a: ReactNode; plain?: string };
 
-export function Faq({ items, title = "Domande e *risposte*", dark = false }: { items: QA[]; title?: string; dark?: boolean }) {
+export function Faq({ items, title = "Domande e *risposte*", dark = false, id }: { items: QA[]; title?: string; dark?: boolean; id?: string }) {
   const ld = {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: items.map((i) => ({ "@type": "Question", name: i.q, acceptedAnswer: { "@type": "Answer", text: i.plain ?? (typeof i.a === "string" ? i.a : "") } })),
   };
   return (
-    <section className={`${dark ? "section-dark" : ""} section`}>
+    <section id={id} className={`${dark ? "section-dark" : ""} section scroll-mt-28`}>
       <JsonLd data={ld} />
       <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div><Label t="Domande e risposte" /><Heading text={title} className="text-5xl md:text-6xl" /></div>
