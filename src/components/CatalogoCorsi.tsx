@@ -5,6 +5,8 @@ import { Slot } from "./Slot";
 
 type P = { id: string; t: string; d: string; pillar: "Business" | "Tecnica"; fmt: string; price: string; badge?: string; href: string };
 const ITEMS: P[] = [
+  { id: "prodotto-stories", t: "Instagram Stories che vendono", d: "Il manuale operativo per riempire l'agenda con le Stories.", pillar: "Business", fmt: "Guida", price: "37 €", badge: "Garanzia 14 giorni", href: "/prodotti/instagram-stories-che-vendono" },
+  { id: "prodotto-calcolatore", t: "Wellness Profit Calculator", d: "Il foglio di calcolo per il regime forfettario.", pillar: "Business", fmt: "Guida", price: "Da confermare", href: "/prodotti/wellness-profit-calculator" },
   { id: "corso-guida", t: "Il Sistema Clienti per Operatori del Benessere", d: "La guida pratica per fare i primi 10 clienti online.", pillar: "Business", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
   { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento per ritrovare continuità.", pillar: "Business", fmt: "Affiancamento", price: "Dopo la call", badge: "Soddisfatti o rimborsati", href: "/percorsi/metodo-agenda" },
   { id: "corso-wm", t: "Wellness Mastery", d: "Da operatrice del benessere a imprenditrice digitale.", pillar: "Business", fmt: "Video + affiancamento", price: "Da confermare", badge: "Soddisfatti o rimborsati", href: "/percorsi/wellness-mastery" },

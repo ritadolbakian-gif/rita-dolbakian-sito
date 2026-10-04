@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { InfluencerCollage } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Tbc, Faq } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -105,6 +106,8 @@ export default function ChiSono() {
           </div>
         </div>
       </section>
+
+      <InfluencerCollage title="Chi vive di immagine sceglie *mani sicure*." />
 
       <section className="section">
         <div className="wrap">

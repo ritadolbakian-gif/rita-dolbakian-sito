@@ -9,7 +9,7 @@ import { CountUp } from "@/components/CountUp";
 import { CaseStudies, VideoWall, Quotes, PressBar, TrustBar, RatingLd } from "@/components/Proof";
 import { LeadForm } from "@/components/LeadForm";
 import { Faq } from "@/components/Ui";
-import { GuaranteeBand } from "@/components/Sections";
+import { GuaranteeBand, InfluencerCollage } from "@/components/Sections";
 import { getPublished } from "@/lib/blog";
 
 const Label = ({ n, t }: { n?: string; t: string }) => <p className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-8 bg-rose" />{n ? `${n} — ` : ""}{t}</p>;
@@ -59,6 +59,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <InfluencerCollage n="02" />
 
       {/* 02 */}
       <section className="section-dark section overflow-hidden">

@@ -23,6 +23,12 @@ export const MEDIA: Record<string, MediaItem> = {
   "guida-pag-1": { alt: "Anteprima pagina interna 1 (4:3)" },
   "guida-pag-2": { alt: "Anteprima pagina interna 2 (4:3)" },
   "guida-pag-3": { alt: "Anteprima pagina interna 3 (4:3)" },
+  "prodotto-stories": { src: "/media/prodotto-stories.webp", alt: "Instagram Stories che vendono, il manuale operativo di Rita Dolbakian" },
+  "prodotto-calcolatore": { src: "/media/prodotto-calcolatore.webp", alt: "Wellness Profit Calculator, foglio di calcolo per il regime forfettario" },
+  "infl-1": { src: "/media/infl-1.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
+  "infl-2": { src: "/media/infl-2.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
+  "infl-3": { src: "/media/infl-3.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
+  "infl-4": { src: "/media/infl-4.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
   "guida-mockup": { src: "/media/guida-mockup.webp", alt: "La guida gratuita «Il Sistema Clienti per Operatori del Benessere» di Rita Dolbakian" },
   // PERCORSI
   "agenda-hero": { src: "/media/rita-conversazione.webp", alt: "Rita in affiancamento (4:3)" , pos: "60% 40%" },

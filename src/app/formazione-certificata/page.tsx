@@ -1,5 +1,5 @@
 import { QuoteWall } from "@/components/Proof";
-import { Outcomes, Steps, Objections, Compare } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, InfluencerCollage } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -74,6 +74,8 @@ export default function FormazioneCertificata() {
           </div>
         </div>
       </section>
+
+      <InfluencerCollage title="Imparare da chi lavora con *persone esigenti*." text="Lavoro anche con persone molto esposte sui social e abituate a standard alti. È l'esperienza che porto nelle lezioni: tecnica, presenza e cura del cliente." />
 
       <section className="section">
         <div className="wrap">

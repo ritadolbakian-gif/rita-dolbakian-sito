@@ -199,3 +199,22 @@ export function GuaranteeConditions({ n, dark = false, id, imageId }: { n?: stri
     </section>
   );
 }
+
+/** Collage: Rita con persone molto esposte sui social. Servono i consensi alla pubblicazione (vedi DA-CONFERMARE.md). */
+export function InfluencerCollage({ n, title = "Chi vive di immagine sceglie *mani sicure*.", text = "Lavoro anche con persone molto esposte sui social: per loro il corpo è uno strumento di lavoro e vogliono accanto qualcuno di cui fidarsi. È questa esperienza che porto in ogni percorso." }: { n?: string; title?: string; text?: string }) {
+  const shots = [["infl-3", "3/4", ""], ["infl-4", "1/1", "md:mt-12"], ["infl-2", "3/4", ""], ["infl-1", "3/4", "md:mt-8"]] as const;
+  return (
+    <section className="section">
+      <div className="wrap">
+        <Label n={n} t="Il mio lavoro" />
+        <Heading text={title} className="text-5xl md:text-6xl max-w-3xl" />
+        <p className="mt-6 text-stone max-w-xl">{text}</p>
+        <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+          {shots.map(([id, ratio, cls], i) => (
+            <Reveal key={id} delay={i * 0.08}><div className={cls}><Slot kind="foto" id={id} label="Rita al lavoro" ratio={ratio} art="orbs" /></div></Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

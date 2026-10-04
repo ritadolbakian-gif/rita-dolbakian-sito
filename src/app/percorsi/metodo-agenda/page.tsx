@@ -9,12 +9,12 @@ import { meta } from "@/lib/seo";
 export const metadata = meta("Metodo A.G.E.N.D.A. per operatrici del benessere", "Il Metodo A.G.E.N.D.A. di Rita Dolbakian: il primo percorso di affiancamento per ritrovare continuità e clienti qualificati nel benessere.", "/percorsi/metodo-agenda");
 
 const letters = [
-  { l: "A", w: "Attira", d: "Fatti vedere da chi ti cerca. Non serve essere ovunque: serve essere chiara nei posti dove le persone ti trovano.", p: "Profilo, scheda Google, contenuti essenziali e qualche collaborazione." },
-  { l: "G", w: "Guida", d: "Fatti riconoscere come la persona giusta. Chi arriva da te deve capire come lavori e potersi affidare.", p: "La tua frase di posizionamento, il tuo modo di lavorare, le prove che dai." },
-  { l: "E", w: "Empatia", d: "Ascolta prima di proporre. Capisci cosa cerca la persona, come si sente e di cosa ha davvero bisogno.", p: "Le domande giuste da fare, al primo messaggio e in seduta." },
-  { l: "N", w: "Negozia con naturalezza", d: "Presenta l'offerta e il prezzo senza forzare e senza svenderti. Un valore che sai spiegare si accetta con più serenità.", p: "Un'offerta chiara e un prezzo che sai spiegare." },
-  { l: "D", w: "Dialogo", d: "Tieni aperta la conversazione. È nei messaggi e su WhatsApp che nasce la prenotazione, o si perde.", p: "Risposte pronte a «quanto costa?» e agli altri dubbi." },
-  { l: "A", w: "Affiancamento", d: "Accompagna chi ha scelto te prima, durante e dopo la seduta. È così che i clienti tornano e parlano bene di te. E io accompagno te.", p: "Ricontatti, indicazioni dopo l'incontro, quattro numeri da guardare." },
+  { l: "A", w: "Attrazione", d: "Un profilo ottimizzato e contenuti che attirano la cliente ideale: chi ti trova capisce subito per chi lavori e cosa offri.", p: "Le persone iniziano a scriverti in DM." },
+  { l: "G", w: "Generazione fiducia", d: "Contenuti educativi, storytelling e testimonianze reali. È così che una persona che non ti conosce comincia a fidarsi di te.", p: "Ti percepiscono come esperta." },
+  { l: "E", w: "Esposizione", d: "Reel, collaborazioni, influencer e Google My Business: fai in modo che sempre più persone ti scoprano, senza essere ovunque.", p: "Sempre più persone ti scoprono." },
+  { l: "N", w: "Nutrimento", d: "Stories, DM marketing e follow-up strategici: tieni viva la relazione con chi ti ha già notata, fino alla prenotazione.", p: "Le richieste diventano appuntamenti." },
+  { l: "D", w: "Differenziazione", d: "Massaggio signature, pacchetti e aumento dei prezzi: costruisci un'offerta che non si confronta solo sul costo.", p: "Prezzi più alti, più valore percepito." },
+  { l: "A", w: "Automazione", d: "Fidelizzazione, scontrino medio più alto e gestione dell'agenda con strumenti che lavorano per te.", p: "Un'agenda più piena e regolare." },
 ];
 
 export default function MetodoAgenda() {
@@ -46,7 +46,7 @@ export default function MetodoAgenda() {
           <Heading text="Sei lettere. Sei *passi*." className="text-5xl md:text-7xl" />
           <p className="mt-6 text-lg text-stone max-w-xl">Ogni lettera è un passo. Non si salta niente e non si corre: si costruisce una cosa alla volta, uno dopo l'altro.</p>
           <Reveal delay={0.1}>
-            <p className="mt-10 font-display text-3xl md:text-5xl leading-tight" aria-label="Attira, Guida, Empatia, Negozia con naturalezza, Dialogo, Affiancamento">
+            <p className="mt-10 font-display text-3xl md:text-5xl leading-tight" aria-label="Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione">
               {letters.map((x, i) => <span key={i} className="mr-4 inline-block"><span className="kw">{x.l}</span>{x.w.slice(1)}{i < letters.length - 1 && <span className="text-rose"> · </span>}</span>)}
             </p>
           </Reveal>
@@ -188,7 +188,7 @@ export default function MetodoAgenda() {
       ]} />
 
       <Faq items={[
-        { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere, in sei passi: Attira, Guida, Empatia, Negozia con naturalezza, Dialogo, Affiancamento. È anche il primo percorso di affiancamento." },
+        { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere, in sei passi: Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È anche il primo percorso di affiancamento." },
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono smettere di andare a tentativi." },
         { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo e nessuno spam: è un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
