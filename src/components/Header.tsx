@@ -120,7 +120,9 @@ export function StickyCta() {
   if (path.startsWith("/call-orientamento") || path.startsWith("/area-privata")) return null;
   return (
     <div className={`sm:hidden fixed inset-x-3 z-40 transition-all duration-500 ${show ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0 pointer-events-none"}`} style={{ bottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
-      <Link href="/call-orientamento" className="btn btn-primary w-full justify-center shadow-xl">Prenota 30 minuti gratis</Link>
+      {path.startsWith("/guida-gratuita")
+        ? <a href="#modulo" className="btn btn-primary w-full justify-center shadow-xl">Ricevi la guida via email</a>
+        : <Link href="/call-orientamento" className="btn btn-primary w-full justify-center shadow-xl">Prenota 30 minuti gratis</Link>}
     </div>
   );
 }

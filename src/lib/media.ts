@@ -18,6 +18,11 @@ export const MEDIA: Record<string, MediaItem> = {
   "card-call": { src: "/media/rita-videocall.webp", alt: "Rita in call di orientamento (4:3)" , pos: "40% 40%" },
   "card-wm": { src: "/media/wm-cover.webp", alt: "Wellness Mastery: copertina con Rita" },
   "card-rd": { src: "/media/rita-massaggio-1.webp", alt: "Metodo Rita Dolbakian (4:3)", pos: "55% 40%" },
+  "guida-copertina": { alt: "Copertina piatta della guida (3:4)" },
+  "guida-rita": { alt: "Rita con la guida in mano (4:5)" },
+  "guida-pag-1": { alt: "Anteprima pagina interna 1 (4:3)" },
+  "guida-pag-2": { alt: "Anteprima pagina interna 2 (4:3)" },
+  "guida-pag-3": { alt: "Anteprima pagina interna 3 (4:3)" },
   "guida-mockup": { alt: "Mockup della guida «Il Sistema Clienti» (3:4)" },
   // PERCORSI
   "agenda-hero": { src: "/media/rita-conversazione.webp", alt: "Rita in affiancamento (4:3)" , pos: "60% 40%" },
