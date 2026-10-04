@@ -5,14 +5,15 @@
  * Per i video: `src` = file mp4 in /public/media, `poster` = immagine di copertina.
  * Rapporti consigliati tra parentesi.
  */
-export type MediaItem = { src?: string; poster?: string; alt: string };
+export type MediaItem = { src?: string; poster?: string; alt: string; pos?: string }; // pos = object-position, es. "50% 20%"
 
 export const MEDIA: Record<string, MediaItem> = {
   // HOME
-  hero: { alt: "Rita Dolbakian, ritratto (4:5, verticale)" },
+  hero: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian, ritratto in camice (4:5, verticale)", pos: "50% 25%" },
   "path-agenda": { alt: "Rita al lavoro in studio (16:11)" },
   "path-rd": { alt: "Mani al lavoro, dettaglio della tecnica (16:11)" },
-  "rita-studio": { alt: "Rita, ritratto in studio (4:5)" },
+  "rita-studio": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
+  "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
   "card-guida": { alt: "Copertina guida gratuita (4:3)" },
   "card-call": { alt: "Rita in call di orientamento (4:3)" },
   "card-wm": { alt: "Wellness Mastery (4:3)" },
@@ -25,7 +26,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "rd-online": { alt: "Anteprima lezione online (video 16:9)" },
   "rd-aula": { alt: "Formazione in presenza, aula (16:9)" },
   // CHI SONO
-  "about-portrait": { alt: "Ritratto di Rita (4:5)" },
+  "about-portrait": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "about-video": { alt: "Video di presentazione (16:10)" },
   "about-allieve": { alt: "Rita con le allieve (4:5)" },
   "gallery-1": { alt: "Dietro le quinte 1 (4:5)" },

@@ -29,7 +29,7 @@ export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art,
       {isVideo ? (
         <video src={file} poster={cover} controls playsInline preload="none" className="absolute inset-0 size-full object-cover" aria-label={text} />
       ) : file ? (
-        <Image src={file} alt={text} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
+        <Image src={file} alt={text} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" style={{ objectPosition: m?.pos }} />
       ) : (
         <Art variant={art ?? pickArt(label)} />
       )}

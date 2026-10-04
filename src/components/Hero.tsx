@@ -33,7 +33,7 @@ export function Hero() {
         </div>
         <div className="relative">
           <motion.div style={{ y }}>
-            <motion.div {...fade(0.4)}><Slot kind="foto" label="Ritratto di Rita (hero)" ratio="4/5" art="arch" className="!rounded-t-[999px]" /></motion.div>
+            <motion.div {...fade(0.4)}><Slot kind="foto" id="hero" label="Ritratto di Rita (hero)" ratio="4/5" art="arch" className="!rounded-t-[999px]" /></motion.div>
           </motion.div>
           <motion.div style={{ y: y2 }} className="absolute -left-4 md:-left-10 bottom-12 bg-ink text-ivory rounded-full px-6 py-4 shadow-2xl flex items-baseline gap-2">
             <span className="font-display text-4xl kw leading-none"><CountUp to={10} suffix="+" /></span><span className="text-sm leading-tight">anni<br />nel benessere</span>

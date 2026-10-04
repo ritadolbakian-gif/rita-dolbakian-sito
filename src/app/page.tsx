@@ -64,6 +64,7 @@ export default function Home() {
           <div>
             <Label n="02" t="Ti riconosci?" />
             <Heading text="Non è un problema di impegno. E molto spesso *non è nemmeno* un problema di bravura." className="text-4xl md:text-6xl" />
+            <Reveal delay={0.2}><div className="mt-10 max-w-md"><Slot kind="foto" id="riconoscimento" label="Professionista pensierosa" ratio="4/3" art="orbs" /></div></Reveal>
           </div>
           <div className="self-end">
             <p className="text-ivory/70 mb-8">Se lavori nel benessere e ti riconosci in almeno una di queste situazioni, sei nel posto giusto:</p>
