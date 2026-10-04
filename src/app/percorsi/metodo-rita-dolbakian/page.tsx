@@ -25,7 +25,7 @@ export default function MetodoRD() {
   return (
     <>
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
-      <PageHero imageId="rd-top" imageRatio="4/3" imageArt="stones" dark eyebrow="Metodo Rita Dolbakian" title="Impara a *massaggiare*. Con mani sicure." answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
+      <PageHero imageId="rd-top" imageRatio="4/3" imageArt="stones" dark eyebrow="Metodo Rita Dolbakian" title="Vuoi imparare a *massaggiare* con mani sicure?" answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
         <Link href="/call-orientamento" className="btn btn-primary">Scegli il tuo livello con me <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Guarda i tre livelli</Link>
       </PageHero>

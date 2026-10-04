@@ -28,7 +28,7 @@ export default function Blog() {
         author: { "@type": "Person", name: "Rita Dolbakian" },
         blogPost: posts.map((p) => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE.url}/blog/${p.slug}`, datePublished: p.date })),
       }} />
-      <PageHero eyebrow="Il blog" title="Idee per *lavorare* con più calma." answer="In questo blog raccolgo guide pratiche per chi lavora nel benessere: come trovare clienti, stabilizzare l'agenda, stabilire i prezzi, usare Instagram e la scheda Google, e come scegliere un corso di massaggio. Un tema alla volta, con parole semplici.">
+      <PageHero eyebrow="Il blog" title="Guide per *riempire l'agenda* senza ansia." answer="In questo blog raccolgo guide pratiche per chi lavora nel benessere: come trovare clienti, stabilizzare l'agenda, stabilire i prezzi, usare Instagram e la scheda Google, e come scegliere un corso di massaggio. Un tema alla volta, con parole semplici.">
         <Link href={`/blog/${featured.slug}`} className="btn btn-primary">Leggi la guida per trovare clienti <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
       </PageHero>

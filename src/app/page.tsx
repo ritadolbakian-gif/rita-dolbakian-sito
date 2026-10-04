@@ -34,7 +34,7 @@ export default function Home() {
       <section className="section pt-8">
         <div className="wrap">
           <Label n="01" t="Le due strade" />
-          <Heading text="Da dove vuoi *partire*?" className="text-5xl md:text-7xl max-w-3xl" />
+          <Heading text="Vuoi *più clienti* o mani più sicure?" className="text-5xl md:text-7xl max-w-3xl" />
           <Reveal delay={0.15}><p className="mt-5 text-lg text-stone max-w-xl">Una strada è per la tua attività. L'altra è per le tue mani. Scegli quella che ti somiglia oggi: l'altra ti aspetta.</p></Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
@@ -63,7 +63,7 @@ export default function Home() {
         <div className="wrap relative grid gap-14 lg:grid-cols-[1fr_1fr]">
           <div>
             <Label n="02" t="Ti riconosci?" />
-            <Heading text="Non è un problema di impegno. E molto spesso *non è nemmeno* un problema di bravura." className="text-4xl md:text-6xl" />
+            <Heading text="Lavori tanto e l'agenda va a *ondate*? Non è colpa tua." className="text-4xl md:text-6xl" />
             <Reveal delay={0.2}><div className="mt-10 max-w-md"><Slot kind="foto" id="riconoscimento" label="Professionista pensierosa" ratio="4/3" art="orbs" /></div></Reveal>
           </div>
           <div className="self-end">
@@ -110,7 +110,7 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <Label n="05" t="Come funziona" />
-          <Heading text="Tre passi. *Nessuna* fretta." className="text-5xl md:text-7xl" />
+          <Heading text="Tre passi per farti trovare e *scegliere*." className="text-5xl md:text-7xl max-w-4xl" />
           <div className="mt-14 grid gap-px bg-[var(--line)] md:grid-cols-3 border border-[var(--line)] rounded-3xl overflow-hidden">
             {[
               { n: "1", t: "La guida gratuita", d: "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="orb bg-rose/20 size-[28rem] -right-40 bottom-0" aria-hidden />
         <div className="wrap relative">
           <Label n="06" t="I percorsi" />
-          <Heading text="Non tutti partono dallo *stesso* punto." className="text-5xl md:text-7xl max-w-4xl" />
+          <Heading text="Quale percorso ti serve *adesso*?" className="text-5xl md:text-7xl max-w-4xl" />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { t: "Guida gratuita", d: "Per iniziare, senza impegno.", tag: "Gratis", href: "/guida-gratuita", art: "waves" as const, id: "card-guida" },
@@ -207,7 +207,7 @@ export default function Home() {
           <Reveal><Slot kind="foto" id="guida-mockup" label="Mockup della guida" ratio="3/4" art="waves" className="max-w-xs mx-auto" /></Reveal>
           <div>
             <Label n="09" t="Guida gratuita" />
-            <Heading text="I primi 10 clienti online, *con ordine*." className="text-5xl md:text-6xl" />
+            <Heading text="Vuoi i *primi 10 clienti* online? Parti da qui." className="text-5xl md:text-6xl" />
             <p className="mt-5 text-lg text-stone max-w-xl">«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per cominciare dal punto giusto. Una sola email, nessuno spam.</p>
             <div className="mt-8 max-w-xl"><LeadForm tipo="guida" cta="Mandami la guida" compact /></div>
           </div>
@@ -228,7 +228,7 @@ export default function Home() {
       <section className="section pt-0">
         <div className="wrap">
           <div className="flex items-end justify-between gap-6 flex-wrap">
-            <div><Label n="11" t="Dal blog" /><Heading text="Idee per *lavorare* con più calma." className="text-5xl md:text-6xl max-w-2xl" /></div>
+            <div><Label n="11" t="Dal blog" /><Heading text="Guide per *riempire l'agenda* senza ansia." className="text-5xl md:text-6xl max-w-2xl" /></div>
             <Link href="/blog" className="ulink font-medium">Tutti gli articoli →</Link>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">

@@ -11,7 +11,7 @@ export const metadata = meta("Prenota la call gratuita di orientamento", "Prenot
 export default function Call() {
   return (
     <>
-      <PageHero eyebrow="Call di orientamento" title="Un confronto. *Calmo.* Onesto." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In circa 30 minuti ti dico con sincerità dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva." />
+      <PageHero eyebrow="Call di orientamento" title="30 minuti per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In circa 30 minuti ti dico con sincerità dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva." />
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="space-y-10">

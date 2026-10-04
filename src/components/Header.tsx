@@ -47,7 +47,7 @@ export function Header() {
       <Progress />
       <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${light ? "hdr-light text-ivory" : ""} ${solid ? "bg-ivory/80 backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2" : "py-3 md:py-5"}`}>
         <div className="wrap flex items-center justify-between gap-4">
-          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src={light ? "/media/logo-light-compact.png" : "/media/logo-compact.png"} alt="Rita Dolbakian" width={1971} height={372} priority className={`w-auto transition-all duration-500 ${solid ? "h-10 md:h-11" : "h-11 md:h-14"}`} /></Link>
+          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src={light ? "/media/logo-light-compact.png" : "/media/logo-compact.png"} alt="Rita Dolbakian" width={1971} height={443} priority className={`w-auto transition-all duration-500 ${solid ? "h-9 md:h-11" : "h-10 md:h-13"}`} /></Link>
 
           <nav className="hidden xl:flex items-center" aria-label="Principale">
             {NAV.map((n) =>
@@ -87,7 +87,7 @@ export function Header() {
           <motion.div className="section-dark fixed inset-0 z-[60] flex flex-col overflow-y-auto"
             initial={{ clipPath: "circle(0% at 90% 5%)" }} animate={{ clipPath: "circle(150% at 90% 5%)" }} exit={{ clipPath: "circle(0% at 90% 5%)" }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
             <div className="wrap flex justify-between items-center py-5">
-              <Image src="/media/logo-light-compact.png" alt="Rita Dolbakian" width={1971} height={372} className="h-11 w-auto" />
+              <Image src="/media/logo-light-compact.png" alt="Rita Dolbakian" width={1971} height={443} className="h-10 w-auto" />
               <button onClick={() => setOpen(false)} className="min-h-11 min-w-11 text-2xl" aria-label="Chiudi il menu">✕</button>
             </div>
             <nav className="wrap flex-1 flex flex-col justify-center gap-2 py-6" aria-label="Menu mobile">

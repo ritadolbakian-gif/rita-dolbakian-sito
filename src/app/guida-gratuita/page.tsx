@@ -12,7 +12,7 @@ export const metadata = meta("Guida gratuita: i primi 10 clienti online", "Scari
 export default function Guida() {
   return (
     <>
-      <PageHero eyebrow="Guida gratuita" title="I primi 10 clienti *online*. Con ordine." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Il Sistema Clienti per Operatori del Benessere» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti spiego da dove cominciare, un passo alla volta."} />
+      <PageHero eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Il Sistema Clienti per Operatori del Benessere» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti spiego da dove cominciare, un passo alla volta."} />
       <section className="section">
         <div className="wrap grid gap-16 lg:grid-cols-[0.9fr_1.1fr] items-start">
           <Reveal><Slot kind="foto" id="guida-mockup" label="Mockup della guida" ratio="3/4" art="waves" className="max-w-sm mx-auto" /></Reveal>

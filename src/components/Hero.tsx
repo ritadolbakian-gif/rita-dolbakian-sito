@@ -27,7 +27,7 @@ export function Hero() {
           <motion.p {...fade(0.1)} className="eyebrow mb-6 flex items-center gap-3"><span className="inline-block h-px w-10 bg-rose" />Per operatrici e operatori del benessere</motion.p>
           <Heading as="h1" text="Sei un operatore del benessere e vuoi *più clienti*, prezzi più alti e un'agenda piena?" className="text-[clamp(2.3rem,5.2vw,4.8rem)]" delay={0.2} immediate />
           <motion.p {...fade(0.9)} className="mt-8 max-w-xl text-lg text-stone">
-            Allora sei nel posto giusto. Sono Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni: ti do il metodo per farti trovare e scegliere, senza svenderti e senza dipendere dal passaparola. E se vuoi imparare a massaggiare con mani sicure, c'è anche quello. Non prometto numeri: ti accompagno io, passo dopo passo.
+            Allora sei nel posto giusto. Sono Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni: ti do il metodo per farti trovare e scegliere, senza svenderti e senza dipendere dal passaparola. E se vuoi imparare a massaggiare con mani sicure, c'è anche quello.
           </motion.p>
           <motion.div {...fade(1.05)} className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link href="/call-orientamento" className="btn btn-primary justify-center">Prenota 30 minuti gratis <span className="arr">→</span></Link>
