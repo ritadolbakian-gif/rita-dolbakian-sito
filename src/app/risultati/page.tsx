@@ -1,3 +1,4 @@
+import { ReviewsSection } from "@/components/Reviews";
 import { PageHero, Label, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { Heading } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -28,6 +29,8 @@ export default function Risultati() {
           <div className="mt-14"><Quotes /></div>
         </div>
       </section>
+      <ReviewsSection />
+
       <section className="section"><div className="wrap"><TrustBar /></div></section>
       <CtaBand title="Il prossimo racconto potrebbe essere *il tuo*." primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
       <Faq items={[

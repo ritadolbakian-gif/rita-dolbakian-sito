@@ -1,3 +1,4 @@
+import { ReviewsSection } from "@/components/Reviews";
 import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteePill } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -170,6 +171,8 @@ export default function WellnessMastery() {
           <Reveal delay={0.1}><div className="section-dark rounded-3xl p-8 md:p-10 h-full"><h3 className="font-display text-3xl">Non è per te se…</h3><ul className="mt-5 space-y-2 text-ivory/70"><li>✕ cerchi guadagni facili o garantiti;</li><li>✕ non hai tempo da dedicarci;</li><li>✕ vuoi che qualcuno faccia il lavoro al posto tuo.</li></ul></div></Reveal>
         </div>
       </section>
+
+      <ReviewsSection />
 
       <Outcomes n="09" label="Dopo il percorso" title="E *dopo* le 8 settimane?" cols={3} items={[
         { t: "Hai un sistema, non solo dei video", d: "Brand, offerta, contenuti e risposte restano tuoi e li puoi aggiornare." },

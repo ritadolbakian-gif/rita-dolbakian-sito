@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { Heading } from "./Motion";
 import { Slot } from "./Slot";
 import { CountUp } from "./CountUp";
+import { ReviewBadge } from "./Reviews";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -34,6 +35,7 @@ export function Hero() {
             <Link href="/percorsi" className="btn btn-ghost justify-center">Trova il tuo percorso</Link>
           </motion.div>
           <motion.p {...fade(1.2)} className="mt-6 text-sm text-stone">30 minuti · nessun obbligo · nessuno spam</motion.p>
+          <ReviewBadge />
         </div>
         <div className="relative">
           <motion.div style={{ y }}>

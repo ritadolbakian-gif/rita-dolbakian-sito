@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
-import { Marquee } from "@/components/Marquee";
+import { StatsTicker } from "@/components/StatsTicker";
+import { ReviewsSection } from "@/components/Reviews";
+import { visibleStats, showDraftStats } from "@/lib/proof";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { CountUp } from "@/components/CountUp";
@@ -17,14 +19,14 @@ export default function Home() {
     <>
       <RatingLd />
       <Hero />
-      <Marquee items={["Agenda piena", "Prezzi giusti", "Clienti qualificati", "Massaggio", "Metodo", "Continuità", "Presenza"]} />
+      <StatsTicker />
 
       <section className="py-14 md:py-20">
         <div className="wrap grid grid-cols-2 gap-y-10 md:grid-cols-4 text-center md:text-left">
-          {[[10, "+", "anni di lavoro nel benessere"], [10, "", "moduli in Wellness Mastery"], [6, "", "bonus inclusi nel percorso"], [14, "", "giorni: soddisfatti o rimborsati (Wellness Mastery)"]].map(([n, s, l], i) => (
-            <Reveal key={i} delay={i * 0.08}>
-              <p className="font-display text-6xl md:text-7xl kw leading-none"><CountUp to={n as number} suffix={s as string} /></p>
-              <p className="mt-3 text-sm text-stone max-w-[14rem] mx-auto md:mx-0">{l}</p>
+          {visibleStats().slice(0, 4).map((st, i) => (
+            <Reveal key={st.id} delay={i * 0.08}>
+              <p className="font-display text-6xl md:text-7xl kw leading-none"><CountUp to={st.value} prefix={st.prefix ?? ""} suffix={st.suffix ?? ""} /></p>
+              <p className="mt-3 text-sm text-stone max-w-[14rem] mx-auto md:mx-0">{st.label}{showDraftStats() && !st.confirmed && <span className="ml-2 rounded bg-rose/15 px-1.5 text-[0.65rem] uppercase tracking-wider text-rose">da confermare</span>}</p>
             </Reveal>
           ))}
         </div>
@@ -160,6 +162,8 @@ export default function Home() {
           <p className="mt-8 text-ivory/60 text-sm">Cerchi un attestato? <Link href="/formazione-certificata" className="ulink">Scopri la formazione certificata</Link>.</p>
         </div>
       </section>
+
+      <ReviewsSection />
 
       <GuaranteeBand compact cta={{ href: "/percorsi/wellness-mastery", label: "Vedi Wellness Mastery" }} />
 
