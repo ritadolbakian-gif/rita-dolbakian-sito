@@ -6,7 +6,7 @@ import { CtaBand, JsonLd, Label } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { Toc, ShareBar } from "@/components/BlogClient";
-import { LeadForm } from "@/components/LeadForm";
+import { GuideForm } from "@/components/GuideForm";
 import { Quotes } from "@/components/Proof";
 import { meta } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -167,7 +167,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
             <Label t="Prima di andare" />
             <Heading text="Una guida pratica, *gratis*." className="text-4xl md:text-5xl" />
             <p className="mt-4 text-stone">«Il Sistema Clienti per Operatori del Benessere». Una sola email, nessuno spam.</p>
-            <div className="mt-8 text-left max-w-xl mx-auto"><LeadForm tipo="guida" cta="Mandami la guida" compact /></div>
+            <div className="mt-8 text-left max-w-xl mx-auto"><GuideForm /></div>
           </div>
         </section>
       </article>

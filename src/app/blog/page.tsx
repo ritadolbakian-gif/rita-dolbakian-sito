@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageHero, Label, Faq, JsonLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { LeadForm } from "@/components/LeadForm";
+import { GuideForm } from "@/components/GuideForm";
 import { BlogGrid, type Card } from "@/components/BlogClient";
 import { getPublished, getUpcoming, CATEGORIES } from "@/lib/blog";
 import { SITE } from "@/lib/site";
@@ -80,7 +80,7 @@ export default function Blog() {
             <Label t="Guida gratuita" />
             <Heading text="Vuoi tutto in *un posto solo*? Parti da qui." className="text-4xl md:text-5xl" />
             <p className="mt-5 text-lg text-stone max-w-xl">«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. Una sola email, nessuno spam.</p>
-            <div className="mt-8 max-w-xl"><LeadForm tipo="guida" cta="Mandami la guida" compact /></div>
+            <div className="mt-8 max-w-xl"><GuideForm /></div>
           </div>
         </div>
       </section>

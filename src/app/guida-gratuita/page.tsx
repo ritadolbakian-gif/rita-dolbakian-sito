@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PageHero, Label, Faq, Tbc, CtaBand } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { LeadForm } from "@/components/LeadForm";
+import { GuideForm } from "@/components/GuideForm";
 import { Outcomes, Steps } from "@/components/Sections";
 import { QuoteWall, TrustBar } from "@/components/Proof";
 import { ReviewBadge } from "@/components/Reviews";
@@ -34,7 +34,7 @@ export default function Guida() {
             <Label t="Gratis, via email" />
             <Heading text="Dimmi dove *mandartela*." className="text-5xl md:text-6xl" />
             <p className="mt-4 text-stone max-w-md">Una email con la guida, e basta. Niente spam: se un giorno non ti serve più, ti cancelli con un clic.</p>
-            <div className="mt-8 max-w-xl"><LeadForm tipo="guida" cta="Ricevi la guida via email" compact /></div>
+            <div className="mt-8 max-w-xl"><GuideForm /></div>
             <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ Gratuita, senza carta</li><li>✓ Una sola email</li><li>✓ Cancellazione con un clic</li></ul>
             <ReviewBadge />
           </div>

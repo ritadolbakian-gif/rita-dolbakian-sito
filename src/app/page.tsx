@@ -7,7 +7,7 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { CountUp } from "@/components/CountUp";
 import { CaseStudies, VideoWall, Quotes, PressBar, TrustBar, RatingLd } from "@/components/Proof";
-import { LeadForm } from "@/components/LeadForm";
+import { GuideForm } from "@/components/GuideForm";
 import { Faq } from "@/components/Ui";
 import { GuaranteeBand, InfluencerCollage } from "@/components/Sections";
 import { getPublished } from "@/lib/blog";
@@ -238,7 +238,7 @@ export default function Home() {
             <Label n="09" t="Guida gratuita" />
             <Heading text="Vuoi i *primi 10 clienti* online? Parti da qui." className="text-5xl md:text-6xl" />
             <p className="mt-5 text-lg text-stone max-w-xl">«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per cominciare dal punto giusto. Una sola email, nessuno spam.</p>
-            <div className="mt-8 max-w-xl"><LeadForm tipo="guida" cta="Mandami la guida" compact /></div>
+            <div className="mt-8 max-w-xl"><GuideForm /></div>
           </div>
         </div>
       </section>
