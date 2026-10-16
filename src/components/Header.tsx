@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { NAV, SITE } from "@/lib/site";
 
@@ -22,12 +22,14 @@ function Progress() {
   return <motion.div className="progress" style={{ scaleX }} aria-hidden />;
 }
 
+const useIso = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
 export function Header() {
   const path = usePathname();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const [onDark, setOnDark] = useState(false);
-  useEffect(() => {
+  useIso(() => {
     const on = () => {
       setSolid(window.scrollY > 40);
       const el = document.querySelector("[data-hero-dark]");

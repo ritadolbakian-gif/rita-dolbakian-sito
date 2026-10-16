@@ -15,6 +15,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "rita-studio": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
   "card-guida": { src: "/media/guida-mockup.webp", alt: "Copertina guida gratuita (4:3)", pos: "50% 32%" },
+  "card-quiz": { src: "/media/hero-pensierosa.webp", alt: "Quiz gratuito: cosa ti separa da un'agenda piena", pos: "60% 25%" },
   "card-call": { src: "/media/rita-videocall.webp", alt: "Rita in call di orientamento (4:3)" , pos: "40% 40%" },
   "card-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "card-rd": { src: "/media/rita-massaggio-1.webp", alt: "Metodo Rita Dolbakian (4:3)", pos: "55% 40%" },

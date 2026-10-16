@@ -7,7 +7,7 @@ export function StatsTicker() {
     ...visibleStats().map((s) => ({ k: s.id, big: `${s.prefix ?? ""}${s.value}${s.suffix ?? ""}`, label: s.label, draft: !s.confirmed })),
     { k: "garanzia", big: "✓", label: "soddisfatti o rimborsati, per tutto il percorso" },
     { k: "call", big: "1:1", label: "call gratuita con me" },
-    ...(RATING ? [{ k: "rating", big: `${RATING.value.toString().replace(".", ",")}★`, label: `su ${RATING.source} · ${RATING.count} recensioni` }] : []),
+    ...(RATING ? [{ k: "rating", big: `${RATING.value.toString().replace(".", ",")}★`, label: "di valutazione media" }] : []),
   ];
   const row = [...items, ...items];
   return (

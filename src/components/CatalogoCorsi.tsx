@@ -24,6 +24,7 @@ const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }
   {
     id: "gratis", n: "03", title: "Per iniziare, *gratis*", lead: "Un primo passo per capire da dove partire.",
     items: [
+      { id: "card-quiz", t: "Quiz: cosa ti blocca?", d: "In 2 minuti scopri dove stai perdendo clienti e da dove partire.", fmt: "Quiz", price: "Gratis", badge: "2 minuti", href: "/quiz-diagnostico" },
       { id: "corso-guida", t: "Guida Metodo A.G.E.N.D.A.", d: "La guida pratica per fare i primi 10 clienti online.", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
       { id: "card-call", t: "Call di orientamento", d: "Una videochiamata con me per capire da dove partire.", fmt: "Videochiamata", price: "Gratis", badge: "Gratis", href: "/call-orientamento" },
     ],

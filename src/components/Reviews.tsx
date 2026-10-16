@@ -51,7 +51,7 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
                 <>
                   <p className="font-display text-8xl kw leading-none">{RATING.value.toString().replace(".", ",")}</p>
                   <p className="mt-2"><Stars n={Math.round(RATING.value)} /></p>
-                  <p className="mt-2 text-stone">{RATING.count} recensioni su {RATING.source}</p>
+                  <p className="mt-2 text-stone">Valutazione media delle recensioni</p>
                 </>
               ) : (
                 <>
@@ -96,5 +96,5 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
 export function ReviewBadge() {
   if (!RATING) return null;
   const href = REVIEW_SOURCES.google.profileUrl || REVIEW_SOURCES.trustpilot.profileUrl || "#";
-  return <a href={href} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-ivory/70 px-4 min-h-11 text-sm backdrop-blur"><Stars n={Math.round(RATING.value)} /><span><b>{RATING.value.toString().replace(".", ",")}</b> · {RATING.count} recensioni su {RATING.source}</span></a>;
+  return <a href={href} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-ivory/70 px-4 min-h-11 text-sm backdrop-blur"><Stars n={Math.round(RATING.value)} /><span><b>{RATING.value.toString().replace(".", ",")}</b> su 5</span></a>;
 }

@@ -35,19 +35,19 @@ export function GuideForm({ className = "", height = 638 }: { className?: string
 }
 
 /** Quiz GoHighLevel incorporato (si ridimensiona da solo con form_embed.js). */
-export function GhlQuiz({ id, minHeight = 900, className = "" }: { id: string; minHeight?: number; className?: string }) {
+export function GhlQuiz({ id, className = "" }: { id: string; className?: string }) {
   return (
     <div className={className}>
       <iframe
         src={`https://api.leadconnectorhq.com/widget/quiz/${id}`}
-        style={{ border: "none", width: "100%", minHeight }}
+        className="block w-full border-0 min-h-[320px]"
         scrolling="no"
         id={id}
         title="Quiz diagnostico"
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
       />
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
   );
 }
