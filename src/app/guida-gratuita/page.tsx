@@ -8,7 +8,7 @@ import { QuoteWall, TrustBar } from "@/components/Proof";
 import { ReviewBadge } from "@/components/Reviews";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta("Guida gratuita: i primi 10 clienti online", "Scarica gratis «Il Sistema Clienti per Operatori del Benessere», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita");
+export const metadata = meta("Guida Metodo A.G.E.N.D.A. gratuita: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita");
 
 const chapters = [
   ["Chi vuoi aiutare e cosa offri", "Tre domande a cui rispondere prima di pubblicare qualsiasi cosa, per spiegare in una frase chi sei e perché scegliere te."],
@@ -22,14 +22,14 @@ const chapters = [
 export default function Guida() {
   return (
     <>
-      <PageHero eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Il Sistema Clienti per Operatori del Benessere» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
+      <PageHero eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Guida Metodo A.G.E.N.D.A.» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
         <a href="#modulo" className="btn btn-primary">Ricevi la guida via email <span className="arr">→</span></a>
         <a href="#dentro" className="btn btn-ghost">Cosa trovi dentro</a>
       </PageHero>
 
       <section id="modulo" className="section pt-10 scroll-mt-24">
         <div className="wrap grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr]">
-          <Reveal><Slot kind="foto" id="guida-mockup" label="La guida «Il Sistema Clienti»" ratio="3/4" art="waves" className="max-w-sm mx-auto lg:max-w-md" priority /></Reveal>
+          <Reveal><Slot kind="foto" id="guida-mockup" label="La Guida Metodo A.G.E.N.D.A." ratio="3/4" art="waves" className="max-w-sm mx-auto lg:max-w-md" priority /></Reveal>
           <div>
             <Label t="Gratis, via email" />
             <Heading text="Dimmi dove *mandartela*." className="text-5xl md:text-6xl" />
@@ -113,7 +113,7 @@ export default function Guida() {
 
       <Faq items={[
         { q: "La guida è davvero gratuita?", a: "Sì. Non c'è nessun pagamento e non serve la carta." },
-        { q: "Cosa ricevo, e come?", a: "Ricevi via email la guida «Il Sistema Clienti per Operatori del Benessere». Se non la vedi, controlla anche la cartella spam." },
+        { q: "Cosa ricevo, e come?", a: "Ricevi via email la guida «Guida Metodo A.G.E.N.D.A.». Se non la vedi, controlla anche la cartella spam." },
         { q: "Quanto ci vuole a leggerla?", a: <>Si legge in una sessione e si applica nell'arco di quattro settimane. <Tbc>numero di pagine e tempo di lettura</Tbc></>, plain: "Si legge in una sessione e si applica nell'arco di quattro settimane." },
         { q: "Serve già avere clienti o un profilo social?", a: "No. Serve avere una competenza nel benessere. La guida parte da lì." },
         { q: "È per massaggiatrici o anche per altre professioni?", a: "Per chiunque lavori nel benessere: massaggiatori, estetiste, operatori olistici, personal trainer e simili. Gli esempi partono dal massaggio." },

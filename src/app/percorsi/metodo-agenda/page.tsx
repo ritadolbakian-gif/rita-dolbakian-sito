@@ -129,7 +129,7 @@ export default function MetodoAgenda() {
           <Label n="05" t="Come funziona" />
           <Heading text="Dalla guida al percorso, *un passo alla volta*." className="text-5xl md:text-6xl max-w-3xl" />
           <ol className="mt-12 grid gap-8 md:grid-cols-3">
-            {[["La guida gratuita", "«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Circa 30 minuti. Mi racconti dove sei, ti dico se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Metodo Sold Out."]].map(([t, d], i) => (
+            {[["La guida gratuita", "«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Circa 30 minuti. Mi racconti dove sei, ti dico se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Metodo Sold Out."]].map(([t, d], i) => (
               <li key={t}><Reveal delay={i * 0.1}><span className="font-display text-6xl kw">0{i + 1}</span><h3 className="font-display text-3xl mt-2">{t}</h3><p className="mt-3 text-stone">{d}</p></Reveal></li>
             ))}
           </ol>

@@ -11,7 +11,7 @@ export function GET() {
 - [Metodo Rita Dolbakian](${SITE.url}/percorsi/metodo-rita-dolbakian): formazione per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.
 
 ## Per iniziare
-- [Guida gratuita: Il Sistema Clienti per Operatori del Benessere](${SITE.url}/guida-gratuita)
+- [Guida gratuita: Guida Metodo A.G.E.N.D.A.](${SITE.url}/guida-gratuita)
 - [Call gratuita di orientamento (30 minuti)](${SITE.url}/call-orientamento)
 
 ## Altro

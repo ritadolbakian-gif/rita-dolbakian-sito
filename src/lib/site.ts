@@ -2,7 +2,7 @@ export const SITE = {
   name: "Rita Dolbakian",
   brand: "RD Academy",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rd-academy.it", // [DA CONFERMARE: dominio definitivo]
-  bookingUrl: "https://api.leadconnectorhq.com/widget/booking/5Qga7LPDjrJDvjLuTTIS",
+  bookingUrl: "https://api.leadconnectorhq.com/widget/booking/Crk5pbPt2YsMCM2bYgA6",
   social: {
     instagram: "https://www.instagram.com/rita_dolbakian",
     youtube: "https://www.youtube.com/@ritadolbakian",

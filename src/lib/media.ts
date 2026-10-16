@@ -29,7 +29,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "infl-2": { src: "/media/infl-2.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
   "infl-3": { src: "/media/infl-3.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
   "infl-4": { src: "/media/infl-4.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
-  "guida-mockup": { src: "/media/guida-mockup.webp", alt: "La guida gratuita «Il Sistema Clienti per Operatori del Benessere» di Rita Dolbakian" },
+  "guida-mockup": { src: "/media/guida-mockup.webp", alt: "La guida gratuita «Guida Metodo A.G.E.N.D.A.» di Rita Dolbakian" },
   // PERCORSI
   "agenda-hero": { src: "/media/rita-conversazione.webp", alt: "Rita in affiancamento (4:3)" , pos: "60% 40%" },
   "wm-video": { alt: "Rita presenta Metodo Sold Out (video 16:10)" },

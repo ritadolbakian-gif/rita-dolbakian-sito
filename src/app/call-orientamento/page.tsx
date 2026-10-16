@@ -3,7 +3,7 @@ import { PageHero, Label, Faq, Tbc } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { TrustBar } from "@/components/Proof";
-import { SITE } from "@/lib/site";
+import { BookingCalendar } from "@/components/BookingCalendar";
 import { meta } from "@/lib/seo";
 
 export const metadata = meta("Prenota la call gratuita di orientamento", "Prenota una call gratuita di circa 30 minuti con Rita Dolbakian: una chiacchierata senza impegno e senza spam.", "/call-orientamento");
@@ -21,9 +21,7 @@ export default function Call() {
             <Heading text="30 minuti. *Nessun* obbligo." className="text-4xl" as="h2" />
             <Reveal><Slot kind="foto" id="call-hero" label="Rita sorride alla videochiamata" ratio="4/5" art="orbs" className="max-w-xs" /></Reveal>
           </div>
-          <div className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory">
-            <iframe src={SITE.bookingUrl} title="Prenota la call di orientamento" loading="lazy" className="w-full border-0" style={{ minHeight: 780 }} />
-          </div>
+          <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
         </div>
       </section>
       <section className="section pt-0"><div className="wrap"><TrustBar /></div></section>

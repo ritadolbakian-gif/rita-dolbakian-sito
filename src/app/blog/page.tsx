@@ -79,7 +79,7 @@ export default function Blog() {
           <div>
             <Label t="Guida gratuita" />
             <Heading text="Vuoi tutto in *un posto solo*? Parti da qui." className="text-4xl md:text-5xl" />
-            <p className="mt-5 text-lg text-stone max-w-xl">«Il Sistema Clienti per Operatori del Benessere»: la guida pratica per fare i primi 10 clienti online. Una sola email, nessuno spam.</p>
+            <p className="mt-5 text-lg text-stone max-w-xl">«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online. Una sola email, nessuno spam.</p>
             <div className="mt-8 max-w-xl"><GuideForm /></div>
           </div>
         </div>

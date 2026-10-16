@@ -166,7 +166,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
           <div className="wrap max-w-3xl text-center">
             <Label t="Prima di andare" />
             <Heading text="Una guida pratica, *gratis*." className="text-4xl md:text-5xl" />
-            <p className="mt-4 text-stone">«Il Sistema Clienti per Operatori del Benessere». Una sola email, nessuno spam.</p>
+            <p className="mt-4 text-stone">«Guida Metodo A.G.E.N.D.A.». Una sola email, nessuno spam.</p>
             <div className="mt-8 text-left max-w-xl mx-auto"><GuideForm /></div>
           </div>
         </section>
