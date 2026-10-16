@@ -75,7 +75,7 @@ export default function SoldOut() {
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
 
-      <PageNav items={[{ id: "incluso", t: "Cosa è incluso" }, { id: "fasi", t: "Le tre fasi" }, { id: "risultati", t: "Risultati" }, { id: "investimento", t: "Cosa ricevi" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota 30 minuti" }} />
+      <PageNav items={[{ id: "incluso", t: "Cosa è incluso" }, { id: "fasi", t: "Le tre fasi" }, { id: "risultati", t: "Risultati" }, { id: "investimento", t: "Cosa ricevi" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota la call" }} />
 
       <section className="py-10 md:py-14">
         <div className="wrap">

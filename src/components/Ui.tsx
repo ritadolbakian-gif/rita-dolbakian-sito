@@ -72,7 +72,7 @@ export function Faq({ items, title = "Domande e *risposte*", dark = false, id }:
   );
 }
 
-export function CtaBand({ title = "Se senti che continuare così *non ti basta* più, parliamone.", sub = "Scrivimi o prenota: ti rispondo io.", primary = { href: "/call-orientamento", label: "Prenota 30 minuti con me" }, secondary }: { title?: string; sub?: string; primary?: { href: string; label: string }; secondary?: { href: string; label: string } }) {
+export function CtaBand({ title = "Se senti che continuare così *non ti basta* più, parliamone.", sub = "Scrivimi o prenota: ti rispondo io.", primary = { href: "/call-orientamento", label: "Prenota la call con me" }, secondary }: { title?: string; sub?: string; primary?: { href: string; label: string }; secondary?: { href: string; label: string } }) {
   return (
     <section className="section-dark section text-center">
       <div className="wrap max-w-4xl">

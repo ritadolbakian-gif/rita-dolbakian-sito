@@ -127,7 +127,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
 
             <div className="mt-10 flex flex-wrap gap-3">
               {isTech ? <Link href="/percorsi/metodo-rita-dolbakian" className="btn btn-primary">Scopri il Metodo Rita Dolbakian <span className="arr">→</span></Link> : <Link href="/guida-gratuita" className="btn btn-primary">Ricevi la guida via email <span className="arr">→</span></Link>}
-              <Link href="/call-orientamento" className="btn btn-ghost">Prenota 30 minuti con me</Link>
+              <Link href="/call-orientamento" className="btn btn-ghost">Prenota la call con me</Link>
             </div>
 
             <div className="mt-14 border-t border-[var(--line)] pt-8"><ShareBar title={p.title} url={url} /></div>
@@ -175,7 +175,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
           </div>
         </section>
       </article>
-      <CtaBand title="Vuoi parlarne *con me*?" primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
+      <CtaBand title="Vuoi parlarne *con me*?" primary={{ href: "/call-orientamento", label: "Prenota la call con me" }} />
     </>
   );
 }

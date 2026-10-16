@@ -41,7 +41,7 @@ export default function ChiSono() {
     <>
       <Crumbs trail={[["Chi sono", "/chi-sono"]]} />
       <PageHero dark bgId="chi-sono-bg" eyebrow="Chi sono" title="Lavoravo in un bar. Poi ho scelto *le mie mani*." answer="Sono Rita Dolbakian. Ho iniziato dietro un bancone, frustrata e convinta di meritare di più. Ho scelto il massaggio, ho sbattuto contro tutte le difficoltà di chi non trova clienti e poi ho capito come usare i social per farmi trovare. Oggi lavoro nel benessere da oltre dieci anni e lo insegno a chi vuole fare lo stesso.">
-        <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link>
         <Link href="#bar" className="btn btn-ghost">Leggi la mia storia</Link>
       </PageHero>
 
@@ -96,7 +96,7 @@ export default function ChiSono() {
       <Chapter id="oggi" n="05" label="Oggi" title="Oggi lo insegno *a te*." img={<Slot kind="foto" id="story-oggi" label="Rita oggi" ratio="4/5" art="arch" />}>
         <p>Oggi lavoro nel benessere da oltre dieci anni. Ho trasformato quello che ho imparato in due percorsi: uno per la tua attività, uno per le tue mani.</p>
         <p>Con il <Link href="/percorsi/metodo-agenda" className="ulink text-ink">Metodo A.G.E.N.D.A.</Link> e <Link href="/percorsi/sold-out" className="ulink text-ink">Metodo Sold Out</Link> ti aiuto a farti trovare e scegliere. Con il <Link href="/percorsi/metodo-rita-dolbakian" className="ulink text-ink">Metodo Rita Dolbakian</Link> ti insegno a massaggiare con mani sicure. Seguo poche persone alla volta, perché voglio esserci davvero.</p>
-        <div className="flex flex-wrap gap-3 pt-2"><Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link><Link href="/percorsi" className="btn btn-ghost">Scegli il tuo percorso</Link></div>
+        <div className="flex flex-wrap gap-3 pt-2"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link><Link href="/percorsi" className="btn btn-ghost">Scegli il tuo percorso</Link></div>
       </Chapter>
 
       <section className="section-dark section">
@@ -172,7 +172,7 @@ export default function ChiSono() {
         { q: "Come hai trovato i tuoi clienti?", a: "All'inizio solo con il passaparola, provando un po' di tutto. Poi ho imparato a usare i social e a mettere in fila i passaggi, dal «ti vedo» al «ti scrivo»." },
         { q: "Di cosa ti occupi oggi?", a: "Aiuto operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Metodo Sold Out) e insegno a massaggiare con il mio metodo, online e in presenza." },
         { q: "Perché segui poche persone alla volta?", a: "Perché se ti seguo voglio sapere come ti chiami e a che punto sei. Con cento persone insieme non ci riuscirei." },
-        { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento di circa 30 minuti. Da lì capiamo insieme quale percorso ha senso." },
+        { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento. Da lì capiamo insieme quale percorso ha senso." },
         { q: "Dove ti trovo sui social?", a: "Su Instagram @rita_dolbakian, su YouTube e su TikTok @rita.dolbakian." },
       ]} />
       <CtaBand title="Se questa storia somiglia alla tua, *parliamone*." />

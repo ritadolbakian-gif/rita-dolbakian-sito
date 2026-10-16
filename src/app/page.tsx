@@ -119,7 +119,7 @@ export default function Home() {
           <div className="mt-14 grid gap-px bg-[var(--line)] md:grid-cols-3 border border-[var(--line)] rounded-3xl overflow-hidden">
             {[
               { n: "1", t: "La guida gratuita", d: "«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
-              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti. Una chiacchierata per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
+              { n: "2", t: "La call di orientamento", d: "Una chiacchierata a quattr'occhi per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota la call con me" },
               { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi il massimo affiancamento, la mentorship 1:1 Metodo Sold Out.", href: "/percorsi", cta: "Scegli il tuo percorso" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
@@ -177,7 +177,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-ivory/15 pt-6 text-ivory/70">
               <span className="eyebrow">Per iniziare</span>
               <Link href="/guida-gratuita" className="ulink text-ivory">Guida gratuita</Link>
-              <Link href="/call-orientamento" className="ulink text-ivory">Call di orientamento · 30 minuti</Link>
+              <Link href="/call-orientamento" className="ulink text-ivory">Call di orientamento</Link>
               <Link href="/corsi" className="ulink text-ivory">Tutti i corsi e i prodotti</Link>
             </div>
           </Reveal>
@@ -245,8 +245,8 @@ export default function Home() {
 
       {/* 10 — FAQ */}
       <Faq title="Prima di *iniziare*." items={[
-        { q: "Come capisco quale percorso fa per me?", a: "Puoi fare il test di orientamento nella pagina Percorsi, scaricare la guida gratuita oppure prenotare la call: circa 30 minuti, per capire insieme da dove ripartire." },
-        { q: "La call di orientamento costa qualcosa?", a: "No, è gratuita. In circa 30 minuti mi racconti a che punto sei e io ti dico cosa farei al posto tuo." },
+        { q: "Come capisco quale percorso fa per me?", a: "Puoi fare il test di orientamento nella pagina Percorsi, scaricare la guida gratuita oppure prenotare la call, per capire insieme da dove ripartire." },
+        { q: "La call di orientamento costa qualcosa?", a: "No, è gratuita. In call mi racconti a che punto sei e io ti dico cosa farei al posto tuo." },
         { q: "Devo già avere clienti o un seguito sui social?", a: "No. Serve avere una competenza nel benessere. Il resto lo costruiamo insieme." },
         { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Metodo Rita Dolbakian parte dalle fondamenta del tocco e prosegue per livelli, online e in presenza." },
         { q: "Mi garantisci dei risultati?", a: "No, e diffido di chi lo fa. Ti do un metodo e un affiancamento. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
@@ -287,7 +287,7 @@ export default function Home() {
           <Reveal delay={0.2}>
             <p className="mt-8 text-xl font-display italic text-ivory/80">Scrivimi o prenota: ti rispondo io.</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
+              <Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link>
               <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
             </div>
           </Reveal>

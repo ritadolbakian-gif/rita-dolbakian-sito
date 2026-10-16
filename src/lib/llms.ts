@@ -27,7 +27,7 @@ export function llmsIndex() {
 
 ## Per iniziare (gratis)
 - [Guida Metodo A.G.E.N.D.A.](${U}/guida-gratuita): guida pratica gratuita in PDF per fare i primi 10 clienti online.
-- [Call di orientamento](${U}/call-orientamento): videochiamata gratuita di circa 30 minuti con Rita.
+- [Call di orientamento](${U}/call-orientamento): videochiamata gratuita con Rita, fino a un'ora.
 
 ## Prodotti digitali
 - [Instagram Stories che vendono](${U}/prodotti/instagram-stories-che-vendono): manuale operativo per usare le Stories e trasformare le follower in clienti.

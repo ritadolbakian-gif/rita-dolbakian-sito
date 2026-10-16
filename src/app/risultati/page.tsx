@@ -34,7 +34,7 @@ export default function Risultati() {
       <ReviewsSection />
 
       <section className="section"><div className="wrap"><TrustBar /></div></section>
-      <CtaBand title="Il prossimo racconto potrebbe essere *il tuo*." primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
+      <CtaBand title="Il prossimo racconto potrebbe essere *il tuo*." primary={{ href: "/call-orientamento", label: "Prenota la call con me" }} />
       <Faq items={[
         { q: "I risultati sono garantiti?", a: "No. Le testimonianze raccontano esperienze individuali: ognuna parte da una situazione diversa e il risultato dipende anche dall'impegno." },
         { q: "Le testimonianze sono vere?", a: "Pubblichiamo solo storie reali, con nome, cognome e autorizzazione scritta della persona." },

@@ -65,7 +65,7 @@ export default async function Categoria({ params }: PageProps<"/blog/categoria/[
           </div>
         </div>
       </section>
-      <CtaBand title="Vuoi che lo guardiamo *insieme*?" primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} secondary={{ href: "/guida-gratuita", label: "Ricevi la guida" }} />
+      <CtaBand title="Vuoi che lo guardiamo *insieme*?" primary={{ href: "/call-orientamento", label: "Prenota la call con me" }} secondary={{ href: "/guida-gratuita", label: "Ricevi la guida" }} />
     </>
   );
 }

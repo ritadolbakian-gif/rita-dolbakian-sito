@@ -21,7 +21,7 @@ export default function Percorsi() {
     <>
       <Crumbs trail={[["Percorsi", "/percorsi"]]} />
       <PageHero dark bgId="hero-pensierosa" eyebrow="Percorsi" title="Quale percorso fa per *te*?" answer="Ho costruito due strade. Se lavori nel benessere e vuoi riempire l'agenda, ci sono il Metodo A.G.E.N.D.A. e, per il massimo affiancamento, il Metodo Sold Out. Se vuoi imparare a massaggiare o perfezionare la tecnica, c'è il Metodo Rita Dolbakian. Ti aiuto a capire da quale partire.">
-        <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link>
         <a href="#orientamento" className="btn btn-ghost">Fai il test di 3 domande</a>
       </PageHero>
 
@@ -114,7 +114,7 @@ export default function Percorsi() {
         { q: "C'è una garanzia?", a: "Sì. Per Metodo A.G.E.N.D.A. e Metodo Rita Dolbakian: soddisfatti o rimborsati per tutta la durata, se partecipi agli incontri e svolgi le attività richieste. Per il Metodo Sold Out: la garanzia «Primi 2 mesi», con le condizioni indicate nella pagina." },
         { q: "Devo già lavorare nel benessere?", a: "Per A.G.E.N.D.A. e Metodo Sold Out sì: sono pensati per chi ha già una competenza. Per imparare a massaggiare c'è il Metodo Rita Dolbakian." },
         { q: "Quanto costano i percorsi?", a: "Il prezzo del Metodo A.G.E.N.D.A. e del Metodo Sold Out lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso fa per te. Se vuoi, ne parliamo lì anche del pagamento a rate." },
-        { q: "Da dove si comincia?", a: "Dalla guida gratuita o dalla call di orientamento di circa 30 minuti. Da lì si capisce insieme quale percorso ha senso." },
+        { q: "Da dove si comincia?", a: "Dalla guida gratuita o dalla call di orientamento. Da lì si capisce insieme quale percorso ha senso." },
       ]} />
       <CtaBand />
     </>

@@ -47,7 +47,7 @@ export default function MetodoAgenda() {
       <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo A.G.E.N.D.A.", "/percorsi/metodo-agenda"]]} />
       <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Percorso di 6 mesi in 11 moduli con affiancamento individuale di Rita Dolbakian: il sistema per riempire l'agenda di un'attività nel benessere con Instagram, TikTok, posizionamento e strategie di acquisizione clienti.", "/percorsi/metodo-agenda", ["online"])} />
       <PageHero dark bgId="hero-scrive" eyebrow="Metodo A.G.E.N.D.A." title="L'agenda piena non deve dipendere *dalla stagione*." answer="Il Metodo A.G.E.N.D.A. è il mio sistema per riempire l'agenda usando social, posizionamento professionale e strategie di acquisizione clienti. 6 mesi, 11 moduli e affiancamento individuale incluso. Si parte da una call di orientamento.">
-        <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
+        <Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
       </PageHero>
 
@@ -128,7 +128,7 @@ export default function MetodoAgenda() {
           <Label n="05" t="Come funziona" />
           <Heading text="Dalla guida al percorso, *senza saltare niente*." className="text-5xl md:text-6xl max-w-3xl" />
           <ol className="mt-12 grid gap-8 md:grid-cols-3">
-            {[["La guida gratuita", "«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Circa 30 minuti. Mi racconti dove sei, ti dico se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Metodo Sold Out."]].map(([t, d], i) => (
+            {[["La guida gratuita", "«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online. È il modo più semplice per cominciare."], ["La call di orientamento", "Mi racconti dove sei, ti dico se e come posso aiutarti."], ["L'affiancamento A.G.E.N.D.A.", "Se ha senso per entrambe, si parte insieme. Il passo successivo, quando sei pronta, è Metodo Sold Out."]].map(([t, d], i) => (
               <li key={t}><Reveal delay={i * 0.1}><span className="font-display text-6xl kw">0{i + 1}</span><h3 className="font-display text-3xl mt-2">{t}</h3><p className="mt-3 text-stone">{d}</p></Reveal></li>
             ))}
           </ol>
@@ -179,7 +179,7 @@ export default function MetodoAgenda() {
         { t: "Messa in pratica", a: "Una cosa a settimana, e se non funziona la correggiamo insieme.", b: "Un piano per le prossime settimane e i quattro numeri da guardare per capire se funziona." },
       ]} />
 
-      <Steps n="07" label="La call" title="I 30 minuti, *minuto per minuto*." dark note={<Tbc>svolgimento reale della call</Tbc>} items={[
+      <Steps n="07" label="La call" title="La call, *passo per passo*." dark note={<Tbc>svolgimento reale della call</Tbc>} items={[
         { t: "Ti ascolto", d: "Mi racconti cosa fai, per chi e cosa non ti torna. Non devi preparare niente." },
         { t: "Guardiamo i fatti", d: "Profilo, scheda, messaggi, prezzi: dove arrivano le richieste e dove si fermano." },
         { t: "Cosa farei io", d: "Ti dico da dove partirei, e cosa lascerei stare per ora." },
@@ -263,7 +263,7 @@ export default function MetodoAgenda() {
       <Faq items={[
         { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere, in sei passi: Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È anche il primo percorso di affiancamento." },
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono un ordine preciso da seguire." },
-        { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. È un confronto per capire se e come lavorare insieme." },
+        { q: "Quanto dura la call di orientamento?", a: "Può durare fino a un'ora. È un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
         { q: "Quanto costa il percorso?", a: "Il prezzo lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso è adatto a te." },
         { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è la mentorship 1:1 Metodo Sold Out, il massimo affiancamento, con 8 posti per trimestre." },

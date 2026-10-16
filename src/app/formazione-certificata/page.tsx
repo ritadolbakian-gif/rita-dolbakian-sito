@@ -155,7 +155,7 @@ export default function FormazioneCertificata() {
         { q: "Con questo attestato posso aprire un'attività?", a: "L'attestato attesta il percorso formativo. Per aprire un'attività servono i requisiti e le autorizzazioni previsti dalla legge: se ne parla in call." },
         { q: "Come posso verificare un attestato?", a: <>Se la verifica è attiva, basta inserire il codice riportato sull'attestato. <Tbc>se attivare la verifica</Tbc></>, plain: "Se la verifica è attiva, basta inserire il codice riportato sull'attestato." },
       ]} />
-      <CtaBand title="Vuoi sapere da quale *livello* partire?" primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
+      <CtaBand title="Vuoi sapere da quale *livello* partire?" primary={{ href: "/call-orientamento", label: "Prenota la call con me" }} />
     </>
   );
 }

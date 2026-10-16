@@ -13,7 +13,7 @@ export default function Contatti() {
   return (
     <>
       <Crumbs trail={[["Contatti", "/contatti"]]} />
-      <PageHero dark bgId="hero-seduta" eyebrow="Contatti" title="Scrivimi, *ti rispondo io*." answer="Per una domanda sui percorsi puoi usare il modulo qui sotto, scrivere su WhatsApp o sui social. Se preferisci un confronto a voce, prenota la call gratuita di orientamento: circa 30 minuti.">
+      <PageHero dark bgId="hero-seduta" eyebrow="Contatti" title="Scrivimi, *ti rispondo io*." answer="Per una domanda sui percorsi puoi usare il modulo qui sotto, scrivere su WhatsApp o sui social. Se preferisci un confronto a voce, prenota la call gratuita di orientamento.">
         <a href="#prenota" className="btn btn-primary">Fissa la call con me <span className="arr">→</span></a>
         <a href="#scrivimi" className="btn btn-ghost">Scrivimi un messaggio</a>
       </PageHero>
@@ -22,7 +22,7 @@ export default function Contatti() {
           <div className="space-y-6">
             <Label t="Fissa la call" />
             <Heading text="Preferisci *parlarne a voce*?" className="text-4xl md:text-5xl" />
-            <p className="text-stone max-w-sm">Scegli giorno e orario qui accanto: è una call gratuita di circa 30 minuti, in videochiamata. Mi racconti dove sei e ti dico da dove partirei io.</p>
+            <p className="text-stone max-w-sm">Scegli giorno e orario qui accanto: è una call gratuita in videochiamata, che può durare fino a un'ora. Mi racconti dove sei e ti dico da dove partirei io.</p>
           </div>
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
         </div>
@@ -45,7 +45,7 @@ export default function Contatti() {
       <Faq items={[
         { q: "In quanto tempo ricevo risposta?", a: <>Rispondo di solito entro un giorno lavorativo. <Tbc>tempi reali</Tbc></>, plain: "Rispondo di solito entro un giorno lavorativo." },
         { q: "Posso scrivere su WhatsApp?", a: <>Sì, usa il pulsante in basso a destra. <Tbc>numero WhatsApp</Tbc></>, plain: "Sì, usa il pulsante WhatsApp in basso a destra." },
-        { q: "Preferisco parlare a voce: come faccio?", a: "Fissa la call di orientamento gratuita dal calendario in questa pagina: circa 30 minuti, in videochiamata." },
+        { q: "Preferisco parlare a voce: come faccio?", a: "Fissa la call di orientamento gratuita dal calendario in questa pagina, in videochiamata." },
         { q: "Dove si svolgono le lezioni in presenza?", a: <><Tbc>sedi</Tbc></>, plain: "Le sedi saranno indicate nel calendario." },
         { q: "Posso proporre una collaborazione?", a: "Sì, scrivimi dal modulo qui sopra con due righe su di te e sulla proposta." },
       ]} />

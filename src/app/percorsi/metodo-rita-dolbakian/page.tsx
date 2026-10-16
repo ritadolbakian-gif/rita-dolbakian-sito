@@ -166,7 +166,7 @@ export default function MetodoRD() {
         { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Serve partecipare agli incontri (online e in presenza) e svolgere gli esercizi richiesti, e dimostrarlo." },
         { q: "Il metodo è una terapia?", a: "No. È formazione su tecnica manuale e benessere. Non offre promesse di cura né indicazioni mediche." },
       ]} />
-      <CtaBand title="Prima di scegliere, *parliamone*." primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />
+      <CtaBand title="Prima di scegliere, *parliamone*." primary={{ href: "/call-orientamento", label: "Prenota la call con me" }} />
     </>
   );
 }

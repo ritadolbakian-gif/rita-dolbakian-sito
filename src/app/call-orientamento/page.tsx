@@ -7,20 +7,21 @@ import { BookingCalendar } from "@/components/BookingCalendar";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Prenota la call gratuita di orientamento", "Prenota una call gratuita di circa 30 minuti con Rita Dolbakian: una chiacchierata a quattr'occhi.", "/call-orientamento", "/media/rita-palco-closeup.webp");
+export const metadata = meta("Prenota la call gratuita di orientamento", "Prenota una call gratuita con Rita Dolbakian: una videochiamata a quattr'occhi per capire da dove ripartire.", "/call-orientamento", "/media/hero-massaggio.webp");
 
 export default function Call() {
   return (
     <>
       <Crumbs trail={[["Call di orientamento", "/call-orientamento"]]} />
-      <PageHero dark bgId="hero-call" eyebrow="Call di orientamento" title="30 minuti per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In circa 30 minuti ti dico dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita, e non è una telefonata per venderti qualcosa: se il mio percorso non fa per te, te lo dico." />
+      <PageHero dark bgId="hero-massaggio" eyebrow="Call di orientamento" title="Una call per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In call ti dico dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita, e non è una telefonata per venderti qualcosa: se il mio percorso non fa per te, te lo dico." />
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="space-y-10">
-            <div><Label t="Prima" /><p className="text-stone">Scegli l'orario che ti va bene. Ricevi la conferma via email, e basta.</p></div>
-            <div><Label t="Durante" /><p className="text-stone">Parliamo di dove sei, di cosa vuoi cambiare e di cosa ha senso fare. Ti dico se posso aiutarti oppure no. Lavoro solo con poche persone.</p></div>
-            <div><Label t="Dopo" /><p className="text-stone">Hai tutto il tempo per decidere, senza fretta.</p></div>
-            <Heading text="30 minuti, *solo per te*." className="text-4xl" as="h2" />
+            <div>
+              <Label t="Prenota" />
+              <Heading text="Scegli *giorno e orario*." className="text-4xl md:text-5xl" as="h2" />
+              <p className="mt-4 text-stone max-w-sm">È una videochiamata a quattr'occhi che può durare fino a un'ora. Dopo la prenotazione ricevi la conferma via email.</p>
+            </div>
             <Reveal><Slot kind="foto" id="call-hero" label="Rita sorride alla videochiamata" ratio="4/5" art="orbs" className="max-w-xs" /></Reveal>
           </div>
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
@@ -33,7 +34,7 @@ export default function Call() {
       </div></section>
 
       <Faq items={[
-        { q: "La call è gratuita?", a: "Sì. Dura circa 30 minuti e non ti costa nulla." },
+        { q: "La call è gratuita?", a: "Sì, non ti costa nulla. Può durare fino a un'ora." },
         { q: "È una telefonata di vendita?", a: "No. Parliamo della tua attività, non dei miei corsi. Se alla fine ha senso lavorare insieme te lo propongo, altrimenti ci salutiamo." },
         { q: "Come mi preparo?", a: "Basta che pensi a dove sei oggi con la tua attività e a cosa vorresti cambiare. Non serve preparare altro." },
         { q: "E se dopo la call il percorso non fa per me?", a: "Va benissimo, ci salutiamo. Ti dico comunque se e come posso aiutarti." },

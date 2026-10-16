@@ -6,7 +6,7 @@ import { BookingCalendar } from "@/components/BookingCalendar";
 
 export const metadata: Metadata = {
   title: "Richiesta ricevuta — Guida Metodo A.G.E.N.D.A.",
-  description: "Grazie! Scarica subito la Guida Metodo A.G.E.N.D.A. e, se vuoi, prenota la tua call gratuita di 30 minuti con Rita Dolbakian.",
+  description: "Grazie! Scarica subito la Guida Metodo A.G.E.N.D.A. e, se vuoi, prenota la tua call gratuita con Rita Dolbakian.",
   robots: { index: false, follow: true },
   alternates: { canonical: "/richiesta-ricevuta" },
 };
@@ -39,8 +39,8 @@ export default function RichiestaRicevuta() {
           <div className="space-y-6">
             <Label t="Il passo successivo" />
             <Heading text="Vuoi *parlarne* con me?" className="text-4xl md:text-5xl" />
-            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita di circa 30 minuti. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
-            <ul className="space-y-2 text-sm text-stone"><li>✓ Circa 30 minuti, in videochiamata</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
+            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
+            <ul className="space-y-2 text-sm text-stone"><li>✓ In videochiamata, fino a un'ora</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
           </div>
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
         </div>
