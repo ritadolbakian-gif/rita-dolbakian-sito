@@ -49,6 +49,7 @@ const jsonLd = {
 };
 
 const GTM_ID = "GTM-M6XPR5LZ";
+const GA4_ID = "G-MYN73YRN8K";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -62,6 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="consent-default" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});gtag('set','url_passthrough',true);try{var s=JSON.parse(localStorage.getItem('rd-consent-v1')||'null');if(s&&s.ts&&(Date.now()-s.ts)<=15552000000){gtag('consent','update',{ad_storage:s.marketing?'granted':'denied',ad_user_data:s.marketing?'granted':'denied',ad_personalization:s.marketing?'granted':'denied',analytics_storage:s.analytics?'granted':'denied'});}}catch(e){}` }} />
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');` }} />
+        {/* Google Analytics 4 (gtag.js) — rispetta il Consent Mode impostato sopra */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');` }} />
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <SmoothScroll />
