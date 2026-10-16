@@ -204,7 +204,7 @@ export default function SoldOut() {
       <ReviewsSection />
 
       <Objections n="10" items={[
-        { t: "Non mi piace espormi in video", d: "Il metodo si basa su un'identità personale riconoscibile, quindi serve metterci faccia e voce. Lo facciamo con calma, un passo alla volta. Se non è per te, meglio dirselo prima." },
+        { t: "Non mi piace espormi in video", d: "Il metodo si basa su un'identità personale riconoscibile, quindi serve metterci faccia e voce. All'inizio è normale sentirsi impacciate: si comincia con video brevi e si migliora di settimana in settimana. Se proprio non è per te, meglio dirselo prima." },
         { t: "Costa più di quanto posso spendere ora", d: "Capisco. Ne parliamo in call, senza pressione. C'è anche il Metodo A.G.E.N.D.A. come primo passo." },
         { t: "Non sono brava con la tecnologia", d: "Per questo piattaforma, landing page e prodotto digitale li facciamo noi: zero stress tecnico." },
         { t: "E se non funziona per me?", d: "C'è la garanzia «Primi 2 mesi». Non prometto risultati economici, che nessuno può garantire." },

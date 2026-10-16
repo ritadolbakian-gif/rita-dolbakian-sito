@@ -10,7 +10,7 @@ import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
 export const metadata = {
-  ...meta("Blog per chi lavora nel benessere", "Articoli di Rita Dolbakian su clienti, prezzi, Instagram, scheda Google e formazione nel massaggio. Guide pratiche, un passo alla volta.", "/blog", "/media/hero-scrive.webp"),
+  ...meta("Blog per chi lavora nel benessere", "Articoli di Rita Dolbakian su clienti, prezzi, Instagram, scheda Google e formazione nel massaggio. Guide pratiche scritte da una massaggiatrice.", "/blog", "/media/hero-scrive.webp"),
   alternates: { canonical: "/blog", types: { "application/rss+xml": "/blog/feed.xml" } },
 };
 
@@ -31,7 +31,7 @@ export default function Blog() {
         author: { "@type": "Person", "@id": `${SITE.url}/#rita`, name: "Rita Dolbakian" }, publisher: { "@id": `${SITE.url}/#academy` },
         blogPost: posts.map((p) => ({ "@type": "BlogPosting", "@id": `${SITE.url}/blog/${p.slug}#article`, headline: p.title, description: p.metaDescription, url: `${SITE.url}/blog/${p.slug}`, datePublished: p.date, dateModified: p.updated, image: `${SITE.url}/media/blog-${p.slug}.webp`, author: { "@id": `${SITE.url}/#rita` } })),
       }} />
-      <PageHero dark bgId="hero-scrive" eyebrow="Il blog" title="Guide per *riempire l'agenda* senza ansia." answer="In questo blog raccolgo guide pratiche per chi lavora nel benessere: come trovare clienti, stabilizzare l'agenda, stabilire i prezzi, usare Instagram e la scheda Google, e come scegliere un corso di massaggio. Un tema alla volta, con parole semplici.">
+      <PageHero dark bgId="hero-scrive" eyebrow="Il blog" title="Quello che ho imparato per *riempire l'agenda*." answer="In questo blog raccolgo guide pratiche per chi lavora nel benessere: come trovare clienti, stabilizzare l'agenda, stabilire i prezzi, usare Instagram e la scheda Google, e come scegliere un corso di massaggio. Un tema alla volta, con parole semplici.">
         <Link href={`/blog/${featured.slug}`} className="btn btn-primary">Leggi la guida per trovare clienti <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
       </PageHero>

@@ -94,7 +94,7 @@ export default function Percorsi() {
       <section className="section-dark section">
         <div className="wrap">
           <Label n="04" t="Da dove partire" />
-          <Heading text="Un passo alla volta, *senza fretta*." className="text-5xl md:text-6xl max-w-3xl" />
+          <Heading text="Quattro passi, *nell'ordine giusto*." className="text-5xl md:text-6xl max-w-3xl" />
           <ol className="mt-12 grid gap-4 md:grid-cols-4">
             {[["Gratis", "La guida e la call di orientamento", "/guida-gratuita"], ["Primo passo", "Un prodotto digitale, per iniziare subito", "/corsi#digitali"], ["Affiancamento", "Metodo A.G.E.N.D.A., con me accanto", "/percorsi/metodo-agenda"], ["Il massimo", "Mentorship 1:1 Metodo Sold Out", "/percorsi/sold-out"]].map(([k, d, h], i) => (
               <li key={k}><Reveal delay={i * 0.08}><Link href={h} className="lift block rounded-3xl border border-ivory/15 p-6 h-full"><span className="font-display text-5xl kw leading-none">0{i + 1}</span><h3 className="font-display text-2xl mt-3">{k}</h3><p className="mt-2 text-ivory/70 text-sm">{d}</p></Link></Reveal></li>

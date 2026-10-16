@@ -19,7 +19,7 @@ export default function Page() {
       checkout={CHECKOUT.stories}
       cta="Voglio il manuale operativo a 37 €"
       painTitle="Pubblichi Stories che *nessuno* considera?"
-      painNote="Non è colpa tua. Il problema non è la tua competenza tecnica: è che nessuno ti ha mai spiegato come usare le Stories per far prenotare."
+      painNote="Il tuo lavoro lo sai fare benissimo. Ti manca sapere cosa mettere nelle Stories perché qualcuno ti scriva per prenotare."
       pains={["Pubblicare Stories ti sembra una perdita di tempo.", "Ti senti bloccata davanti alla fotocamera.", "Hai paura di sembrare invadente o poco professionale.", "Finisci per non pubblicare nulla."]}
       solutionTitle="Il manuale che ti dice *cosa* pubblicare."
       solution={<p>«Instagram Stories che vendono» è il manuale operativo con il metodo che uso io: Stories pensate per farti ricordare, farti riconoscere come esperta e portare le tue follower a prenotare il primo trattamento.</p>}

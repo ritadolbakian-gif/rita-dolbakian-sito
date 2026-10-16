@@ -13,7 +13,7 @@ export default function Call() {
   return (
     <>
       <Crumbs trail={[["Call di orientamento", "/call-orientamento"]]} />
-      <PageHero dark bgId="hero-laptop" eyebrow="Call di orientamento" title="30 minuti per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In circa 30 minuti ti dico dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva." />
+      <PageHero dark bgId="hero-laptop" eyebrow="Call di orientamento" title="30 minuti per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In circa 30 minuti ti dico dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita, e non è una telefonata per venderti qualcosa: se il mio percorso non fa per te, te lo dico." />
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="space-y-10">
@@ -34,7 +34,7 @@ export default function Call() {
 
       <Faq items={[
         { q: "La call è gratuita?", a: "Sì. Dura circa 30 minuti e non ti costa nulla." },
-        { q: "È una telefonata di vendita?", a: "No. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva. È una chiacchierata alla pari." },
+        { q: "È una telefonata di vendita?", a: "No. Parliamo della tua attività, non dei miei corsi. Se alla fine ha senso lavorare insieme te lo propongo, altrimenti ci salutiamo." },
         { q: "Come mi preparo?", a: "Basta che pensi a dove sei oggi con la tua attività e a cosa vorresti cambiare. Non serve preparare altro." },
         { q: "E se dopo la call il percorso non fa per me?", a: "Va benissimo, ci salutiamo. Ti dico comunque se e come posso aiutarti." },
         { q: "Come si svolge, e dove?", a: <>Si svolge in videochiamata. <Tbc>piattaforma e link</Tbc></>, plain: "Si svolge in videochiamata." },

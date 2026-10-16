@@ -18,7 +18,7 @@ const tappe = [
   { id: "social", n: "4", t: "I social", d: "Ho capito come farmi trovare." },
   { id: "oggi", n: "5", t: "Oggi", d: "Lo insegno a te." },
 ];
-const values = [["Ascolto", "Prima di dire cosa fare, capire dove sei."], ["Chiarezza", "Parole semplici, passi ordinati."], ["Presenza", "Esserci davvero, non a distanza di sicurezza."], ["Pochi, ma seguiti davvero", "Seguo poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza."]];
+const values = [["Ascolto", "Prima di dire cosa fare, capire dove sei."], ["Chiarezza", "Parole semplici, passi ordinati."], ["Presenza", "Esserci davvero, non a distanza di sicurezza."], ["Poche persone alla volta", "Seguo poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza."]];
 
 function Chapter({ id, n, label, title, children, img, flip = false }: { id: string; n: string; label: string; title: string; children: React.ReactNode; img: React.ReactNode; flip?: boolean }) {
   return (
@@ -76,12 +76,12 @@ export default function ChiSono() {
       <Chapter id="fatica" n="03" label="La fatica" title="Ho affrontato *tutte le difficoltà*." img={<Slot kind="foto" id="story-frustrazione" label="Rita frustrata" ratio="4/3" art="waves" />}>
         <p>Qui è arrivata la parte dura. Non trovavo clienti. Solo qualche passaparola, mesi pieni seguiti da mesi vuoti, il telefono che non suonava, i conti che non tornavano.</p>
         <p>Ho provato di tutto, spesso a caso: un po' di Instagram, qualche sconto, qualche collaborazione. Andavo a tentativi, e a fine mese non sapevo se avevo guadagnato o mi ero solo stancata.</p>
-        <p>Se ti riconosci, sappi che non è colpa tua. Nessuno mi aveva mai insegnato come si fa a farsi trovare e scegliere.</p>
+        <p>Nessuno mi aveva mai spiegato come ci si fa trovare. Ai corsi impari le manovre, non come riempire l'agenda.</p>
       </Chapter>
 
       <Chapter id="social" n="04" label="I social" title="Ho capito come *farmi trovare*." flip img={<Slot kind="foto" id="story-social" label="Rita registra contenuti" ratio="4/5" art="leaf" />}>
         <p>Poi ho capito una cosa. I social non servono a «fare numeri»: servono a far vedere chi sei prima che qualcuno ti scriva. Ho imparato a usarli per trovare clienti, e in particolare clienti alto-spendenti, che scelgono la qualità e capiscono il valore di quello che fai.</p>
-        <p>Ho cominciato a registrare contenuti ovunque, anche all'aperto con il telefono su un treppiede. Ho messo ordine nel percorso che porta una persona dal «ti vedo» al «ti scrivo». E ho smesso di andare a tentativi.</p>
+        <p>Ho cominciato a registrare contenuti ovunque, anche all'aperto con il telefono su un treppiede. Ho messo ordine nel percorso che porta una persona dal «ti vedo» al «ti scrivo». E ho smesso di improvvisare.</p>
         {showRes ? (
           <div className="not-prose rounded-3xl bg-blush/40 p-6">
             <p className="font-display text-6xl md:text-7xl kw leading-none">{PERSONAL_RESULT.amount}</p>
@@ -169,13 +169,13 @@ export default function ChiSono() {
       <Faq items={[
         { q: "Chi sei?", a: "Sono Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni. Prima lavoravo in un bar. Ho scelto il massaggio, ho faticato a trovare clienti e ho imparato a usare i social per farmi trovare." },
         { q: "Perché hai lasciato il bar?", a: "Perché ero frustrata e sapevo di meritare di più. Volevo costruire qualcosa di mio, con le mie mani." },
-        { q: "Come hai trovato i tuoi clienti?", a: "All'inizio solo con il passaparola, e andando a tentativi. Poi ho imparato a usare i social e a costruire un percorso chiaro, dal «ti vedo» al «ti scrivo»." },
+        { q: "Come hai trovato i tuoi clienti?", a: "All'inizio solo con il passaparola, provando un po' di tutto. Poi ho imparato a usare i social e a mettere in fila i passaggi, dal «ti vedo» al «ti scrivo»." },
         { q: "Di cosa ti occupi oggi?", a: "Aiuto operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Metodo Sold Out) e insegno a massaggiare con il mio metodo, online e in presenza." },
-        { q: "Perché segui poche persone alla volta?", a: "Perché il lavoro vero richiede ascolto, attenzione e presenza. Preferisco seguire poche persone davvero, che molte a distanza." },
+        { q: "Perché segui poche persone alla volta?", a: "Perché se ti seguo voglio sapere come ti chiami e a che punto sei. Con cento persone insieme non ci riuscirei." },
         { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento di circa 30 minuti. Da lì capiamo insieme quale percorso ha senso." },
         { q: "Dove ti trovo sui social?", a: "Su Instagram @rita_dolbakian, su YouTube e su TikTok @rita.dolbakian." },
       ]} />
-      <CtaBand title="Se ti riconosci in questa storia, *parliamone*." />
+      <CtaBand title="Se questa storia somiglia alla tua, *parliamone*." />
     </>
   );
 }

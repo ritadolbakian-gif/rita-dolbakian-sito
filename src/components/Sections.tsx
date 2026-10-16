@@ -146,7 +146,7 @@ export function GuaranteeBand({ compact = false, cta }: { compact?: boolean; cta
           <div>
             <p className="eyebrow !text-white/80">Garanzia</p>
             <h2 className={`font-display mt-2 leading-[1.02] ${compact ? "text-3xl md:text-4xl" : "text-4xl md:text-6xl"}`}>Soddisfatti <em className="!text-white">o rimborsati</em>.</h2>
-            <p className={`mt-3 max-w-xl text-white/90 ${compact ? "text-[0.97rem]" : "text-lg"}`}>Vale su tutti i miei percorsi e per tutta la loro durata, non solo per qualche giorno. Se non sei soddisfatta, ti rimborso: il rischio è mio. A una condizione: partecipi davvero, e lo dimostri.</p>
+            <p className={`mt-3 max-w-xl text-white/90 ${compact ? "text-[0.97rem]" : "text-lg"}`}>Vale per tutta la durata del percorso, non solo per i primi giorni. Se non sei soddisfatta ti restituisco i soldi. Ti chiedo una cosa sola: che tu partecipi agli incontri e faccia le attività, in modo che si possa vedere.</p>
             {!compact && <p className="mt-3 text-sm text-white/80">Cosa devi fare è scritto qui sotto e nella <Link href="/rimborsi" className="underline underline-offset-4">pagina Recesso e garanzia</Link>. Il recesso di legge di 14 giorni resta valido, in più.</p>}
           </div>
         </Reveal>

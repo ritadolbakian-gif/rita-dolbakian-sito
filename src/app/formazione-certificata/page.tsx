@@ -20,7 +20,7 @@ const steps = [
   ["Colloquio", "Una chiacchierata per scegliere il livello giusto."],
   ["Studio online", "Lezioni video da seguire con i tuoi tempi."],
   ["Pratica in presenza", "Mani su mani, in gruppi piccoli."],
-  ["Verifica", "Una valutazione finale, chiara."],
+  ["Verifica", "Una verifica finale."],
   ["Attestato", "Il riconoscimento del percorso fatto."],
 ];
 
@@ -29,7 +29,7 @@ export default function FormazioneCertificata() {
     <>
       <Crumbs trail={[["Formazione certificata", "/formazione-certificata"]]} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Course", name: "Formazione certificata Rita Dolbakian Academy", description: "Percorso a tre livelli di formazione pratica sul massaggio, con attestato finale.", provider: { "@type": "EducationalOrganization", name: "Rita Dolbakian Academy" }, inLanguage: "it-IT" }} />
-      <PageHero dark bgId="hero-massaggio-2" eyebrow="Formazione certificata" title="Vuoi finire il percorso con *un attestato* in mano?" answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
+      <PageHero dark bgId="hero-massaggio-2" eyebrow="Formazione certificata" title="Il percorso che finisce *con un attestato*." answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
         <Link href="/call-orientamento" className="btn btn-primary">Capiamo da quale livello partire <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
       </PageHero>
@@ -53,7 +53,7 @@ export default function FormazioneCertificata() {
         <div className="wrap">
           <Label n="02" t="Il percorso a tappe" />
           <Heading text="Tre livelli. *Una* strada." className="text-5xl md:text-7xl" />
-          <p className="mt-5 text-lg text-stone max-w-xl">Ogni livello ha un obiettivo chiaro, dei requisiti e una verifica finale. Così sai sempre dove sei e cosa manca.</p>
+          <p className="mt-5 text-lg text-stone max-w-xl">Ogni livello ha il suo obiettivo, i suoi requisiti e una verifica alla fine. Così sai sempre dove sei e cosa manca.</p>
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {levels.map((l, i) => (
               <Reveal key={l.n} delay={i * 0.1}>
@@ -125,12 +125,12 @@ export default function FormazioneCertificata() {
             <Label n="06" t="Per chi è" />
             <Heading text="Per chi vuole farlo *bene*." className="text-5xl" />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl bg-blush/40 p-6"><p className="font-display text-2xl">Fa per te se…</p><ul className="mt-3 space-y-2 text-sm text-stone"><li>✓ vuoi basi solide e un percorso ordinato;</li><li>✓ ti piace imparare facendo;</li><li>✓ vuoi un riconoscimento chiaro del tuo percorso.</li></ul></div>
+              <div className="rounded-3xl bg-blush/40 p-6"><p className="font-display text-2xl">Fa per te se…</p><ul className="mt-3 space-y-2 text-sm text-stone"><li>✓ vuoi basi solide e un percorso ordinato;</li><li>✓ ti piace imparare facendo;</li><li>✓ vuoi un documento che dica cosa hai studiato.</li></ul></div>
               <div className="rounded-3xl border border-[var(--line)] p-6"><p className="font-display text-2xl">Non fa per te se…</p><ul className="mt-3 space-y-2 text-sm text-stone"><li>✕ cerchi un titolo abilitante in due weekend;</li><li>✕ non vuoi praticare;</li><li>✕ vuoi risultati senza metterci tempo.</li></ul></div>
             </div>
           </div>
         </div>
-        <div className="wrap mt-14"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Ne parliamo prima, in call." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna." }, { t: "Attestato chiaro", d: "Scritto cosa è e cosa no." }, { t: "Nessuna promessa sanitaria", d: "Formazione su tecnica e benessere." }]} /></div>
+        <div className="wrap mt-14"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Ne parliamo prima, in call." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna." }, { t: "Un attestato a fine percorso", d: "Scritto cosa è e cosa no." }, { t: "Nessuna promessa sanitaria", d: "Formazione su tecnica e benessere." }]} /></div>
       </section>
 
       <Objections n="07" title="Domande che *conviene* farsi." items={[

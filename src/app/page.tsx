@@ -41,7 +41,7 @@ export default function Home() {
           <Reveal delay={0.15}><p className="mt-5 text-lg text-stone max-w-xl">Una strada è per la tua attività. L'altra è per le tue mani. Scegli quella che ti somiglia oggi: l'altra ti aspetta.</p></Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
-              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", cta: "Guarda come funziona il Metodo", t: "Metodo A.G.E.N.D.A.", d: "Smetti di andare a tentativi. Con il mio metodo dai direzione alla tua attività, a partire da un primo affiancamento: dalla call a un'agenda che regge nel tempo.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
+              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", cta: "Guarda come funziona il Metodo", t: "Metodo A.G.E.N.D.A.", d: "Ti insegno a farti trovare online da chi cerca un massaggio vicino a te, e a far tornare chi è già passata dal tuo lettino. Si comincia con una call con me.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
               { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", cta: "Guarda i tre livelli", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo che ho semplificato in oltre dieci anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
@@ -67,12 +67,12 @@ export default function Home() {
         <div className="orb bg-rose/20 size-[30rem] -left-40 top-10" aria-hidden />
         <div className="wrap relative grid gap-14 lg:grid-cols-[1fr_1fr]">
           <div>
-            <Label n="02" t="Ti riconosci?" />
-            <Heading text="Lavori tanto e l'agenda va a *ondate*? Non è colpa tua." className="text-4xl md:text-6xl" />
+            <Label n="02" t="Succede anche a te?" />
+            <Heading text="Lavori tanto e l'agenda va a *ondate*?" className="text-4xl md:text-6xl" />
             <Reveal delay={0.2}><div className="mt-10 max-w-md"><Slot kind="foto" id="riconoscimento" label="Professionista pensierosa" ratio="4/3" art="orbs" /></div></Reveal>
           </div>
           <div className="self-end">
-            <p className="text-ivory/70 mb-8">Se lavori nel benessere e ti riconosci in almeno una di queste situazioni, sei nel posto giusto:</p>
+            <p className="text-ivory/70 mb-8">Se lavori nel benessere, almeno una di queste l'hai vissuta:</p>
             <ul className="divide-y divide-ivory/15 border-y border-ivory/15">
               {["La domenica sera guardi la settimana dopo: tre buchi in agenda.", "Ti scrivono «quanto costa?», rispondi con il prezzo, e non ti rispondono più.", "A marzo sei piena. Ad aprile il telefono sta zitto.", "Hai aperto Instagram, una scheda Google, forse TikTok. Nessuno ti ha detto da dove cominciare.", "A un'amica sei «bravissima». A un cliente nuovo non sai spiegare perché dovrebbe scegliere te."].map((t, i) => (
                 <Reveal key={t} delay={i * 0.07}>
@@ -146,8 +146,8 @@ export default function Home() {
               <div className="relative"><Slot kind="foto" id="corso-agenda" label="Metodo A.G.E.N.D.A." ratio="16/9" art="orbs" priority /><span className="absolute left-3 top-3 rounded-full bg-rose px-3 py-1 text-xs text-white">Il percorso da cui partire</span></div>
               <div>
                 <p className="eyebrow !text-rose">Metodo A.G.E.N.D.A. · 6 mesi · 11 moduli</p>
-                <h3 className="font-display text-4xl md:text-6xl mt-3 leading-[1.02]">Riempi l'agenda, <span className="kw">un passo alla volta</span>.</h3>
-                <p className="mt-4 text-ivory/70 max-w-lg">Il mio sistema per farti trovare, farti scegliere e far tornare i clienti, con affiancamento individuale e senza svenderti.</p>
+                <h3 className="font-display text-4xl md:text-6xl mt-3 leading-[1.02]">Riempi l'agenda, <span className="kw">settimana dopo settimana</span>.</h3>
+                <p className="mt-4 text-ivory/70 max-w-lg">Il mio sistema per farti trovare, farti scegliere e far tornare le clienti. Per sei mesi ci sono io accanto a te.</p>
                 <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-ivory/80 max-w-md">
                   {["Attrazione", "Generazione fiducia", "Esposizione", "Nutrimento", "Differenziazione", "Automazione"].map((x) => <li key={x}><span className="text-rose">✓</span> {x}</li>)}
                 </ul>
@@ -214,7 +214,7 @@ export default function Home() {
               <h3 className="font-display text-3xl">È adatto se…</h3>
               <ul className="mt-6 space-y-3 text-stone">
                 <li>✓ lavori nel benessere e hai già competenza;</li>
-                <li>✓ hai poca continuità e vuoi smettere di andare a tentativi;</li>
+                <li>✓ un mese sei piena e quello dopo no;</li>
                 <li>✓ sei pronta a cambiare qualcosa nel tuo modo di lavorare.</li>
               </ul>
             </div></Reveal>
@@ -246,8 +246,8 @@ export default function Home() {
       {/* 10 — FAQ */}
       <Faq title="Prima di *iniziare*." items={[
         { q: "Come capisco quale percorso fa per me?", a: "Puoi fare il test di orientamento nella pagina Percorsi, scaricare la guida gratuita oppure prenotare la call: circa 30 minuti, per capire insieme da dove ripartire." },
-        { q: "La call di orientamento costa qualcosa?", a: "No. È gratuita, dura circa 30 minuti. Non è una lezione né una telefonata commerciale aggressiva: è un confronto." },
-        { q: "Devo già avere clienti o un seguito sui social?", a: "No. Serve avere una competenza nel benessere. Da lì, un passo alla volta, si costruisce tutto il resto." },
+        { q: "La call di orientamento costa qualcosa?", a: "No, è gratuita. In circa 30 minuti mi racconti a che punto sei e io ti dico cosa farei al posto tuo." },
+        { q: "Devo già avere clienti o un seguito sui social?", a: "No. Serve avere una competenza nel benessere. Il resto lo costruiamo insieme." },
         { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Metodo Rita Dolbakian parte dalle fondamenta del tocco e prosegue per livelli, online e in presenza." },
         { q: "Mi garantisci dei risultati?", a: "No, e diffido di chi lo fa. Ti do un metodo e un affiancamento. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
         { q: "Posso cambiare idea dopo l'acquisto?", a: "Sì. Per i consumatori c'è il recesso di legge di 14 giorni. In più, su tutti i percorsi, c'è la garanzia soddisfatti o rimborsati per tutta la durata del percorso: a patto che tu partecipi (Zoom, eventi) e svolga le attività richieste." },

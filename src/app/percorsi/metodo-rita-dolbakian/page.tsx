@@ -12,7 +12,7 @@ export const metadata = meta("Metodo Rita Dolbakian: impara a massaggiare", "Il 
 const levels = [
   { n: "Livello 1", id: "rd-livello-1", art: "stones" as const, t: "Fondamenta del tocco", pts: ["Postura e uso del corpo", "Pressione, ritmo e continuità", "Le prime sequenze", "Ascolto della persona"], learn: "A sentire cosa fanno le tue mani.", who: "Per chi parte da zero" },
   { n: "Livello 2", id: "rd-livello-2", art: "waves" as const, t: "Tecnica e precisione", pts: ["Sequenze complete e transizioni", "Adattare il tocco alla persona", "Cura dell'ambiente e dell'accoglienza", "Errori comuni e come correggerli"], learn: "A lavorare con più sicurezza e fluidità.", who: "Per chi ha le basi" },
-  { n: "Livello 3", id: "rd-livello-3", art: "arch" as const, t: "Perfezionamento e mestiere", pts: ["Affinare il proprio stile", "Costruire il tuo trattamento firma", "Presentare il tuo lavoro in modo chiaro", "Un passo verso la tua attività"], learn: "A riconoscere e raccontare il tuo modo di lavorare.", who: "Per chi massaggia già" },
+  { n: "Livello 3", id: "rd-livello-3", art: "arch" as const, t: "Perfezionamento e mestiere", pts: ["Affinare il proprio stile", "Costruire il tuo trattamento firma", "Spiegare cosa fai a chi non ti conosce", "Un passo verso la tua attività"], learn: "A riconoscere e raccontare il tuo modo di lavorare.", who: "Per chi massaggia già" },
 ];
 
 const day = [
@@ -27,7 +27,7 @@ export default function MetodoRD() {
     <>
       <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo Rita Dolbakian", "/percorsi/metodo-rita-dolbakian"]]} />
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
-      <PageHero dark bgId="hero-massaggio" eyebrow="Metodo Rita Dolbakian" title="Vuoi imparare a *massaggiare* con mani sicure?" answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
+      <PageHero dark bgId="hero-massaggio" eyebrow="Metodo Rita Dolbakian" title="Ti insegno a massaggiare *come lavoro io*." answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
         <Link href="/call-orientamento" className="btn btn-primary">Scegli il tuo livello con me <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Guarda i tre livelli</Link>
       </PageHero>
@@ -127,7 +127,7 @@ export default function MetodoRD() {
       <section className="section">
         <div className="wrap grid gap-12 md:grid-cols-2">
           <div><Label n="07" t="Per chi è" /><Heading text="Per chi *vuole* farlo bene." className="text-5xl" />
-            <ul className="mt-6 space-y-2 text-stone"><li>✓ Principianti che vogliono basi solide</li><li>✓ Professionisti che vogliono perfezionarsi</li><li>✓ Chi cerca un metodo chiaro e pratico</li></ul></div>
+            <ul className="mt-6 space-y-2 text-stone"><li>✓ Principianti che vogliono basi solide</li><li>✓ Professionisti che vogliono perfezionarsi</li><li>✓ Chi vuole mettere le mani su un corpo, non solo guardare video</li></ul></div>
           <div><Label n="08" t="Certificazione" /><Heading text="Cosa *ottieni* alla fine." className="text-5xl" />
             <p className="mt-6 text-stone">Al termine è previsto un attestato. <Tbc>tipo di attestato (es. Attestato RD Academy), requisiti, ore</Tbc> Leggi di più su <Link href="/formazione-certificata" className="ulink text-ink">formazione certificata</Link>.</p></div>
         </div>
@@ -163,7 +163,7 @@ export default function MetodoRD() {
         { q: "Posso fare solo il livello che mi interessa?", a: "Sì, puoi partire dal livello più adatto a te. In call di orientamento ne parliamo." },
         { q: "Cosa serve per seguire le lezioni online?", a: "Uno spazio dove esercitarti e una persona di fiducia su cui provare. Per i dettagli, ne parliamo in call." },
         { q: "Posso poi aprire la mia attività?", a: "Il percorso aiuta a costruire competenza. Per aprire un'attività servono i requisiti previsti dalla legge: chiedi in call." },
-        { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Il rischio è mio. Serve partecipare agli incontri (online e in presenza) e svolgere gli esercizi richiesti, e dimostrarlo." },
+        { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Serve partecipare agli incontri (online e in presenza) e svolgere gli esercizi richiesti, e dimostrarlo." },
         { q: "Il metodo è una terapia?", a: "No. È formazione su tecnica manuale e benessere. Non offre promesse di cura né indicazioni mediche." },
       ]} />
       <CtaBand title="Prima di scegliere, *parliamone*." primary={{ href: "/call-orientamento", label: "Prenota 30 minuti con me" }} />

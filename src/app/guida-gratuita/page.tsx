@@ -19,7 +19,7 @@ const chapters = [
   ["Chi vuoi aiutare e cosa offri", "Tre domande a cui rispondere prima di pubblicare qualsiasi cosa, per spiegare in una frase chi sei e perché scegliere te."],
   ["Come ti vede chi ti cerca", "Profilo, scheda Google e primo messaggio: cosa trova una persona nuova quando cerca il tuo nome e cosa sistemare per prima."],
   ["I 5 canali per trovare clienti", "Google, Instagram, WhatsApp, collaborazioni locali e passaparola organizzato: da quale cominciare e quali lasciare per dopo."],
-  ["Come rispondere ai messaggi", "«Quanto costa?» e gli altri dubbi: risposte pronte per spiegare il valore senza forzare e senza svenderti."],
+  ["Come rispondere ai messaggi", "«Quanto costa?» e gli altri dubbi: risposte pronte per spiegare quanto vale il tuo lavoro prima di dire il prezzo."],
   ["Il piano delle prime 4 settimane", "Cosa fare ogni settimana, in poche ore, per passare dal «non mi trova nessuno» ai primi contatti veri."],
   ["Cosa misurare per capire se funziona", "Quattro numeri da annotare ogni settimana, così sai cosa tenere e cosa lasciare stare."],
 ];
@@ -50,7 +50,7 @@ export default function Guida() {
         <div className="wrap">
           <Label n="01" t="Cosa trovi dentro" />
           <Heading text="Sei temi. Tutto *pratico*." className="text-5xl md:text-6xl max-w-3xl" />
-          <p className="mt-4 text-stone max-w-xl">In formato PDF, da leggere quando vuoi e applicare un passo alla volta.</p>
+          <p className="mt-4 text-stone max-w-xl">È un PDF: lo leggi in una sera e lo usi per le quattro settimane successive.</p>
           <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {chapters.map(([t, d], i) => (
               <li key={t}><Reveal delay={(i % 3) * 0.08}>
@@ -73,7 +73,7 @@ export default function Guida() {
       <Outcomes n="02" label="Cosa cambia" title="Dopo averla letta, *saprai*…" cols={3} items={[
         { t: "Cosa dire, e a chi", d: "Spieghi in una frase chi aiuti e perché dovrebbero scegliere te." },
         { t: "Dove farti trovare", d: "Sai quali due canali presidiare per primi, senza essere ovunque." },
-        { t: "Come rispondere", d: "Hai risposte pronte a «quanto costa?» e agli altri dubbi, senza ansia." },
+        { t: "Come rispondere", d: "Sai cosa rispondere a «quanto costa?» e alle altre domande che ti fanno sempre." },
         { t: "Cosa fare ogni settimana", d: "Hai un piano di poche ore a settimana, per un mese." },
         { t: "Cosa guardare", d: "Hai quattro numeri per capire se stai andando nella direzione giusta." },
         { t: "Quale passo viene dopo", d: "Sai se ti serve un affiancamento o puoi continuare da sola." },
@@ -91,7 +91,7 @@ export default function Guida() {
       <Steps n="03" label="Come funziona" title="Tre passi, *nessun costo*." items={[
         { t: "Lasci l'email", d: "Il tuo nome e la tua email, e acconsenti al trattamento dei dati." },
         { t: "Ricevi la guida", d: "Ti arriva via email. Se non la vedi, controlla la cartella spam." },
-        { t: "Applichi un passo alla volta", d: "Segui il piano delle prime 4 settimane e annota i tuoi numeri." },
+        { t: "Lo metti in pratica", d: "Segui il piano delle prime 4 settimane e annota i tuoi numeri." },
         { t: "Se vuoi, ne parliamo", d: "Se ti serve una mano, puoi prenotare una call gratuita di 30 minuti con me." },
       ]} />
 
