@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile per massaggiatori: guida passo passo"
 slug: "google-business-profile-massaggiatori"
-metaTitle: "Scheda Google per massaggiatori: guida passo passo"
+metaTitle: "Scheda Google My Business per massaggiatori: la guida"
 metaDescription: "Come creare e curare la scheda Google (Google Business Profile) se fai massaggi: categorie, foto, descrizione, recensioni e gli errori da evitare."
 keyword: "scheda google my business massaggiatore"
 keywords: "google business profile massaggi, massaggi vicino a me, recensioni google massaggiatrice"

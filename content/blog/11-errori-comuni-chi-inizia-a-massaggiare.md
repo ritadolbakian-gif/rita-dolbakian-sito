@@ -1,7 +1,7 @@
 ---
 title: "Gli errori più comuni di chi inizia a massaggiare (e come evitarli)"
 slug: "errori-comuni-chi-inizia-a-massaggiare"
-metaTitle: "Errori comuni di chi inizia a massaggiare"
+metaTitle: "Errori da principianti nel massaggio: come evitarli"
 metaDescription: "I 10 errori più frequenti di chi comincia a massaggiare: postura, pressione, ritmo, ascolto e comunicazione. Come riconoscerli e correggerli."
 keyword: "errori massaggio principianti"
 keywords: "errori massaggiatore, massaggio per principianti, come migliorare il massaggio"

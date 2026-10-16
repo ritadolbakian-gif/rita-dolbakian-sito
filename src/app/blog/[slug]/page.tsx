@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getPublished, getPost, getRelated } from "@/lib/blog";
+import { getPublished, getPost, getRelated, catSlug } from "@/lib/blog";
 import { CtaBand, JsonLd, Label } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
@@ -52,7 +52,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
     },
     {
       "@context": "https://schema.org", "@type": "BreadcrumbList",
-      itemListElement: [["Home", SITE.url], ["Blog", `${SITE.url}/blog`], [p.title, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })),
+      itemListElement: [["Home", SITE.url], ["Blog", `${SITE.url}/blog`], [p.category, `${SITE.url}/blog/categoria/${catSlug(p.category)}`], [p.title, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })),
     },
     ...(p.faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: p.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }] : []),
   ];
@@ -78,7 +78,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
               <span className="flex items-center gap-3"><span className="relative block size-10 overflow-hidden rounded-full"><Slot id="author" label="Rita" ratio="1/1" className="!rounded-full" /></span><span>Di <b className="text-ink font-medium">Rita Dolbakian</b></span></span>
               <span>Aggiornato il {fmt(p.updated)}</span>
               <span>{p.read} min di lettura</span>
-              <span className="rounded-full border border-[var(--line)] px-3 py-1">{p.category}</span>
+              <Link href={`/blog/categoria/${catSlug(p.category)}`} className="rounded-full border border-[var(--line)] px-3 py-1 hover:border-ink">{p.category}</Link>
             </div>
           </div>
         </header>

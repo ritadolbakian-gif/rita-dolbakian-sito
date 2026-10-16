@@ -118,3 +118,14 @@ export function getRelated(slug: string): Post[] {
   const rest = getPublished().filter((p) => p.slug !== slug && !manual.includes(p) && !fill.includes(p));
   return [...manual, ...fill, ...rest].slice(0, 3);
 }
+
+/** Slug e testi delle pagine hub di categoria (/blog/categoria/[slug]). */
+export const catSlug = (c: string) => c.toLowerCase().replace(/[àá]/g, "a").replace(/[èé]/g, "e").replace(/'/g, "-").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+export const CATEGORY_INFO: Record<string, { title: string; intro: string; meta: string }> = {
+  "Clienti e agenda": { title: "Trovare clienti e *riempire l'agenda*", intro: "Come farti trovare da chi cerca un massaggio vicino a te, riempire i buchi in agenda e far tornare chi è già passata dal tuo lettino. Sono le guide che avrei voluto leggere quando avevo l'agenda a ondate.", meta: "Guide pratiche per massaggiatrici: come trovare clienti, riempire l'agenda, gestire le disdette e far tornare le clienti." },
+  "Prezzi e posizionamento": { title: "Prezzi e *posizionamento*", intro: "Quanto chiedere per un massaggio, come dirlo senza scusarti e come farti scegliere per quello che sai fare, non per lo sconto.", meta: "Quanto far pagare un massaggio, quanto guadagna una massaggiatrice e come posizionarti: guide di Rita Dolbakian." },
+  "Instagram e contenuti": { title: "Instagram e *contenuti*", intro: "Cosa pubblicare, con che costanza e come trasformare chi ti segue in persone che ti scrivono per prenotare.", meta: "Instagram per massaggiatrici: cosa pubblicare, come usare profilo e Stories per trovare clienti." },
+  "Vendita naturale": { title: "Vendere *senza sentirti venditrice*", intro: "I messaggi, il «quanto costa?», WhatsApp: le conversazioni in cui una persona curiosa diventa una cliente, o sparisce.", meta: "Come rispondere a «quanto costa?» e usare WhatsApp Business per trasformare i messaggi in prenotazioni." },
+  "Avviare l'attività": { title: "Avviare la tua *attività*", intro: "Partita IVA, attestati, domicilio o studio, aprire un centro: le domande pratiche di chi parte. In ogni guida trovi anche i riferimenti ufficiali da controllare.", meta: "Come diventare massaggiatrice, chi può fare massaggi in Italia, attestato, partita IVA e apertura di un centro massaggi." },
+  "Tecnica e formazione": { title: "Tecnica e *formazione*", intro: "Imparare a massaggiare da zero, scegliere un corso che valga i soldi che costa ed evitare gli errori dei primi mesi.", meta: "Imparare a massaggiare, scegliere un corso di massaggio, corsi online ed errori da principianti: guide di Rita Dolbakian." },
+};

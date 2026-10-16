@@ -1,7 +1,7 @@
 ---
 title: "Massaggiatrice a domicilio o in studio? Pro, contro e come decidere"
 slug: "massaggiatrice-domicilio-o-studio"
-metaTitle: "Massaggiatrice a domicilio o in studio? Come decidere"
+metaTitle: "Massaggiatrice a domicilio o in studio: come iniziare"
 metaDescription: "A domicilio, in studio o modello misto? Costi, tempi, sicurezza e impatto sui clienti dei tre modelli, per scegliere in base alla tua fase."
 keyword: "massaggiatore a domicilio come iniziare"
 keywords: "massaggi a domicilio, aprire studio massaggi, lavorare in studio o a domicilio"

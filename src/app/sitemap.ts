@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
-import { getPublished } from "@/lib/blog";
+import { getPublished, CATEGORIES, catSlug } from "@/lib/blog";
 
 type F = MetadataRoute.Sitemap[number]["changeFrequency"];
 const PAGES: [string, number, F][] = [
@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastPost = posts.reduce((d, p) => (p.updated > d ? p.updated : d), "2026-10-01");
   return [
     ...PAGES.map(([p, priority, changeFrequency]) => ({ url: `${SITE.url}${p}`, lastModified: p === "/blog" || p === "" ? new Date(lastPost) : new Date("2026-10-16"), changeFrequency, priority })),
+    ...CATEGORIES.filter((c) => posts.some((p) => p.category === c)).map((c) => ({ url: `${SITE.url}/blog/categoria/${catSlug(c)}`, lastModified: new Date(lastPost), changeFrequency: "weekly" as F, priority: 0.65 })),
     ...posts.map((p) => ({ url: `${SITE.url}/blog/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly" as F, priority: 0.7, images: [`${SITE.url}/media/blog-${p.slug}.webp`] })),
   ];
 }

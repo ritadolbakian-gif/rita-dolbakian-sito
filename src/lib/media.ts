@@ -141,6 +141,8 @@ export const MEDIA: Record<string, MediaItem> = {
   "hero-ritratto-m": { src: "/media/hero-ritratto.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "78% 20%", bg: "#050505" },
   "hero-massaggio-2": { src: "/media/hero-massaggio-2.webp", alt: "Rita Dolbakian durante un massaggio", pos: "100% 20%", bg: "#030303" },
   "hero-massaggio-2-m": { src: "/media/hero-massaggio-2.webp", alt: "Rita Dolbakian durante un massaggio", pos: "70% 15%", bg: "#030303" },
+  "hero-call": { src: "/media/hero-call.webp", alt: "Rita Dolbakian parla al microfono durante un evento", pos: "100% 28%", bg: "#000000" },
+  "hero-call-m": { src: "/media/rita-palco-closeup.webp", alt: "Rita Dolbakian parla al microfono durante un evento", pos: "30% 22%", bg: "#000000" },
   "home-bg-m": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "40% 20%", bg: "#131313" },
   "chi-sono-bg-m": { src: "/media/rita-palco.webp", alt: "Rita Dolbakian sul palco di un evento", pos: "50% 22%" },
   "home-bg": { src: "/media/rita-bn.webp", alt: "Rita Dolbakian, ritratto in bianco e nero", pos: "0% 30%", bg: "#131313" },

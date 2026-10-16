@@ -1,7 +1,7 @@
 ---
 title: "Agenda con mesi pieni e mesi vuoti: perché succede e come stabilizzarla"
 slug: "agenda-massaggiatrice-mesi-vuoti"
-metaTitle: "Agenda con mesi pieni e mesi vuoti: come stabilizzarla"
+metaTitle: "Riempire l'agenda da massaggiatrice: basta mesi vuoti"
 metaDescription: "Un mese pieno e uno vuoto? Non è sfortuna né mancanza di bravura. Scopri i 4 punti in cui si perde continuità e come rimetterli in ordine."
 keyword: "riempire agenda massaggiatrice"
 keywords: "continuità clienti massaggi, agenda instabile, solo passaparola"

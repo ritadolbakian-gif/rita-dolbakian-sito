@@ -4,7 +4,7 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { GuideForm } from "@/components/GuideForm";
 import { BlogGrid, type Card } from "@/components/BlogClient";
-import { getPublished, getUpcoming, CATEGORIES } from "@/lib/blog";
+import { getPublished, getUpcoming, CATEGORIES, catSlug } from "@/lib/blog";
 import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
@@ -59,6 +59,10 @@ export default function Blog() {
         <div className="wrap">
           <Label n="02" t="Tutti gli articoli" />
           <Heading text="Un tema *alla volta*." className="text-5xl md:text-6xl mb-10" />
+          <nav aria-label="Argomenti del blog" className="mb-10">
+            <p className="eyebrow mb-3">Argomenti</p>
+            <ul className="flex flex-wrap gap-3">{cats.map((c) => <li key={c}><Link href={`/blog/categoria/${catSlug(c)}`} className="inline-flex rounded-full border border-[var(--line)] px-4 min-h-11 items-center text-sm hover:border-ink">{c} →</Link></li>)}</ul>
+          </nav>
           <BlogGrid cards={cards} categories={cats} />
         </div>
       </section>
