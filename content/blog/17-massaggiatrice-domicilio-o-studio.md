@@ -120,6 +120,12 @@ L’idea è **far crescere i costi insieme ai ricavi**, non prima.
 - Trascurare la sicurezza personale.
 - Non adattare i prezzi al modello scelto ([come fissarli](/blog/quanto-far-pagare-un-massaggio)).
 
+## Fonti ufficiali da consultare
+
+Le regole cambiano nel tempo e possono variare da regione a regione: prima di decidere, controlla la versione aggiornata qui e confrontati con il tuo commercialista o con il SUAP del tuo Comune.
+
+- [Impresa in un giorno, il portale dei SUAP](https://www.impresainungiorno.gov.it/)
+
 ## Domande frequenti
 
 ### Posso ricevere i clienti a casa mia?

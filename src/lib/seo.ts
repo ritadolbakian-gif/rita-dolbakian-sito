@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { SITE } from "@/lib/site";
 
-export function meta(title: string, description: string, path: string): Metadata {
+export const ID = { rita: `${SITE.url}/#rita`, academy: `${SITE.url}/#academy`, website: `${SITE.url}/#website` };
+
+/** Metadati di pagina. `image` = immagine di condivisione (default: og-image). */
+export function meta(title: string, description: string, path: string, image = "/og-image.jpg"): Metadata {
   return {
     title,
     description,
     alternates: { canonical: path },
-    openGraph: { title, description, url: path, type: "website", locale: "it_IT", images: ["/og-image.jpg"] },
-    twitter: { card: "summary_large_image", title, description, images: ["/og-image.jpg"] },
+    openGraph: { title, description, url: path, type: "website", locale: "it_IT", siteName: "Rita Dolbakian", images: [image] },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
+  };
+}
+
+/** BreadcrumbList: Home è aggiunta da sola. */
+export function crumbsLd(trail: [string, string][]) {
+  const items: [string, string][] = [["Home", ""], ...trail];
+  return {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: items.map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, item: `${SITE.url}${path}` })),
   };
 }

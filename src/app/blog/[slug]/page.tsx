@@ -21,7 +21,8 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
     ...meta(p.metaTitle, p.metaDescription, `/blog/${slug}`),
     keywords: [p.keyword, ...p.keywords],
     authors: [{ name: "Rita Dolbakian" }],
-    openGraph: { type: "article", title: p.metaTitle, description: p.metaDescription, url: `/blog/${slug}`, publishedTime: p.date, modifiedTime: p.updated, authors: ["Rita Dolbakian"], images: ["/og-image.jpg"], locale: "it_IT" },
+    openGraph: { type: "article", title: p.metaTitle, description: p.metaDescription, url: `/blog/${slug}`, publishedTime: p.date, modifiedTime: p.updated, authors: ["Rita Dolbakian"], section: p.category, tags: [p.keyword, ...p.keywords], images: [{ url: `/media/blog-${slug}.webp`, alt: p.title }], locale: "it_IT", siteName: "Rita Dolbakian" },
+    twitter: { card: "summary_large_image", title: p.metaTitle, description: p.metaDescription, images: [`/media/blog-${slug}.webp`] },
   };
 }
 
@@ -41,10 +42,13 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
   const ld = [
     {
       "@context": "https://schema.org", "@type": "BlogPosting", headline: p.title, description: p.metaDescription, inLanguage: "it-IT",
-      datePublished: p.date, dateModified: p.updated, wordCount: p.words, keywords: [p.keyword, ...p.keywords].join(", "),
-      articleSection: p.category, image: `${SITE.url}/og-image.jpg`, mainEntityOfPage: url,
-      author: { "@type": "Person", name: "Rita Dolbakian", url: SITE.url },
-      publisher: { "@type": "EducationalOrganization", name: "Rita Dolbakian Academy", logo: { "@type": "ImageObject", url: `${SITE.url}/media/logo.png` } },
+      "@id": `${url}#article`, datePublished: p.date, dateModified: p.updated, wordCount: p.words, keywords: [p.keyword, ...p.keywords].join(", "),
+      articleSection: p.category, abstract: p.answerPlain, mainEntityOfPage: url, isPartOf: { "@type": "Blog", "@id": `${SITE.url}/blog#blog` },
+      image: { "@type": "ImageObject", url: `${SITE.url}/media/blog-${slug}.webp`, width: 1600, height: 900 },
+      about: [p.keyword, ...p.keywords].map((name) => ({ "@type": "Thing", name })),
+      author: { "@type": "Person", "@id": `${SITE.url}/#rita`, name: "Rita Dolbakian", url: `${SITE.url}/chi-sono`, jobTitle: "Massaggiatrice e formatrice nel benessere" },
+      publisher: { "@type": "EducationalOrganization", "@id": `${SITE.url}/#academy`, name: "Rita Dolbakian Academy", logo: { "@type": "ImageObject", url: `${SITE.url}/media/logo.png` } },
+      speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".speakable-answer"] },
     },
     {
       "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -87,7 +91,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
           <aside className="hidden lg:block"><div className="sticky top-28 space-y-10"><Toc items={tocItems} /></div></aside>
 
           <div>
-            <div className="rounded-3xl border border-rose/30 bg-blush/30 p-6 md:p-8">
+            <div className="speakable-answer rounded-3xl border border-rose/30 bg-blush/30 p-6 md:p-8">
               <p className="eyebrow !text-rose mb-3">In breve</p>
               <p className="font-display text-2xl md:text-[1.7rem] leading-snug" dangerouslySetInnerHTML={{ __html: p.answer }} />
             </div>

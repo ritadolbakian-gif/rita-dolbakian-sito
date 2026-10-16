@@ -8,11 +8,12 @@ import { QuoteWall } from "@/components/Proof";
 import { ReviewBadge } from "@/components/Reviews";
 import { STATS } from "@/lib/proof";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
 const NUM_LABEL: Record<string, string> = { anni: "anni nel benessere", studenti: "studenti formati" };
 const authorNumbers = STATS.filter((s) => s.confirmed && NUM_LABEL[s.id]).map((s) => ({ big: `${s.prefix ?? ""}${s.value}${s.suffix ?? ""}`, label: NUM_LABEL[s.id] }));
 
-export const metadata = meta("Guida Metodo A.G.E.N.D.A. gratuita: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita");
+export const metadata = meta("Guida Metodo A.G.E.N.D.A. gratuita: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita", "/media/hero-seduta.webp");
 
 const chapters = [
   ["Chi vuoi aiutare e cosa offri", "Tre domande a cui rispondere prima di pubblicare qualsiasi cosa, per spiegare in una frase chi sei e perché scegliere te."],
@@ -26,6 +27,7 @@ const chapters = [
 export default function Guida() {
   return (
     <>
+      <Crumbs trail={[["Guida gratuita", "/guida-gratuita"]]} />
       <PageHero dark bgId="hero-seduta" eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Guida Metodo A.G.E.N.D.A.» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
         <a href="#modulo" className="btn btn-primary">Ricevi la guida via email <span className="arr">→</span></a>
         <a href="#dentro" className="btn btn-ghost">Cosa trovi dentro</a>

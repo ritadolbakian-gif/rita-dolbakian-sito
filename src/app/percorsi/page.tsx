@@ -6,8 +6,9 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Orientatore } from "@/components/Orientatore";
 import { Slot } from "@/components/Slot";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Percorsi di formazione per il benessere", "Tutti i percorsi di Rita Dolbakian: Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian. Scopri da quale partire.", "/percorsi");
+export const metadata = meta("Percorsi di formazione per il benessere", "Tutti i percorsi di Rita Dolbakian: Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian. Scopri da quale partire.", "/percorsi", "/media/hero-pensierosa.webp");
 
 const rows = [
   { n: "Metodo A.G.E.N.D.A.", who: "Operatrici e operatori del benessere", get: "Direzione, continuità, clienti più qualificati", fmt: "6 mesi · 11 moduli · affiancamento individuale", href: "/percorsi/metodo-agenda" },
@@ -18,6 +19,7 @@ const rows = [
 export default function Percorsi() {
   return (
     <>
+      <Crumbs trail={[["Percorsi", "/percorsi"]]} />
       <PageHero dark bgId="hero-pensierosa" eyebrow="Percorsi" title="Quale percorso fa per *te*?" answer="Ho costruito due strade. Se lavori nel benessere e vuoi riempire l'agenda, ci sono il Metodo A.G.E.N.D.A. e, per il massimo affiancamento, il Metodo Sold Out. Se vuoi imparare a massaggiare o perfezionare la tecnica, c'è il Metodo Rita Dolbakian. Ti aiuto a capire da quale partire.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
         <a href="#orientamento" className="btn btn-ghost">Fai il test di 3 domande</a>

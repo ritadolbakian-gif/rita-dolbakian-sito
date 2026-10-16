@@ -6,8 +6,9 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { TrustBar } from "@/components/Proof";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Formazione certificata con Rita Dolbakian", "Il percorso a tre livelli di Rita Dolbakian Academy che si conclude con un attestato: obiettivi, requisiti, durata, modalità e prossime edizioni.", "/formazione-certificata");
+export const metadata = meta("Formazione certificata con Rita Dolbakian", "Il percorso a tre livelli di Rita Dolbakian Academy che si conclude con un attestato: obiettivi, requisiti, durata, modalità e prossime edizioni.", "/formazione-certificata", "/media/hero-massaggio-2.webp");
 
 const levels = [
   { n: "1", id: "cert-livello-1", art: "stones" as const, t: "Fondamenta del tocco", goal: "Imparare le basi: postura, pressione, ritmo, le prime sequenze.", who: "Chi parte da zero" },
@@ -26,6 +27,7 @@ const steps = [
 export default function FormazioneCertificata() {
   return (
     <>
+      <Crumbs trail={[["Formazione certificata", "/formazione-certificata"]]} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Course", name: "Formazione certificata Rita Dolbakian Academy", description: "Percorso a tre livelli di formazione pratica sul massaggio, con attestato finale.", provider: { "@type": "EducationalOrganization", name: "Rita Dolbakian Academy" }, inLanguage: "it-IT" }} />
       <PageHero dark bgId="hero-massaggio-2" eyebrow="Formazione certificata" title="Vuoi finire il percorso con *un attestato* in mano?" answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
         <Link href="/call-orientamento" className="btn btn-primary">Capiamo da quale livello partire <span className="arr">→</span></Link>

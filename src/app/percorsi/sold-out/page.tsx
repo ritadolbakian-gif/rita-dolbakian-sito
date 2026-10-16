@@ -6,8 +6,9 @@ import { Heading, Reveal } from "@/components/Motion";
 import { meta } from "@/lib/seo";
 import Link from "next/link";
 import { CaseStudies, TrustBar } from "@/components/Proof";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Metodo Sold Out: mentorship 1:1 per operatrici del benessere", "Metodo Sold Out di Rita Dolbakian: mentorship 1:1 di 6 mesi per diventare il riferimento del tuo territorio, con call settimanali, Kit Pronto, landing page, prodotto digitale e 8 posti a trimestre.", "/percorsi/sold-out");
+export const metadata = meta("Metodo Sold Out: mentorship 1:1 per operatrici del benessere", "Metodo Sold Out di Rita Dolbakian: mentorship 1:1 di 6 mesi per diventare il riferimento del tuo territorio, con call settimanali, Kit Pronto, landing page, prodotto digitale e 8 posti a trimestre.", "/percorsi/sold-out", "/media/hero-palco.webp");
 
 const included: { t: string; items: string[] }[] = [
   { t: "Mentorship 1:1 con Rita Dolbakian", items: [
@@ -70,7 +71,8 @@ const value: [string, string][] = [
 export default function SoldOut() {
   return (
     <>
-      <JsonLd data={courseLd("Metodo Sold Out", "Mentorship 1:1 di 6 mesi con Rita Dolbakian per operatrici del benessere.", "/percorsi/sold-out")} />
+      <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo Sold Out", "/percorsi/sold-out"]]} />
+      <JsonLd data={courseLd("Metodo Sold Out", "Mentorship 1:1 di 6 mesi con Rita Dolbakian per operatrici del benessere: una call individuale a settimana, revisione dei contenuti, landing page, prodotto digitale e piattaforma realizzati dal team. 8 posti a trimestre.", "/percorsi/sold-out", ["online", "blended"])} />
       <PageHero dark bgId="hero-palco" eyebrow="Mentorship 1:1 · Metodo Sold Out" title="Da brava ma *invisibile* a riferimento del tuo territorio." answer="Metodo Sold Out è la mia mentorship 1:1 di 6 mesi per operatrici del benessere: una call a settimana con me, la revisione dei tuoi contenuti e tutto ciò che si può fare al posto tuo (landing page, prodotto digitale, piattaforma) lo facciamo noi. A te restano la faccia, la voce e le tue clienti. Lavoriamo su due piattaforme: Instagram e TikTok.">
         <Link href="#candidatura" className="btn btn-primary">Candidati <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>

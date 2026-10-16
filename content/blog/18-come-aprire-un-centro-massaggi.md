@@ -128,6 +128,14 @@ Il confronto tra queste strade è nell’articolo [Massaggiatrice a domicilio o 
 - [ ] Ho già clienti o una lista di persone interessate.
 - [ ] Ho un piano per la visibilità nei primi tre mesi.
 
+## Fonti ufficiali da consultare
+
+Le regole cambiano nel tempo e possono variare da regione a regione: prima di decidere, controlla la versione aggiornata qui e confrontati con il tuo commercialista o con il SUAP del tuo Comune.
+
+- [Impresa in un giorno, il portale dei SUAP](https://www.impresainungiorno.gov.it/)
+- [Agenzia delle Entrate](https://www.agenziaentrate.gov.it/)
+- [INPS](https://www.inps.it/)
+
 ## Domande frequenti
 
 ### Quanto costa aprire un centro massaggi?

@@ -143,6 +143,13 @@ Per le regole sulla scheda cliente e sul consenso leggi anche [Scheda cliente, p
 4. Aggiorna **catalogo e orari**, se serve.
 5. Annota **quali domande** ricevi più spesso e prepara una risposta rapida.
 
+## Fonti ufficiali da consultare
+
+Le funzioni delle piattaforme cambiano spesso: per le istruzioni aggiornate, guarda il centro assistenza ufficiale.
+
+- [WhatsApp Business](https://business.whatsapp.com/)
+- [Centro assistenza di WhatsApp](https://faq.whatsapp.com/)
+
 ## Domande frequenti
 
 ### WhatsApp Business è gratuito?

@@ -5,8 +5,9 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { CaseStudies, TrustBar, QuoteWall, VideoWall } from "@/components/Proof";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Metodo A.G.E.N.D.A. per operatrici del benessere", "Il Metodo A.G.E.N.D.A. di Rita Dolbakian: il primo percorso di affiancamento per ritrovare continuità e clienti qualificati nel benessere.", "/percorsi/metodo-agenda");
+export const metadata = meta("Metodo A.G.E.N.D.A. per operatrici del benessere", "Il Metodo A.G.E.N.D.A. di Rita Dolbakian: il primo percorso di affiancamento per ritrovare continuità e clienti qualificati nel benessere.", "/percorsi/metodo-agenda", "/media/hero-scrive.webp");
 
 const letters = [
   { l: "A", w: "Attrazione", d: "Un profilo ottimizzato e contenuti che attirano la cliente ideale: chi ti trova capisce subito per chi lavori e cosa offri.", p: "Le persone iniziano a scriverti in DM." },
@@ -46,7 +47,8 @@ const valueList: [string, string][] = [
 export default function MetodoAgenda() {
   return (
     <>
-      <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Metodo e primo percorso di affiancamento per operatrici e operatori del benessere che vogliono continuità e clienti qualificati online.", "/percorsi/metodo-agenda")} />
+      <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo A.G.E.N.D.A.", "/percorsi/metodo-agenda"]]} />
+      <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Percorso di 6 mesi in 11 moduli con affiancamento individuale di Rita Dolbakian: il sistema per riempire l'agenda di un'attività nel benessere con Instagram, TikTok, posizionamento e strategie di acquisizione clienti.", "/percorsi/metodo-agenda", ["online"])} />
       <PageHero dark bgId="hero-scrive" eyebrow="Metodo A.G.E.N.D.A." title="Vuoi un'agenda che *regge* anche nei mesi difficili?" answer="Il Metodo A.G.E.N.D.A. è il mio sistema per riempire l'agenda usando social, posizionamento professionale e strategie di acquisizione clienti. 6 mesi, 11 moduli e affiancamento individuale incluso. Si parte da una call di orientamento.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>

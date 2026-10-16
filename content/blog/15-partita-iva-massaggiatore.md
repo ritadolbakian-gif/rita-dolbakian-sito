@@ -91,6 +91,13 @@ Chi lavora in proprio versa contributi previdenziali. La cassa o gestione di rif
 - Non separare le spese personali da quelle dell’attività.
 - Affidarsi a informazioni trovate in rete senza confrontarle con un professionista.
 
+## Fonti ufficiali da consultare
+
+Le regole cambiano nel tempo e possono variare da regione a regione: prima di decidere, controlla la versione aggiornata qui e confrontati con il tuo commercialista o con il SUAP del tuo Comune.
+
+- [Agenzia delle Entrate](https://www.agenziaentrate.gov.it/)
+- [INPS](https://www.inps.it/)
+
 ## Domande frequenti
 
 ### Posso lavorare come massaggiatrice senza partita IVA?

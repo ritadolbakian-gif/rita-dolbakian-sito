@@ -7,8 +7,9 @@ import { QuoteWall, TrustBar, PressBar } from "@/components/Proof";
 import { PERSONAL_RESULT, showPersonalResult } from "@/lib/proof";
 import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Chi è Rita Dolbakian", "Dal bancone di un bar al massaggio, fino a trovare clienti con i social: la storia di Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni.", "/chi-sono");
+export const metadata = meta("Chi è Rita Dolbakian", "Dal bancone di un bar al massaggio, fino a trovare clienti con i social: la storia di Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni.", "/chi-sono", "/media/hero-ritratto.webp");
 
 const tappe = [
   { id: "bar", n: "1", t: "Il bar", d: "Frustrata, convinta di meritare di più." },
@@ -38,6 +39,7 @@ export default function ChiSono() {
   const showRes = showPersonalResult();
   return (
     <>
+      <Crumbs trail={[["Chi sono", "/chi-sono"]]} />
       <PageHero dark bgId="chi-sono-bg" eyebrow="Chi sono" title="Lavoravo in un bar. Poi ho scelto *le mie mani*." answer="Sono Rita Dolbakian. Ho iniziato dietro un bancone, frustrata e convinta di meritare di più. Ho scelto il massaggio, ho sbattuto contro tutte le difficoltà di chi non trova clienti e poi ho capito come usare i social per farmi trovare. Oggi lavoro nel benessere da oltre dieci anni e lo insegno a chi vuole fare lo stesso.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota 30 minuti con me <span className="arr">→</span></Link>
         <Link href="#bar" className="btn btn-ghost">Leggi la mia storia</Link>
@@ -121,6 +123,30 @@ export default function ChiSono() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <Slot kind="video" id="about-video" label="Video di presentazione" ratio="16/10" className="md:col-span-2" art="arch" />
             <Slot id="about-allieve" label="Rita con le allieve" ratio="4/5" art="leaf" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-dark section">
+        <div className="wrap">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <Label t="Sul set" />
+              <Heading text="Davanti alla telecamera *ci sono io*." className="text-5xl md:text-6xl" />
+            </div>
+            <p className="text-lg text-ivory/75 max-w-xl">I video che trovi sui miei profili e nei corsi li giro io, in studio, con un videomaker. Il lettino è quello vero, i trattamenti sono quelli che faccio ogni giorno. Quello che ti insegno lo vedi fare a me, non a un'attrice.</p>
+          </div>
+          <div className="mt-12 grid gap-3 grid-cols-2 md:grid-cols-4 md:gap-5">
+            {[["set-1", ""], ["set-2", "md:mt-14"], ["set-4", ""], ["set-5", "md:mt-14"]].map(([id, cls], i) => (
+              <Reveal key={id} delay={i * 0.08}><div className={cls}><Slot id={id} label="Sul set" ratio="3/4" art="orbs" /></div></Reveal>
+            ))}
+          </div>
+          <div className="mt-5 grid gap-3 md:grid-cols-[1.4fr_1fr] md:gap-5">
+            <Reveal><Slot id="set-palco" label="Sul palco" ratio="16/10" art="arch" /></Reveal>
+            <Reveal delay={0.1}><div className="h-full rounded-3xl border border-ivory/15 p-8 flex flex-col justify-end">
+              <p className="font-display text-3xl md:text-4xl leading-tight">Dal lettino al palco, <span className="kw">con le stesse mani</span>.</p>
+              <p className="mt-4 text-ivory/70">Oggi racconto il mio metodo anche agli eventi, davanti a chi lavora nel benessere come me.</p>
+            </div></Reveal>
           </div>
         </div>
       </section>

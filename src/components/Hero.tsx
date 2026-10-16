@@ -4,6 +4,9 @@ import { useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Heading } from "./Motion";
 import { Slot } from "./Slot";
+import { MEDIA } from "@/lib/media";
+
+const BG = MEDIA["home-bg"]?.bg ?? "#0b0a09";
 import { CountUp } from "./CountUp";
 import { ReviewBadge } from "./Reviews";
 
@@ -14,14 +17,14 @@ export function Hero() {
   const fade = (d: number) => ({ initial: reduce ? false : { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.9, delay: d, ease: [0.22, 1, 0.36, 1] as const } });
 
   return (
-    <section ref={ref} data-hero-dark className="section-dark relative overflow-hidden pt-0 pb-14 md:pt-40 md:pb-28">
+    <section ref={ref} data-hero-dark style={{ backgroundColor: BG }} className="section-dark hero-solid relative overflow-hidden pt-0 pb-14 md:pt-40 md:pb-28">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-[104vw] md:hidden" aria-hidden>
           <Slot id="home-bg-m" priority raw sizes="100vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink from-2% via-ink/60 via-35% to-ink/10" />
+          <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${BG} 2%, ${BG}99 35%, ${BG}1a)` }} />
         </div>
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block" aria-hidden>
         <Slot id="home-bg" priority raw sizes="58vw" label="Sfondo" ratio="16/9" className="!absolute !inset-0 !h-full !w-full !rounded-none [aspect-ratio:auto!important]" art="orbs" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink from-0% via-ink/30 via-25% to-transparent" />
+        <div className="absolute inset-0" style={{ background: `linear-gradient(to right, ${BG} 0%, ${BG}cc 10%, ${BG}4d 28%, transparent 55%)` }} />
       </div>
       <div className="wrap relative pt-[62vw] md:pt-0">
         <div className="max-w-4xl">

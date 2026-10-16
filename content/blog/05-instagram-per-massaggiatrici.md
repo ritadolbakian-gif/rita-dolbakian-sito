@@ -140,6 +140,13 @@ Le prenotazioni, su Instagram, nascono quasi sempre in un messaggio privato. Aiu
 - **Cambiare strategia ogni settimana.** Dai tempo a un ritmo di funzionare.
 - **Lasciare senza risposta i messaggi.** Ogni messaggio è una persona.
 
+## Fonti ufficiali da consultare
+
+Le funzioni delle piattaforme cambiano spesso: per le istruzioni aggiornate, guarda il centro assistenza ufficiale.
+
+- [Centro assistenza di Instagram](https://help.instagram.com/)
+- [Instagram per le aziende](https://business.instagram.com/)
+
 ## Domande frequenti
 
 ### Devo mostrare il mio viso e la mia vita privata?

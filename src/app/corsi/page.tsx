@@ -2,12 +2,14 @@ import { QuoteWall } from "@/components/Proof";
 import { PageHero, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { CatalogoCorsi } from "@/components/CatalogoCorsi";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Corsi, guide e percorsi di Rita Dolbakian", "Il catalogo di Rita Dolbakian: guida gratuita, Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian per imparare a massaggiare.", "/corsi");
+export const metadata = meta("Corsi, guide e percorsi di Rita Dolbakian", "Il catalogo di Rita Dolbakian: guida gratuita, Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian per imparare a massaggiare.", "/corsi", "/media/hero-ritratto.webp");
 
 export default function Corsi() {
   return (
     <>
+      <Crumbs trail={[["Corsi", "/corsi"]]} />
       <PageHero dark bgId="hero-ritratto" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
         <a href="#affiancamento" className="btn btn-primary">Percorsi di affiancamento</a>
         <a href="#digitali" className="btn btn-ghost">Prodotti digitali</a>

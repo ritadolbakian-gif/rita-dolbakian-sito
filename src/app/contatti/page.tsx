@@ -3,14 +3,32 @@ import { LeadForm } from "@/components/LeadForm";
 import { Slot } from "@/components/Slot";
 import { SITE, CONTACT, COMPANY } from "@/lib/site";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
+import { BookingCalendar } from "@/components/BookingCalendar";
+import { Heading } from "@/components/Motion";
 
-export const metadata = meta("Contatti", "Scrivi a Rita Dolbakian Academy: modulo di contatto, WhatsApp, social e riferimenti.", "/contatti");
+export const metadata = meta("Contatti", "Scrivi a Rita Dolbakian Academy: modulo di contatto, WhatsApp, social e riferimenti.", "/contatti", "/media/hero-seduta.webp");
 
 export default function Contatti() {
   return (
     <>
-      <PageHero dark bgId="hero-seduta" eyebrow="Contatti" title="Scrivimi, *ti rispondo io*." answer="Per una domanda sui percorsi puoi usare il modulo qui sotto, scrivere su WhatsApp o sui social. Se preferisci un confronto a voce, prenota la call gratuita di orientamento: circa 30 minuti." />
-      <section className="section">
+      <Crumbs trail={[["Contatti", "/contatti"]]} />
+      <PageHero dark bgId="hero-seduta" eyebrow="Contatti" title="Scrivimi, *ti rispondo io*." answer="Per una domanda sui percorsi puoi usare il modulo qui sotto, scrivere su WhatsApp o sui social. Se preferisci un confronto a voce, prenota la call gratuita di orientamento: circa 30 minuti.">
+        <a href="#prenota" className="btn btn-primary">Fissa la call con me <span className="arr">→</span></a>
+        <a href="#scrivimi" className="btn btn-ghost">Scrivimi un messaggio</a>
+      </PageHero>
+      <section id="prenota" className="section bg-blush/30 scroll-mt-24">
+        <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
+          <div className="space-y-6">
+            <Label t="Fissa la call" />
+            <Heading text="Preferisci *parlarne a voce*?" className="text-4xl md:text-5xl" />
+            <p className="text-stone max-w-sm">Scegli giorno e orario qui accanto: è una call gratuita di circa 30 minuti, in videochiamata. Mi racconti dove sei e ti dico da dove partirei io.</p>
+          </div>
+          <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
+        </div>
+      </section>
+
+      <section id="scrivimi" className="section scroll-mt-24">
         <div className="wrap grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
           <div><LeadForm tipo="contatti" cta="Invia il messaggio" withMessage /></div>
           <div className="space-y-8 text-stone">
@@ -27,7 +45,7 @@ export default function Contatti() {
       <Faq items={[
         { q: "In quanto tempo ricevo risposta?", a: <>Rispondo di solito entro un giorno lavorativo. <Tbc>tempi reali</Tbc></>, plain: "Rispondo di solito entro un giorno lavorativo." },
         { q: "Posso scrivere su WhatsApp?", a: <>Sì, usa il pulsante in basso a destra. <Tbc>numero WhatsApp</Tbc></>, plain: "Sì, usa il pulsante WhatsApp in basso a destra." },
-        { q: "Preferisco parlare a voce: come faccio?", a: "Prenota la call di orientamento gratuita: circa 30 minuti." },
+        { q: "Preferisco parlare a voce: come faccio?", a: "Fissa la call di orientamento gratuita dal calendario in questa pagina: circa 30 minuti, in videochiamata." },
         { q: "Dove si svolgono le lezioni in presenza?", a: <><Tbc>sedi</Tbc></>, plain: "Le sedi saranno indicate nel calendario." },
         { q: "Posso proporre una collaborazione?", a: "Sì, scrivimi dal modulo qui sopra con due righe su di te e sulla proposta." },
       ]} />

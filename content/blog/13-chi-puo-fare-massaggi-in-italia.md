@@ -90,6 +90,13 @@ Anche nell’ambito del benessere, ci sono situazioni in cui è meglio non proce
 4. Cosa mi hanno detto Comune e commercialista per la mia situazione?
 5. Che cosa faccio quando una persona ha un problema di salute?
 
+## Fonti ufficiali da consultare
+
+Le regole cambiano nel tempo e possono variare da regione a regione: prima di decidere, controlla la versione aggiornata qui e confrontati con il tuo commercialista o con il SUAP del tuo Comune.
+
+- [Normattiva, la banca dati ufficiale delle leggi italiane](https://www.normattiva.it/)
+- [Impresa in un giorno, il portale dei SUAP](https://www.impresainungiorno.gov.it/)
+
 ## Domande frequenti
 
 ### Un massaggiatore del benessere può sostituire un fisioterapista?

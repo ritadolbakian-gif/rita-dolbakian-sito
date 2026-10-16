@@ -129,6 +129,12 @@ Una scheda non si sistema una volta e basta. Una routine leggera, di 15 minuti a
 - Scheda duplicata per la stessa attività.
 - Scheda e profilo social con informazioni diverse (nome, contatti, orari).
 
+## Fonti ufficiali da consultare
+
+Le funzioni delle piattaforme cambiano spesso: per le istruzioni aggiornate, guarda il centro assistenza ufficiale.
+
+- [Guida ufficiale di Google Business Profile](https://support.google.com/business/)
+
 ## Domande frequenti
 
 ### La scheda Google è gratuita?

@@ -76,6 +76,7 @@ body {
   color: var(--ivory);
   isolation: isolate;
 }
+.hero-solid::before { display: none; }
 .section-dark::before {
   content: "";
   position: absolute; inset: 0; z-index: -1;

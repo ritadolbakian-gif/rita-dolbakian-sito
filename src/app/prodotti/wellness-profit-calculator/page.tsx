@@ -3,7 +3,7 @@ import { ProductPage } from "@/components/ProductPage";
 import { meta } from "@/lib/seo";
 import { CHECKOUT } from "@/lib/products";
 
-export const metadata = meta("Wellness Profit Calculator: foglio di calcolo per il regime forfettario", "Il foglio di calcolo di RD Academy per operatori del benessere in regime forfettario: i tuoi numeri in un posto solo.", "/prodotti/wellness-profit-calculator");
+export const metadata = meta("Wellness Profit Calculator: foglio di calcolo per il regime forfettario", "Il foglio di calcolo di RD Academy per operatori del benessere in regime forfettario: i tuoi numeri in un posto solo.", "/prodotti/wellness-profit-calculator", "/media/prodotto-calcolatore.webp");
 
 export default function Page() {
   return (

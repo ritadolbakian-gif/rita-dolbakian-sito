@@ -4,12 +4,14 @@ import { Heading } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { CaseStudies, VideoWall, Quotes, PressBar, RatingLd, TrustBar } from "@/components/Proof";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Risultati e testimonianze delle allieve", "Casi studio e testimonianze delle allieve di Rita Dolbakian. Risultati dichiarati, esperienze individuali.", "/risultati");
+export const metadata = meta("Risultati e testimonianze delle allieve", "Casi studio e testimonianze delle allieve di Rita Dolbakian. Risultati dichiarati, esperienze individuali.", "/risultati", "/media/hero-ritratto.webp");
 
 export default function Risultati() {
   return (
     <>
+      <Crumbs trail={[["Risultati", "/risultati"]]} />
       <RatingLd />
       <PageHero dark bgId="hero-ritratto" eyebrow="Risultati" title="Le storie di chi ha *cambiato* direzione." answer="Qui trovi i casi studio e le testimonianze delle allieve che hanno lavorato con me, con nome, cognome e autorizzazione. Sono esperienze individuali: raccontano un percorso, non promettono un risultato uguale per tutte." />
       <section className="section">

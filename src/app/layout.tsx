@@ -22,19 +22,28 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { themeColor: "#0b0a09", width: "device-width", initialScale: 1 };
 
+const SAME = [SITE.social.instagram, SITE.social.youtube, SITE.social.tiktok, "https://it.trustpilot.com/review/rd-academy.it"];
+const TOPICS = ["massaggio", "massaggio benessere", "formazione per massaggiatori", "marketing per operatori del benessere", "Instagram per massaggiatrici", "acquisizione clienti nel benessere", "personal branding nel benessere"];
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Person", "@id": `${SITE.url}/#rita`, name: "Rita Dolbakian",
-      jobTitle: "Massaggiatrice e formatrice nel benessere", url: SITE.url, image: `${SITE.url}/media/rita-ritratto-camice.webp`,
-      sameAs: [SITE.social.instagram, SITE.social.youtube, SITE.social.tiktok],
+      jobTitle: "Massaggiatrice e formatrice nel benessere",
+      description: "Rita Dolbakian è una massaggiatrice e formatrice italiana con oltre dieci anni di esperienza nel benessere. Ha creato il Metodo A.G.E.N.D.A., il Metodo Sold Out e il Metodo Rita Dolbakian per insegnare a operatrici e operatori del benessere a trovare clienti e a massaggiare con un metodo.",
+      url: `${SITE.url}/chi-sono`, image: `${SITE.url}/media/rita-ritratto-camice.webp`,
+      worksFor: { "@id": `${SITE.url}/#academy` }, knowsAbout: TOPICS, knowsLanguage: "it", nationality: "IT",
+      sameAs: SAME,
     },
     {
-      "@type": "EducationalOrganization", "@id": `${SITE.url}/#academy`, name: "Rita Dolbakian Academy", alternateName: "RD Academy", legalName: "RD SRL", vatID: "IT02097250472", address: { "@type": "PostalAddress", streetAddress: "Viale Garibaldi 42", postalCode: "51017", addressLocality: "Pescia", addressRegion: "PT", addressCountry: "IT" },
-      url: SITE.url, logo: `${SITE.url}/media/logo.png`, founder: { "@id": `${SITE.url}/#rita` },
+      "@type": "EducationalOrganization", "@id": `${SITE.url}/#academy`, name: "Rita Dolbakian Academy", alternateName: ["RD Academy", "Rita Dolbakian"],
+      legalName: "RD SRL", vatID: "IT02097250472", slogan: "Il tuo talento. Il tuo metodo. Più clienti.",
+      description: "Formazione online e in presenza per operatori del benessere: percorsi per riempire l'agenda con i social e corsi per imparare a massaggiare.",
+      address: { "@type": "PostalAddress", streetAddress: "Viale Garibaldi 42", postalCode: "51017", addressLocality: "Pescia", addressRegion: "PT", addressCountry: "IT" },
+      areaServed: { "@type": "Country", name: "Italia" }, knowsAbout: TOPICS,
+      url: SITE.url, logo: `${SITE.url}/media/logo.png`, image: `${SITE.url}/og-image.jpg`, founder: { "@id": `${SITE.url}/#rita` }, sameAs: SAME,
     },
-    { "@type": "WebSite", "@id": `${SITE.url}/#website`, url: SITE.url, name: "Rita Dolbakian", inLanguage: "it-IT" },
+    { "@type": "WebSite", "@id": `${SITE.url}/#website`, url: SITE.url, name: "Rita Dolbakian", inLanguage: "it-IT", publisher: { "@id": `${SITE.url}/#academy` }, about: { "@id": `${SITE.url}/#rita` } },
   ],
 };
 

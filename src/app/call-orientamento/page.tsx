@@ -5,12 +5,14 @@ import { Slot } from "@/components/Slot";
 import { TrustBar } from "@/components/Proof";
 import { BookingCalendar } from "@/components/BookingCalendar";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Prenota la call gratuita di orientamento", "Prenota una call gratuita di circa 30 minuti con Rita Dolbakian: una chiacchierata a quattr'occhi.", "/call-orientamento");
+export const metadata = meta("Prenota la call gratuita di orientamento", "Prenota una call gratuita di circa 30 minuti con Rita Dolbakian: una chiacchierata a quattr'occhi.", "/call-orientamento", "/media/hero-seduta.webp");
 
 export default function Call() {
   return (
     <>
+      <Crumbs trail={[["Call di orientamento", "/call-orientamento"]]} />
       <PageHero dark bgId="hero-laptop" eyebrow="Call di orientamento" title="30 minuti per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In circa 30 minuti ti dico dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita. Non è una lezione, non è motivazionale e non è una telefonata commerciale aggressiva." />
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">

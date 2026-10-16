@@ -3,7 +3,7 @@ import { ProductPage } from "@/components/ProductPage";
 import { meta } from "@/lib/seo";
 import { CHECKOUT } from "@/lib/products";
 
-export const metadata = meta("Instagram Stories che vendono: il manuale operativo", "Il manuale operativo di Rita Dolbakian per usare le Stories di Instagram e portare le follower a prenotare il primo trattamento, anche se non ami mostrarti in video.", "/prodotti/instagram-stories-che-vendono");
+export const metadata = meta("Instagram Stories che vendono: il manuale operativo", "Il manuale operativo di Rita Dolbakian per usare le Stories di Instagram e portare le follower a prenotare il primo trattamento, anche se non ami mostrarti in video.", "/prodotti/instagram-stories-che-vendono", "/media/prodotto-stories.webp");
 
 export default function Page() {
   return (

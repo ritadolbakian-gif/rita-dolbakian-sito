@@ -96,6 +96,12 @@ Un ente serio risponde volentieri a queste domande. Se la risposta è evasiva, �
 
 Per i percorsi con attestato, consulta la pagina [Formazione certificata](/formazione-certificata).
 
+## Fonti ufficiali da consultare
+
+Le regole cambiano nel tempo e possono variare da regione a regione: prima di decidere, controlla la versione aggiornata qui e confrontati con il tuo commercialista o con il SUAP del tuo Comune.
+
+- [Normattiva, la banca dati ufficiale delle leggi italiane](https://www.normattiva.it/)
+
 ## Domande frequenti
 
 ### L’attestato di un corso privato è valido in Italia?

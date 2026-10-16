@@ -5,8 +5,9 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { CaseStudies, TrustBar, QuoteWall } from "@/components/Proof";
 import { meta } from "@/lib/seo";
+import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Metodo Rita Dolbakian: impara a massaggiare", "Il Metodo Rita Dolbakian per imparare a massaggiare e migliorare la tua tecnica: tre livelli, studio online e pratica in presenza.", "/percorsi/metodo-rita-dolbakian");
+export const metadata = meta("Metodo Rita Dolbakian: impara a massaggiare", "Il Metodo Rita Dolbakian per imparare a massaggiare e migliorare la tua tecnica: tre livelli, studio online e pratica in presenza.", "/percorsi/metodo-rita-dolbakian", "/media/hero-massaggio.webp");
 
 const levels = [
   { n: "Livello 1", id: "rd-livello-1", art: "stones" as const, t: "Fondamenta del tocco", pts: ["Postura e uso del corpo", "Pressione, ritmo e continuità", "Le prime sequenze", "Ascolto della persona"], learn: "A sentire cosa fanno le tue mani.", who: "Per chi parte da zero" },
@@ -24,6 +25,7 @@ const day = [
 export default function MetodoRD() {
   return (
     <>
+      <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo Rita Dolbakian", "/percorsi/metodo-rita-dolbakian"]]} />
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
       <PageHero dark bgId="hero-massaggio" eyebrow="Metodo Rita Dolbakian" title="Vuoi imparare a *massaggiare* con mani sicure?" answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
         <Link href="/call-orientamento" className="btn btn-primary">Scegli il tuo livello con me <span className="arr">→</span></Link>
