@@ -12,7 +12,7 @@ export default function Call() {
   return (
     <>
       <Crumbs trail={[["Call di orientamento", "/call-orientamento"]]} />
-      <PageHero dark bgId="hero-massaggio" eyebrow="Call di orientamento" title="Una call per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In call ti dico dove stai perdendo continuità e cosa farei io per prima cosa. È gratuita, e non è una telefonata per venderti qualcosa: se il mio percorso non fa per te, te lo dico." />
+      <PageHero dark bgId="hero-massaggio" eyebrow="Call di orientamento" title="Una call per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In call ti dico dove stai perdendo continuità e cosa farei io per prima cosa." />
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div className="space-y-10">
