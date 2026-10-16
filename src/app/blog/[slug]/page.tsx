@@ -62,7 +62,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
       <p className="eyebrow !mb-0 !text-ivory/60">{isTech ? "Se vuoi imparare con un metodo" : "Guida gratuita"}</p>
       <p className="font-display text-3xl md:text-4xl mt-3 leading-[1.08] !text-ivory">{isTech ? <>Mani sicure, <em className="kw">tocco consapevole</em>.</> : <>I primi 10 clienti online: <em className="kw">da dove cominciare</em>.</>}</p>
       <p className="mt-3 text-[0.95rem] !text-ivory/75">{isTech ? "Scopri il Metodo Rita Dolbakian: tre livelli, online e in presenza." : "La mia guida pratica per chi lavora nel benessere."}</p>
-      <Link href={isTech ? "/percorsi/metodo-rita-dolbakian" : "/guida-gratuita"} className="btn btn-primary mt-6 !min-h-12 !text-white !no-underline">{isTech ? "Scopri il metodo" : "Ricevi la guida via email"} <span className="arr">→</span></Link>
+      <Link href={isTech ? "/percorsi/metodo-rita-dolbakian" : "/guida-gratuita"} className="btn btn-primary mt-6 !min-h-12 !text-white hover:!text-ink !no-underline">{isTech ? "Scopri il metodo" : "Ricevi la guida via email"} <span className="arr">→</span></Link>
     </aside>
   );
 
