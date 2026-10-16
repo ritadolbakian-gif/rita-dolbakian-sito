@@ -39,7 +39,7 @@ export default function RichiestaRicevuta() {
           <div className="space-y-6">
             <Label t="Il passo successivo" />
             <Heading text="Vuoi *parlarne* con me?" className="text-4xl md:text-5xl" />
-            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita di circa 30 minuti. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa. Nessun obbligo e nessuno spam.</p>
+            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita di circa 30 minuti. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa. Nessun obbligo.</p>
             <ul className="space-y-2 text-sm text-stone"><li>✓ Circa 30 minuti, in videochiamata</li><li>✓ Gratuita, senza impegno</li><li>✓ Scegli tu l'orario</li></ul>
           </div>
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />

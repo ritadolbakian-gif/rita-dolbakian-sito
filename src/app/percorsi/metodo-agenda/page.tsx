@@ -264,14 +264,14 @@ export default function MetodoAgenda() {
       <Faq items={[
         { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere, in sei passi: Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È anche il primo percorso di affiancamento." },
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono smettere di andare a tentativi." },
-        { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo e nessuno spam: è un confronto per capire se e come lavorare insieme." },
+        { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. Non c'è nessun obbligo: è un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
         { q: "Quanto costa il percorso?", a: "Il prezzo lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso è adatto a te. Il valore di tutto ciò che è incluso è indicato nella sezione dedicata." },
         { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è la mentorship 1:1 Metodo Sold Out, il massimo affiancamento, con 8 posti per trimestre." },
         { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
         { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },
         { q: "Quanto dura l'affiancamento?", a: "Il percorso dura 6 mesi, con 2 chiamate individuali al mese (12 in totale), chat 7 giorni su 7, community privata e Q&A bisettimanali." },
-        { q: "Cosa succede se alla call capisco che non fa per me?", a: "Nessun problema: nessun obbligo e nessuno spam. E ti dico comunque da dove partirei." },
+        { q: "Cosa succede se alla call capisco che non fa per me?", a: "Nessun problema: nessun obbligo. E ti dico comunque da dove partirei." },
         { q: "C'è una garanzia?", a: "Sì: soddisfatti o rimborsati per tutta la durata del percorso. Il rischio è mio. La condizione è che tu partecipi agli incontri e svolga le attività richieste, e lo dimostri." },
         { q: "Ci sono garanzie sul risultato economico?", a: "Nessuno può garantire guadagni o numero di clienti, e non lo faccio io. La garanzia riguarda la tua soddisfazione per il percorso. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },
       ]} />

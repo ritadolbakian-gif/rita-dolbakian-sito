@@ -74,7 +74,7 @@ export function ProductPage(p: ProductProps) {
           {p.comingSoon ? (
             <>
               <p className="mt-6 font-display text-5xl">In arrivo</p>
-              <p className="mt-4 text-stone">Non è ancora disponibile. Lascia la tua email e ti scrivo appena esce, senza altro spam.</p>
+              <p className="mt-4 text-stone">Non è ancora disponibile. Lascia la tua email e ti scrivo appena esce.</p>
               <div className="mt-8 text-left max-w-xl mx-auto"><LeadForm tipo="contatti" cta="Avvisami quando esce" phone={false} compact /></div>
             </>
           ) : (

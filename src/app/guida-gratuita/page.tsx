@@ -6,7 +6,11 @@ import { GuideForm } from "@/components/GuideForm";
 import { Outcomes, Steps } from "@/components/Sections";
 import { QuoteWall, TrustBar } from "@/components/Proof";
 import { ReviewBadge } from "@/components/Reviews";
+import { STATS } from "@/lib/proof";
 import { meta } from "@/lib/seo";
+
+const NUM_LABEL: Record<string, string> = { anni: "anni nel benessere", studenti: "studenti formati" };
+const authorNumbers = STATS.filter((s) => s.confirmed && NUM_LABEL[s.id]).map((s) => ({ big: `${s.prefix ?? ""}${s.value}${s.suffix ?? ""}`, label: NUM_LABEL[s.id] }));
 
 export const metadata = meta("Guida Metodo A.G.E.N.D.A. gratuita: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita");
 
@@ -33,7 +37,7 @@ export default function Guida() {
           <div>
             <Label t="Gratis, via email" />
             <Heading text="Dimmi dove *mandartela*." className="text-5xl md:text-6xl" />
-            <p className="mt-4 text-stone max-w-md">Una email con la guida, e basta. Niente spam: se un giorno non ti serve più, ti cancelli con un clic.</p>
+            <p className="mt-4 text-stone max-w-md">Una email con la guida, e basta. Se un giorno non ti serve più, ti cancelli con un clic.</p>
             <div className="mt-8 max-w-xl"><GuideForm /></div>
             <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ Gratuita, senza carta</li><li>✓ Una sola email</li><li>✓ Cancellazione con un clic</li></ul>
             <ReviewBadge />
@@ -44,8 +48,8 @@ export default function Guida() {
       <section id="dentro" className="section bg-blush/30 scroll-mt-24">
         <div className="wrap">
           <Label n="01" t="Cosa trovi dentro" />
-          <Heading text="Sei capitoli. Tutto *pratico*." className="text-5xl md:text-6xl max-w-3xl" />
-          <p className="mt-4 text-sm text-stone"><Tbc>indice reale della guida, numero di pagine e formato (PDF)</Tbc></p>
+          <Heading text="Sei temi. Tutto *pratico*." className="text-5xl md:text-6xl max-w-3xl" />
+          <p className="mt-4 text-stone max-w-xl">In formato PDF, da leggere quando vuoi e applicare un passo alla volta.</p>
           <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {chapters.map(([t, d], i) => (
               <li key={t}><Reveal delay={(i % 3) * 0.08}>
@@ -59,7 +63,7 @@ export default function Guida() {
           </ol>
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[["guida-pag-1", "orbs"], ["guida-pag-2", "waves"], ["guida-pag-3", "stones"]].map(([id, a], i) => (
-              <Reveal key={id} delay={i * 0.08}><Slot id={id} label="Anteprima pagina interna" ratio="4/3" art={a as "orbs"} /></Reveal>
+              <Reveal key={id} delay={i * 0.08}><Slot id={id} label="Anteprima pagina interna" ratio="3/4" art={a as "orbs"} className="rounded-2xl shadow-[0_24px_60px_-30px_rgba(11,10,9,.5)]" /></Reveal>
             ))}
           </div>
         </div>
@@ -91,16 +95,27 @@ export default function Guida() {
       ]} />
 
       <section className="section">
-        <div className="wrap grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <Reveal><Slot kind="foto" id="guida-rita" label="Rita con la guida" ratio="4/5" art="leaf" className="max-w-sm mx-auto" /></Reveal>
+        <div className="wrap grid items-center gap-12 lg:gap-16 lg:grid-cols-[0.95fr_1.05fr]">
+          <Reveal>
+            <div className="grid grid-cols-5 gap-4 max-w-md mx-auto lg:mx-0">
+              <div className="col-span-3"><Slot kind="foto" id="guida-rita" label="Rita Dolbakian" ratio="3/4" art="leaf" /></div>
+              <div className="col-span-2 self-end"><Slot kind="foto" id="rita-studio" label="Rita nel suo studio" ratio="3/4" art="waves" /></div>
+            </div>
+          </Reveal>
           <div>
             <Label n="04" t="Chi l'ha scritta" />
             <Heading text="L'ho scritta *io*." className="text-5xl md:text-6xl" />
             <div className="mt-6 space-y-4 text-lg text-stone max-w-xl">
-              <p>Sono Rita Dolbakian. Lavoravo in un bar, poi ho scelto il massaggio, ho faticato a trovare clienti e ho imparato a farmi trovare con i social. Lavoro nel benessere da oltre dieci anni.</p>
-              <p>Questa guida è quello che avrei voluto avere io all'inizio: poche cose, nell'ordine giusto.</p>
+              <p>Sono Rita Dolbakian. Lavoravo in un bar, poi ho scelto il massaggio: ho faticato a trovare clienti, finché non ho imparato a farmi trovare con i social. Oggi lavoro nel benessere da oltre dieci anni e accompagno altre operatrici a fare lo stesso.</p>
+              <p>Questa guida è quello che avrei voluto avere io all'inizio: poche cose, nell'ordine giusto, scritte da chi il lettino lo conosce davvero.</p>
             </div>
-            <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la mia storia <span className="arr">→</span></Link>
+            <div className="mt-8 flex flex-wrap items-end gap-x-10 gap-y-5">
+              {authorNumbers.map((n) => (
+                <div key={n.label}><p className="font-display text-5xl kw leading-none">{n.big}</p><p className="mt-1 text-sm text-stone">{n.label}</p></div>
+              ))}
+            </div>
+            <ReviewBadge />
+            <div className="mt-8"><Link href="/chi-sono" className="btn btn-ghost">Leggi la mia storia <span className="arr">→</span></Link></div>
           </div>
         </div>
       </section>
