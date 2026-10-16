@@ -6,9 +6,8 @@ export const SITE = {
   bookingUrl: "https://api.leadconnectorhq.com/widget/booking/Crk5pbPt2YsMCM2bYgA6",
   social: {
     instagram: "https://www.instagram.com/rita_dolbakian",
-    youtube: "https://www.youtube.com/@ritadolbakian",
-    tiktok: "https://www.tiktok.com/@rita.dolbakian",
-    linkedin: "https://www.linkedin.com", // [DA CONFERMARE: URL profilo LinkedIn]
+    youtube: "https://www.youtube.com/@ritadolbakian-d2h",
+    tiktok: "https://www.tiktok.com/@rita.marketingbenessere",
   },
 };
 

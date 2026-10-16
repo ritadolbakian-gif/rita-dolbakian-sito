@@ -21,7 +21,7 @@ export default function Call() {
               <Heading text="Scegli *giorno e orario*." className="text-4xl md:text-5xl" as="h2" />
               <p className="mt-4 text-stone max-w-sm">È una videochiamata a quattr'occhi che può durare fino a un'ora. Dopo la prenotazione ricevi la conferma via email.</p>
             </div>
-            <Reveal><Slot kind="foto" id="call-hero" label="Rita sorride alla videochiamata" ratio="4/5" art="orbs" className="max-w-xs" /></Reveal>
+            <Reveal><Slot kind="foto" id="call-hero" label="Rita durante una consulenza" ratio="4/3" art="orbs" /></Reveal>
           </div>
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
         </div>

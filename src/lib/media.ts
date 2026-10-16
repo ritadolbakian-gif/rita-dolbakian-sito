@@ -16,7 +16,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
   "card-guida": { src: "/media/guida-mockup.webp", alt: "Copertina guida gratuita (4:3)", pos: "50% 32%" },
   "card-quiz": { src: "/media/hero-pensierosa.webp", alt: "Quiz gratuito: cosa ti separa da un'agenda piena", pos: "60% 25%" },
-  "card-call": { src: "/media/rita-videocall.webp", alt: "Rita in call di orientamento (4:3)" , pos: "40% 40%" },
+  "card-call": { src: "/media/rita-conversazione.webp", alt: "Rita Dolbakian durante una consulenza (4:3)", pos: "62% 38%" },
   "card-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "card-rd": { src: "/media/rita-massaggio-1.webp", alt: "Metodo Rita Dolbakian (4:3)", pos: "55% 40%" },
   "guida-copertina": { alt: "Copertina piatta della guida (3:4)" },
@@ -65,7 +65,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "corso-rd-online": { src: "/media/rita-massaggio-3.webp", alt: "Copertina corso: Metodo RD online (4:3)", pos: "70% 40%" },
   "corso-rd-presenza": { src: "/media/aula-grande.webp", alt: "Copertina corso: Metodo RD in presenza (4:3)"  },
   // ALTRE PAGINE
-  "call-hero": { src: "/media/rita-videocall.webp", alt: "Rita sorride alla videochiamata (4:5)" , pos: "28% 40%" },
+  "call-hero": { src: "/media/rita-conversazione.webp", alt: "Rita Dolbakian durante una consulenza", pos: "62% 38%" },
   "contatti-hero": { src: "/media/rita-porta.webp", alt: "Rita, ritratto per la pagina contatti (4:5)" , pos: "50% 25%" },
   "risultati-hero": { alt: "Rita con una allieva (autorizzata) (16:9)" },
   "area-privata": { src: "/media/rita-divano.webp", alt: "Studio accogliente, area privata (16:9)" , pos: "30% 40%" },

@@ -14,7 +14,6 @@ export function Footer() {
             <a className="flink" href={SITE.social.instagram} rel="noopener" target="_blank">Instagram</a>
             <a className="flink" href={SITE.social.youtube} rel="noopener" target="_blank">YouTube</a>
             <a className="flink" href={SITE.social.tiktok} rel="noopener" target="_blank">TikTok</a>
-            <a className="flink" href={SITE.social.linkedin} rel="noopener" target="_blank">LinkedIn</a>
           </div>
         </div>
         <nav aria-label="Sito" className="flex flex-col gap-2 text-ivory/80">
