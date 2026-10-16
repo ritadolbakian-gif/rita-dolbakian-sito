@@ -78,7 +78,6 @@ export function ShareBar({ title, url }: { title: string; url: string }) {
     <div className="flex flex-wrap items-center gap-2">
       <span className="eyebrow mr-2">Condividi</span>
       <a className={b} target="_blank" rel="noopener" href={`https://wa.me/?text=${enc(title + " " + url)}`}>WhatsApp</a>
-      <a className={b} target="_blank" rel="noopener" href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`}>LinkedIn</a>
       <button className={b} onClick={copy}>{copied ? "Link copiato ✓" : "Copia il link"}</button>
     </div>
   );
