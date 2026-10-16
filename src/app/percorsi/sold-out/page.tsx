@@ -1,6 +1,6 @@
 import { ReviewsSection } from "@/components/Reviews";
 import { PageNav } from "@/components/PageNav";
-import { Outcomes, Steps, Objections, Compare, DetailSteps, ValueBlock } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { meta } from "@/lib/seo";
@@ -9,61 +9,6 @@ import { CaseStudies, TrustBar } from "@/components/Proof";
 import { Crumbs } from "@/components/Crumbs";
 
 export const metadata = meta("Metodo Sold Out: mentorship 1:1 per operatrici del benessere", "Metodo Sold Out di Rita Dolbakian: mentorship 1:1 di 6 mesi per diventare il riferimento del tuo territorio, con call settimanali, Kit Pronto, landing page, prodotto digitale e 8 posti a trimestre.", "/percorsi/sold-out", "/media/hero-palco.webp");
-
-const included: { t: string; items: string[] }[] = [
-  { t: "Mentorship 1:1 con Rita Dolbakian", items: [
-    "Audit iniziale di 90 minuti per definire posizionamento, obiettivi e roadmap personalizzata sui 6 mesi.",
-    "6 mesi di call individuali da 45-60 minuti, una a settimana, via Zoom.",
-    "Ogni call ha un tema chiaro e si chiude con compiti pratici per la settimana successiva.",
-    "Revisione settimanale dei tuoi contenuti in base al calendario editoriale, prima che li pubblichi.",
-    "Registrazione di ogni sessione disponibile a vita, per riguardare i passaggi importanti.",
-    "Supporto WhatsApp diretto con me (lun-ven, 9-18) per i dubbi tra una call e l'altra.",
-    "Esercizio guidato sulla Scala dei Valori nella prima fase, per costruire la tua mappa valoriale.",
-    "1:1 avanzato sull'uso di Claude come supporto al business: contenuti, organizzazione e decisioni quotidiane, non solo social.",
-  ] },
-  { t: "Il Kit Pronto", items: [
-    "100 idee contenuto per massaggiatrici, già scritte e organizzate mese per mese.",
-    "Script DM per rispondere a richieste di prezzi, curiosi, prenotazioni e «ci penso e ti faccio sapere».",
-    "Calendario editoriale del mese: cosa pubblicare, quando e con quale tono.",
-  ] },
-  { t: "Community privata Sold Out", items: [
-    "Gruppo Telegram riservato alle partecipanti del programma.",
-    "1 Q&A live al mese con me (60 minuti in gruppo): domande, confronto e hot seat a rotazione.",
-    "Sfide mensili di gruppo (per esempio «30 giorni di Reels») con supporto.",
-    "Confronto continuo con altre professioniste del benessere.",
-  ] },
-  { t: "Teambuilding live", items: [
-    "1 giornata dal vivo con le partecipanti del trimestre e con me, a metà percorso.",
-    "Workshop pratico di gruppo su contenuti e personal branding: si lavora fianco a fianco.",
-    "Un momento di community reale: vi conoscete, vi confrontate, create contenuti insieme.",
-    "Location in Italia, comunicata con largo anticipo a inizio trimestre. Costi di viaggio e soggiorno non inclusi: dettagli comunicati separatamente.",
-  ] },
-  { t: "Landing page pronta all'uso", items: [
-    "La costruiamo noi per vendere il tuo servizio o prodotto, su una struttura collaudata. Tu ci dici l'obiettivo, ci porti le foto e, se vuoi, qualche landing che ti piace come ispirazione. I testi li scriviamo noi.",
-    "Ottimizzata per trasformare le visite in richieste: form, bottoni WhatsApp, prova sociale.",
-    "Pronta in 5-7 giorni lavorativi dalla consegna dei tuoi materiali.",
-  ] },
-  { t: "Prodotto digitale fatto e finito", items: [
-    "Ti creiamo un tuo prodotto digitale da vendere (guida PDF di 15-20 pagine) su struttura già testata: contenuto, grafica e impaginazione a cura nostra, tu ci metti esperienza e voce.",
-    "Pensato per generare un primo flusso di vendite a basso prezzo (19-39 €) mentre costruisci l'agenda.",
-    "Ti mostriamo anche il processo con cui lo costruiamo, così in futuro saprai crearne altri da sola.",
-  ] },
-  { t: "Setup piattaforma GoHighLevel", items: [
-    "Attiviamo e configuriamo per te GoHighLevel, la piattaforma che uso io per gestire prenotazioni, automazioni e clienti.",
-    "Pipeline di vendita, calendario prenotazioni e form già pronti, duplicati dai miei template e adattati a te.",
-    "Nessuna curva di apprendimento tecnica: la piattaforma arriva già impostata. Se usi già un altro strumento (per esempio Stan Store), colleghiamo la landing a quello.",
-  ] },
-  { t: "Sistema newsletter ed email marketing", items: [
-    "Scriviamo per te i contenuti della newsletter: 4 email pronte, basate sul mio framework, tu ci metti la tua voce.",
-    "Se usi GoHighLevel, impostiamo anche l'invio e le automazioni base collegate a landing page e prodotto digitale.",
-    "Se usi un'altra piattaforma, ti diciamo quali email mandare, quando e come sono strutturate; il caricamento e l'invio restano a te.",
-  ] },
-  { t: "Accesso al video corso «Metodo A.G.E.N.D.A.»", items: [
-    "Se arrivi dal Metodo A.G.E.N.D.A. hai già la piattaforma video: con Sold Out sblocchi anche gli approfondimenti avanzati riservati a chi entra in mentorship.",
-    "Se entri direttamente in Sold Out hai accesso a tutti i contenuti video del percorso, più gli approfondimenti avanzati.",
-  ] },
-];
-
 
 export default function SoldOut() {
   return (
@@ -75,7 +20,7 @@ export default function SoldOut() {
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
 
-      <PageNav items={[{ id: "incluso", t: "Cosa è incluso" }, { id: "fasi", t: "Le tre fasi" }, { id: "risultati", t: "Risultati" }, { id: "investimento", t: "Cosa ricevi" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota la call" }} />
+      <PageNav items={[{ id: "risultati", t: "Risultati" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota la call" }} />
 
       <section className="py-10 md:py-14">
         <div className="wrap">
@@ -123,23 +68,7 @@ export default function SoldOut() {
         { t: "Più libertà di scelta", d: "Non «più follower»: più richieste in DM, più prenotazioni e più scelta su chi far entrare nel tuo studio e a che prezzo." },
       ]} />
 
-      <section id="incluso" className="section bg-blush/30 scroll-mt-28">
-        <div className="wrap">
-          <Label n="03" t="Cosa è incluso" />
-          <Heading text="Massimo affiancamento. *Zero* stress tecnico." className="text-5xl md:text-7xl max-w-4xl" />
-          <p className="mt-6 max-w-2xl text-lg text-stone">Tutto ciò che si può fare al posto tuo (landing page, prodotto digitale, piattaforma) lo faccio io con il mio team. A te restano le cose che nessun altro può fare: la tua faccia, la tua voce, le tue clienti.</p>
-          <div className="mt-12 border-t border-[var(--line)] max-w-4xl">
-            {included.map((b, i) => (
-              <details key={b.t} className="acc" open={i === 0}>
-                <summary><h3 className="font-display text-2xl md:text-3xl"><span className="kw mr-3">{String(i + 1).padStart(2, "0")}</span>{b.t}</h3><span className="plus" aria-hidden>+</span></summary>
-                <div className="acc-body !max-w-none"><ul className="space-y-2">{b.items.map((x) => <li key={x}>— {x}</li>)}</ul></div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <DetailSteps n="04" label="Le tre fasi" title="Fondamenta, trazione, *agenda piena*." bg="" cols={3} items={[
+      <DetailSteps n="03" label="Le tre fasi" title="Fondamenta, trazione, *agenda piena*." bg="" cols={3} items={[
         { t: "Mesi 1–2 · Fondamenta", a: "Posizionamento personale, identità visiva, ottimizzazione completa di Instagram e TikTok. Include l'esercizio guidato sulla Scala dei Valori.", b: "Alla fine di questa fase il tuo profilo è pronto a lavorare." },
         { t: "Mesi 3–4 · Trazione", a: "Strategia di contenuto, Reels e TikTok ricorrenti, primo flusso costante di richieste in DM. Si impara a parlare al pubblico giusto e a farsi notare.", b: "Un flusso più regolare di persone interessate." },
         { t: "Mesi 5–6 · Riempire l'agenda", a: "Conversione delle richieste in clienti paganti, fidelizzazione, sistemi di passaparola digitale e recensioni.", b: "L'obiettivo: un'agenda più piena e prevedibile." },
@@ -147,7 +76,7 @@ export default function SoldOut() {
 
       <section id="risultati" className="section scroll-mt-28">
         <div className="wrap">
-          <Label n="05" t="Risultati" />
+          <Label n="04" t="Risultati" />
           <Heading text="I risultati di chi ha fatto il percorso, *raccontati* da loro." className="text-5xl md:text-6xl max-w-4xl" />
           <div className="mt-12"><CaseStudies max={3} /></div>
           <p className="mt-6 text-xs text-stone max-w-2xl">Risultati individuali, riferiti a singole allieve: non sono garantiti e non rappresentano un risultato medio. Dipendono dalla situazione di partenza e dall'impegno di ciascuna.</p>
@@ -162,15 +91,9 @@ export default function SoldOut() {
         </div>
       </section>
 
-      <ValueBlock n="06" id="investimento" title="Non ricevi un corso. Ricevi *me*, un metodo e un sistema già fatto." intro="Sold Out è la mentorship più completa che offro: il Metodo A.G.E.N.D.A. completo, una call a settimana con me e tutto ciò che si può fare al posto tuo. A te restano la faccia, la voce e le tue clienti." layers={[
-        { k: "Il cuore", t: "Il metodo, applicato a te", d: "Accesso al Metodo A.G.E.N.D.A. con gli approfondimenti avanzati, più un audit di 90 minuti e una roadmap personalizzata sui tuoi 6 mesi.", items: ["Posizionamento e identità personale riconoscibile", "Esercizio guidato sulla Scala dei Valori", "Instagram e TikTok ottimizzati insieme", "Kit Pronto: 100 idee, script DM e calendario"] },
-        { k: "Accanto a te", t: "La mentorship 1:1", d: "Una call a settimana, compiti pratici e revisione dei tuoi contenuti prima che tu li pubblichi.", items: ["24 call individuali via Zoom, registrate a vita", "WhatsApp diretto con me, lun-ven", "Community privata e Q&A mensile live", "Giornata di teambuilding dal vivo"] },
-        { k: "Fatto per te", t: "Il lavoro tecnico lo facciamo noi", d: "Zero stress tecnico: quello che si può fare al posto tuo lo fa il mio team.", items: ["Landing page pronta in 5-7 giorni", "Prodotto digitale fatto e finito", "Piattaforma GoHighLevel già configurata", "4 email di newsletter scritte per te"] },
-      ]} closing={<><p>In Sold Out non compri un corso: lavori con me ogni settimana, e il lavoro tecnico lo fa il mio team.</p><p>Alla fine dei sei mesi il metodo resta tuo: sai cosa fare, in che ordine e perché.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
-
       <section id="garanzia" className="section-dark section scroll-mt-28">
         <div className="wrap max-w-4xl">
-          <Label n="07" t="La garanzia Sold Out" />
+          <Label n="05" t="La garanzia Sold Out" />
           <Heading text="Garanzia «Primi 2 mesi»." className="text-5xl md:text-7xl" />
           <p className="mt-8 text-xl text-ivory/85">Se nei primi 2 mesi segui le mie indicazioni, frequenti tutte le call, completi i compiti settimanali, applichi le revisioni al tuo profilo e non vedi nessun miglioramento concreto sul tuo Instagram (più visualizzazioni, più follower in target, prime richieste in DM), ti restituisco l'intero investimento.</p>
           <p className="mt-6 font-display text-3xl">Senza domande. Senza giustificazioni. Senza paragrafi nascosti.</p>
@@ -181,7 +104,7 @@ export default function SoldOut() {
       <section id="candidatura" className="section bg-blush/30 scroll-mt-28">
         <div className="wrap grid gap-10 lg:grid-cols-2 items-center">
           <div>
-            <Label n="08" t="Perché i posti sono limitati" />
+            <Label n="06" t="Perché i posti sono limitati" />
             <Heading text="*8 posti* per ogni trimestre." className="text-5xl md:text-7xl" />
           </div>
           <Reveal>
@@ -192,7 +115,7 @@ export default function SoldOut() {
         </div>
       </section>
 
-      <Steps n="09" label="I prossimi passi" title="Come *si parte*." items={[
+      <Steps n="07" label="I prossimi passi" title="Come *si parte*." items={[
         { t: "Mi scrivi", d: "Rispondi dal sito o scrivimi su WhatsApp per confermare il tuo posto." },
         { t: "Audit iniziale", d: "Fissiamo la data dell'audit di 90 minuti." },
         { t: "Scegli come pagare", d: "Pagamento unico o finanziamento, e ricevi l'accesso immediato al Kit Pronto." },
@@ -200,25 +123,25 @@ export default function SoldOut() {
 
       <ReviewsSection />
 
-      <Objections n="10" items={[
+      <Objections n="08" items={[
         { t: "Non mi piace espormi in video", d: "Il metodo si basa su un'identità personale riconoscibile, quindi serve metterci faccia e voce. All'inizio è normale sentirsi impacciate: si comincia con video brevi e si migliora di settimana in settimana. Se proprio non è per te, meglio dirselo prima." },
         { t: "Costa più di quanto posso spendere ora", d: "Capisco. Ne parliamo in call, senza pressione. C'è anche il Metodo A.G.E.N.D.A. come primo passo." },
         { t: "Non sono brava con la tecnologia", d: "Per questo piattaforma, landing page e prodotto digitale li facciamo noi: zero stress tecnico." },
         { t: "E se non funziona per me?", d: "C'è la garanzia «Primi 2 mesi». Non prometto risultati economici, che nessuno può garantire." },
       ]} />
 
-      <Compare n="11" title="Metodo A.G.E.N.D.A. *o* Sold Out?" cols={["Metodo A.G.E.N.D.A.", "Metodo Sold Out"]} rows={[
-        { label: "Cos'è", cells: ["Il sistema in 11 moduli, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
+      <Compare n="09" title="Metodo A.G.E.N.D.A. *o* Sold Out?" cols={["Metodo A.G.E.N.D.A.", "Metodo Sold Out"]} rows={[
+        { label: "Cos'è", cells: ["Il sistema completo, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
         { label: "Durata", cells: ["6 mesi", "6 mesi"] },
         { label: "Affiancamento", cells: ["2 call individuali al mese, chat 7/7, Q&A bisettimanali", "Una call a settimana (24), revisione contenuti, WhatsApp diretto"] },
-        { label: "Fatto per te", cells: ["Video corso e bonus", "Landing page, prodotto digitale, piattaforma, newsletter"] },
+        { label: "Fatto per te", cells: ["Il video corso", "Landing page, prodotto digitale, piattaforma, newsletter"] },
         { label: "Posti", cells: ["Aperto", "8 per trimestre"] },
         { label: "Prezzo", cells: ["Lo comunico in videochiamata", "Lo comunico in videochiamata"] },
       ]} />
 
       <Faq id="domande" items={[
         { q: "Che cos'è il Metodo Sold Out?", a: "È la mia mentorship 1:1 di 6 mesi per operatrici del benessere: una call a settimana con me, la revisione dei tuoi contenuti, e landing page, prodotto digitale e piattaforma fatti al posto tuo." },
-        { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il sistema in 11 moduli con affiancamento. Sold Out è il massimo affiancamento: una call a settimana, revisione dei contenuti e servizi fatti dal mio team." },
+        { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il sistema completo con affiancamento. Sold Out è il massimo affiancamento: una call a settimana, revisione dei contenuti e servizi fatti dal mio team." },
         { q: "Devo mostrarmi sui social?", a: "Sì. Il metodo si basa su un'identità personale riconoscibile: video, volto e voce, non solo grafiche." },
         { q: "Quanto tempo richiede?", a: <>Serve tempo ogni settimana: la call, i compiti e i contenuti. <Tbc>ore settimanali consigliate</Tbc></>, plain: "Serve tempo ogni settimana per la call, i compiti e i contenuti." },
         { q: "Quanto costa e posso pagare a rate?", a: "Il prezzo lo comunico durante la videochiamata di orientamento. Se vuoi dividere il pagamento in rate, ne parliamo in quella sede." },

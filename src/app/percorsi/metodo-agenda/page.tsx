@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteeConditions, ValueBlock } from "@/components/Sections";
+import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteeConditions } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -18,35 +18,12 @@ const letters = [
   { l: "A", w: "Automazione", d: "Fidelizzazione, scontrino medio più alto e gestione dell'agenda con strumenti che lavorano per te.", p: "Un'agenda più piena e regolare." },
 ];
 
-const modulesList: [string, string, string][] = [
-  ["00", "Introduzione", "Roadmap dei 6 mesi, errori da evitare, come usare il percorso al massimo."],
-  ["01", "Mindset", "Superare la paura di esporsi, convinzioni sul denaro, mindfulness."],
-  ["02", "Fondamenta business", "Nicchia, cliente ideale, massaggio differenziante, personal brand."],
-  ["03", "Parte pratica", "Cabina, attrezzatura, abbigliamento, accoglienza del cliente, caparra."],
-  ["04", "Offerta irresistibile", "Ricerca di mercato, costruzione dei pacchetti, aumento dei prezzi."],
-  ["05", "Instagram", "Profilo ottimizzato, algoritmo, crescita organica, contenuti strategici."],
-  ["06", "Instagram Stories", "Struttura, storytelling, stories di vendita, gestione delle richieste."],
-  ["07", "Content creation", "Piano editoriale, script video, template di contenuti, brainstorming."],
-  ["08", "Espansione canali", "TikTok, Facebook, YouTube, LinkedIn, Google My Business."],
-  ["09", "Vendita e DM", "Gestione richieste, chiusura clienti, follow-up, lead non chiusi."],
-  ["10", "AI e automazioni", "ChatGPT per i contenuti, automazioni di marketing, organizzazione del lavoro."],
-];
-
-const bonusList: [string, string][] = [
-  ["Calendario contenuti 12 mesi", "Un piano editoriale già pronto: sai cosa pubblicare ogni giorno per un anno."],
-  ["Mini corso Canva", "Crea contenuti grafici professionali anche senza esperienza di grafica."],
-  ["Mini corso CapCut", "Monta video per TikTok e Reel in modo semplice e veloce."],
-  ["Script chiusura influencer", "Template pronti per contattare manager e influencer locali e proporre collaborazioni."],
-  ["Masterclass Pinterest", "Come usare Pinterest per attirare traffico organico e nuovi clienti."],
-];
-
-
 export default function MetodoAgenda() {
   return (
     <>
       <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo A.G.E.N.D.A.", "/percorsi/metodo-agenda"]]} />
-      <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Percorso di 6 mesi in 11 moduli con affiancamento individuale di Rita Dolbakian: il sistema per riempire l'agenda di un'attività nel benessere con Instagram, TikTok, posizionamento e strategie di acquisizione clienti.", "/percorsi/metodo-agenda", ["online"])} />
-      <PageHero dark bgId="hero-scrive" eyebrow="Metodo A.G.E.N.D.A." title="L'agenda piena non deve dipendere *dalla stagione*." answer="Il Metodo A.G.E.N.D.A. è il mio sistema per riempire l'agenda usando social, posizionamento professionale e strategie di acquisizione clienti. 6 mesi, 11 moduli e affiancamento individuale incluso. Si parte da una call di orientamento.">
+      <JsonLd data={courseLd("Metodo A.G.E.N.D.A.", "Percorso di 6 mesi con affiancamento individuale di Rita Dolbakian: il sistema per riempire l'agenda di un'attività nel benessere con Instagram, TikTok, posizionamento e strategie di acquisizione clienti.", "/percorsi/metodo-agenda", ["online"])} />
+      <PageHero dark bgId="hero-scrive" eyebrow="Metodo A.G.E.N.D.A." title="L'agenda piena non deve dipendere *dalla stagione*." answer="Il Metodo A.G.E.N.D.A. è il mio sistema per riempire l'agenda usando social, posizionamento professionale e strategie di acquisizione clienti. 6 mesi di affiancamento individuale. Si parte da una call di orientamento.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link>
         <Link href="/guida-gratuita" className="btn btn-ghost">Ricevi la guida via email</Link>
       </PageHero>
@@ -72,7 +49,7 @@ export default function MetodoAgenda() {
           <Reveal delay={0.1}>
             <p className="eyebrow mb-4">Il dato che cambia tutto</p>
             <p className="font-display text-3xl md:text-5xl leading-tight">delle donne tra i 25 e i 55 anni, il target perfetto del massaggio benessere, sceglie il proprio operatore di fiducia su Instagram.</p>
-            <p className="mt-6 text-lg text-ivory/75">Non da Google. Non dal passaparola. Da Instagram. Un sistema in 11 moduli per portarti da «brava ma invisibile» a un'agenda piena in 6 mesi, lavorando su due piattaforme: Instagram e TikTok.</p>
+            <p className="mt-6 text-lg text-ivory/75">Non da Google. Non dal passaparola. Da Instagram. Un sistema per portarti da «brava ma invisibile» a un'agenda piena in 6 mesi, lavorando su due piattaforme: Instagram e TikTok.</p>
           </Reveal>
         </div>
       </section>
@@ -136,42 +113,6 @@ export default function MetodoAgenda() {
         </div>
       </section>
 
-      <section id="incluso" className="section scroll-mt-28">
-        <div className="wrap">
-          <Label n="05b" t="Cosa è incluso" />
-          <Heading text="11 moduli. Tutto quello che serve, *nulla di più*." className="text-5xl md:text-6xl max-w-4xl" />
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {modulesList.map(([n, t, d], i) => (
-              <li key={n}><Reveal delay={(i % 3) * 0.06}><div className="rounded-3xl border border-[var(--line)] p-6 h-full"><span className="font-display text-5xl kw leading-none">{n}</span><h3 className="font-display text-2xl mt-3">{t}</h3><p className="mt-2 text-sm text-stone">{d}</p></div></Reveal></li>
-            ))}
-          </ul>
-          <p className="mt-6 text-xs text-stone">Per chi è alle prime armi con la tecnologia, i mini corsi Canva e CapCut sono nei bonus.</p>
-        </div>
-      </section>
-
-      <section className="section-dark section">
-        <div className="wrap">
-          <Label n="05c" t="Bonus e supporto" />
-          <Heading text="Cinque bonus. E non *resti* sola." className="text-5xl md:text-6xl max-w-4xl" />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {bonusList.map(([t, d], i) => (
-              <Reveal key={t} delay={i * 0.06}><div className="rounded-3xl border border-ivory/15 p-7 h-full"><span className="eyebrow">Bonus {i + 1}</span><h3 className="font-display text-2xl mt-3">{t}</h3><p className="mt-2 text-ivory/65 text-[0.95rem]">{d}</p></div></Reveal>
-            ))}
-          </div>
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
-            {[["Affiancamento individuale via chat, 7 giorni su 7", "Accesso diretto a me ogni giorno. Supporto personalizzato sulla tua situazione, non risposte generiche."], ["2 chiamate individuali al mese con me", "Sessioni 1:1 dedicate a te: analisi dei contenuti, strategia personalizzata, supporto per sbloccare gli ostacoli."], ["Community privata WhatsApp", "Confronto quotidiano con altri massaggiatori che stanno costruendo la loro attività."], ["Live Q&A bisettimanali", "Sessioni di gruppo ogni due settimane: domande, analisi di casi reali e aggiornamenti sulle strategie."]].map(([t, d], i) => (
-              <Reveal key={t} delay={i * 0.06}><div className="rounded-3xl bg-ivory/10 p-7 h-full"><h3 className="font-display text-2xl">{t}</h3><p className="mt-2 text-ivory/70">{d}</p></div></Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <ValueBlock n="05d" id="investimento" title="Non ricevi dei file. Ricevi un *metodo*, e qualcuno accanto." intro="Il Metodo A.G.E.N.D.A. non è un insieme di video: è un sistema completo e replicabile, per riempire l'agenda con i social, un posizionamento preciso e strategie per attirare clienti. E non lo applichi da sola." layers={[
-        { k: "Il cuore", t: "Il Metodo A.G.E.N.D.A.", d: "11 moduli che ti dicono cosa fare, in che ordine e perché. Resta tuo: lo puoi riapplicare ogni volta che cambi offerta, prezzo o canale.", items: ["Mindset, nicchia, cliente ideale e personal brand", "Offerta e prezzi giusti per il tuo lavoro", "Instagram, Stories, contenuti e altri canali", "Vendita nei DM, AI e automazioni"] },
-        { k: "Accanto a te", t: "L'affiancamento", d: "Il metodo funziona se lo applichi. Per questo non resti sola davanti allo schermo.", items: ["2 call individuali al mese con me (12 in 6 mesi)", "Chat diretta con me 7 giorni su 7", "Live Q&A ogni due settimane", "Community privata WhatsApp"] },
-        { k: "Pronto da usare", t: "Gli strumenti", d: "Cinque bonus per partire subito, senza cominciare da una pagina bianca.", items: ["Calendario contenuti per 12 mesi", "Mini corso Canva e mini corso CapCut", "Script per contattare gli influencer locali", "Masterclass Pinterest"] },
-      ]} closing={<><p>Non ti consegno dei file da guardare quando capita. Ti do un metodo che resta tuo e che puoi rifare ogni volta che cambi offerta, prezzo o canale.</p><p>E per sei mesi lo applichi con me accanto.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
-
       <DetailSteps n="06" label="L'affiancamento" title="Come lavoriamo, *fase per fase*." bg="" items={[
         { t: "Fotografia", a: "Guardiamo insieme dove sei: profilo, scheda Google, messaggi, prezzi, clienti che tornano.", b: "Un quadro chiaro di cosa funziona già e di dove perdi continuità." },
         { t: "Direzione", a: "Definiamo chi vuoi aiutare, cosa offri e perché dovrebbero scegliere te.", b: "Tre frasi che usi ovunque: nella bio, nella scheda, nei messaggi." },
@@ -200,8 +141,7 @@ export default function MetodoAgenda() {
           <div><Label n="09" t="Un esempio" /><Heading text="Com'è, *in concreto*." className="text-5xl md:text-6xl" /><p className="mt-5 text-sm text-stone max-w-sm">Scenario inventato per spiegare: non è il caso di una persona reale e non è una promessa di risultato.</p></div>
           <Reveal><div className="rounded-3xl bg-ivory p-7 md:p-10 space-y-6">
             <div><p className="eyebrow">Marta, massaggiatrice · prima</p><p className="mt-2 text-stone">Lavora solo con il passaparola. Un mese è piena, il successivo ha buchi. Quando le scrivono «quanto costa?» risponde con il prezzo e la persona sparisce. La sua scheda Google non ha foto.</p></div>
-            <div className="border-t border-[var(--line)] pt-6"><p className="eyebrow !text-rose">Cosa si sistema, passo dopo passo</p><ol className="mt-2 list-decimal pl-5 space-y-1 text-stone"><li>Una frase su chi aiuta e cosa offre, da mettere nella bio.</li><li>La scheda Google con foto vere, orari e descrizione.</li><li>Una risposta pronta a «quanto costa?», che spiega il valore prima del prezzo.</li><li>Ogni settimana ricontatta due persone che non vede da tempo.</li></ol></div>
-            <div className="border-t border-[var(--line)] pt-6"><p className="eyebrow">Dopo qualche settimana</p><p className="mt-2 text-stone">Sa da dove arrivano le richieste, sa cosa rispondere e ha un piano per il mese successivo. Non è «tutto risolto»: è un'agenda che ha una direzione.</p></div>
+            <div className="border-t border-[var(--line)] pt-6"><p className="eyebrow !text-rose">Dopo qualche settimana</p><p className="mt-2 text-stone">Le richieste arrivano con più regolarità e più qualificate. Sa da dove vengono, sa cosa rispondere senza più ansia e ha un piano per il mese successivo. Non è «tutto risolto»: è un'agenda che finalmente ha una direzione.</p></div>
           </div></Reveal>
         </div>
       </section>
@@ -253,10 +193,10 @@ export default function MetodoAgenda() {
       ]} />
 
       <Compare n="14" title="A.G.E.N.D.A. o *Sold Out*?" cols={["Metodo A.G.E.N.D.A.", "Metodo Sold Out"]} rows={[
-        { label: "Cos'è", cells: ["Il sistema in 11 moduli, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
+        { label: "Cos'è", cells: ["Il sistema completo, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
         { label: "Per chi", cells: ["Chi vuole un metodo preciso per riempire l'agenda", "Chi vuole essere seguita ogni settimana e farsi fare il lavoro tecnico"] },
         { label: "Quando", cells: ["Si parte da qui", "È il passo successivo"] },
-        { label: "Formato", cells: ["6 mesi · 11 moduli · 2 call al mese · chat 7/7", "6 mesi · una call a settimana · 8 posti a trimestre"] },
+        { label: "Formato", cells: ["6 mesi · 2 call al mese · chat 7/7", "6 mesi · una call a settimana · 8 posti a trimestre"] },
         { label: "Prezzo", cells: ["Lo comunico in videochiamata", "Lo comunico in videochiamata"] },
       ]} />
 
