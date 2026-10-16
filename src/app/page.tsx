@@ -237,7 +237,7 @@ export default function Home() {
           <div>
             <Label n="09" t="Guida gratuita" />
             <Heading text="Vuoi i *primi 10 clienti* online? Parti da qui." className="text-5xl md:text-6xl" />
-            <p className="mt-5 text-lg text-stone max-w-xl">«Guida Metodo A.G.E.N.D.A.»: la guida pratica per cominciare dal punto giusto. Una sola email.</p>
+            <p className="mt-5 text-lg text-stone max-w-xl">«Guida Metodo A.G.E.N.D.A.»: la guida pratica per cominciare dal punto giusto.</p>
             <div className="mt-8 max-w-xl"><GuideForm /></div>
           </div>
         </div>

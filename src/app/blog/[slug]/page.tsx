@@ -57,7 +57,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
     <aside className="my-12 rounded-3xl bg-ink p-7 md:p-9 section-dark">
       <p className="eyebrow !mb-0 !text-ivory/60">{isTech ? "Se vuoi imparare con un metodo" : "Guida gratuita"}</p>
       <p className="font-display text-3xl md:text-4xl mt-3 leading-[1.08] !text-ivory">{isTech ? <>Mani sicure, <em className="kw">tocco consapevole</em>.</> : <>I primi 10 clienti online: <em className="kw">da dove cominciare</em>.</>}</p>
-      <p className="mt-3 text-[0.95rem] !text-ivory/75">{isTech ? "Scopri il Metodo Rita Dolbakian: tre livelli, online e in presenza." : "La mia guida pratica per chi lavora nel benessere. Gratis, una sola email."}</p>
+      <p className="mt-3 text-[0.95rem] !text-ivory/75">{isTech ? "Scopri il Metodo Rita Dolbakian: tre livelli, online e in presenza." : "La mia guida pratica per chi lavora nel benessere."}</p>
       <Link href={isTech ? "/percorsi/metodo-rita-dolbakian" : "/guida-gratuita"} className="btn btn-primary mt-6 !min-h-12 !text-white !no-underline">{isTech ? "Scopri il metodo" : "Ricevi la guida via email"} <span className="arr">→</span></Link>
     </aside>
   );
@@ -166,7 +166,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
           <div className="wrap max-w-3xl text-center">
             <Label t="Prima di andare" />
             <Heading text="Una guida pratica, *gratis*." className="text-4xl md:text-5xl" />
-            <p className="mt-4 text-stone">«Guida Metodo A.G.E.N.D.A.». Una sola email.</p>
+            <p className="mt-4 text-stone">«Guida Metodo A.G.E.N.D.A.».</p>
             <div className="mt-8 text-left max-w-xl mx-auto"><GuideForm /></div>
           </div>
         </section>

@@ -4,7 +4,7 @@ import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { GuideForm } from "@/components/GuideForm";
 import { Outcomes, Steps } from "@/components/Sections";
-import { QuoteWall, TrustBar } from "@/components/Proof";
+import { QuoteWall } from "@/components/Proof";
 import { ReviewBadge } from "@/components/Reviews";
 import { STATS } from "@/lib/proof";
 import { meta } from "@/lib/seo";
@@ -37,9 +37,8 @@ export default function Guida() {
           <div>
             <Label t="Gratis, via email" />
             <Heading text="Dimmi dove *mandartela*." className="text-5xl md:text-6xl" />
-            <p className="mt-4 text-stone max-w-md">Una email con la guida, e basta. Se un giorno non ti serve più, ti cancelli con un clic.</p>
+            <p className="mt-4 text-stone max-w-md">Una email con la guida, e basta.</p>
             <div className="mt-8 max-w-xl"><GuideForm /></div>
-            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ Gratuita, senza carta</li><li>✓ Una sola email</li><li>✓ Cancellazione con un clic</li></ul>
             <ReviewBadge />
           </div>
         </div>
@@ -123,16 +122,15 @@ export default function Guida() {
       <section className="section bg-blush/30 pt-0"><div className="wrap">
         <p className="eyebrow mb-5">Cosa dicono di me</p>
         <QuoteWall />
-        <div className="mt-14"><TrustBar items={[{ t: "Gratuita", d: "Nessun pagamento, nessuna carta." }, { t: "Una sola email", d: "Ti scrivo per mandarti la guida." }, { t: "Pratica", d: "Passi concreti, non teoria." }, { t: "Passo dopo passo", d: "Da applicare una cosa alla volta." }]} /></div>
       </div></section>
 
       <Faq items={[
-        { q: "La guida è davvero gratuita?", a: "Sì. Non c'è nessun pagamento e non serve la carta." },
+        { q: "La guida è davvero gratuita?", a: "Sì, è gratuita. Mi lasci la tua email e te la mando." },
         { q: "Cosa ricevo, e come?", a: "Ricevi via email la guida «Guida Metodo A.G.E.N.D.A.». Se non la vedi, controlla anche la cartella spam." },
         { q: "Quanto ci vuole a leggerla?", a: <>Si legge in una sessione e si applica nell'arco di quattro settimane. <Tbc>numero di pagine e tempo di lettura</Tbc></>, plain: "Si legge in una sessione e si applica nell'arco di quattro settimane." },
         { q: "Serve già avere clienti o un profilo social?", a: "No. Serve avere una competenza nel benessere. La guida parte da lì." },
         { q: "È per massaggiatrici o anche per altre professioni?", a: "Per chiunque lavori nel benessere: massaggiatori, estetiste, operatori olistici, personal trainer e simili. Gli esempi partono dal massaggio." },
-        { q: "Mi arriveranno tante email?", a: "No. Ti scrivo per mandarti la guida. Le comunicazioni successive solo se scegli di riceverle, e puoi cancellarti con un clic." },
+        { q: "Mi arriveranno tante email?", a: "No. Ti scrivo per mandarti la guida. Dopo, mi fai sapere tu se vuoi ricevere le mie email." },
         { q: "E dopo la guida?", a: "Se vuoi un aiuto concreto puoi prenotare una call gratuita di circa 30 minuti, senza obbligo. Oppure vai avanti da sola con il piano della guida." },
         { q: "Come vengono usati i miei dati?", a: <>Solo per inviarti quello che hai chiesto, come spiegato nell'<Link href="/privacy" className="ulink text-ink">informativa privacy</Link>.</>, plain: "Solo per inviarti quello che hai chiesto, come spiegato nell'informativa privacy." },
       ]} />
