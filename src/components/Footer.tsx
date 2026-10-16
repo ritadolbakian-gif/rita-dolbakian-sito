@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NAV, SITE, COMPANY } from "@/lib/site";
-import { Tbc } from "./Ui";
 import { CookiePrefsLink } from "./CookieBanner";
 
 export function Footer() {
@@ -38,7 +37,7 @@ export function Footer() {
       </div>
       <div className="wrap mt-16 border-t border-ivory/15 pt-6 text-xs text-ivory/50 space-y-1">
         <p>© {new Date().getFullYear()} Rita Dolbakian Academy è un marchio di {COMPANY.name}</p>
-        <p>{COMPANY.line.replace("RD SRL · ", "")} · Capitale sociale: <Tbc>capitale sociale</Tbc></p>
+        <p>{COMPANY.line.replace("RD SRL · ", "")} · Capitale sociale 2.000 €</p>
         <p>Le testimonianze riflettono esperienze individuali e non costituiscono garanzia di risultato.</p>
       </div>
     </footer>
