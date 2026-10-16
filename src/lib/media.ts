@@ -65,7 +65,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "corso-rd-online": { src: "/media/rita-massaggio-3.webp", alt: "Copertina corso: Metodo RD online (4:3)", pos: "70% 40%" },
   "corso-rd-presenza": { src: "/media/aula-grande.webp", alt: "Copertina corso: Metodo RD in presenza (4:3)"  },
   // ALTRE PAGINE
-  "call-hero": { src: "/media/rita-conversazione.webp", alt: "Rita Dolbakian durante una consulenza", pos: "62% 38%" },
+  "call-hero": { src: "/media/rita-palco.webp", alt: "Rita Dolbakian sul palco di un evento", pos: "50% 26%" },
   "contatti-hero": { src: "/media/rita-porta.webp", alt: "Rita, ritratto per la pagina contatti (4:5)" , pos: "50% 25%" },
   "risultati-hero": { alt: "Rita con una allieva (autorizzata) (16:9)" },
   "area-privata": { src: "/media/rita-divano.webp", alt: "Studio accogliente, area privata (16:9)" , pos: "30% 40%" },

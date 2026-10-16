@@ -1,7 +1,6 @@
 import { PageHero, Label, Faq, Tbc } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { TrustBar } from "@/components/Proof";
 import { BookingCalendar } from "@/components/BookingCalendar";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
@@ -26,7 +25,6 @@ export default function Call() {
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
         </div>
       </section>
-      <section className="section pt-0"><div className="wrap"><TrustBar /></div></section>
 
       <Faq items={[
         { q: "La call è gratuita?", a: "Sì, non ti costa nulla. Può durare fino a un'ora." },

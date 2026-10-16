@@ -15,7 +15,7 @@ export function BookingCalendar({ className = "", minHeight = 780 }: { className
         id={`${BOOKING_ID}_inline`}
         style={{ width: "100%", border: "none", overflow: "hidden", minHeight }}
       />
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
   );
 }
