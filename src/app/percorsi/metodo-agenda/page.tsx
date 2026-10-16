@@ -40,9 +40,6 @@ const bonusList: [string, string][] = [
   ["Masterclass Pinterest", "Come usare Pinterest per attirare traffico organico e nuovi clienti."],
 ];
 
-const valueList: [string, string][] = [
-  ["Video corso Metodo A.G.E.N.D.A. (11 moduli)", "997 €"], ["Affiancamento individuale via chat 7/7 (6 mesi)", "697 €"], ["2 call individuali al mese con Rita (12 call)", "897 €"], ["Community privata WhatsApp", "197 €"], ["Live Q&A bisettimanali", "297 €"], ["Calendario contenuti 12 mesi", "197 €"], ["Mini corso Canva", "97 €"], ["Mini corso CapCut", "97 €"], ["Script chiusura influencer", "97 €"], ["Masterclass Pinterest", "97 €"],
-];
 
 export default function MetodoAgenda() {
   return (
@@ -173,7 +170,7 @@ export default function MetodoAgenda() {
         { k: "Il cuore", t: "Il Metodo A.G.E.N.D.A.", d: "11 moduli che ti dicono cosa fare, in che ordine e perché. Resta tuo: lo puoi riapplicare ogni volta che cambi offerta, prezzo o canale.", items: ["Mindset, nicchia, cliente ideale e personal brand", "Offerta e prezzi giusti per il tuo lavoro", "Instagram, Stories, contenuti e altri canali", "Vendita nei DM, AI e automazioni"] },
         { k: "Accanto a te", t: "L'affiancamento", d: "Il metodo funziona se lo applichi. Per questo non resti sola davanti allo schermo.", items: ["2 call individuali al mese con me (12 in 6 mesi)", "Chat diretta con me 7 giorni su 7", "Live Q&A ogni due settimane", "Community privata WhatsApp"] },
         { k: "Pronto da usare", t: "Gli strumenti", d: "Cinque bonus per partire subito, senza cominciare da una pagina bianca.", items: ["Calendario contenuti per 12 mesi", "Mini corso Canva e mini corso CapCut", "Script per contattare gli influencer locali", "Masterclass Pinterest"] },
-      ]} rows={valueList} total="3.670 €" closing={<><p>I 3.670 € sono solo la somma dei pezzi, venduti uno per uno.</p><p>Quello che non si vede in elenco è il metodo che li tiene insieme: un sistema che sai ripetere, e che continua a servirti anche dopo i 6 mesi.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
+      ]} closing={<><p>Non ti consegno dei file da guardare quando capita. Ti do un metodo che resta tuo e che puoi rifare ogni volta che cambi offerta, prezzo o canale.</p><p>E per sei mesi lo applichi con me accanto.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
 
       <DetailSteps n="06" label="L'affiancamento" title="Come lavoriamo, *fase per fase*." bg="" items={[
         { t: "Fotografia", a: "Guardiamo insieme dove sei: profilo, scheda Google, messaggi, prezzi, clienti che tornano.", b: "Un quadro chiaro di cosa funziona già e di dove perdi continuità." },
@@ -268,7 +265,7 @@ export default function MetodoAgenda() {
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono un ordine preciso da seguire." },
         { q: "Quanto dura la call di orientamento?", a: "Circa 30 minuti. È un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
-        { q: "Quanto costa il percorso?", a: "Il prezzo lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso è adatto a te. Il valore di tutto ciò che è incluso è indicato nella sezione dedicata." },
+        { q: "Quanto costa il percorso?", a: "Il prezzo lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso è adatto a te." },
         { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è la mentorship 1:1 Metodo Sold Out, il massimo affiancamento, con 8 posti per trimestre." },
         { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
         { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },

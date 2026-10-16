@@ -221,8 +221,8 @@ export function InfluencerCollage({ n, title = "Chi vive di immagine sceglie *ma
 
 export type ValueLayer = { k: string; t: string; d: string; items: string[] };
 /** «Cosa ricevi»: il metodo prima, poi persone e strumenti; infine il valore dei singoli componenti. */
-export function ValueBlock({ n, id = "valore", title, intro, layers, rows, total, closing, cta }: {
-  n?: string; id?: string; title: string; intro: ReactNode; layers: ValueLayer[]; rows: [string, string][]; total: string; closing: ReactNode; cta: { href: string; label: string };
+export function ValueBlock({ n, id = "valore", title, intro, layers, closing, cta }: {
+  n?: string; id?: string; title: string; intro: ReactNode; layers: ValueLayer[]; closing: ReactNode; cta: { href: string; label: string };
 }) {
   return (
     <section id={id} className="section scroll-mt-28">
@@ -244,23 +244,15 @@ export function ValueBlock({ n, id = "valore", title, intro, layers, rows, total
           ))}
         </div>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
-          <div>
-            <p className="eyebrow mb-4">Il valore dei singoli componenti</p>
-            <dl className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
-              {rows.map(([k, v]) => <div key={k} className="flex justify-between gap-6 py-3"><dt className="text-stone">{k}</dt><dd className="font-medium whitespace-nowrap">{v}</dd></div>)}
-              <div className="flex justify-between gap-6 py-4 text-lg"><dt>Somma dei componenti</dt><dd className="font-display text-3xl">{total}</dd></div>
-            </dl>
-          </div>
-          <Reveal>
-            <div className="rounded-3xl bg-blush/40 p-8 md:p-10">
-              <p className="eyebrow !text-rose">Ma il valore vero è un altro</p>
-              <div className="mt-4 space-y-4 text-lg">{closing}</div>
-              <Link href={cta.href} className="btn btn-primary mt-8">{cta.label} <span className="arr">→</span></Link>
-              <p className="mt-5 text-xs text-stone">Il prezzo lo comunico in videochiamata, dopo aver capito se il percorso fa per te. Se vuoi dividere il pagamento in rate, ne parliamo lì: <Link href="/pagamenti-rateali" className="ulink text-ink">come funziona</Link>.</p>
+        <Reveal>
+          <div className="mt-12 grid gap-8 rounded-3xl bg-blush/40 p-8 md:p-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
+            <div className="space-y-4 text-lg">{closing}</div>
+            <div className="lg:text-right">
+              <Link href={cta.href} className="btn btn-primary">{cta.label} <span className="arr">→</span></Link>
+              <p className="mt-4 text-xs text-stone">Prezzo e modalità di pagamento te li spiego in call.</p>
             </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

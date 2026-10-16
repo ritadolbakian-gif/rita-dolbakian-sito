@@ -64,9 +64,6 @@ const included: { t: string; items: string[] }[] = [
   ] },
 ];
 
-const value: [string, string][] = [
-  ["Mentorship 1:1 (24 call + WhatsApp diretto)", "4.800 €"], ["Audit iniziale + roadmap personalizzata", "600 €"], ["Kit Pronto", "497 €"], ["Community + Q&A mensili", "397 €"], ["Teambuilding live", "697 €"], ["Landing page", "197 €"], ["Prodotto digitale", "197 €"], ["Setup piattaforma", "197 €"], ["Newsletter", "124 €"], ["Accesso video corso", "497 €"], ["1:1 avanzato: Claude per il business", "297 €"],
-];
 
 export default function SoldOut() {
   return (
@@ -78,7 +75,7 @@ export default function SoldOut() {
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>
 
-      <PageNav items={[{ id: "incluso", t: "Cosa è incluso" }, { id: "fasi", t: "Le tre fasi" }, { id: "risultati", t: "Risultati" }, { id: "investimento", t: "Investimento" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota 30 minuti" }} />
+      <PageNav items={[{ id: "incluso", t: "Cosa è incluso" }, { id: "fasi", t: "Le tre fasi" }, { id: "risultati", t: "Risultati" }, { id: "investimento", t: "Cosa ricevi" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota 30 minuti" }} />
 
       <section className="py-10 md:py-14">
         <div className="wrap">
@@ -169,7 +166,7 @@ export default function SoldOut() {
         { k: "Il cuore", t: "Il metodo, applicato a te", d: "Accesso al Metodo A.G.E.N.D.A. con gli approfondimenti avanzati, più un audit di 90 minuti e una roadmap personalizzata sui tuoi 6 mesi.", items: ["Posizionamento e identità personale riconoscibile", "Esercizio guidato sulla Scala dei Valori", "Instagram e TikTok ottimizzati insieme", "Kit Pronto: 100 idee, script DM e calendario"] },
         { k: "Accanto a te", t: "La mentorship 1:1", d: "Una call a settimana, compiti pratici e revisione dei tuoi contenuti prima che tu li pubblichi.", items: ["24 call individuali via Zoom, registrate a vita", "WhatsApp diretto con me, lun-ven", "Community privata e Q&A mensile live", "Giornata di teambuilding dal vivo"] },
         { k: "Fatto per te", t: "Il lavoro tecnico lo facciamo noi", d: "Zero stress tecnico: quello che si può fare al posto tuo lo fa il mio team.", items: ["Landing page pronta in 5-7 giorni", "Prodotto digitale fatto e finito", "Piattaforma GoHighLevel già configurata", "4 email di newsletter scritte per te"] },
-      ]} rows={value} total="8.500 €" closing={<><p>Gli 8.500 € sono la somma dei singoli componenti, se li comprassi uno per uno.</p><p>Il valore vero è avere accanto una persona che ti guida ogni settimana e un metodo che resta tuo: sai cosa fare, in che ordine e perché, anche quando il percorso finisce.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
+      ]} closing={<><p>In Sold Out non compri un corso: lavori con me ogni settimana, e il lavoro tecnico lo fa il mio team.</p><p>Alla fine dei sei mesi il metodo resta tuo: sai cosa fare, in che ordine e perché.</p></>} cta={{ href: "/call-orientamento", label: "Prenota la videochiamata" }} />
 
       <section id="garanzia" className="section-dark section scroll-mt-28">
         <div className="wrap max-w-4xl">
