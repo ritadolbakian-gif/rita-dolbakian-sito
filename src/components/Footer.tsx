@@ -23,7 +23,7 @@ export function Footer() {
           {NAV.map((n) => <Link key={n.href} href={n.href} className="flink">{n.label}</Link>)}
           <Link href="/guida-gratuita" className="flink">Guida gratuita</Link>
           <Link href="/contatti" className="flink">Contatti</Link>
-          <Link href="/area-privata" className="flink">Area Privata</Link>
+          <a href={SITE.platformUrl} rel="noopener" className="flink">Area Privata</a>
         </nav>
         <nav aria-label="Legale" className="flex flex-col gap-2 text-ivory/80">
           <span className="eyebrow mb-2">Informazioni</span>

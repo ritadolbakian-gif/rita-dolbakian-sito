@@ -16,7 +16,7 @@ const GUIDE_PDF = "https://drive.google.com/file/d/1SMMKoY0GwJB9FQjRpgaSRS-u5l7O
 export default function RichiestaRicevuta() {
   return (
     <>
-      <PageHero dark bgId="home-bg" eyebrow="Richiesta ricevuta" title="Grazie! La tua *guida* è pronta." answer="Ti ho inviato la «Guida Metodo A.G.E.N.D.A.» anche via email: se non la trovi, controlla la cartella spam o la scheda Promozioni. Intanto puoi scaricarla subito qui sotto.">
+      <PageHero dark bgId="hero-ritratto" eyebrow="Richiesta ricevuta" title="Grazie! La tua *guida* è pronta." answer="Ti ho inviato la «Guida Metodo A.G.E.N.D.A.» anche via email: se non la trovi, controlla la cartella spam o la scheda Promozioni. Intanto puoi scaricarla subito qui sotto.">
         <a href={GUIDE_PDF} target="_blank" rel="noopener" className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a>
         <a href="#call" className="btn btn-ghost">Prenota la call gratuita</a>
       </PageHero>
@@ -39,8 +39,8 @@ export default function RichiestaRicevuta() {
           <div className="space-y-6">
             <Label t="Il passo successivo" />
             <Heading text="Vuoi *parlarne* con me?" className="text-4xl md:text-5xl" />
-            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita di circa 30 minuti. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa. Nessun obbligo.</p>
-            <ul className="space-y-2 text-sm text-stone"><li>✓ Circa 30 minuti, in videochiamata</li><li>✓ Gratuita, senza impegno</li><li>✓ Scegli tu l'orario</li></ul>
+            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita di circa 30 minuti. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
+            <ul className="space-y-2 text-sm text-stone"><li>✓ Circa 30 minuti, in videochiamata</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
           </div>
           <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
         </div>

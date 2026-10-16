@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageHero, Tbc, Faq } from "@/components/Ui";
 import { Slot } from "@/components/Slot";
+import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
 
 export const metadata = { ...meta("Area Privata", "Accedi alla piattaforma dei corsi di Rita Dolbakian Academy.", "/area-privata"), robots: { index: false } };
@@ -8,13 +9,13 @@ export const metadata = { ...meta("Area Privata", "Accedi alla piattaforma dei c
 export default function Area() {
   return (
     <>
-      <PageHero dark eyebrow="Area Privata" title="Bentornata *a casa*." answer="Da qui accedi ai tuoi corsi e ai materiali del percorso che hai acquistato." />
+      <PageHero dark bgId="hero-seduta" eyebrow="Area Privata" title="Bentornata *a casa*." answer="Da qui accedi ai tuoi corsi e ai materiali del percorso che hai acquistato." />
       <section className="section">
         <div className="wrap max-w-2xl text-center">
           <Slot id="area-privata" label="Studio accogliente" ratio="16/8" art="arch" className="mb-10" />
-          <p className="text-lg text-stone">Accedi con l'email che hai usato per l'iscrizione. <Tbc>link alla piattaforma corsi</Tbc></p>
+          <p className="text-lg text-stone">Accedi con l'email che hai usato per l'iscrizione.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <span className="btn btn-primary opacity-60 pointer-events-none">Accedi alla piattaforma</span>
+            <a href={SITE.platformUrl} className="btn btn-primary" rel="noopener">Accedi alla piattaforma <span className="arr">→</span></a>
             <Link href="/contatti" className="btn btn-ghost">Serve aiuto per accedere?</Link>
           </div>
         </div>

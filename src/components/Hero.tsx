@@ -34,7 +34,7 @@ export function Hero() {
             <Link href="/call-orientamento" className="btn btn-primary justify-center">Prenota 30 minuti gratis <span className="arr">→</span></Link>
             <Link href="/percorsi" className="btn btn-ghost justify-center">Trova il tuo percorso</Link>
           </motion.div>
-          <motion.p {...fade(1.2)} className="mt-6 text-sm text-ivory/60">30 minuti · nessun obbligo</motion.p>
+          <motion.p {...fade(1.2)} className="mt-6 text-sm text-ivory/60">Call gratuita di 30 minuti</motion.p>
           <motion.div {...fade(1.3)} className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
             <span className="flex items-baseline gap-2"><span className="font-display text-5xl kw leading-none"><CountUp to={10} suffix="+" /></span><span className="text-sm leading-tight text-ivory/70">anni<br />nel benessere</span></span>
             <span className="text-sm leading-tight text-ivory/70">Online<br />+ in presenza</span>

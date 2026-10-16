@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import { NAV } from "@/lib/site";
+import { NAV, SITE } from "@/lib/site";
 
 const PERCORSI = [
   { href: "/percorsi/metodo-agenda", t: "Metodo A.G.E.N.D.A.", d: "Per chi lavora nel benessere e vuole più clienti" },
@@ -73,7 +73,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Link href="/area-privata" className={`hidden md:inline-flex items-center gap-2 rounded-full border px-4 min-h-11 text-sm transition-colors duration-300 ${light ? "border-ivory/40 hover:bg-ivory hover:text-ink hover:border-ivory" : "border-ink/20 hover:bg-ink hover:text-ivory hover:border-ink"}`}><Lock />Area Privata</Link>
+            <a href={SITE.platformUrl} rel="noopener" className={`hidden md:inline-flex items-center gap-2 rounded-full border px-4 min-h-11 text-sm transition-colors duration-300 ${light ? "border-ivory/40 hover:bg-ivory hover:text-ink hover:border-ivory" : "border-ink/20 hover:bg-ink hover:text-ivory hover:border-ink"}`}><Lock />Area Privata</a>
             <Link href="/call-orientamento" className="btn btn-primary hidden md:inline-flex !min-h-11 !py-2.5">Prenota la call <span className="arr">→</span></Link>
             <button onClick={() => setOpen(true)} className="xl:hidden min-h-11 min-w-11 grid place-items-center" aria-label="Apri il menu" aria-expanded={open}>
               <span className="block w-7 space-y-2"><span className={`block h-px ${light ? "bg-ivory" : "bg-ink"}`} /><span className={`block h-px w-5 ml-auto ${light ? "bg-ivory" : "bg-ink"}`} /></span>
@@ -98,7 +98,7 @@ export function Header() {
               ))}
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link href="/call-orientamento" onClick={() => setOpen(false)} className="btn btn-primary justify-center">Prenota la call <span className="arr">→</span></Link>
-                <Link href="/area-privata" onClick={() => setOpen(false)} className="btn btn-ghost justify-center"><Lock />Area Privata</Link>
+                <a href={SITE.platformUrl} rel="noopener" onClick={() => setOpen(false)} className="btn btn-ghost justify-center"><Lock />Area Privata</a>
               </div>
             </nav>
           </motion.div>

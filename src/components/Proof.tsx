@@ -107,7 +107,7 @@ export function RatingLd() {
 /** Striscia di rassicurazioni, sempre vera. */
 export function TrustBar({ items }: { items?: { t: string; d: string }[] }) {
   const list = items ?? [
-    { t: "Nessun obbligo", d: "La call dura circa 30 minuti ed è gratuita." },
+    { t: "30 minuti con me", d: "La call dura circa 30 minuti ed è gratuita." },
     { t: "Poche persone alla volta", d: "Così posso seguire ognuna con attenzione." },
     { t: "Soddisfatti o rimborsati", d: "Per tutta la durata del percorso, se partecipi e svolgi le attività." },
     { t: "Niente promesse di guadagno", d: "Ti do un metodo e un affiancamento. I risultati dipendono anche da te." },

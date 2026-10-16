@@ -8,7 +8,7 @@ export const metadata = meta("Corsi, guide e percorsi di Rita Dolbakian", "Il ca
 export default function Corsi() {
   return (
     <>
-      <PageHero imageId="corsi-top" imageRatio="4/5" imageArt="leaf" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
+      <PageHero dark bgId="hero-ritratto" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
         <a href="#affiancamento" className="btn btn-primary">Percorsi di affiancamento</a>
         <a href="#digitali" className="btn btn-ghost">Prodotti digitali</a>
         <a href="#gratis" className="btn btn-ghost">Gratis</a>
@@ -22,7 +22,7 @@ export default function Corsi() {
 
       <Faq items={[
         { q: "Come scelgo il corso giusto?", a: "Dipende da cosa vuoi cambiare: se vuoi più clienti per la tua attività, parti dal Metodo A.G.E.N.D.A. o dal Metodo Sold Out. Se vuoi imparare a massaggiare, il Metodo Rita Dolbakian. Il test di orientamento nella pagina Percorsi ti aiuta a decidere." },
-        { q: "C'è qualcosa di gratuito per iniziare?", a: "Sì: la guida «Guida Metodo A.G.E.N.D.A.» e la call di orientamento di circa 30 minuti, senza obbligo." },
+        { q: "C'è qualcosa di gratuito per iniziare?", a: "Sì: la guida «Guida Metodo A.G.E.N.D.A.» e la call di orientamento di circa 30 minuti." },
         { q: "Quali sono i prezzi?", a: "Per A.G.E.N.D.A. e Sold Out il prezzo si comunica durante la videochiamata di orientamento, perché dipende dal percorso giusto per te. Instagram Stories che vendono costa 37 €. Gli altri prezzi sono nella pagina di ogni percorso." },
         { q: "Posso seguire i corsi online?", a: "Sì: i percorsi per l'attività sono pensati per essere seguiti online. Per la tecnica di massaggio, lo studio è online e la pratica in presenza." },
         { q: "Devo già lavorare nel benessere?", a: "Per A.G.E.N.D.A. e Metodo Sold Out sì: servono competenza e un'attività, anche appena avviata. Per il Metodo Rita Dolbakian si può partire da zero." },

@@ -146,7 +146,7 @@ export default function ChiSono() {
         { q: "Come hai trovato i tuoi clienti?", a: "All'inizio solo con il passaparola, e andando a tentativi. Poi ho imparato a usare i social e a costruire un percorso chiaro, dal «ti vedo» al «ti scrivo»." },
         { q: "Di cosa ti occupi oggi?", a: "Aiuto operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Metodo Sold Out) e insegno a massaggiare con il mio metodo, online e in presenza." },
         { q: "Perché segui poche persone alla volta?", a: "Perché il lavoro vero richiede ascolto, attenzione e presenza. Preferisco seguire poche persone davvero, che molte a distanza." },
-        { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento di circa 30 minuti, senza obbligo. Da lì capiamo insieme quale percorso ha senso." },
+        { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento di circa 30 minuti. Da lì capiamo insieme quale percorso ha senso." },
         { q: "Dove ti trovo sui social?", a: "Su Instagram @rita_dolbakian, su YouTube e su TikTok @rita.dolbakian." },
       ]} />
       <CtaBand title="Se ti riconosci in questa storia, *parliamone*." />

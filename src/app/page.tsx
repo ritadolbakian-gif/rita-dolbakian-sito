@@ -119,7 +119,7 @@ export default function Home() {
           <div className="mt-14 grid gap-px bg-[var(--line)] md:grid-cols-3 border border-[var(--line)] rounded-3xl overflow-hidden">
             {[
               { n: "1", t: "La guida gratuita", d: "«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
-              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti, nessun obbligo. Una chiacchierata per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
+              { n: "2", t: "La call di orientamento", d: "Circa 30 minuti. Una chiacchierata per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota 30 minuti con me" },
               { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi il massimo affiancamento, la mentorship 1:1 Metodo Sold Out.", href: "/percorsi", cta: "Scegli il tuo percorso" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
@@ -245,8 +245,8 @@ export default function Home() {
 
       {/* 10 — FAQ */}
       <Faq title="Prima di *iniziare*." items={[
-        { q: "Come capisco quale percorso fa per me?", a: "Puoi fare il test di orientamento nella pagina Percorsi, scaricare la guida gratuita oppure prenotare la call: circa 30 minuti, senza obbligo, per capire insieme da dove ripartire." },
-        { q: "La call di orientamento costa qualcosa?", a: "No. È gratuita, dura circa 30 minuti e non c'è nessun obbligo. Non è una lezione né una telefonata commerciale aggressiva: è un confronto." },
+        { q: "Come capisco quale percorso fa per me?", a: "Puoi fare il test di orientamento nella pagina Percorsi, scaricare la guida gratuita oppure prenotare la call: circa 30 minuti, per capire insieme da dove ripartire." },
+        { q: "La call di orientamento costa qualcosa?", a: "No. È gratuita, dura circa 30 minuti. Non è una lezione né una telefonata commerciale aggressiva: è un confronto." },
         { q: "Devo già avere clienti o un seguito sui social?", a: "No. Serve avere una competenza nel benessere. Da lì, un passo alla volta, si costruisce tutto il resto." },
         { q: "Posso imparare a massaggiare partendo da zero?", a: "Sì. Il Metodo Rita Dolbakian parte dalle fondamenta del tocco e prosegue per livelli, online e in presenza." },
         { q: "Mi garantisci dei risultati?", a: "No, e diffido di chi lo fa. Ti do un metodo e un affiancamento. I risultati dipendono dalla tua situazione di partenza e dal tuo impegno." },

@@ -71,7 +71,7 @@ export default function SoldOut() {
   return (
     <>
       <JsonLd data={courseLd("Metodo Sold Out", "Mentorship 1:1 di 6 mesi con Rita Dolbakian per operatrici del benessere.", "/percorsi/sold-out")} />
-      <PageHero imageId="wm-top" imageRatio="16/9" imageArt="arch" dark eyebrow="Mentorship 1:1 · Metodo Sold Out" title="Da brava ma *invisibile* a riferimento del tuo territorio." answer="Metodo Sold Out è la mia mentorship 1:1 di 6 mesi per operatrici del benessere: una call a settimana con me, la revisione dei tuoi contenuti e tutto ciò che si può fare al posto tuo (landing page, prodotto digitale, piattaforma) lo facciamo noi. A te restano la faccia, la voce e le tue clienti. Lavoriamo su due piattaforme: Instagram e TikTok.">
+      <PageHero dark bgId="hero-palco" eyebrow="Mentorship 1:1 · Metodo Sold Out" title="Da brava ma *invisibile* a riferimento del tuo territorio." answer="Metodo Sold Out è la mia mentorship 1:1 di 6 mesi per operatrici del benessere: una call a settimana con me, la revisione dei tuoi contenuti e tutto ciò che si può fare al posto tuo (landing page, prodotto digitale, piattaforma) lo facciamo noi. A te restano la faccia, la voce e le tue clienti. Lavoriamo su due piattaforme: Instagram e TikTok.">
         <Link href="#candidatura" className="btn btn-primary">Candidati <span className="arr">→</span></Link>
         <Link href="/call-orientamento" className="btn btn-ghost">Prima parliamone</Link>
       </PageHero>

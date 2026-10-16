@@ -26,7 +26,7 @@ const chapters = [
 export default function Guida() {
   return (
     <>
-      <PageHero dark bgId="home-bg" eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Guida Metodo A.G.E.N.D.A.» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
+      <PageHero dark bgId="hero-seduta" eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Guida Metodo A.G.E.N.D.A.» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
         <a href="#modulo" className="btn btn-primary">Ricevi la guida via email <span className="arr">→</span></a>
         <a href="#dentro" className="btn btn-ghost">Cosa trovi dentro</a>
       </PageHero>
@@ -90,7 +90,7 @@ export default function Guida() {
         { t: "Lasci l'email", d: "Il tuo nome e la tua email, e acconsenti al trattamento dei dati." },
         { t: "Ricevi la guida", d: "Ti arriva via email. Se non la vedi, controlla la cartella spam." },
         { t: "Applichi un passo alla volta", d: "Segui il piano delle prime 4 settimane e annota i tuoi numeri." },
-        { t: "Se vuoi, ne parliamo", d: "Se ti serve una mano, puoi prenotare una call gratuita di 30 minuti. Senza obbligo." },
+        { t: "Se vuoi, ne parliamo", d: "Se ti serve una mano, puoi prenotare una call gratuita di 30 minuti con me." },
       ]} />
 
       <section className="section">
@@ -131,7 +131,7 @@ export default function Guida() {
         { q: "Serve già avere clienti o un profilo social?", a: "No. Serve avere una competenza nel benessere. La guida parte da lì." },
         { q: "È per massaggiatrici o anche per altre professioni?", a: "Per chiunque lavori nel benessere: massaggiatori, estetiste, operatori olistici, personal trainer e simili. Gli esempi partono dal massaggio." },
         { q: "Mi arriveranno tante email?", a: "No. Ti scrivo per mandarti la guida. Dopo, mi fai sapere tu se vuoi ricevere le mie email." },
-        { q: "E dopo la guida?", a: "Se vuoi un aiuto concreto puoi prenotare una call gratuita di circa 30 minuti, senza obbligo. Oppure vai avanti da sola con il piano della guida." },
+        { q: "E dopo la guida?", a: "Se vuoi un aiuto concreto puoi prenotare una call gratuita di circa 30 minuti. Oppure vai avanti da sola con il piano della guida." },
         { q: "Come vengono usati i miei dati?", a: <>Solo per inviarti quello che hai chiesto, come spiegato nell'<Link href="/privacy" className="ulink text-ink">informativa privacy</Link>.</>, plain: "Solo per inviarti quello che hai chiesto, come spiegato nell'informativa privacy." },
       ]} />
 

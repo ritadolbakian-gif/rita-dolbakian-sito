@@ -27,7 +27,7 @@ export default function FormazioneCertificata() {
   return (
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Course", name: "Formazione certificata Rita Dolbakian Academy", description: "Percorso a tre livelli di formazione pratica sul massaggio, con attestato finale.", provider: { "@type": "EducationalOrganization", name: "Rita Dolbakian Academy" }, inLanguage: "it-IT" }} />
-      <PageHero imageId="cert-top" imageRatio="4/3" imageArt="orbs" dark eyebrow="Formazione certificata" title="Vuoi finire il percorso con *un attestato* in mano?" answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
+      <PageHero dark bgId="hero-massaggio-2" eyebrow="Formazione certificata" title="Vuoi finire il percorso con *un attestato* in mano?" answer={<>La formazione certificata di Rita Dolbakian Academy è il percorso a tre livelli del Metodo Rita Dolbakian che si conclude con un attestato. Qui trovi livelli, requisiti, modalità e prossime edizioni. <Tbc>tipo di attestato (es. Attestato RD Academy), ente, validità</Tbc></>}>
         <Link href="/call-orientamento" className="btn btn-primary">Capiamo da quale livello partire <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Vedi i livelli</Link>
       </PageHero>
@@ -124,7 +124,7 @@ export default function FormazioneCertificata() {
             <Heading text="Per chi vuole farlo *bene*." className="text-5xl" />
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-3xl bg-blush/40 p-6"><p className="font-display text-2xl">Fa per te se…</p><ul className="mt-3 space-y-2 text-sm text-stone"><li>✓ vuoi basi solide e un percorso ordinato;</li><li>✓ ti piace imparare facendo;</li><li>✓ vuoi un riconoscimento chiaro del tuo percorso.</li></ul></div>
-              <div className="rounded-3xl border border-[var(--line)] p-6"><p className="font-display text-2xl">Non fa per te se…</p><ul className="mt-3 space-y-2 text-sm text-stone"><li>✕ cerchi un titolo abilitante in due weekend;</li><li>✕ non vuoi praticare;</li><li>✕ vuoi risultati senza impegno.</li></ul></div>
+              <div className="rounded-3xl border border-[var(--line)] p-6"><p className="font-display text-2xl">Non fa per te se…</p><ul className="mt-3 space-y-2 text-sm text-stone"><li>✕ cerchi un titolo abilitante in due weekend;</li><li>✕ non vuoi praticare;</li><li>✕ vuoi risultati senza metterci tempo.</li></ul></div>
             </div>
           </div>
         </div>
