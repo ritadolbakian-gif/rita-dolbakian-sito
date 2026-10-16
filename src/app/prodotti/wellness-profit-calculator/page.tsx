@@ -1,42 +1,32 @@
-import { Tbc } from "@/components/Ui";
-import { ProductPage } from "@/components/ProductPage";
+import Link from "next/link";
+import { PageHero } from "@/components/Ui";
+import { Heading } from "@/components/Motion";
+import { Slot } from "@/components/Slot";
+import { LeadForm } from "@/components/LeadForm";
+import { Crumbs } from "@/components/Crumbs";
 import { meta } from "@/lib/seo";
-import { CHECKOUT } from "@/lib/products";
 
-export const metadata = meta("Wellness Profit Calculator: foglio di calcolo per il regime forfettario", "Il foglio di calcolo di RD Academy per operatori del benessere in regime forfettario: i tuoi numeri in un posto solo.", "/prodotti/wellness-profit-calculator", "/media/prodotto-calcolatore.webp");
+export const metadata = meta("Wellness Profit Calculator: in arrivo a breve", "Il foglio di calcolo di RD Academy per operatori del benessere in regime forfettario. In arrivo a breve: lascia la tua email e ti avviso appena esce.", "/prodotti/wellness-profit-calculator", "/media/prodotto-calcolatore.webp");
 
 export default function Page() {
   return (
-    <ProductPage
-      name="Wellness Profit Calculator"
-      slug="wellness-profit-calculator"
-      eyebrow="In arrivo · foglio di calcolo per il regime forfettario"
-      title="I tuoi numeri, *finalmente* chiari."
-      answer="Un foglio di calcolo (XLS) pensato per chi lavora nel benessere in regime forfettario, per capire quanto entra, quanto resta e quanto serve davvero."
-      imageId="prodotto-calcolatore"
-      comingSoon
-      price=""
-      checkout={CHECKOUT.calcolatore}
-      cta="Avvisami quando esce"
-      painTitle="Sai quanto *resta* davvero?"
-      painNote="Tra tasse, contributi e spese è facile perdere il conto. Senza numeri chiari è difficile decidere i prezzi."
-      pains={["Non sai quanto devi tenere da parte per tasse e contributi.", "Fissi i prezzi a sensazione.", "Non sai quanti clienti ti servono al mese.", "I conti li fai a fine anno, quando è tardi."]}
-      solutionTitle="Un foglio, *tutti* i tuoi numeri."
-      solution={<p>Il Wellness Profit Calculator è un file Excel pronto da compilare. <Tbc>funzioni e contenuto esatto del foglio, da descrivere</Tbc></p>}
-      benefits={[
-        { t: "Numeri chiari", d: <Tbc>cosa calcola</Tbc> },
-        { t: "Prezzi più consapevoli", d: "Capisci da quanto partire per lavorare con serenità." },
-        { t: "Subito utilizzabile", d: "File XLS: lo apri e lo compili." },
-      ]}
-      forWho={["Lavori nel benessere con partita IVA in regime forfettario.", "Vuoi capire i tuoi margini.", "Preferisci un file semplice a un software complicato."]}
-      notForWho={["Cerchi una consulenza fiscale personalizzata: per quella serve il tuo commercialista."]}
-      guarantee={<Tbc>condizioni di garanzia e rimborso del prodotto</Tbc>}
-      description="Foglio di calcolo XLS per operatori del benessere in regime forfettario."
-      faq={[
-        { q: "Sostituisce il commercialista?", a: "No. È uno strumento di calcolo orientativo: per decisioni fiscali ti consiglio di confrontarti con il tuo commercialista." },
-        { q: "In che formato è?", a: "È un file XLS, compatibile con Excel." },
-        { q: "Funziona anche con Google Fogli?", a: <Tbc>verificare compatibilità</Tbc>, plain: "Compatibilità da verificare." },
-      ]}
-    />
+    <>
+      <Crumbs trail={[["Corsi", "/corsi"], ["Wellness Profit Calculator", "/prodotti/wellness-profit-calculator"]]} />
+
+      <PageHero dark eyebrow="In arrivo a breve" title="Wellness Profit *Calculator*." answer="Il foglio di calcolo per chi lavora nel benessere in regime forfettario. Non è ancora disponibile." />
+
+      <section className="section">
+        <div className="wrap grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] max-w-4xl mx-auto">
+          <Slot kind="foto" id="prodotto-calcolatore" label="Wellness Profit Calculator" ratio="4/3" art="orbs" className="w-full max-w-sm mx-auto lg:max-w-none" />
+          <div>
+            <p className="eyebrow !text-rose">In arrivo a breve</p>
+            <Heading text="Ti avviso appena *è pronto*." className="text-4xl md:text-5xl" />
+            <p className="mt-4 text-stone max-w-md">Lascia la tua email: ti scrivo appena esce, e basta.</p>
+            <div className="mt-8 max-w-md"><LeadForm tipo="contatti" cta="Avvisami quando esce" phone={false} compact /></div>
+            <p className="mt-6 text-sm"><Link href="/corsi" className="ulink text-ink">Intanto guarda gli altri corsi e prodotti</Link></p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

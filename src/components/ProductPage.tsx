@@ -33,6 +33,15 @@ export function ProductPage(p: ProductProps) {
         <a href="#dentro" className="btn btn-ghost">Cosa trovi dentro</a>
       </PageHero>
 
+      {p.comingSoon && (
+        <div className="section-dark">
+          <div className="wrap flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-6 text-center sm:text-left">
+            <p className="font-display text-2xl md:text-3xl leading-tight">In arrivo <span className="kw">a breve</span>. Lascia l'email e sei tra le prime a saperlo.</p>
+            <a href="#acquista" className="btn btn-primary shrink-0">Avvisami quando esce <span className="arr">→</span></a>
+          </div>
+        </div>
+      )}
+
       <section className="section">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] items-start">
           <div>
@@ -71,11 +80,11 @@ export function ProductPage(p: ProductProps) {
 
       <section id="acquista" className="section bg-blush/30 scroll-mt-24">
         <div className="wrap max-w-3xl text-center">
-          <Label t={p.comingSoon ? "In arrivo" : "Acquista"} />
+          <Label t={p.comingSoon ? "In arrivo a breve" : "Acquista"} />
           <Heading text={`${p.name}`} className="text-5xl md:text-6xl justify-center" />
           {p.comingSoon ? (
             <>
-              <p className="mt-6 font-display text-5xl">In arrivo</p>
+              <p className="mt-6 font-display text-5xl">In arrivo <span className="kw">a breve</span></p>
               <p className="mt-4 text-stone">Non è ancora disponibile. Lascia la tua email e ti scrivo appena esce.</p>
               <div className="mt-8 text-left max-w-xl mx-auto"><LeadForm tipo="contatti" cta="Avvisami quando esce" phone={false} compact /></div>
             </>

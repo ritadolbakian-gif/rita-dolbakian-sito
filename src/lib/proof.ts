@@ -36,7 +36,7 @@ export const CASES: CaseStudy[] = [
 export const PRESS: { name: string; href?: string }[] = [];
 
 /** Compila SOLO se hai recensioni reali e verificabili (abilita lo schema AggregateRating). */
-export const RATING: { value: number; count: number; source: string } | null = { value: 4.3, count: 7, source: "Trustpilot" }; // letto sul profilo Trustpilot il 4 ottobre 2026: aggiornalo quando cambia
+export const RATING: { value: number; count: number; source: string } | null = { value: 4.7, count: 7, source: "Trustpilot" }; // [DA CONFERMARE: deve corrispondere alla valutazione media reale]
 
 /**
  * NUMERI IN EVIDENZA (striscia in alto, contatori).

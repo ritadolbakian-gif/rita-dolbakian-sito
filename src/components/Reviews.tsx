@@ -3,7 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import { RATING, REVIEWS, REVIEW_SOURCES } from "@/lib/proof";
 import { Heading, Reveal } from "./Motion";
 
-const Stars = ({ n }: { n: number }) => <span aria-label={`${n} stelle su 5`} className="text-rose tracking-widest">{"★".repeat(n)}<span className="text-ink/20">{"★".repeat(5 - n)}</span></span>;
+const Stars = ({ value = 5 }: { value?: number }) => {
+  const pct = Math.max(0, Math.min(100, (value / 5) * 100));
+  return (
+    <span aria-label={`${value} stelle su 5`} role="img" className="relative inline-flex leading-none tracking-[0.12em] text-lg">
+      <span className="text-ink/15">★★★★★</span>
+      <span className="absolute inset-0 overflow-hidden whitespace-nowrap text-rose" style={{ width: `${pct}%` }}>★★★★★</span>
+    </span>
+  );
+};
 
 /** Widget Trustpilot (TrustBox): si carica solo con il consenso ai cookie di marketing. */
 function Trustpilot() {
@@ -50,7 +58,7 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
               {RATING ? (
                 <>
                   <p className="font-display text-8xl kw leading-none">{RATING.value.toString().replace(".", ",")}</p>
-                  <p className="mt-2"><Stars n={Math.round(RATING.value)} /></p>
+                  <p className="mt-2"><Stars value={RATING.value} /></p>
                   <p className="mt-2 text-stone">Valutazione media delle recensioni</p>
                 </>
               ) : (
@@ -74,7 +82,7 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
               ? REVIEWS.slice(0, 6).map((r, i) => (
                   <Reveal key={r.author + i} delay={(i % 2) * 0.08}>
                     <figure className="h-full rounded-3xl bg-ivory p-6 flex flex-col">
-                      <Stars n={r.rating} />
+                      <Stars value={r.rating} />
                       <blockquote className="mt-3 flex-1 text-[0.97rem]">«{r.text}»</blockquote>
                       <figcaption className="mt-4 text-sm"><span className="font-medium">{r.author}</span> · <span className="text-stone">{r.source === "google" ? "Google" : "Trustpilot"}{r.date ? `, ${r.date}` : ""}</span></figcaption>
                     </figure>
@@ -82,7 +90,7 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
                 ))
               : [0, 1, 2, 3].map((i) => (
                   <div key={i} className="rounded-3xl border border-dashed border-rose/50 p-6 text-sm text-stone">
-                    <Stars n={5} /><p className="mt-3">Qui va una recensione reale, copiata da Google o Trustpilot.</p><p className="mt-3">[Nome] · [fonte]</p>
+                    <Stars value={5} /><p className="mt-3">Qui va una recensione reale, copiata da Google o Trustpilot.</p><p className="mt-3">[Nome] · [fonte]</p>
                   </div>
                 ))}
           </div>
@@ -96,5 +104,5 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
 export function ReviewBadge() {
   if (!RATING) return null;
   const href = REVIEW_SOURCES.google.profileUrl || REVIEW_SOURCES.trustpilot.profileUrl || "#";
-  return <a href={href} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-ivory/70 px-4 min-h-11 text-sm backdrop-blur"><Stars n={Math.round(RATING.value)} /><span><b>{RATING.value.toString().replace(".", ",")}</b> su 5</span></a>;
+  return <a href={href} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-ivory/70 px-4 min-h-11 text-sm backdrop-blur"><Stars value={RATING.value} /><span><b>{RATING.value.toString().replace(".", ",")}</b> su 5</span></a>;
 }
