@@ -7,7 +7,7 @@ const PAGES: [string, number, F][] = [
   ["", 1, "weekly"],
   ["/percorsi/metodo-agenda", 0.95, "monthly"], ["/percorsi/sold-out", 0.95, "monthly"], ["/guida-gratuita", 0.9, "monthly"],
   ["/percorsi", 0.9, "monthly"], ["/percorsi/metodo-rita-dolbakian", 0.85, "monthly"], ["/chi-sono", 0.85, "monthly"],
-  ["/call-orientamento", 0.85, "monthly"], ["/corsi", 0.8, "monthly"], ["/blog", 0.8, "weekly"], ["/formazione-certificata", 0.75, "monthly"],
+  ["/call-orientamento", 0.85, "monthly"], ["/quiz-diagnostico", 0.8, "monthly"], ["/corsi", 0.8, "monthly"], ["/blog", 0.8, "weekly"], ["/formazione-certificata", 0.75, "monthly"],
   ["/prodotti/instagram-stories-che-vendono", 0.7, "monthly"], ["/prodotti/wellness-profit-calculator", 0.5, "monthly"],
   ["/risultati", 0.6, "monthly"], ["/contatti", 0.6, "yearly"],
   ["/privacy", 0.2, "yearly"], ["/cookie", 0.2, "yearly"], ["/termini", 0.2, "yearly"], ["/rimborsi", 0.2, "yearly"], ["/pagamenti-rateali", 0.3, "yearly"], ["/regolamento-corsi", 0.2, "yearly"],
