@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { GuideForm } from "./GuideForm";
 
 const KEY = "rd-guide-popup-v1";
-const SKIP = ["/guida-gratuita", "/richiesta-ricevuta", "/call-orientamento", "/area-privata", "/privacy", "/cookie", "/termini", "/rimborsi"];
+const SKIP = ["/guida-gratuita", "/questionario", "/richiesta-ricevuta", "/call-orientamento", "/area-privata", "/privacy", "/cookie", "/termini", "/rimborsi"];
 
 /** Popup gentile: una sola volta, dopo 35 secondi o a metà pagina. Mai sulle pagine di conversione. */
 export function GuidePopup() {

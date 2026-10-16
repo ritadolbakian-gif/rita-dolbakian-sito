@@ -1,16 +1,14 @@
 "use client";
 import Script from "next/script";
 
-const FORM_ID = "kJW39OTeJDTngYTAZA4a";
-
-/** Form della guida gratuita: embed ufficiale GoHighLevel (LeadConnector). */
-export function GuideForm({ className = "", height = 638 }: { className?: string; height?: number }) {
+/** Form GoHighLevel (LeadConnector) incorporato. */
+export function GhlForm({ id, name, height, className = "" }: { id: string; name: string; height: number; className?: string }) {
   return (
     <div className={className}>
       <iframe
-        src={`https://api.leadconnectorhq.com/widget/form/${FORM_ID}`}
+        src={`https://api.leadconnectorhq.com/widget/form/${id}`}
         style={{ width: "100%", height: `${height}px`, border: "none", borderRadius: 12 }}
-        id={`inline-${FORM_ID}`}
+        id={`inline-${id}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -18,15 +16,20 @@ export function GuideForm({ className = "", height = 638 }: { className?: string
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Form Guida"
+        data-form-name={name}
         data-height={height}
-        data-layout-iframe-id={`inline-${FORM_ID}`}
-        data-form-id={FORM_ID}
+        data-layout-iframe-id={`inline-${id}`}
+        data-form-id={id}
         data-cookie-consent="true"
         data-cookie-consent-provider="auto"
-        title="Form Guida"
+        title={name}
       />
       <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
     </div>
   );
+}
+
+/** Form della guida gratuita. */
+export function GuideForm({ className = "", height = 638 }: { className?: string; height?: number }) {
+  return <GhlForm id="kJW39OTeJDTngYTAZA4a" name="Form Guida" height={height} className={className} />;
 }
