@@ -1,6 +1,9 @@
-# Da confermare — elenco completo (aggiornato al 16/10/2026)
+# Da confermare — elenco aggiornato
 
-I punti segnati `[DA CONFERMARE]` oggi sono **visibili sul sito online** come riquadri tratteggiati. Appena mi mandi il dato, lo inserisco e il riquadro sparisce.
+I punti segnati `[DA CONFERMARE]` oggi si vedono sul sito come riquadri tratteggiati. Appena mi mandi il dato, lo inserisco e il riquadro sparisce.
+
+## Già fatto (non serve più)
+- Integrazione GoHighLevel: form guida, questionario, quiz e calendario della call sono collegati. ✔ fatto da te
 
 ## 1. Urgenti (si vedono online o bloccano conversioni)
 
@@ -12,12 +15,12 @@ I punti segnati `[DA CONFERMARE]` oggi sono **visibili sul sito online** come ri
 - Capitale sociale di RD SRL (footer, obbligatorio per legge).
 
 ### Decisioni sul metodo
-- **Acronimo A.G.E.N.D.A.**: la copertina della guida dice *Attira, Guida, Educa, Nutri, Decidi, Acquisisci*; il sito dice *Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione*. Quale tengo?
-- **Garanzia**: Metodo A.G.E.N.D.A. e Metodo Rita Dolbakian = "soddisfatti o rimborsati per tutta la durata"; Sold Out = "Primi 2 mesi". Confermare e far scrivere le condizioni definitive al legale (rimborso integrale o al netto dei bonus? soglia di partecipazione? entro quanti giorni dalla fine?).
+- Acronimo A.G.E.N.D.A.: la copertina della guida dice Attira, Guida, Educa, Nutri, Decidi, Acquisisci; il sito dice Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. Quale tengo?
+- Garanzia: Metodo A.G.E.N.D.A. e Metodo Rita Dolbakian = "soddisfatti o rimborsati per tutta la durata"; Sold Out = "Primi 2 mesi". Da confermare e far scrivere le condizioni definitive a un legale (rimborso integrale o al netto dei bonus? soglia di partecipazione? entro quanti giorni dalla fine?).
 
 ### Formazione certificata e Metodo Rita Dolbakian
 - Tipo di attestato (es. "Attestato RD Academy"), ente, eventuale ente certificatore, dicitura esatta e validità.
-- Livelli: ore e settimane per livello, requisiti di accesso, modalità di valutazione, attrezzatura richiesta.
+- Livelli: ore e settimane per livello, requisiti di accesso, modalità di valutazione (esame?), attrezzatura richiesta.
 - Calendario, sedi in presenza, prossime edizioni, formato online/presenza.
 - Prezzi e formule di pagamento (oppure, come per gli altri percorsi, "in call").
 - I tratti distintivi del tuo metodo di massaggio (2-3 righe con parole tue).
@@ -30,11 +33,12 @@ I punti segnati `[DA CONFERMARE]` oggi sono **visibili sul sito online** come ri
 - Area Privata: per quanto tempo restano accessibili i corsi.
 
 ## 2. Prove sociali (servono consensi scritti)
-- **Testimonianze**: oggi la sezione "Cosa dicono di me" mostra segnaposto. Servono nome, città, frase, foto e autorizzazione scritta.
-- **Casi studio** già sul sito (Antonella C. oltre 7.000 €/mese, Alessia A. da 1.000 a 2.800 €, Mariangela F. 2.000 €): autorizzazione scritta di ciascuna e prova dei dati.
-- **Numero di studenti formati**: oggi "+100" è nascosto online finché non lo confermi.
-- **Tuo risultato personale** (15.000 € in un mese): importo, periodo e documentazione; oggi è nascosto online.
-- **Foto con clienti molto esposte sui social** (collage Home / Chi sono / Formazione): consenso scritto di ogni persona ritratta, altrimenti le tolgo.
+- Valutazione media: oggi il sito mostra "4,7 su 5". Confermare che corrisponda alla media reale delle recensioni.
+- Testimonianze: la sezione "Cosa dicono di me" mostra segnaposto. Servono nome, città, frase, foto e autorizzazione scritta.
+- Casi studio già sul sito (Antonella C. oltre 7.000 €/mese, Alessia A. da 1.000 a 2.800 €, Mariangela F. 2.000 €): autorizzazione scritta di ciascuna e prova dei dati.
+- Numero di studenti formati: oggi "+100" è nascosto online finché non lo confermi.
+- Tuo risultato personale (15.000 € in un mese): importo, periodo e documentazione; oggi è nascosto online.
+- Foto con clienti molto esposte sui social (collage Home / Chi sono / Formazione): consenso scritto di ogni persona ritratta, altrimenti le tolgo.
 - Testate o collaborazioni reali in cui sei citata (sezione stampa vuota).
 - Link diretto alla tua scheda Google (oggi c'è una ricerca Google generica).
 - Possibilità di far contattare le allieve dalla pagina Risultati.
@@ -44,15 +48,13 @@ I punti segnati `[DA CONFERMARE]` oggi sono **visibili sul sito online** come ri
 - «Alzare le tariffe del 30-40% senza perdere nessun cliente»: promessa assoluta, da ammorbidire o documentare.
 
 ## 4. Prodotti digitali e pagamenti
-- Link di checkout GoHighLevel: impostare su Vercel `NEXT_PUBLIC_CHECKOUT_STORIES` e `NEXT_PUBLIC_CHECKOUT_CALCOLATORE`.
 - Instagram Stories che vendono: formato e numero di pagine.
-- Wellness Profit Calculator (in arrivo): cosa calcola, contenuto del foglio, compatibilità Google Fogli, garanzia. Copertina con refuso "fofettario".
+- Wellness Profit Calculator: oggi è una pagina "in arrivo a breve". Quando sarà pronto: cosa calcola, contenuto del foglio, prezzo, garanzia. Nota: la copertina riporta il refuso "Regime fofettario" (giusto: forfettario).
 - Rate: finanziarie convenzionate (Pagodil, Pagolight, Heylight), importi minimi/massimi, numero di rate, eventuale tasso zero a carico di RD SRL.
 - Metodi di pagamento accettati (carta, bonifico, PayPal…) ed eventuale rateizzazione diretta.
 
 ## 5. Guida gratuita
 - Numero di pagine e tempo di lettura.
-- Su GoHighLevel: impostare la pagina di ringraziamento del Form Guida su `https://www.ritadolbakian.it/richiesta-ricevuta`.
 
 ## 6. Legale (da far rivedere a un consulente)
 - Privacy: email privacy, conferma che il DPO non serve, nomi dei fornitori e loro garanzie, tempi di conservazione, modulo liberatoria foto/video.
@@ -72,7 +74,7 @@ I punti segnati `[DA CONFERMARE]` oggi sono **visibili sul sito online** come ri
 - Copertina piatta della guida.
 
 ## 8. Fuori dal sito (li fai tu)
-- Google Search Console: verifica dominio e invia `https://www.ritadolbakian.it/sitemap.xml`.
+- Google Search Console: verifica dominio e invia la sitemap https://www.ritadolbakian.it/sitemap.xml
 - Bing Webmaster Tools (importabile da Search Console): conta per ChatGPT e Copilot.
 - Google Business Profile: mandami il link.
-- Vercel: verifica che `NEXT_PUBLIC_SITE_URL` sia `https://www.ritadolbakian.it` (o non impostata).
+- Vercel: verifica che NEXT_PUBLIC_SITE_URL sia https://www.ritadolbakian.it (o non impostata).
