@@ -33,7 +33,7 @@ const after: [string, string][] = [
 export default function Questionario() {
   return (
     <>
-      <PageHero dark bgId="hero-laptop" eyebrow="Prima della call" title="Prima di sentirci, *qualche domanda*." answer="Le tue risposte mi aiutano a preparare la call pensando a te e alla tua attività. Compilalo quando hai qualche minuto tranquillo.">
+      <PageHero dark bgId="hero-laptop" eyebrow="Prima della call" title="Prima di sentirci, *qualche domanda*." answer="Le tue risposte mi aiutano a preparare la call pensando a te e alla tua attività.">
         <a href="#questionario" className="btn btn-primary">Compila il questionario <span className="arr">↓</span></a>
       </PageHero>
 
