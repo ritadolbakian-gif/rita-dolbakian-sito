@@ -14,8 +14,23 @@ function read(): Consent | null {
     return { analytics: !!j.analytics, marketing: !!j.marketing };
   } catch { return null; }
 }
+/** Comunica la scelta a Google Tag Manager (Consent Mode v2), riusando il gtag globale definito nel layout. */
+function updateGtmConsent(c: Consent) {
+  try {
+    const g = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
+    if (typeof g !== "function") return;
+    g("consent", "update", {
+      ad_storage: c.marketing ? "granted" : "denied",
+      ad_user_data: c.marketing ? "granted" : "denied",
+      ad_personalization: c.marketing ? "granted" : "denied",
+      analytics_storage: c.analytics ? "granted" : "denied",
+    });
+  } catch {}
+}
+
 function save(c: Consent) {
   try { localStorage.setItem(KEY, JSON.stringify({ ...c, ts: Date.now() })); } catch {}
+  updateGtmConsent(c);
   window.dispatchEvent(new CustomEvent("rd-consent", { detail: c })); // GA4 / Meta Pixel si agganciano qui, solo se consentito
 }
 
@@ -28,7 +43,7 @@ export function CookieBanner() {
     const cur = read();
     // lettura di localStorage solo dopo il mount (evita mismatch di idratazione)
     /* eslint-disable react-hooks/set-state-in-effect */
-    if (!cur) setOpen(true); else { setC(cur); window.dispatchEvent(new CustomEvent("rd-consent", { detail: cur })); }
+    if (!cur) setOpen(true); else { setC(cur); updateGtmConsent(cur); window.dispatchEvent(new CustomEvent("rd-consent", { detail: cur })); }
     /* eslint-enable react-hooks/set-state-in-effect */
     const reopen = () => { setCustom(true); setOpen(true); };
     window.addEventListener("rd-open-cookies", reopen);
