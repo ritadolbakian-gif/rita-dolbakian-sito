@@ -27,13 +27,13 @@ const tips: [string, string][] = [
 const after: [string, string][] = [
   ["Invii le risposte", "Arrivano direttamente a me."],
   ["Le leggo prima della call", "Così so già a che punto sei e cosa ti blocca."],
-  ["In call partiamo da lì", "Niente presentazioni infinite: andiamo subito su quello che ti serve."],
+  ["Ne parliamo in call", "Partiamo da quello che mi hai scritto e vediamo insieme da dove ripartire."],
 ];
 
 export default function Questionario() {
   return (
     <>
-      <PageHero dark bgId="hero-laptop" eyebrow="Prima della call" title="Raccontami *dove sei* oggi." answer="Leggo le tue risposte prima della call, così quando ci sentiamo non perdiamo tempo con le presentazioni e andiamo subito al punto.">
+      <PageHero dark bgId="hero-laptop" eyebrow="Prima della call" title="Prima di sentirci, *qualche domanda*." answer="Le tue risposte mi aiutano a preparare la call pensando a te e alla tua attività. Compilalo quando hai qualche minuto tranquillo.">
         <a href="#questionario" className="btn btn-primary">Compila il questionario <span className="arr">↓</span></a>
       </PageHero>
 
