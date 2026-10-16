@@ -1,4 +1,4 @@
-import { PageHero, Label, Faq, Tbc } from "@/components/Ui";
+import { PageHero, Label, Faq } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
 import { BookingCalendar } from "@/components/BookingCalendar";
@@ -31,7 +31,7 @@ export default function Call() {
         { q: "È una telefonata di vendita?", a: "No. Parliamo della tua attività, non dei miei corsi. Se alla fine ha senso lavorare insieme te lo propongo, altrimenti ci salutiamo." },
         { q: "Come mi preparo?", a: "Basta che pensi a dove sei oggi con la tua attività e a cosa vorresti cambiare. Non serve preparare altro." },
         { q: "E se dopo la call il percorso non fa per me?", a: "Va benissimo, ci salutiamo. Ti dico comunque se e come posso aiutarti." },
-        { q: "Come si svolge, e dove?", a: <>Si svolge in videochiamata. <Tbc>piattaforma e link</Tbc></>, plain: "Si svolge in videochiamata." },
+        { q: "Come si svolge, e dove?", a: "Si svolge in videochiamata. Il link per collegarti lo ricevi via email, insieme alla conferma della prenotazione." },
         { q: "Posso spostare o annullare la prenotazione?", a: "Sì: puoi farlo dal link che ricevi nella email di conferma." },
       ]} />
     </>
