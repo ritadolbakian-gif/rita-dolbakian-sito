@@ -22,7 +22,7 @@ const chapters = [
 export default function Guida() {
   return (
     <>
-      <PageHero eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Guida Metodo A.G.E.N.D.A.» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
+      <PageHero dark bgId="home-bg" eyebrow="Guida gratuita" title="Vuoi i primi 10 clienti *online*? Ecco da dove cominciare." answer={"Hai un profilo, forse una scheda Google, e da settimane nessun cliente nuovo. «Guida Metodo A.G.E.N.D.A.» è la mia guida pratica gratuita per fare i primi 10 clienti online: ti dico cosa fare, in che ordine e in quanto tempo."}>
         <a href="#modulo" className="btn btn-primary">Ricevi la guida via email <span className="arr">→</span></a>
         <a href="#dentro" className="btn btn-ghost">Cosa trovi dentro</a>
       </PageHero>

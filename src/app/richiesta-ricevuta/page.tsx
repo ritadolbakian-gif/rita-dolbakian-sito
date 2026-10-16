@@ -16,7 +16,7 @@ const GUIDE_PDF = "/guida-metodo-agenda.pdf";
 export default function RichiestaRicevuta() {
   return (
     <>
-      <PageHero eyebrow="Richiesta ricevuta" title="Grazie! La tua *guida* è pronta." answer="Ti ho inviato la «Guida Metodo A.G.E.N.D.A.» anche via email: se non la trovi, controlla la cartella spam o la scheda Promozioni. Intanto puoi scaricarla subito qui sotto.">
+      <PageHero dark bgId="home-bg" eyebrow="Richiesta ricevuta" title="Grazie! La tua *guida* è pronta." answer="Ti ho inviato la «Guida Metodo A.G.E.N.D.A.» anche via email: se non la trovi, controlla la cartella spam o la scheda Promozioni. Intanto puoi scaricarla subito qui sotto.">
         <a href={GUIDE_PDF} download className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a>
         <a href="#call" className="btn btn-ghost">Prenota la call gratuita</a>
       </PageHero>
