@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, Label } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
-import { Slot } from "@/components/Slot";
 import { GhlForm } from "@/components/GuideForm";
 
 export const metadata: Metadata = {
@@ -12,10 +11,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "/questionario" },
 };
 
+const parts: [string, string][] = [
+  ["I tuoi dati", "Nome, contatti, età e città. Due minuti."],
+  ["La tua attività", "Che lavoro fai e da quanto, se hai la partita IVA, quanto chiedi e quanto incassi in media, da dove arrivano le clienti."],
+  ["Dove sei oggi", "Il problema più grande, da quanto ci convivi, cosa hai già provato e perché vuoi cambiare adesso."],
+  ["Cosa vuoi dalla call", "Cosa hai già fatto per formarti, quanto saresti disposta a investire e cosa vuoi portarti a casa."],
+];
+
 const tips: [string, string][] = [
-  ["Scrivi come parli", "Non serve essere precisa o usare parole tecniche. Due righe sincere valgono più di un tema."],
-  ["I numeri vanno bene anche a occhio", "Se non sai quanti clienti fai al mese, scrivi una stima. Ci lavoriamo in call."],
-  ["Puoi farlo dal telefono", "Il questionario funziona anche da smartphone: prenditi dieci minuti tranquilli."],
+  ["Sul problema più grande, sii concreta", "Invece di «ho pochi clienti», scrivi qualcosa come «a febbraio ho fatto 6 massaggi». Così capisco subito."],
+  ["Sui numeri basta una stima", "Per prezzo e incassi va bene una cifra indicativa: il trattamento che fai più spesso, un mese normale."],
+  ["Sui «6 mesi» rispondi di pancia", "È la domanda che fa più riflettere. Scrivi la prima cosa che ti viene, anche solo una riga."],
 ];
 
 const after: [string, string][] = [
@@ -27,13 +33,13 @@ const after: [string, string][] = [
 export default function Questionario() {
   return (
     <>
-      <PageHero dark bgId="hero-scrive" eyebrow="Prima della call" title="Raccontami *dove sei* oggi." answer="Leggo le tue risposte prima della call, così quando ci sentiamo non perdiamo tempo con le presentazioni e andiamo subito al punto.">
+      <PageHero dark bgId="hero-laptop" eyebrow="Prima della call" title="Raccontami *dove sei* oggi." answer="Leggo le tue risposte prima della call, così quando ci sentiamo non perdiamo tempo con le presentazioni e andiamo subito al punto.">
         <a href="#questionario" className="btn btn-primary">Compila il questionario <span className="arr">↓</span></a>
       </PageHero>
 
       <div className="border-b border-[var(--line)] bg-ivory">
         <ul className="wrap grid grid-cols-3 divide-x divide-[var(--line)] py-5 text-center">
-          {[["10'", "per compilarlo"], ["1", "volta sola"], ["Rita", "legge le risposte"]].map(([b, l]) => (
+          {[["10'", "circa, per compilarlo"], ["4", "parti, dalla tua attività ai tuoi obiettivi"], ["Rita", "legge ogni risposta"]].map(([b, l]) => (
             <li key={l} className="px-2"><p className="font-display text-3xl md:text-4xl kw leading-none">{b}</p><p className="mt-1 text-xs md:text-sm text-stone">{l}</p></li>
           ))}
         </ul>
@@ -41,16 +47,19 @@ export default function Questionario() {
 
       <section id="questionario" className="section bg-blush/30 scroll-mt-20">
         <div className="wrap grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-14 items-start">
-          <aside className="lg:sticky lg:top-28 space-y-8">
+          <aside className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pr-3 no-scrollbar space-y-7">
             <div>
               <Label t="Questionario" />
               <Heading text="Rispondi con *sincerità*, non con le risposte giuste." className="text-4xl md:text-5xl" />
             </div>
-            <div className="hidden lg:flex items-center gap-4">
-              <div className="w-20 shrink-0"><Slot id="hero-ritratto-m" label="Rita Dolbakian" ratio="1/1" art="orbs" className="!rounded-full" /></div>
-              <p className="text-stone text-[0.95rem]">«Più mi racconti com'è davvero la tua giornata, più la call ti sarà utile.» <span className="block mt-1 text-ink font-medium">Rita</span></p>
-            </div>
-            <ul className="space-y-5">
+            <ol className="rounded-3xl bg-ivory p-6 space-y-4">
+              <li className="eyebrow !text-rose">Le 4 parti del questionario</li>
+              {parts.map(([t, d], i) => (
+                <li key={t} className="flex gap-4"><span className="font-display text-3xl kw leading-none w-6 shrink-0">{i + 1}</span><div><p className="font-medium text-ink leading-tight">{t}</p><p className="text-sm text-stone mt-0.5">{d}</p></div></li>
+              ))}
+            </ol>
+            <p className="eyebrow">Tre consigli</p>
+            <ul className="space-y-5 -mt-4">
               {tips.map(([t, d]) => (
                 <li key={t} className="flex gap-4">
                   <span className="mt-1 grid size-7 shrink-0 place-items-center rounded-full bg-rose text-white text-sm" aria-hidden>✓</span>
@@ -68,6 +77,7 @@ export default function Questionario() {
               </div>
               <GhlForm id="rEqmS1NUILpw2jrDWoOg" name="Questionario pre-disco" height={3358} />
             </div>
+            <p className="mt-5 px-2 text-xs text-stone">Uso le tue risposte solo per preparare la nostra call. Come tratto i dati lo trovi nell'<Link href="/privacy" className="ulink text-ink">informativa privacy</Link>.</p>
           </div>
         </div>
       </section>
