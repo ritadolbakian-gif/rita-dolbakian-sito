@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/richiesta-ricevuta" },
 };
 
-const GUIDE_PDF = "/guida-metodo-agenda.pdf";
+const GUIDE_PDF = "https://drive.google.com/file/d/1SMMKoY0GwJB9FQjRpgaSRS-u5l7OPpEg/view?usp=drive_link";
 
 export default function RichiestaRicevuta() {
   return (
     <>
       <PageHero dark bgId="home-bg" eyebrow="Richiesta ricevuta" title="Grazie! La tua *guida* è pronta." answer="Ti ho inviato la «Guida Metodo A.G.E.N.D.A.» anche via email: se non la trovi, controlla la cartella spam o la scheda Promozioni. Intanto puoi scaricarla subito qui sotto.">
-        <a href={GUIDE_PDF} download className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a>
+        <a href={GUIDE_PDF} target="_blank" rel="noopener" className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a>
         <a href="#call" className="btn btn-ghost">Prenota la call gratuita</a>
       </PageHero>
 
@@ -28,7 +28,7 @@ export default function RichiestaRicevuta() {
             <Label t="Il primo passo" />
             <Heading text="Scaricala e parti dal *primo* capitolo." className="text-4xl md:text-5xl" />
             <p className="mt-4 text-stone max-w-md">Non serve leggerla tutta d'un fiato. Comincia dal primo capitolo e applica un passo alla volta: la guida è pensata per essere usata, non solo letta.</p>
-            <div className="mt-8"><a href={GUIDE_PDF} download className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a></div>
+            <div className="mt-8"><a href={GUIDE_PDF} target="_blank" rel="noopener" className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a></div>
             <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ La trovi anche nella tua email</li><li>✓ PDF, da leggere quando vuoi</li></ul>
           </div>
         </div>
