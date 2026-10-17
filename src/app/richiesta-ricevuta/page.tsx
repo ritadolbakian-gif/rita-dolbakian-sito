@@ -42,7 +42,7 @@ export default function RichiestaRicevuta() {
             <p className="text-stone max-w-md">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
             <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ In videochiamata, fino a un'ora</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
           </div>
-          <div className="mt-10 lg:mt-12 max-w-3xl mx-auto">
+          <div className="mt-10 lg:mt-12">
             <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
           </div>
         </div>

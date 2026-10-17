@@ -22,7 +22,7 @@ export default function Call() {
             </div>
             <Reveal><Slot kind="foto" id="call-hero" label="Rita durante una consulenza" ratio="4/3" art="orbs" /></Reveal>
           </div>
-          <div className="mt-12 lg:mt-16 max-w-3xl mx-auto">
+          <div className="mt-12 lg:mt-16">
             <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
           </div>
         </div>
