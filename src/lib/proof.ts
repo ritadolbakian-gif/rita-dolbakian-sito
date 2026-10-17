@@ -47,10 +47,9 @@ export const RATING: { value: number; count: number; source: string } | null = {
  */
 export type Stat = { id: string; value: number; prefix?: string; suffix?: string; label: string; confirmed: boolean };
 export const STATS: Stat[] = [
-  { id: "anni", value: 10, suffix: "+", label: "anni di esperienza nel benessere", confirmed: true },
+  { id: "anni", value: 13, label: "anni di esperienza nel benessere", confirmed: true },
+  { id: "mesi", value: 6, label: "mesi di affiancamento individuale", confirmed: true },
   { id: "studenti", value: 100, prefix: "+", label: "studenti formati", confirmed: false }, // [DA CONFERMARE: numero reale]
-  { id: "moduli", value: 11, label: "moduli nel Metodo A.G.E.N.D.A.", confirmed: true },
-  { id: "bonus", value: 5, label: "bonus inclusi nel Metodo A.G.E.N.D.A.", confirmed: true },
 ];
 export const showDraftStats = () => process.env.NEXT_PUBLIC_SHOW_DRAFT === "1" || process.env.NODE_ENV !== "production";
 export const visibleStats = () => STATS.filter((s) => s.confirmed || showDraftStats());
