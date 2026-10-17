@@ -2,11 +2,9 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { StatsTicker } from "@/components/StatsTicker";
 import { ReviewsSection } from "@/components/Reviews";
-import { visibleStats, showDraftStats } from "@/lib/proof";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { CountUp } from "@/components/CountUp";
-import { CaseStudies, VideoWall, Quotes, PressBar, TrustBar, RatingLd } from "@/components/Proof";
+import { CaseStudies, VideoWall, Quotes, TrustBar, RatingLd } from "@/components/Proof";
 import { GuideForm } from "@/components/GuideForm";
 import { Faq } from "@/components/Ui";
 import { GuaranteeBand, InfluencerCollage } from "@/components/Sections";
@@ -20,18 +18,6 @@ export default function Home() {
       <RatingLd />
       <Hero />
       <StatsTicker />
-
-      <section className="py-14 md:py-20">
-        <div className="wrap grid grid-cols-2 gap-y-10 md:grid-cols-4 text-center md:text-left">
-          {visibleStats().slice(0, 4).map((st, i) => (
-            <Reveal key={st.id} delay={i * 0.08}>
-              <p className="font-display text-6xl md:text-7xl kw leading-none"><CountUp to={st.value} prefix={st.prefix ?? ""} suffix={st.suffix ?? ""} /></p>
-              <p className="mt-3 text-sm text-stone max-w-[14rem] mx-auto md:mx-0">{st.label}{showDraftStats() && !st.confirmed && <span className="ml-2 rounded bg-rose/15 px-1.5 text-[0.65rem] uppercase tracking-wider text-rose">da confermare</span>}</p>
-            </Reveal>
-          ))}
-        </div>
-        <div className="wrap mt-14"><PressBar /></div>
-      </section>
 
       {/* 01 */}
       <section className="section pt-8">
