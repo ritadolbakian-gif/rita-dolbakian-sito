@@ -35,14 +35,16 @@ export default function RichiestaRicevuta() {
       </section>
 
       <section id="call" className="section bg-blush/30 scroll-mt-24">
-        <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
-          <div className="space-y-6">
+        <div className="wrap">
+          <div className="max-w-2xl space-y-5">
             <Label t="Il passo successivo" />
             <Heading text="Vuoi *parlarne* con me?" className="text-4xl md:text-5xl" />
-            <p className="text-stone max-w-sm">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
-            <ul className="space-y-2 text-sm text-stone"><li>✓ In videochiamata, fino a un'ora</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
+            <p className="text-stone max-w-md">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
+            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ In videochiamata, fino a un'ora</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
           </div>
-          <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
+          <div className="mt-10 lg:mt-12 max-w-3xl mx-auto">
+            <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
+          </div>
         </div>
       </section>
     </>
