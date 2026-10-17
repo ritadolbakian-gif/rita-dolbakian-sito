@@ -93,7 +93,7 @@ export default function Blog() {
       </section>
 
       <Faq title="Sul *blog*." items={[
-        { q: "Chi scrive gli articoli?", a: "Gli articoli li scrivo io, Rita Dolbakian: massaggiatrice e formatrice nel benessere da oltre dieci anni. Sono pensati per chi lavora nel benessere." },
+        { q: "Chi scrive gli articoli?", a: "Gli articoli li scrivo io, Rita Dolbakian: massaggiatrice e formatrice nel benessere da tredici anni. Sono pensati per chi lavora nel benessere." },
         { q: "Gli articoli sono consigli medici?", a: "No. Parlano di benessere, organizzazione e formazione. Non contengono indicazioni sanitarie né promesse di cura. Per questioni di salute ci si rivolge a un professionista sanitario." },
         { q: "Ogni quanto escono nuovi articoli?", a: "Nuovi articoli arrivano man mano che sono completi e verificati. Puoi seguire gli aggiornamenti con il feed RSS." },
         { q: "Posso proporre un argomento?", a: <>Sì, scrivimi dalla pagina <Link href="/contatti" className="ulink text-ink">Contatti</Link>: i temi più richiesti diventano nuovi articoli.</>, plain: "Sì, scrivi dalla pagina Contatti: i temi più richiesti diventano nuovi articoli." },

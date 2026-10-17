@@ -107,7 +107,7 @@ export default function Guida() {
             <Label n="04" t="Chi l'ha scritta" />
             <Heading text="L'ho scritta *io*." className="text-5xl md:text-6xl" />
             <div className="mt-6 space-y-4 text-lg text-stone max-w-xl">
-              <p>Sono Rita Dolbakian. Lavoravo in un bar, poi ho scelto il massaggio: ho faticato a trovare clienti, finché non ho imparato a farmi trovare con i social. Oggi lavoro nel benessere da oltre dieci anni e accompagno altre operatrici a fare lo stesso.</p>
+              <p>Sono Rita Dolbakian. Per 13 anni ho massaggiato nelle case più esclusive di Milano e ho imparato come ci si fa scegliere da clienti esigenti. Oggi insegno quello che ho imparato a chi lavora nel benessere.</p>
               <p>Questa guida è quello che avrei voluto avere io all'inizio: poche cose, nell'ordine giusto, scritte da chi il lettino lo conosce davvero.</p>
             </div>
             <div className="mt-8 flex flex-wrap items-end gap-x-10 gap-y-5">

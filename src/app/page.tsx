@@ -28,7 +28,7 @@ export default function Home() {
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
               { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", cta: "Guarda come funziona il Metodo", t: "Metodo A.G.E.N.D.A.", d: "Ti insegno a farti trovare online da chi cerca un massaggio vicino a te, e a far tornare chi è già passata dal tuo lettino. Si comincia con una call con me.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
-              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", cta: "Guarda i tre livelli", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo che ho semplificato in oltre dieci anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
+              { icon: "🤲", k: "Voglio imparare a massaggiare e migliorarmi", cta: "Guarda i tre livelli", t: "Metodo Rita Dolbakian", d: "Mani sicure, tocco consapevole. Un metodo che ho semplificato in tredici anni di lavoro: si studia online e si pratica in presenza.", href: "/percorsi/metodo-rita-dolbakian", slot: "Mani al lavoro, dettaglio tecnica", id: "path-rd", art: "stones" as const, dark: false },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
                 <Link href={c.href} className={`lift group block rounded-[1.75rem] p-5 md:p-6 h-full ${c.dark ? "section-dark" : "bg-blush/60"}`}>

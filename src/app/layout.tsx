@@ -17,7 +17,7 @@ const sans = Hanken_Grotesk({ variable: "--font-sans", subsets: ["latin"], displ
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: "Rita Dolbakian: più clienti e agenda piena nel benessere", template: "%s | Rita Dolbakian" },
-  description: "Rita Dolbakian, massaggiatrice e formatrice da oltre dieci anni. Percorsi per riempire l'agenda online e per imparare a massaggiare con un metodo preciso.",
+  description: "Rita Dolbakian, massaggiatrice e formatrice da tredici anni. Percorsi per riempire l'agenda online e per imparare a massaggiare con un metodo preciso.",
   openGraph: { type: "website", locale: "it_IT", siteName: "Rita Dolbakian Academy", images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Rita Dolbakian. Il tuo talento. Il tuo metodo. Più clienti." }] },
   twitter: { card: "summary_large_image", images: ["/og-image.jpg"] },
   alternates: { canonical: "/" },
@@ -32,7 +32,7 @@ const jsonLd = {
     {
       "@type": "Person", "@id": `${SITE.url}/#rita`, name: "Rita Dolbakian",
       jobTitle: "Massaggiatrice e formatrice nel benessere",
-      description: "Rita Dolbakian è una massaggiatrice e formatrice italiana con oltre dieci anni di esperienza nel benessere. Ha creato il Metodo A.G.E.N.D.A., il Metodo Sold Out e il Metodo Rita Dolbakian per insegnare a operatrici e operatori del benessere a trovare clienti e a massaggiare con un metodo.",
+      description: "Rita Dolbakian è una massaggiatrice e formatrice italiana con tredici anni di esperienza nel benessere. Ha creato il Metodo A.G.E.N.D.A., il Metodo Sold Out e il Metodo Rita Dolbakian per insegnare a operatrici e operatori del benessere a trovare clienti e a massaggiare con un metodo.",
       url: `${SITE.url}/chi-sono`, image: `${SITE.url}/media/rita-ritratto-camice.webp`,
       worksFor: { "@id": `${SITE.url}/#academy` }, knowsAbout: TOPICS, knowsLanguage: "it", nationality: "IT",
       sameAs: SAME,

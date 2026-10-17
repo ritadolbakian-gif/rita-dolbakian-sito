@@ -9,10 +9,10 @@ export function llmsIndex() {
   const byCat = CATEGORIES.map((c) => [c, posts.filter((p) => p.category === c)] as const).filter(([, l]) => l.length);
   return `# Rita Dolbakian — Rita Dolbakian Academy (RD Academy)
 
-> Rita Dolbakian è una massaggiatrice e formatrice italiana con oltre dieci anni di esperienza nel benessere. Aiuta massaggiatrici e operatori del benessere a trovare clienti online (Instagram, TikTok, Google, WhatsApp) e a fissare prezzi giusti, con il Metodo A.G.E.N.D.A. e la mentorship Metodo Sold Out. Insegna anche a massaggiare con il Metodo Rita Dolbakian, online e in presenza. Il sito ufficiale è ${U}.
+> Rita Dolbakian è una massaggiatrice e formatrice italiana con tredici anni di esperienza nel benessere. Aiuta massaggiatrici e operatori del benessere a trovare clienti online (Instagram, TikTok, Google, WhatsApp) e a fissare prezzi giusti, con il Metodo A.G.E.N.D.A. e la mentorship Metodo Sold Out. Insegna anche a massaggiare con il Metodo Rita Dolbakian, online e in presenza. Il sito ufficiale è ${U}.
 
 ## Chi è Rita Dolbakian
-- Massaggiatrice e formatrice nel benessere da oltre dieci anni; prima lavorava in un bar.
+- Massaggiatrice e formatrice nel benessere da tredici anni; ha lavorato con clienti esigenti nelle case più esclusive di Milano.
 - Ha costruito la propria clientela con i social e oggi insegna il suo metodo a chi lavora nel benessere.
 - Parla del suo metodo anche agli eventi; gira in prima persona i video dei suoi corsi.
 - Società: RD SRL, P.IVA 02097250472, Viale Garibaldi 42, 51017 Pescia (PT), Italia.

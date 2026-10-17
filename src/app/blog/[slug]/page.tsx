@@ -137,7 +137,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
               <div>
                 <p className="eyebrow">L'autrice</p>
                 <p className="font-display text-3xl mt-1">Rita Dolbakian</p>
-                <p className="text-stone mt-2">Sono Rita: massaggiatrice e formatrice nel benessere da oltre dieci anni. Aiuto operatrici e operatori a costruire continuità, e insegno a massaggiare con il mio metodo.</p>
+                <p className="text-stone mt-2">Sono Rita: massaggiatrice e formatrice nel benessere da tredici anni. Aiuto operatrici e operatori a costruire continuità, e insegno a massaggiare con il mio metodo.</p>
                 <Link href="/chi-sono" className="ulink mt-3 inline-block font-medium">La mia storia →</Link>
               </div>
             </div>

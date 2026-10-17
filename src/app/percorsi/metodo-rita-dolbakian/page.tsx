@@ -27,7 +27,7 @@ export default function MetodoRD() {
     <>
       <Crumbs trail={[["Percorsi", "/percorsi"], ["Metodo Rita Dolbakian", "/percorsi/metodo-rita-dolbakian"]]} />
       <JsonLd data={courseLd("Metodo Rita Dolbakian", "Formazione pratica per imparare a massaggiare e migliorare la propria tecnica, online e in presenza.", "/percorsi/metodo-rita-dolbakian", ["online", "onsite"])} />
-      <PageHero dark bgId="hero-massaggio" eyebrow="Metodo Rita Dolbakian" title="Ti insegno a massaggiare *come lavoro io*." answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da oltre dieci anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
+      <PageHero dark bgId="hero-massaggio" eyebrow="Metodo Rita Dolbakian" title="Ti insegno a massaggiare *come lavoro io*." answer="Il Metodo Rita Dolbakian è il mio percorso di formazione pratica per imparare a massaggiare e migliorare la propria tecnica. Nasce da tredici anni di lavoro sul campo ed è semplificato per essere seguito a partire dal tuo livello: lezioni online per studiare, pratica in presenza per mettere le mani.">
         <Link href="/call-orientamento" className="btn btn-primary">Scegli il tuo livello con me <span className="arr">→</span></Link>
         <Link href="#livelli" className="btn btn-ghost">Guarda i tre livelli</Link>
       </PageHero>
@@ -41,7 +41,7 @@ export default function MetodoRD() {
             <Label n="01" t="Cosa lo rende diverso" />
             <Heading text="Tecnica, *ascolto*, presenza." className="text-5xl md:text-6xl" />
             <div className="mt-8 space-y-4 text-lg text-stone max-w-xl">
-              <p>Hai visto cento video e non sei sicura delle tue mani. La pressione giusta non si impara a parole. Il mio metodo l'ho studiato, testato e semplificato in oltre dieci anni: sai cosa fai, in che ordine, e perché.</p>
+              <p>Hai visto cento video e non sei sicura delle tue mani. La pressione giusta non si impara a parole. Il mio metodo l'ho studiato, testato e semplificato in tredici anni: sai cosa fai, in che ordine, e perché.</p>
               <p>Non impari a ripetere dei movimenti. Impari a sentire, a dosare, a restare con la persona che hai davanti.</p>
               <p className="text-sm"><Tbc>i tratti distintivi del mio metodo</Tbc></p>
             </div>
@@ -108,7 +108,7 @@ export default function MetodoRD() {
           <div>
             <Label n="05" t="Chi insegna" />
             <Heading text="Impari da chi lo *fa* ogni giorno." className="text-5xl md:text-6xl" />
-            <p className="mt-6 text-lg text-stone max-w-xl">Sono massaggiatrice prima ancora che formatrice. Ti insegno quello che ho studiato, provato e semplificato in oltre dieci anni.</p>
+            <p className="mt-6 text-lg text-stone max-w-xl">Sono massaggiatrice prima ancora che formatrice. Ti insegno quello che ho studiato, provato e semplificato in tredici anni.</p>
             <Link href="/chi-sono" className="btn btn-ghost mt-8">Leggi la mia storia <span className="arr">→</span></Link>
           </div>
         </div>

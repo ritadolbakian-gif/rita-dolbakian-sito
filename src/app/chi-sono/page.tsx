@@ -9,14 +9,14 @@ import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Chi è Rita Dolbakian", "Dal bancone di un bar al massaggio, fino a trovare clienti con i social: la storia di Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni.", "/chi-sono", "/media/hero-ritratto.webp");
+export const metadata = meta("Chi è Rita Dolbakian", "Per 13 anni Rita Dolbakian ha massaggiato nelle case più esclusive di Milano. Oggi insegna a operatrici e operatori del benessere come farsi scegliere e riempire l'agenda.", "/chi-sono", "/media/hero-ritratto.webp");
 
 const tappe = [
-  { id: "bar", n: "1", t: "Il bar", d: "Frustrata, convinta di meritare di più." },
-  { id: "mani", n: "2", t: "Le mie mani", d: "Ho scelto il massaggio." },
-  { id: "fatica", n: "3", t: "La fatica", d: "Niente clienti, tutte le difficoltà." },
-  { id: "social", n: "4", t: "I social", d: "Ho capito come farmi trovare." },
-  { id: "oggi", n: "5", t: "Oggi", d: "Lo insegno a te." },
+  { id: "milano", n: "1", t: "Milano", d: "13 anni nelle case più esclusive." },
+  { id: "mani", n: "2", t: "Le mie mani", d: "Il massaggio, da professionista." },
+  { id: "valore", n: "3", t: "Il valore", d: "Come ci si fa scegliere." },
+  { id: "metodo", n: "4", t: "Il metodo", d: "Identità, posizionamento, social." },
+  { id: "oggi", n: "5", t: "Oggi", d: "Dal 2024 lo insegno a te." },
 ];
 const values = [["Ascolto", "Prima di dire cosa fare, capire dove sei."], ["Chiarezza", "Parole semplici, passi ordinati."], ["Presenza", "Esserci davvero, non a distanza di sicurezza."], ["Poche persone alla volta", "Seguo poche persone alla volta, perché il lavoro vero richiede ascolto, attenzione e presenza."]];
 
@@ -40,9 +40,9 @@ export default function ChiSono() {
   return (
     <>
       <Crumbs trail={[["Chi sono", "/chi-sono"]]} />
-      <PageHero dark bgId="chi-sono-bg" eyebrow="Chi sono" title="Lavoravo in un bar. Poi ho scelto *le mie mani*." answer="Sono Rita Dolbakian. Ho iniziato dietro un bancone, frustrata e convinta di meritare di più. Ho scelto il massaggio, ho sbattuto contro tutte le difficoltà di chi non trova clienti e poi ho capito come usare i social per farmi trovare. Oggi lavoro nel benessere da oltre dieci anni e lo insegno a chi vuole fare lo stesso.">
+      <PageHero dark bgId="chi-sono-bg" eyebrow="Chi sono" title="Per 13 anni ho massaggiato *chi sceglie solo il meglio*." answer="Sono Rita Dolbakian. Per 13 anni ho massaggiato nelle case più esclusive di Milano: imprenditori, volti della TV, dello spettacolo e dello sport. Ho imparato come ci si fa scegliere da clienti così e, dal 2024, lo insegno attraverso la mia Srl a chi lavora nel benessere.">
         <Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link>
-        <Link href="#bar" className="btn btn-ghost">Leggi la mia storia</Link>
+        <Link href="#milano" className="btn btn-ghost">Leggi la mia storia</Link>
       </PageHero>
 
       {/* Mappa della storia */}
@@ -62,26 +62,25 @@ export default function ChiSono() {
         </div>
       </section>
 
-      <Chapter id="bar" n="01" label="Il bar" title="Pensavo di *meritare di più*." img={<div className="grid grid-cols-2 gap-3 md:gap-4"><Slot kind="foto" id="story-bar" label="Rita al bar" ratio="4/5" art="orbs" /><Slot kind="foto" id="story-bar-2" label="Rita al bar" ratio="4/5" art="stones" className="mt-10 md:mt-16" /></div>}>
-        <p>Prima di tutto questo lavoravo in un bar. Bicchieri da preparare, bottiglie da aprire, turni che non finivano mai.</p>
-        <p>Vivevo nella frustrazione. Ogni giorno la stessa domanda: «Possibile che questa sia tutta la mia vita?». Dentro di me ero sicura di valere di più, di potermi costruire qualcosa di mio. Ma non sapevo da dove cominciare.</p>
-        <blockquote className="border-l-2 border-rose pl-5 font-display text-3xl italic leading-snug text-ink">Sapevo di meritare di più. Non sapevo come arrivarci.</blockquote>
+      <Chapter id="milano" n="01" label="Milano" title="Nelle case più *esclusive di Milano*." img={<div className="grid grid-cols-2 gap-3 md:gap-4"><Slot kind="foto" id="story-bar" label="Rita in consulenza" ratio="4/5" art="orbs" /><Slot kind="foto" id="story-bar-2" label="Rita, ritratto" ratio="4/5" art="stones" className="mt-10 md:mt-16" /></div>}>
+        <p>Per 13 anni ho lavorato come massaggiatrice nelle case più esclusive di Milano. Tra i miei clienti: imprenditori, volti della TV, dello spettacolo e dello sport.</p>
+        <p>Persone abituate al meglio, che non scelgono al risparmio. Scelgono di chi si fidano, e sono disposte a pagare per la qualità e per la persona giusta.</p>
+        <blockquote className="border-l-2 border-rose pl-5 font-display text-3xl italic leading-snug text-ink">Chi è abituato al meglio non guarda il prezzo. Guarda di chi può fidarsi.</blockquote>
       </Chapter>
 
-      <Chapter id="mani" n="02" label="Le mie mani" title="Ho iniziato nel *massaggio*." flip img={<Slot kind="foto" id="story-mani" label="Rita al lavoro" ratio="4/5" art="stones" />}>
-        <p>Poi ho iniziato nel massaggio. Le mie mani erano la cosa più mia che avessi, e sentivo che lì c'era qualcosa che sapevo fare davvero.</p>
-        <p>Ho studiato, mi sono formata, ho cominciato a lavorare con le persone. E ho scoperto che la tecnica, da sola, non basta. <Tbc>formazioni, anno di inizio e dettagli del percorso nel massaggio</Tbc></p>
+      <Chapter id="mani" n="02" label="Le mie mani" title="Il massaggio, *il mio mestiere*." flip img={<Slot kind="foto" id="story-mani" label="Rita al lavoro" ratio="4/5" art="stones" />}>
+        <p>Le mani sono sempre state la cosa più mia che avessi. Ho studiato, mi sono formata e ho continuato a migliorare, trattamento dopo trattamento.</p>
+        <p>Con clienti così la qualità non è un di più: è il minimo da cui si parte. Ma presto ho capito che, da sola, la tecnica non basta. <Tbc>formazioni, anno di inizio e dettagli del percorso nel massaggio</Tbc></p>
       </Chapter>
 
-      <Chapter id="fatica" n="03" label="La fatica" title="Ho affrontato *tutte le difficoltà*." img={<Slot kind="foto" id="story-frustrazione" label="Rita frustrata" ratio="4/3" art="waves" />}>
-        <p>Qui è arrivata la parte dura. Non trovavo clienti. Solo qualche passaparola, mesi pieni seguiti da mesi vuoti, il telefono che non suonava, i conti che non tornavano.</p>
-        <p>Ho provato di tutto, spesso a caso: un po' di Instagram, qualche sconto, qualche collaborazione. Andavo a tentativi, e a fine mese non sapevo se avevo guadagnato o mi ero solo stancata.</p>
-        <p>Nessuno mi aveva mai spiegato come ci si fa trovare. Ai corsi impari le manovre, non come riempire l'agenda.</p>
+      <Chapter id="valore" n="03" label="Il valore" title="Non basta *saper massaggiare*." img={<Slot kind="foto" id="story-frustrazione" label="Rita, ritratto" ratio="4/3" art="waves" />}>
+        <p>Lavorando con clienti esigenti ho capito una cosa che cambia tutto: la tecnica apre la porta, ma quello che ti fa scegliere e ti fa pagare bene è come ti presenti, come comunichi il tuo valore e la fiducia che trasmetti.</p>
+        <p>È proprio questo che la maggior parte dei corsi non insegna. Ti danno le manovre, non il modo di farti scegliere e di riempire l'agenda.</p>
       </Chapter>
 
-      <Chapter id="social" n="04" label="I social" title="Ho capito come *farmi trovare*." flip img={<Slot kind="foto" id="story-social" label="Rita registra contenuti" ratio="4/5" art="leaf" />}>
-        <p>Poi ho capito una cosa. I social non servono a «fare numeri»: servono a far vedere chi sei prima che qualcuno ti scriva. Ho imparato a usarli per trovare clienti, e in particolare clienti alto-spendenti, che scelgono la qualità e capiscono il valore di quello che fai.</p>
-        <p>Ho cominciato a registrare contenuti ovunque, anche all'aperto con il telefono su un treppiede. Ho messo ordine nel percorso che porta una persona dal «ti vedo» al «ti scrivo». E ho smesso di improvvisare.</p>
+      <Chapter id="metodo" n="04" label="Il metodo" title="Farmi trovare, *anche online*." flip img={<Slot kind="foto" id="story-social" label="Rita registra contenuti" ratio="4/5" art="leaf" />}>
+        <p>Negli anni ho messo ordine in tutto questo: identità, posizionamento, prezzi e social. Ho imparato a farmi trovare e scegliere anche online, da clienti che capiscono il valore di quello che faccio.</p>
+        <p>I social non servono a «fare numeri»: servono a far vedere chi sei prima che qualcuno ti scriva. Ho messo in fila i passaggi che portano una persona dal «ti vedo» al «ti scrivo», e ho smesso di improvvisare.</p>
         {showRes ? (
           <div className="not-prose rounded-3xl bg-blush/40 p-6">
             <p className="font-display text-6xl md:text-7xl kw leading-none">{PERSONAL_RESULT.amount}</p>
@@ -93,8 +92,8 @@ export default function ChiSono() {
         )}
       </Chapter>
 
-      <Chapter id="oggi" n="05" label="Oggi" title="Oggi lo insegno *a te*." img={<Slot kind="foto" id="story-oggi" label="Rita oggi" ratio="4/5" art="arch" />}>
-        <p>Oggi lavoro nel benessere da oltre dieci anni. Ho trasformato quello che ho imparato in due percorsi: uno per la tua attività, uno per le tue mani.</p>
+      <Chapter id="oggi" n="05" label="Oggi" title="Dal 2024 lo insegno *a te*." img={<Slot kind="foto" id="story-oggi" label="Rita oggi" ratio="4/5" art="arch" />}>
+        <p>Dal 2024, attraverso la mia Srl, insegno quello che ho imparato a chi lavora nel benessere. Ho trasformato il mio metodo in due percorsi: uno per la tua attività, uno per le tue mani.</p>
         <p>Con il <Link href="/percorsi/metodo-agenda" className="ulink text-ink">Metodo A.G.E.N.D.A.</Link> e <Link href="/percorsi/sold-out" className="ulink text-ink">Metodo Sold Out</Link> ti aiuto a farti trovare e scegliere. Con il <Link href="/percorsi/metodo-rita-dolbakian" className="ulink text-ink">Metodo Rita Dolbakian</Link> ti insegno a massaggiare con mani sicure. Seguo poche persone alla volta, perché voglio esserci davvero.</p>
         <div className="flex flex-wrap gap-3 pt-2"><Link href="/call-orientamento" className="btn btn-primary">Prenota la call con me <span className="arr">→</span></Link><Link href="/percorsi" className="btn btn-ghost">Scegli il tuo percorso</Link></div>
       </Chapter>
@@ -167,9 +166,9 @@ export default function ChiSono() {
       </section>
 
       <Faq items={[
-        { q: "Chi sei?", a: "Sono Rita Dolbakian, massaggiatrice e formatrice nel benessere da oltre dieci anni. Prima lavoravo in un bar. Ho scelto il massaggio, ho faticato a trovare clienti e ho imparato a usare i social per farmi trovare." },
-        { q: "Perché hai lasciato il bar?", a: "Perché ero frustrata e sapevo di meritare di più. Volevo costruire qualcosa di mio, con le mie mani." },
-        { q: "Come hai trovato i tuoi clienti?", a: "All'inizio solo con il passaparola, provando un po' di tutto. Poi ho imparato a usare i social e a mettere in fila i passaggi, dal «ti vedo» al «ti scrivo»." },
+        { q: "Chi sei?", a: "Sono Rita Dolbakian, massaggiatrice e formatrice nel benessere. Per 13 anni ho massaggiato nelle case più esclusive di Milano e dal 2024 insegno a operatrici e operatori del benessere a farsi scegliere e riempire l'agenda." },
+        { q: "Che clienti hai avuto?", a: "In 13 anni ho lavorato a Milano con clienti esigenti: imprenditori, volti della TV, dello spettacolo e dello sport. Persone abituate al meglio, che scelgono di chi si fidano." },
+        { q: "Cosa ti ha fatto scegliere da clienti così?", a: "Ho capito che la tecnica apre la porta, ma a farti scegliere e pagare bene è come ti presenti, come comunichi il tuo valore e la fiducia che trasmetti: identità, posizionamento e social usati nel modo giusto." },
         { q: "Di cosa ti occupi oggi?", a: "Aiuto operatrici e operatori del benessere a trovare direzione e clienti (Metodo A.G.E.N.D.A. e Metodo Sold Out) e insegno a massaggiare con il mio metodo, online e in presenza." },
         { q: "Perché segui poche persone alla volta?", a: "Perché se ti seguo voglio sapere come ti chiami e a che punto sei. Con cento persone insieme non ci riuscirei." },
         { q: "Come posso lavorare con te?", a: "Si parte dalla guida gratuita o dalla call di orientamento. Da lì capiamo insieme quale percorso ha senso." },
