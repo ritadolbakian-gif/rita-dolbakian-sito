@@ -24,21 +24,31 @@ function Progress() {
 
 const useIso = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
+// Pagine che NON iniziano con un hero scuro: lì il logo parte scuro. Tutte le altre partono col logo chiaro,
+// già nell'HTML del server (così non si vede il cambio di logo mentre il JavaScript si avvia).
+const LIGHT_PAGES = ["/termini", "/cookie", "/regolamento-corsi", "/privacy", "/rimborsi", "/pagamenti-rateali", "/prodotti/instagram-stories-che-vendono"];
+const startsDark = (p: string) => !(LIGHT_PAGES.includes(p) || /^\/blog\/(?!categoria\/)[^/]+$/.test(p));
+
 export function Header() {
   const path = usePathname();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
-  const [onDark, setOnDark] = useState(false);
+  const [onDark, setOnDark] = useState(() => startsDark(path));
   useIso(() => {
-    const on = () => {
+    setOnDark(startsDark(path));
+    let frame = 0;
+    const measure = () => {
+      frame = 0;
       setSolid(window.scrollY > 40);
       const el = document.querySelector("[data-hero-dark]");
       setOnDark(!!el && el.getBoundingClientRect().bottom > 70);
     };
-    on();
-    const t = window.setTimeout(on, 150); // dopo il render della nuova pagina
+    // al massimo un calcolo per fotogramma, non a ogni evento di scroll
+    const on = () => { if (!frame) frame = requestAnimationFrame(measure); };
+    measure();
+    const t = window.setTimeout(measure, 150); // dopo il render della nuova pagina
     window.addEventListener("scroll", on, { passive: true });
-    return () => { window.clearTimeout(t); window.removeEventListener("scroll", on); };
+    return () => { window.clearTimeout(t); if (frame) cancelAnimationFrame(frame); window.removeEventListener("scroll", on); };
   }, [path]);
   const light = onDark && !solid;
   useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; }, [open]);
@@ -47,9 +57,13 @@ export function Header() {
   return (
     <>
       <Progress />
-      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${light ? "hdr-light text-ivory" : ""} ${solid ? "bg-ivory/80 backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2" : "py-3 md:py-5"}`}>
+      <header className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,color,padding] duration-300 ${light ? "hdr-light text-ivory" : ""} ${solid ? "bg-ivory md:bg-ivory/80 md:backdrop-blur-xl shadow-[0_1px_0_var(--line)] py-2" : "py-3 md:py-5"}`}>
         <div className="wrap flex items-center justify-between gap-4">
-          <Link href="/" className="shrink-0" aria-label="Rita Dolbakian, home"><Image src={light ? "/media/logo-menu-light.png" : "/media/logo-menu.png"} alt="Rita Dolbakian" width={1971} height={443} priority sizes="(min-width:768px) 240px, 180px" className={`w-auto transition-all duration-500 ${solid ? "h-9 md:h-11" : "h-10 md:h-13"}`} /></Link>
+          <Link href="/" className="relative shrink-0" aria-label="Rita Dolbakian, home">
+            {/* due loghi sovrapposti, già caricati: il cambio chiaro/scuro è istantaneo */}
+            <Image src="/media/logo-menu.png" alt="Rita Dolbakian" width={1971} height={443} {...(light ? { loading: "eager" as const } : { priority: true })} sizes="(min-width:768px) 240px, 180px" className={`w-auto transition-[height,opacity] duration-300 ${solid ? "h-9 md:h-11" : "h-10 md:h-13"} ${light ? "opacity-0" : "opacity-100"}`} />
+            <Image src="/media/logo-menu-light.png" alt="" aria-hidden width={1971} height={443} {...(light ? { priority: true } : { loading: "eager" as const })} sizes="(min-width:768px) 240px, 180px" className={`absolute inset-0 w-auto transition-[height,opacity] duration-300 ${solid ? "h-9 md:h-11" : "h-10 md:h-13"} ${light ? "opacity-100" : "opacity-0"}`} />
+          </Link>
 
           <nav className="hidden xl:flex items-center" aria-label="Principale">
             {NAV.map((n) =>
