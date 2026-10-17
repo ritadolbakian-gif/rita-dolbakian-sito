@@ -9,6 +9,7 @@ import { SITE } from "@/lib/site";
 import { CookieBanner } from "@/components/CookieBanner";
 import { WhatsApp } from "@/components/WhatsApp";
 import { GuidePopup } from "@/components/GuidePopup";
+import { MetaPixel } from "@/components/MetaPixel";
 
 const serif = Instrument_Serif({ variable: "--font-serif", subsets: ["latin"], weight: "400", style: ["normal", "italic"], display: "swap" });
 const sans = Hanken_Grotesk({ variable: "--font-sans", subsets: ["latin"], display: "swap" });
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyCta />
         <WhatsApp />
         <GuidePopup />
+        <MetaPixel />
         <CookieBanner />
       </body>
     </html>
