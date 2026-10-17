@@ -245,3 +245,11 @@ details.acc .acc-body { padding: 0 0 1.75rem; max-width: 46rem; color: var(--sto
 
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Animazioni d'ingresso degli hero in CSS: partono appena la pagina è disegnata,
+   senza aspettare il JavaScript (su mobile lento il JS arriva dopo secondi e l'LCP esplode). */
+@keyframes rd-up { from { transform: translateY(110%); } to { transform: none; } }
+@keyframes rd-fade { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+.rd-up { display: inline-block; animation: rd-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rd-fade { animation: rd-fade 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) { .rd-up, .rd-fade { animation: none; } }

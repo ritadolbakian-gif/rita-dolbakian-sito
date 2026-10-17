@@ -21,7 +21,9 @@ export function Slot({ kind = "foto", label, ratio = "4/5", className = "", art,
       style={{ aspectRatio: ratio }}
       data-slot={kind}
       data-slot-id={id}
-      initial={reduce ? false : "hidden"}
+      // le immagini in cima alla pagina (priority) compaiono subito: niente "tendina" che le
+      // tiene nascoste finché il JS non parte, altrimenti su mobile l'LCP sale di molti secondi
+      initial={reduce || priority ? false : "hidden"}
       whileInView="show"
       viewport={{ once: true, amount: 0.05 }}
     >

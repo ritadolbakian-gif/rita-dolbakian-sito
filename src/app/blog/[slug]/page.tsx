@@ -84,7 +84,7 @@ export default async function Post({ params }: PageProps<"/blog/[slug]">) {
         </header>
 
         <div className="wrap max-w-5xl -mt-2 md:mt-0 pt-8 md:pt-10">
-          <Slot kind="foto" id={`blog-${p.slug}`} label={p.category} ratio="16/8" className="!rounded-[1.5rem] md:!rounded-[2rem]" />
+          <Slot kind="foto" id={`blog-${p.slug}`} label={p.category} ratio="16/8" priority sizes="(min-width:1024px) 1100px, 100vw" className="!rounded-[1.5rem] md:!rounded-[2rem]" />
         </div>
 
         <div className="wrap grid gap-12 lg:grid-cols-[13.5rem_minmax(0,44rem)] lg:justify-center lg:gap-16 py-12 md:py-16">

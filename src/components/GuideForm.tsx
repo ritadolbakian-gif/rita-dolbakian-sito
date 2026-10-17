@@ -8,6 +8,7 @@ export function GhlForm({ id, name, height, className = "" }: { id: string; name
       <iframe
         src={`https://api.leadconnectorhq.com/widget/form/${id}`}
         style={{ width: "100%", height: `${height}px`, border: "none", borderRadius: 12 }}
+        loading="lazy"
         id={`inline-${id}`}
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"

@@ -31,6 +31,22 @@ export function Heading({ text, as: Tag = "h2", className = "", delay = 0, immed
     if (lead) { words[words.length - 1].suffix = lead[0]; p = p.slice(lead[0].length); }
     p.replace(/\*/g, "").split(" ").filter(Boolean).forEach((w) => words.push({ w, kw, k: i++ }));
   });
+  // Titoli in cima alla pagina: animazione in CSS, visibile appena la pagina è disegnata (LCP/FCP veloci su mobile).
+  if (immediate) {
+    return (
+      <Tag className={`font-display ${className}`} aria-label={text.replace(/\*/g, "")}>
+        <span aria-hidden>
+          {words.map(({ w, kw, k, glue, suffix }) => (
+            <span key={k} className={`inline-block overflow-hidden align-bottom pb-[0.12em] -mb-[0.12em] ${glue ? "" : "mr-[0.26em]"}`}>
+              <span className={`rd-up ${kw ? "kw" : ""}`} style={{ animationDelay: `${(delay + k * 0.045).toFixed(3)}s` }}>
+                {w}{suffix && <span className="suffix">{suffix}</span>}
+              </span>
+            </span>
+          ))}
+        </span>
+      </Tag>
+    );
+  }
   const MTag = motion[Tag];
   return (
     <MTag
