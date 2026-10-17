@@ -1,17 +1,40 @@
 "use client";
-import Script from "next/script";
+import { useEffect, useRef } from "react";
 
 const BOOKING_ID = "Crk5pbPt2YsMCM2bYgA6";
-
 const BOOKING_URL = `https://api.leadconnectorhq.com/widget/booking/${BOOKING_ID}`;
 
-/** Calendario prenotazioni: embed ufficiale GoHighLevel (LeadConnector). */
-export function BookingCalendar({ className = "", minHeight = 780 }: { className?: string; minHeight?: number }) {
+/**
+ * Calendario prenotazioni: embed GoHighLevel (LeadConnector).
+ * Non usiamo form_embed.js perché non applicava in modo affidabile l'altezza richiesta
+ * dal widget (su Safari il form restava tagliato e il pulsante Conferma irraggiungibile).
+ * Ascoltiamo direttamente i messaggi "highlevel.setHeight" e dimensioniamo l'iframe noi.
+ */
+export function BookingCalendar({ className = "", minHeight = 620 }: { className?: string; minHeight?: number }) {
+  const ref = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    function onMessage(e: MessageEvent) {
+      if (!e.origin.includes("leadconnectorhq.com")) return;
+      let data: unknown = e.data;
+      if (typeof data === "string") {
+        try { data = JSON.parse(data); } catch { return; }
+      }
+      if (Array.isArray(data) && data[0] === "highlevel.setHeight") {
+        const h = Number((data[1] as { height?: number } | undefined)?.height);
+        if (ref.current && Number.isFinite(h) && h > 0) {
+          ref.current.style.height = `${Math.ceil(h)}px`;
+        }
+      }
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
+
   return (
     <div className={className}>
-      {/* niente scrolling="no" né overflow:hidden: su Safari, se il ridimensionamento automatico non parte,
-          il form resterebbe tagliato e il pulsante Conferma irraggiungibile. Così si può comunque scorrere. */}
       <iframe
+        ref={ref}
         src={BOOKING_URL}
         title="Prenota la call di orientamento"
         allow="payment"
@@ -22,7 +45,6 @@ export function BookingCalendar({ className = "", minHeight = 780 }: { className
         Il calendario non si vede bene?{" "}
         <a href={BOOKING_URL} target="_blank" rel="noopener" className="ulink text-ink">Apri la pagina di prenotazione</a>.
       </p>
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
   );
 }
