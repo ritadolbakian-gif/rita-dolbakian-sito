@@ -6,9 +6,9 @@ const BOOKING_URL = `https://api.leadconnectorhq.com/widget/booking/${BOOKING_ID
 
 /**
  * Calendario prenotazioni: embed GoHighLevel (LeadConnector).
- * Non usiamo form_embed.js perché non applicava in modo affidabile l'altezza richiesta
- * dal widget (su Safari il form restava tagliato e il pulsante Conferma irraggiungibile).
- * Ascoltiamo direttamente i messaggi "highlevel.setHeight" e dimensioniamo l'iframe noi.
+ * Non usiamo form_embed.js: ha una logica responsive popup/launcher che a certe larghezze
+ * nasconde l'iframe (opacity:0 / left:-9999px). Ascoltiamo invece i messaggi "highlevel.setHeight"
+ * e dimensioniamo l'iframe noi, così il form non resta mai tagliato (anche su Safari).
  */
 export function BookingCalendar({ className = "", minHeight = 620 }: { className?: string; minHeight?: number }) {
   const ref = useRef<HTMLIFrameElement>(null);
