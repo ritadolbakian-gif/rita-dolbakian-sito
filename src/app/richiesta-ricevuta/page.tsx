@@ -28,8 +28,7 @@ export default function RichiestaRicevuta() {
             <Label t="Il primo passo" />
             <Heading text="Scaricala e parti dal *primo* capitolo." className="text-4xl md:text-5xl" />
             <p className="mt-4 text-stone max-w-md">Non serve leggerla tutta stasera. Parti dal primo capitolo e prova subito quello che c'è scritto: l'ho scritta per essere usata, non per restare in una cartella.</p>
-            <div className="mt-8"><a href={GUIDE_PDF} target="_blank" rel="noopener" className="btn btn-primary">Scarica la guida in PDF <span className="arr">↓</span></a></div>
-            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ La trovi anche nella tua email</li><li>✓ PDF, da leggere quando vuoi</li></ul>
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ La trovi anche nella tua email</li><li>✓ PDF, da leggere quando vuoi</li></ul>
           </div>
         </div>
       </section>
