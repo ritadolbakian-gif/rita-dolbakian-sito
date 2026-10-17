@@ -3,7 +3,7 @@ import { LegalPage, InBreve, Holder } from "@/components/LegalPage";
 import { Tbc } from "@/components/Ui";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta("Recesso, garanzia e rimborsi", "Come recedere entro 14 giorni e come funziona la garanzia «soddisfatti o rimborsati» per tutta la durata del percorso: condizioni, prova di partecipazione, tempi di rimborso e modulo di recesso.", "/rimborsi");
+export const metadata = meta("Recesso, garanzia e rimborsi", "Come recedere entro 14 giorni e come funziona la garanzia «soddisfatti o rimborsati» dei percorsi di Rita Dolbakian: condizioni, tempi e modulo.", "/rimborsi");
 
 const toc = [
   { id: "recesso", t: "Diritto di recesso (14 giorni)" }, { id: "come", t: "Come esercitarlo" }, { id: "limiti", t: "Quando è limitato o escluso" }, { id: "garanzia", t: "Garanzia «soddisfatti o rimborsati»" }, { id: "prova", t: "Cosa devi dimostrare" },

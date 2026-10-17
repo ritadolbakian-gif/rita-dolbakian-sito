@@ -11,7 +11,7 @@ category: "Clienti e agenda"
 order: 7
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** La scheda Google (Google Business Profile) è lo strumento gratuito con cui compari quando qualcuno cerca “massaggi vicino a me”. Per usarla bene servono nome reale dell’attività, categoria corretta, descrizione chiara, foto vere, orari aggiornati, un modo semplice per contattarti e recensioni gestite con cura. Le regole di Google cambiano: controlla sempre la guida ufficiale.
 
@@ -143,7 +143,7 @@ Sì, creare e gestire un profilo attività è gratuito.
 
 ### Serve un sito web per avere la scheda?
 
-No. Puoi avere una scheda anche senza sito. Un sito aiuta, ma non è obbligatorio per iniziare. Ne parliamo nell’articolo su [il sito web per massaggiatrice](/blog/sito-web-massaggiatrice).
+No. Puoi avere una scheda anche senza sito. Un sito aiuta, ma non è obbligatorio per iniziare.
 
 ### Posso averla se lavoro a domicilio?
 
@@ -165,4 +165,4 @@ Sì, da telefono e computer.
 
 Cerca il tuo nome su Google da un altro dispositivo, come farebbe una persona nuova, e annota tre cose da correggere nella tua scheda (o da creare, se non c’è). Il resto viene da sé.
 
-Per un piano più completo su come farti trovare e scegliere, scarica **la guida gratuita “Il Sistema Clienti per Operatori del Benessere”**: [Scarica la guida](/guida-gratuita).
+Per un piano più completo su come farti trovare e scegliere, scarica **la guida gratuita “Guida Metodo A.G.E.N.D.A.”**: [Scarica la guida](/guida-gratuita).

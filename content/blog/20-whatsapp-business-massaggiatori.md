@@ -11,7 +11,7 @@ category: "Vendita naturale"
 order: 20
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** WhatsApp Business è una versione dell’app pensata per le attività: permette profilo professionale, catalogo, messaggio di benvenuto, risposte rapide, etichette e orari. Usato bene, rende la prenotazione semplice e ordinata. Va usato con rispetto per la privacy: non inviare messaggi promozionali a chi non ha dato consenso e non raccogliere dati sanitari in chat.
 
@@ -174,4 +174,4 @@ Dipende dalla persona. Per le prime informazioni la chat è comoda; per esigenze
 
 ## Il passo successivo
 
-Imposta profilo, messaggio di benvenuto e tre risposte rapide: in meno di un’ora hai una base ordinata. Per un metodo più completo su visibilità, richieste e prenotazioni scarica la guida gratuita [Il Sistema Clienti per Operatori del Benessere](/guida-gratuita).
+Imposta profilo, messaggio di benvenuto e tre risposte rapide: in meno di un’ora hai una base ordinata. Per un metodo più completo su visibilità, richieste e prenotazioni scarica la guida gratuita [Guida Metodo A.G.E.N.D.A.](/guida-gratuita).

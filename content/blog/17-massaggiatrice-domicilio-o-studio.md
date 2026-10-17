@@ -11,7 +11,7 @@ category: "Avviare l'attività"
 order: 17
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Lavorare a domicilio costa poco all’inizio ma richiede più tempo di spostamento e un’attenzione particolare a sicurezza e attrezzatura; lavorare in studio dà un ambiente controllato e immagine più professionale, ma ha costi fissi. Molte professioniste partono dal domicilio o da uno spazio condiviso e poi evolvono. La scelta migliore dipende dalla tua fase.
 
@@ -150,4 +150,4 @@ Quando hai un’agenda regolare, una clientela fedele e un margine che ti permet
 
 ## Il passo successivo
 
-Scrivi per ciascun modello i tuoi costi mensili e il numero di sedute che pensi di fare. Il confronto ti dirà molto. Per un metodo completo su clienti e agenda, scarica la guida [Il Sistema Clienti per Operatori del Benessere](/guida-gratuita).
+Scrivi per ciascun modello i tuoi costi mensili e il numero di sedute che pensi di fare. Il confronto ti dirà molto. Per un metodo completo su clienti e agenda, scarica la guida [Guida Metodo A.G.E.N.D.A.](/guida-gratuita).

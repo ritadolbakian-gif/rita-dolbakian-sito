@@ -11,7 +11,7 @@ category: "Tecnica e formazione"
 order: 8
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Per scegliere un buon corso di massaggio chiediti: qual è il mio obiettivo, chi insegna e con quale esperienza, quanta pratica reale c’è nel programma, cosa rilascia a fine corso, se è online o in presenza, che supporto ricevo dopo, quanto costa davvero e quali segnali devono farmi diffidare. Le risposte contano più del prezzo o del nome del corso.
 
@@ -101,7 +101,7 @@ Spesso la parte più preziosa di un corso arriva quando finisce. Chiedi:
 - ricevo materiali da consultare dopo?
 - c’è un aiuto per iniziare a lavorare (come presentarmi, come trovare i primi clienti)?
 
-Se il corso promette di formarti per lavorare ma non dice nulla su come trovare clienti e organizzare l’attività, ti lascia a metà strada. Un corso di tecnica è una cosa; sapere come costruire un’agenda è un’altra. Per questo, per chi lavora, ha senso valutare anche un percorso su visibilità e vendita, come [Wellness Mastery](/percorsi/wellness-mastery).
+Se il corso promette di formarti per lavorare ma non dice nulla su come trovare clienti e organizzare l’attività, ti lascia a metà strada. Un corso di tecnica è una cosa; sapere come costruire un’agenda è un’altra. Per questo, per chi lavora, ha senso valutare anche un percorso su visibilità e vendita, come [Metodo A.G.E.N.D.A.](/percorsi/metodo-agenda).
 
 ## 7. Quanto costa davvero, e cosa è incluso?
 

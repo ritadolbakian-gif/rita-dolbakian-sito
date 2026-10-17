@@ -8,7 +8,7 @@ import Link from "next/link";
 import { CaseStudies, TrustBar } from "@/components/Proof";
 import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Metodo Sold Out: mentorship 1:1 per operatrici del benessere", "Metodo Sold Out di Rita Dolbakian: mentorship 1:1 di 6 mesi per diventare il riferimento del tuo territorio, con call settimanali, Kit Pronto, landing page, prodotto digitale e 8 posti a trimestre.", "/percorsi/sold-out", "/media/hero-palco.webp");
+export const metadata = meta("Metodo Sold Out: mentorship 1:1 per operatrici del benessere", "Metodo Sold Out di Rita Dolbakian: mentorship 1:1 di 6 mesi per operatrici del benessere che vogliono diventare il riferimento del proprio territorio.", "/percorsi/sold-out", "/media/hero-palco.webp");
 
 export default function SoldOut() {
   return (

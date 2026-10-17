@@ -11,7 +11,7 @@ category: "Avviare l'attività"
 order: 12
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Per diventare massaggiatrice professionista in Italia servono quattro passaggi: chiarire che tipo di massaggio vuoi offrire (benessere, non terapeutico), formarti in modo serio con molta pratica, sistemare la parte amministrativa con un commercialista e costruire i primi clienti. Le regole variano secondo il tipo di attività: verifica sempre le fonti ufficiali.
 
@@ -75,7 +75,7 @@ Per un primo orientamento sulla partita IVA leggi [Partita IVA per massaggiatori
 
 ### I primi dieci clienti
 
-Per i primi clienti, il canale più concreto è spesso la rete di persone che già ti conoscono, insieme a collaborazioni locali e a una presenza online ordinata. La strategia completa è nella guida [Come trovare clienti come massaggiatrice](/blog/come-trovare-clienti-massaggiatrice) e nella guida gratuita [Il Sistema Clienti per Operatori del Benessere](/guida-gratuita).
+Per i primi clienti, il canale più concreto è spesso la rete di persone che già ti conoscono, insieme a collaborazioni locali e a una presenza online ordinata. La strategia completa è nella guida [Come trovare clienti come massaggiatrice](/blog/come-trovare-clienti-massaggiatrice) e nella guida gratuita [Guida Metodo A.G.E.N.D.A.](/guida-gratuita).
 
 ## Passaggio 5 (facoltativo ma utile) — Costruisci un’agenda che regge
 

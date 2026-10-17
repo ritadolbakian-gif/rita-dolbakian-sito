@@ -11,7 +11,7 @@ category: "Instagram e contenuti"
 order: 5
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Su Instagram una massaggiatrice non ha bisogno di “andare virale”: le serve un profilo che spieghi in cinque secondi chi aiuta e come prenotare, e una routine sostenibile di contenuti. Bastano quattro tipi di post (educativi, dietro le quinte, fiducia, invito), tre pubblicazioni a settimana e storie quotidiane semplici.
 
@@ -171,10 +171,10 @@ Solo con il loro consenso. Evita nomi e dettagli personali, e non usare testi ch
 
 ### Instagram o TikTok?
 
-Dipende da dove si trova il tuo pubblico e da cosa ti viene naturale. Se parti da zero, concentrati su un solo social. Se vuoi approfondire, leggi l’articolo su [TikTok e Reels per operatori del benessere](/blog/tiktok-reels-operatori-benessere).
+Dipende da dove si trova il tuo pubblico e da cosa ti viene naturale. Se parti da zero, concentrati su un solo social. Se vuoi capire da dove arrivano davvero le clienti, leggi [come trovare clienti come massaggiatrice](/blog/come-trovare-clienti-massaggiatrice).
 
 ## Da dove cominciare oggi
 
 Un passo alla volta: aggiorna la bio con la struttura di tre righe, scegli quattro storie in evidenza e pubblica il primo contenuto utile della settimana.
 
-Se vuoi una guida più completa per trasformare chi ti segue in clienti, in modo naturale e senza stress, scarica **“Il Sistema Clienti per Operatori del Benessere”**: [Scarica la guida gratuita](/guida-gratuita). E se vuoi approfondire con un percorso strutturato su Instagram, contenuti e vendita nei messaggi, scopri [Wellness Mastery](/percorsi/wellness-mastery).
+Se vuoi una guida più completa per trasformare chi ti segue in clienti, in modo naturale e senza stress, scarica **“Guida Metodo A.G.E.N.D.A.”**: [Scarica la guida gratuita](/guida-gratuita). E se vuoi approfondire con un percorso strutturato su Instagram, contenuti e vendita nei messaggi, scopri [Metodo A.G.E.N.D.A.](/percorsi/metodo-agenda).

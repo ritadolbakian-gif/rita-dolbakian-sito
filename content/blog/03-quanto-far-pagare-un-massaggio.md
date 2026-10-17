@@ -11,7 +11,7 @@ category: "Prezzi e posizionamento"
 order: 3
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Il prezzo giusto di un massaggio non si copia dalla concorrenza: si calcola partendo da quanto vuoi guadagnare, dai costi reali dell’attività, dalle imposte e da quante sedute puoi fare davvero in un mese. Il prezzo di mercato è un riferimento, non una regola. Qui trovi un metodo in cinque passi e un esempio numerico.
 
@@ -87,7 +87,7 @@ Cosa ci dice l’esempio?
 - Un prezzo che sembra in linea con il mercato può essere troppo basso per la tua realtà se non hai l’agenda piena.
 - Alzare la qualità dell’offerta e la regolarità dell’agenda cambia i numeri più di qualsiasi sconto.
 
-Per fare lo stesso calcolo con i tuoi dati, puoi usare il **Wellness Profit Calculator**, lo strumento che fa parte dei bonus di Wellness Mastery.
+Per fare lo stesso calcolo con i tuoi dati, puoi usare il **Wellness Profit Calculator**, lo strumento che fa parte dei bonus di Metodo A.G.E.N.D.A..
 
 ## Prezzo singolo o pacchetto?
 

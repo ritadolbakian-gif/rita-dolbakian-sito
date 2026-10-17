@@ -3,7 +3,7 @@ import { LegalPage, InBreve, Holder } from "@/components/LegalPage";
 import { Tbc } from "@/components/Ui";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta("Termini e condizioni di vendita", "Condizioni generali di vendita dei corsi e dei percorsi di Rita Dolbakian Academy (RD SRL): corsi online e in presenza, pagamenti, pagamento rateale, recesso, responsabilità.", "/termini");
+export const metadata = meta("Termini e condizioni di vendita", "Condizioni di vendita dei corsi di Rita Dolbakian Academy (RD SRL): corsi online e in presenza, pagamenti, pagamento a rate, recesso e responsabilità.", "/termini");
 
 const toc = [
   { id: "ambito", t: "Chi vende e cosa si applica" }, { id: "definizioni", t: "Definizioni" }, { id: "servizi", t: "I servizi e cosa non sono" }, { id: "contratto", t: "Come si conclude il contratto" },

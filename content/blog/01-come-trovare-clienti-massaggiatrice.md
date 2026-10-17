@@ -11,7 +11,7 @@ category: "Clienti e agenda"
 order: 1
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Per trovare clienti come massaggiatrice servono tre cose, in quest’ordine: farti trovare quando qualcuno ti cerca, dare fiducia a chi ti trova e rendere semplicissimo scriverti o prenotare. Il passaparola resta prezioso, ma da solo rende l’agenda imprevedibile. Qui trovi i 5 canali da usare e un piano per le prime 4 settimane.
 
@@ -160,6 +160,6 @@ Meglio poche azioni, fatte con regolarità, di tante fatte una volta sola. Anche
 
 ## Da dove partire adesso
 
-Se vuoi un aiuto concreto per mettere in ordine il percorso che porta una persona da “ti vedo” a “ti scrivo”, ho preparato una guida pratica pensata per chi lavora nel benessere: **“Il Sistema Clienti per Operatori del Benessere — la guida per fare i primi 10 clienti online”.** Puoi scaricarla gratuitamente qui: [Scarica la guida](/guida-gratuita).
+Se vuoi un aiuto concreto per mettere in ordine il percorso che porta una persona da “ti vedo” a “ti scrivo”, ho preparato una guida pratica pensata per chi lavora nel benessere: **“Guida Metodo A.G.E.N.D.A. — la guida per fare i primi 10 clienti online”.** Puoi scaricarla gratuitamente qui: [Scarica la guida](/guida-gratuita).
 
 Se invece senti di aver bisogno di un confronto, puoi prenotare una **call di orientamento gratuita**. Non è una chiamata di vendita: serve a capire insieme dove stai perdendo continuità e da dove partire, senza fare tutto insieme. [Prenota la tua call](/call-orientamento).

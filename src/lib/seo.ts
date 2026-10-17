@@ -5,8 +5,10 @@ export const ID = { rita: `${SITE.url}/#rita`, academy: `${SITE.url}/#academy`, 
 
 /** Metadati di pagina. `image` = immagine di condivisione (default: og-image). */
 export function meta(title: string, description: string, path: string, image = "/og-image.jpg"): Metadata {
+  // Google mostra ~60 caratteri: se il suffisso " | Rita Dolbakian" farebbe tagliare il titolo, lo omettiamo.
+  const fits = `${title} | Rita Dolbakian`.length <= 60;
   return {
-    title,
+    title: fits ? title : { absolute: title },
     description,
     alternates: { canonical: path },
     openGraph: { title, description, url: path, type: "website", locale: "it_IT", siteName: "Rita Dolbakian", images: [image] },

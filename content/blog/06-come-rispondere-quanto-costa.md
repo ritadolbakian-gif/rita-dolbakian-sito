@@ -11,7 +11,7 @@ category: "Vendita naturale"
 order: 6
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Quando qualcuno scrive solo “quanto costa?”, non è maleducazione: è il modo più comune di iniziare una conversazione. La risposta migliore dice il prezzo con chiarezza, aggiunge una frase su cosa comprende e fa una domanda per capire meglio la persona. Mai nascondere il costo, mai giustificarti, mai rispondere con un numero e basta.
 
@@ -132,4 +132,4 @@ Perfetto, ma conferma i dettagli: durata, luogo, costo, regole di disdetta. Un m
 
 ## Un passo avanti
 
-Saper parlare di prezzo con tranquillità è una competenza che si allena. Se vuoi lavorare su come presentare la tua offerta e sulla vendita nei messaggi senza forzare, è uno dei temi del percorso [Wellness Mastery](/percorsi/wellness-mastery). Se invece preferisci cominciare con un confronto, puoi prenotare una **call di orientamento gratuita**. [Prenota la tua call](/call-orientamento).
+Saper parlare di prezzo con tranquillità è una competenza che si allena. Se vuoi lavorare su come presentare la tua offerta e sulla vendita nei messaggi senza forzare, è uno dei temi del percorso [Metodo A.G.E.N.D.A.](/percorsi/metodo-agenda). Se invece preferisci cominciare con un confronto, puoi prenotare una **call di orientamento gratuita**. [Prenota la tua call](/call-orientamento).

@@ -3,7 +3,7 @@ import { LegalPage, InBreve } from "@/components/LegalPage";
 import { Tbc } from "@/components/Ui";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta("Pagamento a rate: Pagodil, Pagolight e simili", "Come funziona il pagamento rateale dei corsi di Rita Dolbakian Academy con società finanziarie come Pagodil e Pagolight: passaggi, informazioni da leggere, recesso e rimborsi.", "/pagamenti-rateali");
+export const metadata = meta("Pagamento a rate: Pagodil, Pagolight e simili", "Pagamento a rate dei corsi di Rita Dolbakian Academy con finanziarie come Pagodil e Pagolight: come funziona, cosa leggere, recesso e rimborsi.", "/pagamenti-rateali");
 
 const toc = [
   { id: "come", t: "Come funziona" }, { id: "chi", t: "Chi è chi" }, { id: "leggere", t: "Cosa leggere prima di firmare" }, { id: "diritti", t: "I tuoi diritti" }, { id: "rimborsi", t: "Recesso e rimborsi" }, { id: "domande", t: "Domande" },

@@ -11,7 +11,7 @@ category: "Avviare l'attività"
 order: 15
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Se svolgi un’attività in modo continuativo e organizzato, in genere serve aprire la partita IVA. La scelta del codice ATECO, del regime fiscale (per esempio quello forfettario) e dei contributi dipende dal tuo caso: va decisa con un commercialista. Prima di aprire, preparati con le domande giuste e un’idea chiara dei tuoi servizi e dei tuoi prezzi.
 
@@ -122,4 +122,4 @@ Dipende dall’attività e dall’inquadramento: è un punto da chiarire con il 
 
 ## Il passo successivo
 
-Prepara la lista di domande, scegli un commercialista e fissa un primo incontro. Nel frattempo, lavora sulla parte che puoi già costruire: l’offerta e il prezzo. Nella guida gratuita [Il Sistema Clienti per Operatori del Benessere](/guida-gratuita) trovi un metodo per i primi clienti. Per il quadro generale leggi [Come diventare massaggiatrice professionista](/blog/come-diventare-massaggiatrice-professionista).
+Prepara la lista di domande, scegli un commercialista e fissa un primo incontro. Nel frattempo, lavora sulla parte che puoi già costruire: l’offerta e il prezzo. Nella guida gratuita [Guida Metodo A.G.E.N.D.A.](/guida-gratuita) trovi un metodo per i primi clienti. Per il quadro generale leggi [Come diventare massaggiatrice professionista](/blog/come-diventare-massaggiatrice-professionista).

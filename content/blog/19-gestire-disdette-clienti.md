@@ -11,7 +11,7 @@ category: "Clienti e agenda"
 order: 19
 published: true
 date: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-17"
 ---
 > **In breve.** Per gestire le disdette senza perdere clienti servono quattro cose: regole semplici comunicate prima della prenotazione, promemoria automatici o manuali, una lista d’attesa per riempire i posti liberati e messaggi gentili ma chiari per chi disdice all’ultimo. La regola va spiegata con rispetto, come tutela del tempo di tutti.
 
@@ -144,4 +144,4 @@ Riprendi la regola con gentilezza e valuta se continuare la collaborazione: ogni
 
 ## Il passo successivo
 
-Scrivi la tua politica di disdetta in tre righe e preparati tre messaggi: conferma, promemoria, risposta alla disdetta tardiva. Per un metodo completo su clienti e agenda scarica [Il Sistema Clienti per Operatori del Benessere](/guida-gratuita).
+Scrivi la tua politica di disdetta in tre righe e preparati tre messaggi: conferma, promemoria, risposta alla disdetta tardiva. Per un metodo completo su clienti e agenda scarica [Guida Metodo A.G.E.N.D.A.](/guida-gratuita).

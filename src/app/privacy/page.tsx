@@ -2,7 +2,7 @@ import { LegalPage, InBreve, Holder } from "@/components/LegalPage";
 import { Tbc } from "@/components/Ui";
 import { meta } from "@/lib/seo";
 
-export const metadata = meta("Informativa privacy", "Informativa sul trattamento dei dati personali (artt. 13 e 14 GDPR) di RD SRL, titolare del sito Rita Dolbakian Academy: dati, finalità, destinatari, conservazione e diritti.", "/privacy");
+export const metadata = meta("Informativa privacy", "Informativa privacy (artt. 13 e 14 GDPR) di RD SRL per il sito Rita Dolbakian Academy: quali dati trattiamo, perché, per quanto tempo e i tuoi diritti.", "/privacy");
 
 const toc = [
   { id: "titolare", t: "Chi è il titolare" }, { id: "dati", t: "Quali dati raccogliamo" }, { id: "finalita", t: "Perché li usiamo" }, { id: "destinatari", t: "A chi li comunichiamo" },
