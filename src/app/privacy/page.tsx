@@ -58,14 +58,15 @@ export default function Privacy() {
       <ul>
         <li>fornitori di hosting e infrastruttura del sito (Vercel Inc.);</li>
         <li>il gestionale per moduli, prenotazioni, email e automazioni (GoHighLevel / LeadConnector);</li>
-        <li>la piattaforma dei corsi e di pagamento: <Tbc>nome dei fornitori</Tbc>;</li>
+        <li>la piattaforma dei corsi online e dell'Area Privata (GoHighLevel / LeadConnector);</li>
+        <li>il servizio di pagamento con carta (Stripe), che per gli obblighi di legge e le verifiche antifrode tratta i dati anche come titolare autonomo;</li>
         <li>commercialisti, consulenti e professionisti che ci assistono;</li>
         <li>fornitori di strumenti di analisi e di advertising, se hai acconsentito (per esempio Google e Meta).</li>
       </ul>
       <p>Operano come <strong>titolari autonomi</strong>, con una propria informativa, le società finanziarie e gli istituti di pagamento che gestiscono il pagamento rateale (per esempio Pagodil o Pagolight) e la tua banca. Possiamo inoltre comunicare dati ad autorità pubbliche quando la legge lo richiede. I dati non sono diffusi né venduti.</p>
 
       <h2 id="extraue">5. Trasferimenti fuori dall'Unione Europea</h2>
-      <p>Alcuni fornitori (per esempio Vercel, GoHighLevel, Google, Meta) hanno sede o server negli Stati Uniti. In questi casi il trasferimento avviene verso soggetti aderenti al Data Privacy Framework UE-USA (decisione di adeguatezza della Commissione europea del 10 luglio 2023) oppure con le Clausole contrattuali standard approvate dalla Commissione, con eventuali misure aggiuntive. Puoi chiedere una copia delle garanzie scrivendo al titolare. <Tbc>verifica delle garanzie di ogni fornitore</Tbc></p>
+      <p>Alcuni fornitori (per esempio Vercel, GoHighLevel, Stripe, Google, Meta) hanno sede o server negli Stati Uniti. In questi casi il trasferimento avviene verso soggetti aderenti al Data Privacy Framework UE-USA (decisione di adeguatezza della Commissione europea del 10 luglio 2023) oppure con le Clausole contrattuali standard approvate dalla Commissione, con eventuali misure aggiuntive. Puoi chiedere una copia delle garanzie scrivendo al titolare. <Tbc>verifica delle garanzie di ogni fornitore</Tbc></p>
 
       <h2 id="corsi">6. Corsi dal vivo e online: salute, foto e video</h2>
       <ul>

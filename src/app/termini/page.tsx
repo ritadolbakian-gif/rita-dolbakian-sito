@@ -49,7 +49,7 @@ export default function Termini() {
       <p>I prezzi sono in euro e, per i consumatori, comprensivi di IVA se dovuta. Il prezzo finale, le eventuali rate e ogni spesa sono mostrati prima della conferma. Emettiamo fattura elettronica: ci servono i tuoi dati fiscali (codice fiscale o partita IVA, indirizzo, codice destinatario o PEC). I prezzi possono cambiare, ma non per gli ordini già confermati.</p>
 
       <h2 id="pagamento">6. Pagamento</h2>
-      <p>Puoi pagare con i metodi indicati al momento dell'acquisto: <Tbc>carta, bonifico, PayPal o altri</Tbc>. Il pagamento in un'unica soluzione si addebita alla conferma dell'ordine; per il bonifico l'accesso si attiva dopo l'accredito. <Tbc>eventuale rateizzazione diretta con RD SRL, senza finanziaria</Tbc></p>
+      <p>I pagamenti avvengono tramite <strong>Stripe</strong>, con carta di credito o di debito e con gli altri metodi che Stripe mostra al momento dell'acquisto. I dati della carta sono gestiti direttamente da Stripe: RD SRL non li vede e non li conserva. Il pagamento in un'unica soluzione si addebita alla conferma dell'ordine. <Tbc>eventuale rateizzazione diretta con RD SRL, senza finanziaria</Tbc></p>
 
       <h2 id="rate">7. Pagamento a rate con società finanziaria (Pagodil, Pagolight e simili)</h2>
       <p>Per alcuni corsi puoi scegliere di pagare a rate tramite una società finanziaria convenzionata (per esempio Pagodil, Pagolight o Heylight). Funziona così:</p>

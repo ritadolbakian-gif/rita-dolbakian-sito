@@ -51,13 +51,13 @@ I punti segnati `[DA CONFERMARE]` oggi si vedono sul sito come riquadri trattegg
 - Instagram Stories che vendono: formato e numero di pagine.
 - Wellness Profit Calculator: oggi è una pagina "in arrivo a breve". Quando sarà pronto: cosa calcola, contenuto del foglio, prezzo, garanzia. Nota: la copertina riporta il refuso "Regime fofettario" (giusto: forfettario).
 - Rate: finanziarie convenzionate (Pagodil, Pagolight, Heylight), importi minimi/massimi, numero di rate, eventuale tasso zero a carico di RD SRL.
-- Metodi di pagamento accettati (carta, bonifico, PayPal…) ed eventuale rateizzazione diretta.
+- Eventuale rateizzazione diretta con RD SRL (i pagamenti avvengono con Stripe: confermato).
 
 ## 5. Guida gratuita
 - Numero di pagine e tempo di lettura.
 
 ## 6. Legale (da far rivedere a un consulente)
-- Privacy: email privacy, conferma che il DPO non serve, nomi dei fornitori e loro garanzie, tempi di conservazione, modulo liberatoria foto/video.
+- Privacy: email privacy, conferma che il DPO non serve, garanzie dei fornitori (GoHighLevel, Stripe, Vercel, Google, Meta: nomi confermati), tempi di conservazione, modulo liberatoria foto/video.
 - Cookie: elenco definitivo degli strumenti attivi sul sito e durate.
 - Termini: durate e calendari, regole su assenze e recuperi, polizza RC per i corsi in presenza, stato di registrazione dei marchi, organismo ADR, foro competente (Pistoia?).
 - Rimborsi: funzione di recesso online nel checkout (Direttiva UE 2023/2673), email assistenza, procedura con le finanziarie.
