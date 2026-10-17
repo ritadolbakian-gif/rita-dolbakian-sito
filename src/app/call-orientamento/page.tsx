@@ -13,16 +13,18 @@ export default function Call() {
       <Crumbs trail={[["Call di orientamento", "/call-orientamento"]]} />
       <PageHero dark bgId="hero-massaggio" eyebrow="Call di orientamento" title="Una call per capire *da dove ripartire*." answer="Sai che qualcosa nella tua attività non gira, ma non sai da dove cominciare. In call ti dico dove stai perdendo continuità e cosa farei io per prima cosa." />
       <section className="section">
-        <div className="wrap grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
-          <div className="space-y-10">
+        <div className="wrap">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-14 items-center">
             <div>
               <Label t="Prenota" />
               <Heading text="Scegli *giorno e orario*." className="text-4xl md:text-5xl" as="h2" />
-              <p className="mt-4 text-stone max-w-sm">È una videochiamata a quattr'occhi che può durare fino a un'ora. Dopo la prenotazione ricevi la conferma via email.</p>
+              <p className="mt-4 text-stone max-w-md">È una videochiamata a quattr'occhi che può durare fino a un'ora. Dopo la prenotazione ricevi la conferma via email.</p>
             </div>
             <Reveal><Slot kind="foto" id="call-hero" label="Rita durante una consulenza" ratio="4/3" art="orbs" /></Reveal>
           </div>
-          <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
+          <div className="mt-12 lg:mt-16 max-w-3xl mx-auto">
+            <BookingCalendar className="rounded-3xl border border-[var(--line)] overflow-hidden bg-ivory" />
+          </div>
         </div>
       </section>
 
