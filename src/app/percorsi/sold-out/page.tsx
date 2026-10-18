@@ -6,6 +6,7 @@ import { Heading, Reveal } from "@/components/Motion";
 import { meta } from "@/lib/seo";
 import Link from "next/link";
 import { CaseStudies, TrustBar } from "@/components/Proof";
+import { TestimonialWall } from "@/components/TestimonialWall";
 import { Crumbs } from "@/components/Crumbs";
 
 export const metadata = meta("Metodo Sold Out: mentorship 1:1 per operatrici del benessere", "Metodo Sold Out di Rita Dolbakian: mentorship 1:1 di 6 mesi per operatrici del benessere che vogliono diventare il riferimento del proprio territorio.", "/percorsi/sold-out", "/media/hero-palco.webp");
@@ -80,6 +81,7 @@ export default function SoldOut() {
           <Heading text="I risultati di chi ha fatto il percorso, *raccontati* da loro." className="text-5xl md:text-6xl max-w-4xl" />
           <div className="mt-12"><CaseStudies max={3} /></div>
           <p className="mt-6 text-xs text-stone max-w-2xl">Risultati individuali, riferiti a singole allieve: non sono garantiti e non rappresentano un risultato medio. Dipendono dalla situazione di partenza e dall'impegno di ciascuna.</p>
+          <div className="mt-16"><TestimonialWall max={9} /></div>
           <div className="mt-16"><TrustBar /></div>
         </div>
       </section>

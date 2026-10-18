@@ -3,7 +3,8 @@ import { InfluencerCollage } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Tbc, Faq } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { QuoteWall, TrustBar, PressBar } from "@/components/Proof";
+import { TrustBar, PressBar } from "@/components/Proof";
+import { TestimonialWall } from "@/components/TestimonialWall";
 import { PERSONAL_RESULT, showPersonalResult } from "@/lib/proof";
 import { SITE } from "@/lib/site";
 import { meta } from "@/lib/seo";
@@ -153,8 +154,8 @@ export default function ChiSono() {
       <section className="section bg-blush/30">
         <div className="wrap">
           <Label n="08" t="Cosa dicono di me" />
-          <Heading text="Chi ha lavorato con *me*." className="text-5xl md:text-6xl max-w-3xl" />
-          <div className="mt-12"><QuoteWall /></div>
+          <Heading text="Le allieve, *parole loro*." className="text-5xl md:text-6xl max-w-3xl" />
+          <div className="mt-12"><TestimonialWall max={12} /></div>
         </div>
         <div className="wrap mt-14"><PressBar /></div>
         <div className="wrap mt-14"><TrustBar /></div>

@@ -2,7 +2,8 @@ import { ReviewsSection } from "@/components/Reviews";
 import { PageHero, Label, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { Heading } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { CaseStudies, VideoWall, Quotes, PressBar, RatingLd, TrustBar } from "@/components/Proof";
+import { CaseStudies, PressBar, RatingLd, TrustBar } from "@/components/Proof";
+import { TestimonialWall } from "@/components/TestimonialWall";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
@@ -25,10 +26,9 @@ export default function Risultati() {
       </section>
       <section className="section bg-blush/30">
         <div className="wrap">
-          <Label n="02" t="In video" />
-          <Heading text="Le loro *parole*." className="text-5xl md:text-6xl" />
-          <div className="mt-12"><VideoWall /></div>
-          <div className="mt-14"><Quotes /></div>
+          <Label n="02" t="Parole loro" />
+          <Heading text="Messaggi veri, *risultati veri*." className="text-5xl md:text-6xl" />
+          <div className="mt-12"><TestimonialWall /></div>
         </div>
       </section>
       <ReviewsSection />

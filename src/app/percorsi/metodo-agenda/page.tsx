@@ -3,7 +3,8 @@ import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { CaseStudies, TrustBar, QuoteWall, VideoWall } from "@/components/Proof";
+import { CaseStudies, TrustBar } from "@/components/Proof";
+import { TestimonialWall } from "@/components/TestimonialWall";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
@@ -174,8 +175,7 @@ export default function MetodoAgenda() {
           <Label n="11" t="Chi l'ha fatto" />
           <Heading text="Prima e dopo, nelle *loro* parole." className="text-5xl md:text-6xl max-w-3xl" />
           <div className="mt-12"><CaseStudies max={3} program="A.G.E.N.D.A." /></div>
-          <div className="mt-16"><QuoteWall program="A.G.E.N.D.A." title="Le loro parole" /></div>
-          <div className="mt-16"><VideoWall /></div>
+          <div className="mt-16"><TestimonialWall max={9} /></div>
           <div className="mt-16"><TrustBar /></div>
         </div>
       </section>
