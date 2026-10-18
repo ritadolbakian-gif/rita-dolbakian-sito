@@ -19,7 +19,7 @@ export function llmsIndex() {
 - Pagina: [Chi sono](${U}/chi-sono)
 
 ## Percorsi
-- [Metodo A.G.E.N.D.A.](${U}/percorsi/metodo-agenda): percorso di 6 mesi in 11 moduli con affiancamento individuale (2 call al mese, chat 7 giorni su 7, community, Q&A ogni due settimane, 5 bonus). A.G.E.N.D.A. = Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È il percorso da cui si parte.
+- [Metodo A.G.E.N.D.A.](${U}/percorsi/metodo-agenda): percorso di 6 mesi con affiancamento individuale (2 call al mese, chat 7 giorni su 7, community, Q&A ogni due settimane). A.G.E.N.D.A. = Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È il percorso da cui si parte.
 - [Metodo Sold Out](${U}/percorsi/sold-out): mentorship 1:1 di 6 mesi con Rita, una call a settimana (24), revisione dei contenuti, landing page, prodotto digitale, setup piattaforma e newsletter realizzati dal team. 8 posti a trimestre.
 - [Metodo Rita Dolbakian](${U}/percorsi/metodo-rita-dolbakian): per imparare a massaggiare o perfezionare la tecnica, tre livelli, online e in presenza.
 - [Formazione certificata](${U}/formazione-certificata): il percorso a livelli del Metodo Rita Dolbakian che si conclude con un attestato.

@@ -13,7 +13,7 @@ import { Crumbs } from "@/components/Crumbs";
 const NUM_LABEL: Record<string, string> = { anni: "anni nel benessere", studenti: "studenti formati" };
 const authorNumbers = STATS.filter((s) => s.confirmed && NUM_LABEL[s.id]).map((s) => ({ big: `${s.prefix ?? ""}${s.value}${s.suffix ?? ""}`, label: NUM_LABEL[s.id] }));
 
-export const metadata = meta("Guida Metodo A.G.E.N.D.A. gratuita: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita", "/media/hero-seduta.webp");
+export const metadata = meta("Guida Metodo A.G.E.N.D.A.: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita", "/media/hero-seduta.webp");
 
 const chapters = [
   ["Chi vuoi aiutare e cosa offri", "Tre domande a cui rispondere prima di pubblicare qualsiasi cosa, per spiegare in una frase chi sei e perché scegliere te."],

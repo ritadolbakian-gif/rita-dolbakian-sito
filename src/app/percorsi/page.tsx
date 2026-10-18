@@ -11,7 +11,7 @@ import { Crumbs } from "@/components/Crumbs";
 export const metadata = meta("Percorsi di formazione per il benessere", "Tutti i percorsi di Rita Dolbakian: Metodo A.G.E.N.D.A., Metodo Sold Out e Metodo Rita Dolbakian. Scopri da quale partire.", "/percorsi", "/media/hero-pensierosa.webp");
 
 const rows = [
-  { n: "Metodo A.G.E.N.D.A.", who: "Operatrici e operatori del benessere", get: "Direzione, continuità, clienti più qualificati", fmt: "6 mesi · 11 moduli · affiancamento individuale", href: "/percorsi/metodo-agenda" },
+  { n: "Metodo A.G.E.N.D.A.", who: "Operatrici e operatori del benessere", get: "Direzione, continuità, clienti più qualificati", fmt: "6 mesi · affiancamento individuale", href: "/percorsi/metodo-agenda" },
   { n: "Metodo Sold Out", who: "Chi vuole il massimo affiancamento", get: "Call settimanale con me, landing page, prodotto digitale, piattaforma", fmt: "Mentorship 1:1 · 6 mesi · 8 posti a trimestre", href: "/percorsi/sold-out" },
   { n: "Metodo Rita Dolbakian", who: "Chi vuole imparare a massaggiare o perfezionarsi", get: "Tecnica manuale, ascolto del tocco, pratica", fmt: "Online e in presenza", href: "/percorsi/metodo-rita-dolbakian" },
 ];
@@ -31,7 +31,7 @@ export default function Percorsi() {
           <Heading text="Scegli la *strada*." className="text-5xl md:text-6xl" />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {[
-              { id: "percorsi-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il sistema per riempire l'agenda con social e posizionamento, con affiancamento individuale.", tag: "Per chi lavora nel benessere", href: "/percorsi/metodo-agenda", art: "orbs" as const, pts: ["6 mesi · 11 moduli", "2 call individuali al mese", "Chat con me 7 giorni su 7", "5 bonus"] },
+              { id: "percorsi-agenda", t: "Metodo A.G.E.N.D.A.", d: "Il sistema per riempire l'agenda con social e posizionamento, con affiancamento individuale.", tag: "Per chi lavora nel benessere", href: "/percorsi/metodo-agenda", art: "orbs" as const, pts: ["6 mesi di affiancamento", "2 call individuali al mese", "Chat con me 7 giorni su 7"]  },
               { id: "percorsi-wm", t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi: una call a settimana e il lavoro tecnico fatto al posto tuo.", tag: "8 posti a trimestre", href: "/percorsi/sold-out", art: "arch" as const, pts: ["6 mesi · 24 call con me", "Revisione dei tuoi contenuti", "Landing page e prodotto digitale", "Setup piattaforma e newsletter"] },
               { id: "percorsi-rd", t: "Metodo Rita Dolbakian", d: "Imparare a massaggiare e perfezionare la tecnica, online e in presenza.", tag: "Per le tue mani", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, pts: ["Online e in presenza", "Tre livelli", "Tecnica e ascolto del tocco", "Si può partire da zero"] },
             ].map((c, i) => (
