@@ -10,7 +10,7 @@ export default function Corsi() {
   return (
     <>
       <Crumbs trail={[["Corsi", "/corsi"]]} />
-      <PageHero dark bgId="hero-ritratto" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
+      <PageHero dark bgId="hero-stage" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
         <a href="#affiancamento" className="btn btn-primary">Percorsi di affiancamento</a>
         <a href="#digitali" className="btn btn-ghost">Prodotti digitali</a>
         <a href="#gratis" className="btn btn-ghost">Gratis</a>

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { RATING, REVIEWS, REVIEW_SOURCES } from "@/lib/proof";
 import { Heading, Reveal } from "./Motion";
+import { TestimonialWall } from "./TestimonialWall";
 
 const Stars = ({ value = 5 }: { value?: number }) => {
   const pct = Math.max(0, Math.min(100, (value / 5) * 100));
@@ -77,23 +78,21 @@ export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { titl
               <Trustpilot />
             </div>
           </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {REVIEWS.length > 0
-              ? REVIEWS.slice(0, 6).map((r, i) => (
-                  <Reveal key={r.author + i} delay={(i % 2) * 0.08}>
-                    <figure className="h-full rounded-3xl bg-ivory p-6 flex flex-col">
-                      <Stars value={r.rating} />
-                      <blockquote className="mt-3 flex-1 text-[0.97rem]">«{r.text}»</blockquote>
-                      <figcaption className="mt-4 text-sm"><span className="font-medium">{r.author}</span> · <span className="text-stone">{r.source === "google" ? "Google" : "Trustpilot"}{r.date ? `, ${r.date}` : ""}</span></figcaption>
-                    </figure>
-                  </Reveal>
-                ))
-              : [0, 1, 2, 3].map((i) => (
-                  <div key={i} className="rounded-3xl border border-dashed border-rose/50 p-6 text-sm text-stone">
-                    <Stars value={5} /><p className="mt-3">Qui va una recensione reale, copiata da Google o Trustpilot.</p><p className="mt-3">[Nome] · [fonte]</p>
-                  </div>
-                ))}
-          </div>
+          {REVIEWS.length > 0 ? (
+            <div className="grid gap-4 sm:grid-cols-2">
+              {REVIEWS.slice(0, 6).map((r, i) => (
+                <Reveal key={r.author + i} delay={(i % 2) * 0.08}>
+                  <figure className="h-full rounded-3xl bg-ivory p-6 flex flex-col">
+                    <Stars value={r.rating} />
+                    <blockquote className="mt-3 flex-1 text-[0.97rem]">«{r.text}»</blockquote>
+                    <figcaption className="mt-4 text-sm"><span className="font-medium">{r.author}</span> · <span className="text-stone">{r.source === "google" ? "Google" : "Trustpilot"}{r.date ? `, ${r.date}` : ""}</span></figcaption>
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <TestimonialWall max={6} />
+          )}
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export default function Risultati() {
     <>
       <Crumbs trail={[["Risultati", "/risultati"]]} />
       <RatingLd />
-      <PageHero dark bgId="hero-ritratto" eyebrow="Risultati" title="Le storie di chi ha *cambiato* direzione." answer="Qui trovi i casi studio e le testimonianze delle allieve che hanno lavorato con me, con nome, cognome e autorizzazione. Sono esperienze individuali: raccontano un percorso, non promettono un risultato uguale per tutte." />
+      <PageHero dark bgId="hero-stage" eyebrow="Risultati" title="Le storie di chi ha *cambiato* direzione." answer="Qui trovi i casi studio e le testimonianze delle allieve che hanno lavorato con me, con nome, cognome e autorizzazione. Sono esperienze individuali: raccontano un percorso, non promettono un risultato uguale per tutte." />
       <section className="section">
         <div className="wrap">
           <PressBar />
