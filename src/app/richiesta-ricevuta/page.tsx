@@ -38,7 +38,7 @@ export default function RichiestaRicevuta() {
           <div className="max-w-2xl space-y-5">
             <Label t="Il passo successivo" />
             <Heading text="Vuoi *parlarne* con me?" className="text-4xl md:text-5xl" />
-            <p className="text-stone max-w-md">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita. Ti dico dove stai perdendo continuità e cosa farei io per prima cosa.</p>
+            <p className="text-stone max-w-md">Se dopo la guida vuoi un aiuto concreto, prenota una call gratuita. Scegli lo slot che preferisci: subito dopo riceverai un breve questionario che mi permette di preparare la call su misura per te. La prenotazione si conferma solo dopo l'invio del questionario.</p>
             <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-stone"><li>✓ In videochiamata, fino a un'ora</li><li>✓ Gratuita</li><li>✓ Scegli tu l'orario</li></ul>
           </div>
           <div className="mt-10 lg:mt-12">
