@@ -4,7 +4,7 @@ import { StatsTicker } from "@/components/StatsTicker";
 import { ReviewsSection } from "@/components/Reviews";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { CaseStudies, TrustBar, RatingLd } from "@/components/Proof";
+import { TrustBar, RatingLd } from "@/components/Proof";
 import { TestimonialWall } from "@/components/TestimonialWall";
 import { GuideForm } from "@/components/GuideForm";
 import { Faq } from "@/components/Ui";
@@ -181,7 +181,6 @@ export default function Home() {
         <div className="wrap">
           <Label n="07" t="Risultati" />
           <Heading text="Le storie di chi ha *cambiato* direzione." className="text-5xl md:text-7xl max-w-4xl" />
-          <div className="mt-14"><CaseStudies max={3} /></div>
           <div className="mt-20">
             <p className="eyebrow mb-5">Messaggi veri, dalle allieve</p>
             <TestimonialWall max={9} />

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { Slot } from "@/components/Slot";
-import { CaseStudies, TrustBar, QuoteWall } from "@/components/Proof";
+import { TrustBar } from "@/components/Proof";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
@@ -118,9 +118,7 @@ export default function MetodoRD() {
         <div className="wrap">
           <Label n="06" t="Chi ha imparato" />
           <Heading text="Le mani cambiano. Si *sente*." className="text-5xl md:text-6xl max-w-3xl" />
-          <div className="mt-12"><CaseStudies max={3} program="Metodo Rita Dolbakian" /></div>
-          <div className="mt-16"><QuoteWall program="Metodo Rita Dolbakian" title="Le loro parole" /></div>
-          <div className="mt-16"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Tre livelli: scegli quello giusto per te." }, { t: "Pratica vera", d: "Online per studiare, in presenza per mettere le mani." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna, non una platea." }, { t: "Niente promesse di cura", d: "Formazione sulla tecnica, non una terapia." }]} /></div>
+          <div className="mt-12"><TrustBar items={[{ t: "Parti dal tuo livello", d: "Tre livelli: scegli quello giusto per te." }, { t: "Pratica vera", d: "Online per studiare, in presenza per mettere le mani." }, { t: "Gruppi piccoli", d: "Attenzione a ognuna, non una platea." }, { t: "Niente promesse di cura", d: "Formazione sulla tecnica, non una terapia." }]} /></div>
         </div>
       </section>
 

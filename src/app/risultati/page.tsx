@@ -1,7 +1,7 @@
 import { ReviewsSection } from "@/components/Reviews";
 import { PageHero, Label, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { Heading } from "@/components/Motion";
-import { CaseStudies, PressBar, RatingLd, TrustBar } from "@/components/Proof";
+import { PressBar, RatingLd, TrustBar } from "@/components/Proof";
 import { TestimonialWall } from "@/components/TestimonialWall";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
@@ -17,7 +17,7 @@ export default function Risultati() {
       <section className="section">
         <div className="wrap">
           <PressBar />
-          <Label n="01" t="Casi studio" />
+          <Label n="01" t="Risultati reali" />
           <Heading text="Numeri veri. *Persone* vere." className="text-5xl md:text-6xl max-w-3xl" />
           <p className="mt-6 text-lg text-stone max-w-2xl">Alcuni risultati raccontati dalle allieve negli ultimi mesi. Più in basso trovi i loro messaggi, così come li ho ricevuti.</p>
           <ul className="mt-10 grid grid-cols-2 gap-px bg-[var(--line)] border border-[var(--line)] rounded-3xl overflow-hidden md:grid-cols-4">
@@ -25,8 +25,6 @@ export default function Risultati() {
               <li key={l} className="bg-ivory p-6"><p className="font-display text-4xl md:text-5xl kw leading-none">{n}</p><p className="mt-2 text-sm text-stone">{l}</p></li>
             ))}
           </ul>
-          <p className="mt-4 text-xs text-stone max-w-2xl">Esempi reali, riferiti a singole allieve: non sono garantiti e non rappresentano un risultato medio. Dipendono dalla situazione di partenza e dall'impegno di ciascuna.</p>
-          <div className="mt-14"><CaseStudies /></div>
         </div>
       </section>
       <section className="section bg-blush/30">

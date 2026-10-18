@@ -5,7 +5,7 @@ import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/componen
 import { Heading, Reveal } from "@/components/Motion";
 import { meta } from "@/lib/seo";
 import Link from "next/link";
-import { CaseStudies, TrustBar } from "@/components/Proof";
+import { TrustBar } from "@/components/Proof";
 import { TestimonialWall } from "@/components/TestimonialWall";
 import { Crumbs } from "@/components/Crumbs";
 
@@ -79,7 +79,6 @@ export default function SoldOut() {
         <div className="wrap">
           <Label n="04" t="Risultati" />
           <Heading text="I risultati di chi ha fatto il percorso, *raccontati* da loro." className="text-5xl md:text-6xl max-w-4xl" />
-          <div className="mt-12"><CaseStudies max={3} /></div>
           <p className="mt-6 text-xs text-stone max-w-2xl">Risultati individuali, riferiti a singole allieve: non sono garantiti e non rappresentano un risultato medio. Dipendono dalla situazione di partenza e dall'impegno di ciascuna.</p>
           <div className="mt-16"><TestimonialWall max={9} /></div>
           <div className="mt-16"><TrustBar /></div>
