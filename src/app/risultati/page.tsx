@@ -1,7 +1,6 @@
 import { ReviewsSection } from "@/components/Reviews";
 import { PageHero, Label, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { Heading } from "@/components/Motion";
-import { Slot } from "@/components/Slot";
 import { CaseStudies, PressBar, RatingLd, TrustBar } from "@/components/Proof";
 import { TestimonialWall } from "@/components/TestimonialWall";
 import { meta } from "@/lib/seo";
@@ -17,11 +16,17 @@ export default function Risultati() {
       <PageHero dark bgId="hero-ritratto" eyebrow="Risultati" title="Le storie di chi ha *cambiato* direzione." answer="Qui trovi i casi studio e le testimonianze delle allieve che hanno lavorato con me, con nome, cognome e autorizzazione. Sono esperienze individuali: raccontano un percorso, non promettono un risultato uguale per tutte." />
       <section className="section">
         <div className="wrap">
-          <Slot kind="foto" id="risultati-hero" label="Rita con una allieva (autorizzata)" ratio="16/7" art="waves" className="mb-14" />
           <PressBar />
           <Label n="01" t="Casi studio" />
           <Heading text="Numeri veri. *Persone* vere." className="text-5xl md:text-6xl max-w-3xl" />
-          <div className="mt-12"><CaseStudies /></div>
+          <p className="mt-6 text-lg text-stone max-w-2xl">Alcuni risultati raccontati dalle allieve negli ultimi mesi. Più in basso trovi i loro messaggi, così come li ho ricevuti.</p>
+          <ul className="mt-10 grid grid-cols-2 gap-px bg-[var(--line)] border border-[var(--line)] rounded-3xl overflow-hidden md:grid-cols-4">
+            {[["600 €", "pacchetto chiuso, cliente arrivata da TikTok"], ["1.500 €", "pacchetto viso e corpo venduto da Instagram"], ["5.600 €", "incassati a metà mese, slot esauriti"], ["2 pacchetti", "chiusi da un solo reel"]].map(([n, l]) => (
+              <li key={l} className="bg-ivory p-6"><p className="font-display text-4xl md:text-5xl kw leading-none">{n}</p><p className="mt-2 text-sm text-stone">{l}</p></li>
+            ))}
+          </ul>
+          <p className="mt-4 text-xs text-stone max-w-2xl">Esempi reali, riferiti a singole allieve: non sono garantiti e non rappresentano un risultato medio. Dipendono dalla situazione di partenza e dall'impegno di ciascuna.</p>
+          <div className="mt-14"><CaseStudies /></div>
         </div>
       </section>
       <section className="section bg-blush/30">
