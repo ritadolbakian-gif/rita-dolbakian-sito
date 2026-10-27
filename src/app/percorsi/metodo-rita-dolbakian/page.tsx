@@ -140,7 +140,7 @@ export default function MetodoRD() {
         { t: "Non ho mai massaggiato", d: "Il Livello 1 parte da zero. Nessuno si aspetta che tu sappia già." },
         { t: "Ho paura di sbagliare o di fare male", d: "È normale. Si impara a dosare piano, con feedback, e a riconoscere quando fermarsi." },
         { t: "Può funzionare online?", d: "Lo studio sì. Per questo la pratica è in presenza e, online, serve esercizio regolare con un riscontro." },
-        { t: "Non ho uno spazio o un lettino", d: <>Ne parliamo in call per capire cosa serve davvero. <Tbc>attrezzatura richiesta</Tbc></> },
+        { t: "Non ho ancora uno spazio attrezzato", d: <>Ne parliamo in call per capire cosa serve davvero. <Tbc>attrezzatura richiesta</Tbc></> },
         { t: "Non ho un titolo", d: "Per i requisiti di accesso e per l'attività professionale ti dico con precisione cosa serve, in call." },
       ]} />
 

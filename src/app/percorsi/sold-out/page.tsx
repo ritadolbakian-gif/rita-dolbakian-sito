@@ -55,7 +55,7 @@ export default function SoldOut() {
         { t: "Un'agenda più prevedibile", d: "Si lavora per passare dal «chissà se questo mese va bene» a richieste regolari, da clienti che scegli tu." },
         { t: "Vendere senza sentirti venditrice", d: "Ti insegno il mio modo di comunicare il tuo valore, non un copione." },
         { t: "Meno lavoro gratis", d: "Sconti, omaggi e pacchetti regalati: si impara a farsi pagare per il valore che dai." },
-        { t: "Instagram e TikTok che lavorano per te", d: "Due canali che continuano a portare richieste anche quando il lettino è occupato." },
+        { t: "Instagram e TikTok che lavorano per te", d: "Due canali che continuano a portare richieste anche quando sei in trattamento." },
         { t: "Più libertà di scelta", d: "Non «più follower»: più richieste in DM, più prenotazioni e più scelta su chi far entrare nel tuo studio e a che prezzo." },
       ]} />
 

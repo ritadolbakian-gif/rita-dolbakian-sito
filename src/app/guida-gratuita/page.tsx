@@ -108,7 +108,7 @@ export default function Guida() {
             <Heading text="L'ho scritta *io*." className="text-5xl md:text-6xl" />
             <div className="mt-6 space-y-4 text-lg text-stone max-w-xl">
               <p>Sono Rita Dolbakian. Per 13 anni ho massaggiato nelle case più esclusive di Milano e ho imparato come ci si fa scegliere da clienti esigenti. Oggi insegno quello che ho imparato a chi lavora nel benessere.</p>
-              <p>Questa guida è quello che avrei voluto avere io all'inizio: poche cose, nell'ordine giusto, scritte da chi il lettino lo conosce davvero.</p>
+              <p>Questa guida è quello che avrei voluto avere io all'inizio: poche cose, nell'ordine giusto, scritte da chi questo lavoro lo conosce davvero.</p>
             </div>
             <div className="mt-8 flex flex-wrap items-end gap-x-10 gap-y-5">
               {authorNumbers.map((n) => (

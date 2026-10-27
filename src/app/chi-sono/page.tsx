@@ -134,7 +134,7 @@ export default function ChiSono() {
               <Label t="Sul set" />
               <Heading text="Davanti alla telecamera *ci sono io*." className="text-5xl md:text-6xl" />
             </div>
-            <p className="text-lg text-ivory/75 max-w-xl">I video che trovi sui miei profili e nei corsi li giro io, in studio, con un videomaker. Il lettino è quello vero, i trattamenti sono quelli che faccio ogni giorno. Quello che ti insegno lo vedi fare a me, non a un'attrice.</p>
+            <p className="text-lg text-ivory/75 max-w-xl">I video che trovi sui miei profili e nei corsi li giro io, in studio, con un videomaker. I trattamenti sono quelli veri, quelli che faccio ogni giorno. Quello che ti insegno lo vedi fare a me, non a un'attrice.</p>
           </div>
           <div className="mt-12 grid gap-3 grid-cols-2 md:grid-cols-4 md:gap-5">
             {[["set-1", ""], ["set-2", "md:mt-14"], ["set-4", ""], ["set-5", "md:mt-14"]].map(([id, cls], i) => (
@@ -144,7 +144,7 @@ export default function ChiSono() {
           <div className="mt-5 grid gap-3 md:grid-cols-[1.4fr_1fr] md:gap-5">
             <Reveal><Slot id="set-palco" label="Sul palco" ratio="16/10" art="arch" /></Reveal>
             <Reveal delay={0.1}><div className="h-full rounded-3xl border border-ivory/15 p-8 flex flex-col justify-end">
-              <p className="font-display text-3xl md:text-4xl leading-tight">Dal lettino al palco, <span className="kw">con le stesse mani</span>.</p>
+              <p className="font-display text-3xl md:text-4xl leading-tight">Dallo studio al palco, <span className="kw">con le stesse mani</span>.</p>
               <p className="mt-4 text-ivory/70">Oggi racconto il mio metodo anche agli eventi, davanti a chi lavora nel benessere come me.</p>
             </div></Reveal>
           </div>

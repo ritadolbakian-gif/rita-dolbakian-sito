@@ -28,7 +28,7 @@ export default function Home() {
           <Reveal delay={0.15}><p className="mt-5 text-lg text-stone max-w-xl">Una strada è l'affiancamento con me, passo passo. L'altra è l'Accademia Online: i corsi che segui quando vuoi. Scegli quella che ti somiglia oggi: l'altra ti aspetta.</p></Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {[
-              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", cta: "Guarda come funziona il Metodo", t: "Metodo A.G.E.N.D.A.", d: "Ti insegno a farti trovare online da chi cerca un massaggio vicino a te, e a far tornare chi è già passata dal tuo lettino. Si comincia con una call con me.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
+              { icon: "🌸", k: "Lavoro nel benessere e voglio più clienti", cta: "Guarda come funziona il Metodo", t: "Metodo A.G.E.N.D.A.", d: "Ti insegno a farti trovare online da chi cerca un massaggio vicino a te, e a far tornare chi è già stata da te. Si comincia con una call con me.", href: "/percorsi/metodo-agenda", slot: "Rita al lavoro in studio", id: "path-agenda", art: "orbs" as const, dark: true },
               { icon: "💻", k: "Voglio imparare dai corsi, quando voglio", cta: "Scopri i corsi", t: "Accedi all'Accademia Online", d: "Tutti i miei corsi e percorsi in un unico posto: li segui online, al tuo ritmo, e metti in pratica da subito. Scegli quello giusto per te e inizia quando vuoi.", href: "/corsi", slot: "Rita al computer nel suo studio", id: "path-corsi", art: "stones" as const, dark: false },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 0.12}>
