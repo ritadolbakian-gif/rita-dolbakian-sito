@@ -48,7 +48,6 @@ export const RATING: { value: number; count: number; source: string } | null = {
 export type Stat = { id: string; value: number; prefix?: string; suffix?: string; label: string; confirmed: boolean };
 export const STATS: Stat[] = [
   { id: "anni", value: 13, label: "anni di esperienza nel benessere", confirmed: true },
-  { id: "mesi", value: 6, label: "mesi di affiancamento individuale", confirmed: true },
   { id: "studenti", value: 100, prefix: "+", label: "studenti formati", confirmed: false }, // [DA CONFERMARE: numero reale]
 ];
 export const showDraftStats = () => process.env.NEXT_PUBLIC_SHOW_DRAFT === "1" || process.env.NODE_ENV !== "production";

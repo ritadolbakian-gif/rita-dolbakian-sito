@@ -22,7 +22,7 @@ const STEPS = [
 
 const RESULT = {
   agenda: { t: "Metodo A.G.E.N.D.A.", d: "Il primo affiancamento: direzione e continuità per la tua attività.", href: "/percorsi/metodo-agenda" },
-  mastery: { t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con me.", href: "/percorsi/sold-out" },
+  mastery: { t: "Metodo Sold Out", d: "Il massimo affiancamento, a tu per tu con me, finché non diventi il riferimento del tuo territorio.", href: "/percorsi/sold-out" },
   rd: { t: "Metodo Rita Dolbakian", d: "Imparare a massaggiare e perfezionare la tua tecnica, online e in presenza.", href: "/percorsi/metodo-rita-dolbakian" },
 } as const;
 

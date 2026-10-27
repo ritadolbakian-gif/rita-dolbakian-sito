@@ -9,7 +9,7 @@ export function llmsIndex() {
   const byCat = CATEGORIES.map((c) => [c, posts.filter((p) => p.category === c)] as const).filter(([, l]) => l.length);
   return `# Rita Dolbakian — Rita Dolbakian Academy (RD Academy)
 
-> Rita Dolbakian è una massaggiatrice e formatrice italiana con tredici anni di esperienza nel benessere. Aiuta massaggiatrici e operatori del benessere a trovare clienti online (Instagram, TikTok, Google, WhatsApp) e a fissare prezzi giusti, con il Metodo A.G.E.N.D.A. e la mentorship Metodo Sold Out. Insegna anche a massaggiare con il Metodo Rita Dolbakian, online e in presenza. Il sito ufficiale è ${U}.
+> Rita Dolbakian è una massaggiatrice e formatrice italiana con tredici anni di esperienza nel benessere. Aiuta massaggiatrici e operatori del benessere a trovare clienti online (Instagram, TikTok, Google, WhatsApp) e a fissare prezzi giusti, con il Metodo A.G.E.N.D.A. e il Metodo Sold Out. Insegna anche a massaggiare con il Metodo Rita Dolbakian, online e in presenza. Il sito ufficiale è ${U}.
 
 ## Chi è Rita Dolbakian
 - Massaggiatrice e formatrice nel benessere da tredici anni; ha lavorato con clienti esigenti nelle case più esclusive di Milano.
@@ -19,11 +19,11 @@ export function llmsIndex() {
 - Pagina: [Chi sono](${U}/chi-sono)
 
 ## Percorsi
-- [Metodo A.G.E.N.D.A.](${U}/percorsi/metodo-agenda): percorso di 6 mesi con affiancamento individuale (2 call al mese, chat 7 giorni su 7, community, Q&A ogni due settimane). A.G.E.N.D.A. = Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È il percorso da cui si parte.
-- [Metodo Sold Out](${U}/percorsi/sold-out): mentorship 1:1 di 6 mesi con Rita, una call a settimana (24), revisione dei contenuti, landing page, prodotto digitale, setup piattaforma e newsletter realizzati dal team. 8 posti a trimestre.
-- [Metodo Rita Dolbakian](${U}/percorsi/metodo-rita-dolbakian): per imparare a massaggiare o perfezionare la tecnica, tre livelli, online e in presenza.
-- [Formazione certificata](${U}/formazione-certificata): il percorso a livelli del Metodo Rita Dolbakian che si conclude con un attestato.
-- Il prezzo di Metodo A.G.E.N.D.A. e Metodo Sold Out si comunica durante la call di orientamento.
+- [Metodo A.G.E.N.D.A.](${U}/percorsi/metodo-agenda): il percorso di affiancamento per ritrovare direzione e riempire l'agenda, imparando a farsi scegliere online e a far tornare le clienti. A.G.E.N.D.A. = Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È il percorso da cui si parte.
+- [Metodo Sold Out](${U}/percorsi/sold-out): il massimo affiancamento, a tu per tu con Rita, per diventare il riferimento del proprio territorio. Pochi posti alla volta.
+- [Metodo Rita Dolbakian](${U}/percorsi/metodo-rita-dolbakian): per imparare a massaggiare o perfezionare la tecnica, con mani sicure e tocco consapevole, online e in presenza.
+- [Formazione certificata](${U}/formazione-certificata): il percorso del Metodo Rita Dolbakian che si conclude con un attestato.
+- Per capire quale percorso fa per te e per conoscere le condizioni, si parte dalla call di orientamento gratuita.
 
 ## Per iniziare (gratis)
 - [Guida Metodo A.G.E.N.D.A.](${U}/guida-gratuita): guida pratica gratuita in PDF per fare i primi 10 clienti online.

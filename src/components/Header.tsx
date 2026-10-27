@@ -8,7 +8,7 @@ import { NAV, SITE } from "@/lib/site";
 
 const PERCORSI = [
   { href: "/percorsi/metodo-agenda", t: "Metodo A.G.E.N.D.A.", d: "Per chi lavora nel benessere e vuole più clienti" },
-  { href: "/percorsi/sold-out", t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con Rita" },
+  { href: "/percorsi/sold-out", t: "Metodo Sold Out", d: "Il massimo affiancamento, a tu per tu con Rita" },
   { href: "/percorsi/metodo-rita-dolbakian", t: "Metodo Rita Dolbakian", d: "Impara a massaggiare, online e in presenza" },
 ];
 

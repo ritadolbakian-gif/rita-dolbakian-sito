@@ -1,6 +1,6 @@
 import { ReviewsSection } from "@/components/Reviews";
 import { PageNav } from "@/components/PageNav";
-import { Outcomes, Steps, Objections, Compare, DetailSteps } from "@/components/Sections";
+import { Outcomes, Steps, Objections, DetailSteps } from "@/components/Sections";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
 import { meta } from "@/lib/seo";
@@ -23,17 +23,7 @@ export default function SoldOut() {
 
       <PageNav items={[{ id: "risultati", t: "Risultati" }, { id: "garanzia", t: "Garanzia" }, { id: "candidatura", t: "Posti" }, { id: "domande", t: "Domande" }]} cta={{ href: "/call-orientamento", label: "Prenota la call" }} />
 
-      <section className="py-10 md:py-14">
-        <div className="wrap">
-          <dl className="grid grid-cols-2 gap-px bg-[var(--line)] rounded-3xl overflow-hidden border border-[var(--line)] md:grid-cols-4">
-            {[["6", "mesi di mentorship"], ["24", "call individuali con me"], ["8", "posti per ogni trimestre"], ["1:1", "WhatsApp diretto, lun-ven"]].map(([n, l]) => (
-              <div key={l} className="bg-ivory p-6"><dt className="font-display text-6xl kw leading-none">{n}</dt><dd className="mt-2 text-sm text-stone">{l}</dd></div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
-      <section className="section pt-8">
+      <section className="section pt-12">
         <div className="wrap grid gap-14 lg:grid-cols-2">
           <div>
             <Label n="01" t="Il contesto" />
@@ -119,7 +109,7 @@ export default function SoldOut() {
       <Steps n="07" label="I prossimi passi" title="Come *si parte*." items={[
         { t: "Mi scrivi", d: "Rispondi dal sito o scrivimi su WhatsApp per confermare il tuo posto." },
         { t: "Audit iniziale", d: "Fissiamo la data dell'audit di 90 minuti." },
-        { t: "Scegli come pagare", d: "Pagamento unico o finanziamento, e ricevi l'accesso immediato al Kit Pronto." },
+        { t: "Partiamo insieme", d: "Se ha senso per entrambe, definiamo come procedere e ricevi l'accesso immediato al Kit Pronto." },
       ]} />
 
       <ReviewsSection />
@@ -131,21 +121,11 @@ export default function SoldOut() {
         { t: "E se non funziona per me?", d: "C'è la garanzia «Primi 2 mesi». Non prometto risultati economici, che nessuno può garantire." },
       ]} />
 
-      <Compare n="09" title="Metodo A.G.E.N.D.A. *o* Sold Out?" cols={["Metodo A.G.E.N.D.A.", "Metodo Sold Out"]} rows={[
-        { label: "Cos'è", cells: ["Il sistema completo, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
-        { label: "Durata", cells: ["6 mesi", "6 mesi"] },
-        { label: "Affiancamento", cells: ["2 call individuali al mese, chat 7/7, Q&A bisettimanali", "Una call a settimana (24), revisione contenuti, WhatsApp diretto"] },
-        { label: "Fatto per te", cells: ["Il video corso", "Landing page, prodotto digitale, piattaforma, newsletter"] },
-        { label: "Posti", cells: ["Aperto", "8 per trimestre"] },
-        { label: "Prezzo", cells: ["Lo comunico in videochiamata", "Lo comunico in videochiamata"] },
-      ]} />
-
       <Faq id="domande" items={[
         { q: "Che cos'è il Metodo Sold Out?", a: "È la mia mentorship 1:1 di 6 mesi per operatrici del benessere: una call a settimana con me, la revisione dei tuoi contenuti, e landing page, prodotto digitale e piattaforma fatti al posto tuo." },
         { q: "Cosa cambia rispetto al Metodo A.G.E.N.D.A.?", a: "A.G.E.N.D.A. è il sistema completo con affiancamento. Sold Out è il massimo affiancamento: una call a settimana, revisione dei contenuti e servizi fatti dal mio team." },
         { q: "Devo mostrarmi sui social?", a: "Sì. Il metodo si basa su un'identità personale riconoscibile: video, volto e voce, non solo grafiche." },
         { q: "Quanto tempo richiede?", a: <>Serve tempo ogni settimana: la call, i compiti e i contenuti. <Tbc>ore settimanali consigliate</Tbc></>, plain: "Serve tempo ogni settimana per la call, i compiti e i contenuti." },
-        { q: "Quanto costa e posso pagare a rate?", a: "Il prezzo lo comunico durante la videochiamata di orientamento. Se vuoi dividere il pagamento in rate, ne parliamo in quella sede." },
         { q: "C'è una garanzia?", a: "Sì, la garanzia «Primi 2 mesi»: se segui le indicazioni, frequenti le call, completi i compiti e applichi le revisioni e non vedi nessun miglioramento concreto, ti restituisco l'investimento." },
         { q: "Perché solo 8 posti?", a: "Perché è mentorship 1:1: ogni persona ha una call settimanale e supporto diretto, e il mio tempo reale è limitato." },
         { q: "Il teambuilding è incluso nel prezzo?", a: "La giornata dal vivo è inclusa. Restano esclusi i costi di viaggio e di soggiorno." },

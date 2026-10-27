@@ -1,4 +1,4 @@
-import { Outcomes, Steps, Objections, Compare, DetailSteps, GuaranteeBand, GuaranteeConditions } from "@/components/Sections";
+import { Outcomes, Steps, Objections, DetailSteps, GuaranteeBand, GuaranteeConditions } from "@/components/Sections";
 import Link from "next/link";
 import { PageHero, Label, CtaBand, Faq, Tbc, JsonLd, courseLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -191,21 +191,12 @@ export default function MetodoAgenda() {
         { t: "E se non fa per me?", d: "Te lo dico io, in call. Meglio un no chiaro che un sì a metà." },
       ]} />
 
-      <Compare n="14" title="A.G.E.N.D.A. o *Sold Out*?" cols={["Metodo A.G.E.N.D.A.", "Metodo Sold Out"]} rows={[
-        { label: "Cos'è", cells: ["Il sistema completo, con affiancamento", "Mentorship 1:1, il massimo affiancamento"] },
-        { label: "Per chi", cells: ["Chi vuole un metodo preciso per riempire l'agenda", "Chi vuole essere seguita ogni settimana e farsi fare il lavoro tecnico"] },
-        { label: "Quando", cells: ["Si parte da qui", "È il passo successivo"] },
-        { label: "Formato", cells: ["6 mesi · 2 call al mese · chat 7/7", "6 mesi · una call a settimana · 8 posti a trimestre"] },
-        { label: "Prezzo", cells: ["Lo comunico in videochiamata", "Lo comunico in videochiamata"] },
-      ]} />
-
       <Faq items={[
         { q: "Che cos'è il Metodo A.G.E.N.D.A.?", a: "È il mio metodo per dare direzione e continuità a un'attività nel benessere, in sei passi: Attrazione, Generazione fiducia, Esposizione, Nutrimento, Differenziazione, Automazione. È anche il primo percorso di affiancamento." },
         { q: "A chi si rivolge?", a: "A operatrici e operatori del benessere che hanno già una competenza ma poca continuità e vogliono un ordine preciso da seguire." },
         { q: "Quanto dura la call di orientamento?", a: "Può durare fino a un'ora. È un confronto per capire se e come lavorare insieme." },
         { q: "Devo aver già studiato marketing?", a: "No. Si parte dalla tua situazione reale, senza dare nulla per scontato." },
-        { q: "Quanto costa il percorso?", a: "Il prezzo lo comunico durante la videochiamata di orientamento, dopo aver capito se il percorso è adatto a te." },
-        { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è la mentorship 1:1 Metodo Sold Out, il massimo affiancamento, con 8 posti per trimestre." },
+        { q: "Cosa succede dopo A.G.E.N.D.A.?", a: "Il passo successivo è il Metodo Sold Out, il massimo affiancamento a tu per tu con me." },
         { q: "Posso partecipare se lavoro in un centro e non in proprio?", a: <>Ne parliamo in call, perché dipende da cosa vuoi costruire. <Tbc>mia conferma</Tbc></>, plain: "Ne parliamo in call, perché dipende da cosa vuoi costruire." },
         { q: "Cosa devo preparare prima della call?", a: "Niente. Basta che tu abbia in mente cosa fai, per chi lavori e cosa non ti torna. Il resto lo vediamo insieme." },
         { q: "Quanto dura l'affiancamento?", a: "Il percorso dura 6 mesi, con 2 chiamate individuali al mese (12 in totale), chat 7 giorni su 7, community privata e Q&A bisettimanali." },

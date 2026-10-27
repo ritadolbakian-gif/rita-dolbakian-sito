@@ -107,7 +107,7 @@ export default function Home() {
             {[
               { n: "1", t: "La guida gratuita", d: "«Guida Metodo A.G.E.N.D.A.»: la guida pratica per fare i primi 10 clienti online.", href: "/guida-gratuita", cta: "Ricevi la guida via email" },
               { n: "2", t: "La call di orientamento", d: "Una chiacchierata a quattr'occhi per capire da dove ripartire.", href: "/call-orientamento", cta: "Prenota la call con me" },
-              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi il massimo affiancamento, la mentorship 1:1 Metodo Sold Out.", href: "/percorsi", cta: "Scegli il tuo percorso" },
+              { n: "3", t: "Il percorso con me", d: "Parti dal Metodo A.G.E.N.D.A., il primo affiancamento. Poi, se vuoi il massimo affiancamento, il Metodo Sold Out.", href: "/percorsi", cta: "Scegli il tuo percorso" },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 0.1} className="bg-ivory">
                 <Link href={s.href} className="group p-8 md:p-10 h-full flex flex-col hover:bg-blush/30 transition-colors duration-500">
@@ -132,20 +132,20 @@ export default function Home() {
             <Link href="/percorsi/metodo-agenda" className="lift zoom group mt-14 grid gap-8 rounded-[2rem] border border-rose/60 bg-ivory/[0.04] p-5 md:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <div className="relative"><Slot kind="foto" id="corso-agenda" label="Metodo A.G.E.N.D.A." ratio="16/9" art="orbs" priority /><span className="absolute left-3 top-3 rounded-full bg-rose px-3 py-1 text-xs text-white">Il percorso da cui partire</span></div>
               <div>
-                <p className="eyebrow !text-rose">Metodo A.G.E.N.D.A. · 6 mesi di affiancamento</p>
+                <p className="eyebrow !text-rose">Metodo A.G.E.N.D.A. · con me al tuo fianco</p>
                 <h3 className="font-display text-4xl md:text-6xl mt-3 leading-[1.02]">Riempi l'agenda, <span className="kw">settimana dopo settimana</span>.</h3>
-                <p className="mt-4 text-ivory/70 max-w-lg">Il mio sistema per farti trovare, farti scegliere e far tornare le clienti. Per sei mesi ci sono io accanto a te.</p>
+                <p className="mt-4 text-ivory/70 max-w-lg">Il mio sistema per farti trovare, farti scegliere e far tornare le clienti. Con me accanto, passo passo.</p>
                 <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-ivory/80 max-w-md">
                   {["Attrazione", "Generazione fiducia", "Esposizione", "Nutrimento", "Differenziazione", "Automazione"].map((x) => <li key={x}><span className="text-rose">✓</span> {x}</li>)}
                 </ul>
-                <p className="mt-5 text-sm text-ivory/60">2 call individuali al mese · chat con me 7 giorni su 7</p>
+                <p className="mt-5 text-sm text-ivory/60">Le allieve raccontano agende piene e pacchetti da 600–1.500 €.</p>
                 <span className="btn btn-primary mt-7">Scopri il Metodo A.G.E.N.D.A. <span className="arr">→</span></span>
               </div>
             </Link>
           </Reveal>
           <div className="mt-5 grid gap-5 md:grid-cols-2">
             {[
-              { t: "Metodo Sold Out", d: "Mentorship 1:1 di 6 mesi con me: una call a settimana e il lavoro tecnico fatto al posto tuo.", tag: "Il massimo affiancamento · 8 posti a trimestre", href: "/percorsi/sold-out", art: "arch" as const, id: "card-wm" },
+              { t: "Metodo Sold Out", d: "Il massimo affiancamento, a tu per tu: lavoriamo insieme, da vicino, finché non diventi il riferimento del tuo territorio.", tag: "Il massimo affiancamento", href: "/percorsi/sold-out", art: "arch" as const, id: "card-wm" },
               { t: "Metodo Rita Dolbakian", d: "Per imparare a massaggiare e perfezionare la tecnica, online e in presenza.", tag: "Per le tue mani", href: "/percorsi/metodo-rita-dolbakian", art: "stones" as const, id: "card-rd" },
             ].map((p, i) => (
               <Reveal key={p.t} delay={i * 0.08}>
