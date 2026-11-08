@@ -10,7 +10,7 @@ export type MediaItem = { src?: string; poster?: string; alt: string; pos?: stri
 export const MEDIA: Record<string, MediaItem> = {
   // HOME
   hero: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian, ritratto in camice (4:5, verticale)", pos: "50% 25%" },
-  "path-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "path-agenda": { src: "/media/rita-agenda-lettino.webp", alt: "Metodo A.G.E.N.D.A.: Rita Dolbakian seduta sul lettino, braccia incrociate", pos: "50% 50%" },
   "path-rd": { src: "/media/rita-massaggio-4.webp", alt: "Mani al lavoro, dettaglio della tecnica (16:11)", pos: "60% 45%" },
   "rita-studio": { src: "/media/rita-lettino.jpg", alt: "Rita Dolbakian seduta sul lettino da massaggio (4:5)", pos: "42% 30%" },
   "riconoscimento": { src: "/media/rita-preoccupata.jpg", alt: "Una professionista del benessere pensierosa davanti alla scrivania (4:3)", pos: "50% 30%" },
@@ -75,7 +75,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "rd-top": { src: "/media/rita-massaggio-1.webp", alt: "Rita mostra una tecnica a un piccolo gruppo (immagine illustrativa)", pos: "55% 40%" },
   "cert-top": { src: "/media/rita-massaggio-1.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "55% 40%" },
   "percorsi-top": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio", pos: "52% 35%" },
-  "path-corsi": { src: "/media/rita-laptop.webp", alt: "Rita al computer nel suo studio: i corsi dell'Accademia Online", pos: "52% 35%" },
+  "path-corsi": { src: "/media/rita-mani-accademia.webp", alt: "Rita Dolbakian accoglie tra le mani le mani di una persona: i corsi dell'Accademia Online", pos: "50% 50%" },
   "corsi-top": { src: "/media/rita-oli.webp", alt: "Rita nel suo studio, tra gli oli", pos: "50% 30%" },
   "garanzia-testo": { src: "/media/garanzia-testo.webp", alt: "Rita Dolbakian con la mano sul cuore: Soddisfatti o rimborsati. Per tutto il percorso. Il rischio è mio.", pos: "50% 25%" },
   "wm-garanzia": { src: "/media/wm-garanzia.webp", alt: "Rita Dolbakian con la mano sul cuore: il rischio è mio", pos: "50% 30%" },
