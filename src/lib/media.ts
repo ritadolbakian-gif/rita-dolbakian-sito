@@ -38,7 +38,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "rd-online": { src: "/media/lezione-due.webp", alt: "Anteprima lezione online (video 16:9)"  },
   "rd-aula": { src: "/media/aula-grande.webp", alt: "Formazione in presenza, aula (16:9)"  },
   // PERCORSI (hub + pagine)
-  "percorsi-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "percorsi-agenda": { src: "/media/rita-agenda-lettino.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "percorsi-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "percorsi-rd": { src: "/media/rita-massaggio-5.webp", alt: "Card Metodo Rita Dolbakian (4:3)", pos: "70% 45%" },
   "agenda-prima": { src: "/media/agenda-prima.webp", alt: "Prima: pochi clienti, agenda disordinata, stress" },
@@ -60,7 +60,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "cert-attestato": { alt: "L'attestato reale (4:3)" },
   // CORSI (catalogo)
   "corso-guida": { src: "/media/guida-mockup.webp", alt: "Copertina corso: guida gratuita (4:3)", pos: "50% 32%" },
-  "corso-agenda": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "corso-agenda": { src: "/media/rita-agenda-lettino.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "corso-wm": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "corso-rd-online": { src: "/media/rita-massaggio-3.webp", alt: "Copertina corso: Metodo RD online (4:3)", pos: "70% 40%" },
   "corso-rd-presenza": { src: "/media/aula-grande.webp", alt: "Copertina corso: Metodo RD in presenza (4:3)"  },
@@ -70,7 +70,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "risultati-hero": { alt: "Rita con una allieva (autorizzata) (16:9)" },
   "area-privata": { src: "/media/rita-divano.webp", alt: "Studio accogliente, area privata (16:9)" , pos: "30% 40%" },
   // Foto in testata delle pagine (due colonne)
-  "agenda-top": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "agenda-top": { src: "/media/rita-agenda-lettino.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "wm-top": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "rd-top": { src: "/media/rita-massaggio-1.webp", alt: "Rita mostra una tecnica a un piccolo gruppo (immagine illustrativa)", pos: "55% 40%" },
   "cert-top": { src: "/media/rita-massaggio-1.webp", alt: "Una lezione in aula (immagine illustrativa)", pos: "55% 40%" },
@@ -125,7 +125,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "blog-gestire-disdette-clienti": { src: "/media/blog-gestire-disdette-clienti.webp", alt: "Copertina: gestire disdette clienti" },
   "blog-whatsapp-business-massaggiatori": { src: "/media/blog-whatsapp-business-massaggiatori.webp", alt: "Copertina: whatsapp business massaggiatori" },
   author: { src: "/media/rita-ritratto-camice.webp", alt: "Rita Dolbakian", pos: "50% 22%" },
-  "agenda-cover": { src: "/media/agenda-cover.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
+  "agenda-cover": { src: "/media/rita-agenda-lettino.webp", alt: "Metodo A.G.E.N.D.A.: copertina con Rita" },
   "wm-cover": { src: "/media/sold-out-cover.webp", alt: "Metodo Sold Out: Rita Dolbakian in studio" },
   "hero-massaggio": { src: "/media/hero-massaggio.webp", alt: "Rita Dolbakian durante un massaggio", pos: "100% 20%", bg: "#030303" },
   "hero-massaggio-m": { src: "/media/hero-massaggio.webp", alt: "Rita Dolbakian durante un massaggio", pos: "78% 15%", bg: "#030303" },
