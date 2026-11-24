@@ -8,7 +8,7 @@ import type { Item } from "@/components/Sections";
 
 export type ProductProps = {
   name: string; slug: string; eyebrow: string; title: string; answer: ReactNode; imageId: string;
-  price: ReactNode; oldPrice?: string; checkout: string; cta: string;
+  price: ReactNode; /** Valore indicativo, mostrato come testo e non come prezzo barrato (niente sconto finto). */ value?: string; checkout: string; cta: string;
   painTitle: string; pains: string[]; painNote: ReactNode;
   solutionTitle: string; solution: ReactNode; benefits: Item[];
   forWho: string[]; notForWho?: string[];
@@ -90,7 +90,8 @@ export function ProductPage(p: ProductProps) {
             </>
           ) : (
             <>
-              <p className="mt-6 font-display text-6xl">{p.oldPrice && <span className="text-3xl text-stone line-through mr-3">{p.oldPrice}</span>}{p.price}</p>
+              <p className="mt-6 font-display text-6xl">{p.price}</p>
+              {p.value && <p className="mt-2 text-sm text-stone">Valore del manuale: {p.value}</p>}
               {p.bonus && <p className="mt-6 text-stone"><strong className="text-ink">Bonus: {p.bonus.t}.</strong> {p.bonus.d}</p>}
               <div className="mt-8 flex justify-center"><CheckoutButton href={p.checkout}>{p.cta}</CheckoutButton></div>
               <p className="mt-6 text-sm text-stone">{p.guarantee}</p>

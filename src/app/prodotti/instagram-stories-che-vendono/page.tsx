@@ -1,4 +1,4 @@
-import { Tbc } from "@/components/Ui";
+import Link from "next/link";
 import { ProductPage } from "@/components/ProductPage";
 import { meta } from "@/lib/seo";
 import { CHECKOUT } from "@/lib/products";
@@ -15,7 +15,7 @@ export default function Page() {
       answer="Il metodo pratico e veloce per usare le Stories e trasformare le follower in clienti. Per massaggiatrici, fisioterapiste, osteopate e professioniste del benessere che non sanno cosa pubblicare, o non hanno voglia di stare davanti alla fotocamera."
       imageId="prodotto-stories"
       price="37 €"
-      oldPrice="57 €"
+      value="57 €"
       checkout={CHECKOUT.stories}
       cta="Voglio il manuale operativo a 37 €"
       painTitle="Pubblichi Stories che *nessuno* considera?"
@@ -35,8 +35,13 @@ export default function Page() {
       faq={[
         { q: "Devo mostrarmi in video?", a: "No. Il manuale è pensato anche per chi non ama stare davanti alla fotocamera." },
         { q: "Per chi è?", a: "Per massaggiatrici, fisioterapiste, osteopate e professioniste del benessere che vogliono usare Instagram per riempire l'agenda." },
-        { q: "In che formato è?", a: <>È un manuale operativo digitale. <Tbc>formato e numero di pagine</Tbc></>, plain: "È un manuale operativo digitale." },
-        { q: "Cosa succede se non fa per me?", a: "Hai 14 giorni di garanzia: scrivi e ricevi il rimborso." },
+        { q: "In che formato è?", a: "È un manuale operativo digitale in PDF." },
+        { q: "Quando e come lo ricevo?", a: "Subito dopo il pagamento, via email. Ricevi anche l'accesso all'area corsi, con le istruzioni per scaricarlo." },
+        { q: "Per quanto tempo resta disponibile?", a: "Per sempre: puoi scaricarlo quando vuoi. Gli aggiornamenti futuri non sono inclusi." },
+        { q: "Posso leggerlo dal telefono?", a: "Sì. È un PDF: lo leggi da telefono, tablet o computer." },
+        { q: "Come funziona la consulenza gratuita?", a: <>Trovi il link per prenotarla dentro il manuale. Puoi anche prenotarla subito dalla pagina <Link href="/call-orientamento" className="ulink">Prenota la tua call gratuita</Link>.</>, plain: "Trovi il link per prenotarla dentro il manuale, oppure dalla pagina Prenota la tua call gratuita del sito." },
+        { q: "Ricevo la fattura?", a: "Sì. La ricevi via email, all'indirizzo che indichi al momento del pagamento." },
+        { q: "Cosa succede se non fa per me?", a: <>Hai 14 giorni di garanzia: scrivi a <a href="mailto:rita.dolbakian@rdacademy.it" className="ulink">rita.dolbakian@rdacademy.it</a> e ricevi il rimborso.</>, plain: "Hai 14 giorni di garanzia: scrivi a rita.dolbakian@rdacademy.it e ricevi il rimborso." },
         { q: "Mi garantisci dei risultati?", a: "No. Ti do un metodo pratico: i risultati dipendono dalla tua situazione di partenza e da quanto lo applichi." },
       ]}
     />

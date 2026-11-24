@@ -48,7 +48,6 @@ I punti segnati `[DA CONFERMARE]` oggi si vedono sul sito come riquadri trattegg
 - «Alzare le tariffe del 30-40% senza perdere nessun cliente»: promessa assoluta, da ammorbidire o documentare.
 
 ## 4. Prodotti digitali e pagamenti
-- Instagram Stories che vendono: formato e numero di pagine.
 - Wellness Profit Calculator: oggi è una pagina "in arrivo a breve". Quando sarà pronto: cosa calcola, contenuto del foglio, prezzo, garanzia. Nota: la copertina riporta il refuso "Regime fofettario" (giusto: forfettario).
 - Rate: finanziarie convenzionate (Pagodil, Pagolight, Heylight), importi minimi/massimi, numero di rate, eventuale tasso zero a carico di RD SRL.
 - Eventuale rateizzazione diretta con RD SRL (i pagamenti avvengono con Stripe: confermato).
