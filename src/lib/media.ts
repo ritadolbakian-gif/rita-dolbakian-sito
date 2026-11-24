@@ -24,7 +24,7 @@ export const MEDIA: Record<string, MediaItem> = {
   "guida-pag-1": { src: "/media/guida-pag-1.webp", alt: "Anteprima della guida: Instagram, link in bio e highlights" },
   "guida-pag-2": { src: "/media/guida-pag-2.webp", alt: "Anteprima della guida: Google Business Profile" },
   "guida-pag-3": { src: "/media/guida-pag-3.webp", alt: "Anteprima della guida: WhatsApp per le prenotazioni" },
-  "prodotto-stories": { src: "/media/prodotto-stories.webp", alt: "Instagram Stories che vendono, il manuale operativo di Rita Dolbakian" },
+  "prodotto-stories": { src: "/media/prodotto-stories-2.webp", alt: "Instagram Stories che vendono, il manuale operativo di Rita Dolbakian" },
   "prodotto-calcolatore": { src: "/media/prodotto-calcolatore.webp", alt: "Wellness Profit Calculator, foglio di calcolo per il regime forfettario" },
   "infl-1": { src: "/media/infl-1.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },
   "infl-2": { src: "/media/infl-2.webp", alt: "Rita Dolbakian durante un trattamento con una cliente molto presente sui social" },

@@ -3,7 +3,7 @@ import { CatalogoCorsi } from "@/components/CatalogoCorsi";
 import { meta } from "@/lib/seo";
 import { Crumbs } from "@/components/Crumbs";
 
-export const metadata = meta("Prodotti digitali di Rita Dolbakian", "Manuali e strumenti digitali di Rita Dolbakian per operatrici e operatori del benessere: da usare subito, con i tuoi tempi, a un prezzo contenuto.", "/prodotti", "/media/prodotto-stories.webp");
+export const metadata = meta("Prodotti digitali di Rita Dolbakian", "Manuali e strumenti digitali di Rita Dolbakian per operatrici e operatori del benessere: da usare subito, con i tuoi tempi, a un prezzo contenuto.", "/prodotti", "/media/prodotto-stories-2.webp");
 
 export default function Prodotti() {
   return (
