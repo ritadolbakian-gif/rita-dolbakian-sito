@@ -70,7 +70,6 @@ I punti segnati `[DA CONFERMARE]` oggi si vedono sul sito come riquadri trattegg
 - Foto dell'attestato (Formazione certificata).
 - Immagine per la pagina Risultati.
 - Due immagini per le fasi di Sold Out (fase 1 e fase 3).
-- Copertina piatta della guida.
 
 ## 8. Fuori dal sito (li fai tu)
 - Google Search Console: verifica dominio e invia la sitemap https://www.ritadolbakian.it/sitemap.xml

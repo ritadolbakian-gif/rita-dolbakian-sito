@@ -1,3 +1,4 @@
+import { GuideBook } from "@/components/GuideBook";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { StatsTicker } from "@/components/StatsTicker";
@@ -219,7 +220,7 @@ export default function Home() {
       {/* 09 — Guida */}
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-[0.8fr_1.2fr] items-center">
-          <Reveal><Slot kind="foto" id="guida-mockup" label="Mockup della guida" ratio="3/4" art="waves" className="max-w-xs mx-auto" /></Reveal>
+          <Reveal><GuideBook className="w-[62%] max-w-[260px] mx-auto" /></Reveal>
           <div>
             <Label n="09" t="Guida gratuita" />
             <Heading text="Vuoi i *primi 10 clienti* online? Parti da qui." className="text-5xl md:text-6xl" />

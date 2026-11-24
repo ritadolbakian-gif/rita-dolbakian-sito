@@ -1,3 +1,4 @@
+import { GuideBook } from "@/components/GuideBook";
 import Link from "next/link";
 import { PageHero, Label, Faq, JsonLd } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -82,7 +83,7 @@ export default function Blog() {
       {/* Guida */}
       <section className="section">
         <div className="wrap grid gap-14 lg:grid-cols-[0.8fr_1.2fr] items-center">
-          <Reveal><Slot kind="foto" id="guida-mockup" label="Guida gratuita" ratio="3/4" art="waves" className="max-w-xs mx-auto" /></Reveal>
+          <Reveal><GuideBook className="w-[62%] max-w-[260px] mx-auto" /></Reveal>
           <div>
             <Label t="Guida gratuita" />
             <Heading text="Vuoi tutto in *un posto solo*? Parti da qui." className="text-4xl md:text-5xl" />

@@ -1,7 +1,7 @@
+import { GuideBook } from "@/components/GuideBook";
 import type { Metadata } from "next";
 import { PageHero, Label } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
-import { Slot } from "@/components/Slot";
 import { BookingCalendar } from "@/components/BookingCalendar";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RichiestaRicevuta() {
 
       <section className="section pt-10">
         <div className="wrap grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr]">
-          <Reveal><Slot kind="foto" id="guida-mockup" label="La Guida Metodo A.G.E.N.D.A." ratio="3/4" art="waves" className="max-w-sm mx-auto lg:max-w-md" priority /></Reveal>
+          <Reveal><GuideBook className="w-[68%] max-w-[340px] mx-auto lg:max-w-[380px]" priority /></Reveal>
           <div>
             <Label t="Il primo passo" />
             <Heading text="Scaricala e parti dal *primo* capitolo." className="text-4xl md:text-5xl" />

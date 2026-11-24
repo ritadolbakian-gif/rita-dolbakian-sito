@@ -1,3 +1,4 @@
+import { GuideBook } from "@/components/GuideBook";
 import Link from "next/link";
 import { PageHero, Label, Faq, Tbc, CtaBand } from "@/components/Ui";
 import { Heading, Reveal } from "@/components/Motion";
@@ -13,7 +14,7 @@ import { Crumbs } from "@/components/Crumbs";
 const NUM_LABEL: Record<string, string> = { anni: "anni nel benessere", studenti: "studenti formati" };
 const authorNumbers = STATS.filter((s) => s.confirmed && NUM_LABEL[s.id]).map((s) => ({ big: `${s.prefix ?? ""}${s.value}${s.suffix ?? ""}`, label: NUM_LABEL[s.id] }));
 
-export const metadata = meta("Guida Metodo A.G.E.N.D.A.: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita", "/media/hero-seduta.webp");
+export const metadata = meta("Guida Metodo A.G.E.N.D.A.: i primi 10 clienti online", "Scarica gratis la «Guida Metodo A.G.E.N.D.A.», la guida pratica di Rita Dolbakian per fare i primi 10 clienti online: cosa fare, in che ordine e in quanto tempo.", "/guida-gratuita", "/media/guida-copertina-orizzontale.webp");
 
 const chapters = [
   ["Chi vuoi aiutare e cosa offri", "Tre domande a cui rispondere prima di pubblicare qualsiasi cosa, per spiegare in una frase chi sei e perché scegliere te."],
@@ -35,7 +36,7 @@ export default function Guida() {
 
       <section id="modulo" className="section pt-10 scroll-mt-24">
         <div className="wrap grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr]">
-          <Reveal><Slot kind="foto" id="guida-mockup" label="La Guida Metodo A.G.E.N.D.A." ratio="3/4" art="waves" className="max-w-sm mx-auto lg:max-w-md" priority /></Reveal>
+          <Reveal><GuideBook className="w-[68%] max-w-[340px] mx-auto lg:max-w-[380px]" priority /></Reveal>
           <div>
             <Label t="Gratis, via email" />
             <Heading text="Dimmi dove *mandartela*." className="text-5xl md:text-6xl" />
