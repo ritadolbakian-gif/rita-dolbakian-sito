@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NAV, SITE, COMPANY } from "@/lib/site";
-import { CookiePrefsLink } from "./CookieBanner";
 
 export function Footer() {
   return (
@@ -25,9 +24,10 @@ export function Footer() {
         </nav>
         <nav aria-label="Legale" className="flex flex-col gap-2 text-ivory/80">
           <span className="eyebrow mb-2">Informazioni</span>
-          <Link href="/privacy" className="flink">Privacy</Link>
-          <Link href="/cookie" className="flink">Cookie</Link>
-          <CookiePrefsLink />
+          {/* iubenda: link a Privacy e Cookie Policy, con lo stile degli altri link del footer */}
+          <a href="https://www.iubenda.com/privacy-policy/59136129" className="flink" title="Privacy Policy" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="https://www.iubenda.com/privacy-policy/59136129/cookie-policy" className="flink" title="Cookie Policy" target="_blank" rel="noopener">Cookie Policy</a>
+          <a href="#" className="iubenda-cs-preferences-link flink" title="Preferenze cookie">Preferenze cookie</a>
           <Link href="/termini" className="flink">Termini e condizioni</Link>
           <Link href="/regolamento-corsi" className="flink">Regolamento dei corsi</Link>
           <Link href="/pagamenti-rateali" className="flink">Pagamento a rate</Link>

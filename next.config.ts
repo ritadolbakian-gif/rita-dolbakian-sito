@@ -8,7 +8,12 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
   async redirects() {
-    return [{ source: "/percorsi/wellness-mastery", destination: "/percorsi/sold-out", permanent: true }];
+    return [
+      { source: "/percorsi/wellness-mastery", destination: "/percorsi/sold-out", permanent: true },
+      // privacy e cookie ora sono su iubenda: i vecchi link (email, social, Google) portano lì
+      { source: "/privacy", destination: "https://www.iubenda.com/privacy-policy/59136129", permanent: false },
+      { source: "/cookie", destination: "https://www.iubenda.com/privacy-policy/59136129/cookie-policy", permanent: false },
+    ];
   },
   async headers() {
     return [

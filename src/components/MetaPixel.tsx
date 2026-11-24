@@ -1,10 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useConsent } from "@/lib/consent";
 import { usePathname } from "next/navigation";
 
 const PIXEL_ID = "161493119308611";
-const CONSENT_KEY = "rd-consent-v1";
-const SIX_MONTHS = 1000 * 60 * 60 * 24 * 180;
 
 type Fbq = ((...args: unknown[]) => void) & { callMethod?: (...a: unknown[]) => void; queue?: unknown[]; push?: unknown; loaded?: boolean; version?: string };
 declare global { interface Window { fbq?: Fbq; _fbq?: Fbq } }
@@ -48,30 +47,14 @@ function track(path: string) {
   }
 }
 
-function savedMarketing(): boolean {
-  try {
-    const j = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null");
-    return !!j && !!j.ts && Date.now() - j.ts <= SIX_MONTHS && !!j.marketing;
-  } catch { return false; }
-}
-
-/** Meta Pixel: parte solo con il consenso "Marketing" del banner cookie; traccia ogni cambio pagina. */
+/** Meta Pixel: parte solo con il consenso "Marketing" (finalità 5) dato nel banner iubenda; traccia ogni cambio pagina. */
 export function MetaPixel() {
   const path = usePathname();
-  const [ok, setOk] = useState(false);
+  const ok = useConsent().marketing;
 
   useEffect(() => {
-    // lettura di localStorage solo dopo il mount
-    /* eslint-disable-next-line react-hooks/set-state-in-effect */
-    setOk(savedMarketing());
-    const on = (e: Event) => {
-      const m = !!(e as CustomEvent<{ marketing: boolean }>).detail?.marketing;
-      setOk(m);
-      if (!m && window.fbq) window.fbq("consent", "revoke");
-    };
-    window.addEventListener("rd-consent", on);
-    return () => window.removeEventListener("rd-consent", on);
-  }, []);
+    if (!ok && window.fbq) window.fbq("consent", "revoke");
+  }, [ok]);
 
   useEffect(() => {
     if (!ok) return;

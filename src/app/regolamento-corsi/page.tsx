@@ -46,7 +46,7 @@ export default function Regolamento() {
       <h2 id="pratiche">5. Pratiche tra allievi e salute</h2>
       <ul>
         <li><strong>Consenso sempre.</strong> Ogni pratica sul corpo avviene solo con il consenso di chi la riceve. Chiedi sempre prima, rispetta i limiti dell'altra persona. Puoi interrompere o rifiutare una pratica in ogni momento, senza spiegazioni.</li>
-        <li><strong>Salute.</strong> Se hai condizioni che richiedono attenzione (per esempio problemi alla schiena, allergie, gravidanza), comunicale a chi tiene il corso: sono dati sulla salute, trattati solo con il tuo consenso e per la tua sicurezza, come spiegato nell'<Link href="/privacy">Informativa privacy</Link>. In caso di dubbi sulla tua idoneità, consulta prima il tuo medico.</li>
+        <li><strong>Salute.</strong> Se hai condizioni che richiedono attenzione (per esempio problemi alla schiena, allergie, gravidanza), comunicale a chi tiene il corso: sono dati sulla salute, trattati solo con il tuo consenso e per la tua sicurezza, come spiegato nell'<a target="_blank" rel="noopener" href="https://www.iubenda.com/privacy-policy/59136129">Informativa privacy</a>. In caso di dubbi sulla tua idoneità, consulta prima il tuo medico.</li>
         <li>Le pratiche sono didattiche. Non sono trattamenti sanitari e non sostituiscono il parere di un medico.</li>
       </ul>
 

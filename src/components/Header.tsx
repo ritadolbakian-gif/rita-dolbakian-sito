@@ -26,7 +26,7 @@ const useIso = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 // Pagine che NON iniziano con un hero scuro: lì il logo parte scuro. Tutte le altre partono col logo chiaro,
 // già nell'HTML del server (così non si vede il cambio di logo mentre il JavaScript si avvia).
-const LIGHT_PAGES = ["/termini", "/cookie", "/regolamento-corsi", "/privacy", "/rimborsi", "/pagamenti-rateali", "/prodotti/instagram-stories-che-vendono"];
+const LIGHT_PAGES = ["/termini", "/regolamento-corsi", "/rimborsi", "/pagamenti-rateali", "/prodotti/instagram-stories-che-vendono"];
 const startsDark = (p: string) => !(LIGHT_PAGES.includes(p) || /^\/blog\/(?!categoria\/)[^/]+$/.test(p));
 
 export function Header() {

@@ -6,7 +6,6 @@ import { Header, StickyCta } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll, Cursor } from "@/components/SmoothScroll";
 import { SITE } from "@/lib/site";
-import { CookieBanner } from "@/components/CookieBanner";
 import { WhatsApp } from "@/components/WhatsApp";
 import { GuidePopup } from "@/components/GuidePopup";
 import { MetaPixel } from "@/components/MetaPixel";
@@ -55,13 +54,17 @@ const GA4_ID = "G-MYN73YRN8K";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="it" className={`${serif.variable} ${sans.variable}`}>
+      <head>
+        {/* iubenda: banner cookie. Deve restare il PRIMO script della pagina, prima di qualsiasi tracciamento. Non modificare. */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script type="text/javascript" src="https://embeds.iubenda.com/widgets/59db4ede-4949-4a3b-a14d-adf15cbf6c30.js"></script>
+      </head>
       <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} title="Google Tag Manager" />
         </noscript>
-        {/* Consent Mode v2: default negato (legge una scelta già salvata, altrimenti nega). Deve girare PRIMA di GTM. */}
-        <Script id="consent-default" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});gtag('set','url_passthrough',true);try{var s=JSON.parse(localStorage.getItem('rd-consent-v1')||'null');if(s&&s.ts&&(Date.now()-s.ts)<=15552000000){gtag('consent','update',{ad_storage:s.marketing?'granted':'denied',ad_user_data:s.marketing?'granted':'denied',ad_personalization:s.marketing?'granted':'denied',analytics_storage:s.analytics?'granted':'denied'});}}catch(e){}` }} />
+        {/* Consent Mode v2: lo gestisce iubenda (script nel <head>), che parte prima di GTM e GA4. */}
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');` }} />
         {/* Google Analytics 4 (gtag.js) — rispetta il Consent Mode impostato sopra */}
@@ -78,7 +81,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <WhatsApp />
         <GuidePopup />
         <MetaPixel />
-        <CookieBanner />
       </body>
     </html>
   );

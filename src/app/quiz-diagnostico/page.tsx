@@ -18,7 +18,7 @@ export default function Quiz() {
       <section id="quiz" className="section-dark section pt-10 md:pt-12 pb-16 scroll-mt-14">
         <div className="wrap max-w-2xl mx-auto">
           <GhlQuiz id="T9eMMhoi2aCxsKFJMVEg" className="overflow-hidden rounded-2xl" />
-          <p className="mt-6 text-center text-xs text-ivory/55">Uso le risposte solo per mandarti il risultato. Come tratto i dati lo trovi nell'<Link href="/privacy" className="ulink text-ivory">informativa privacy</Link>.</p>
+          <p className="mt-6 text-center text-xs text-ivory/55">Uso le risposte solo per mandarti il risultato. Come tratto i dati lo trovi nell'<a target="_blank" rel="noopener" href="https://www.iubenda.com/privacy-policy/59136129" className="ulink text-ivory">informativa privacy</a>.</p>
         </div>
       </section>
     </>

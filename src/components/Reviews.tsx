@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useConsent } from "@/lib/consent";
 import { RATING, REVIEWS, REVIEW_SOURCES } from "@/lib/proof";
 import { Heading, Reveal } from "./Motion";
 import { TestimonialWall } from "./TestimonialWall";
@@ -14,20 +15,12 @@ const Stars = ({ value = 5 }: { value?: number }) => {
   );
 };
 
-/** Widget Trustpilot (TrustBox): si carica solo con il consenso ai cookie di marketing. */
+/** Widget Trustpilot (TrustBox): si carica solo con il consenso iubenda a «esperienza» o «marketing». */
 function Trustpilot() {
   const { businessUnitId, templateId } = REVIEW_SOURCES.trustpilot;
   const ref = useRef<HTMLDivElement>(null);
-  const [ok, setOk] = useState(false);
-  useEffect(() => {
-    if (!businessUnitId) return;
-    const on = (e: Event) => { const c = (e as CustomEvent).detail; if (c?.marketing) setOk(true); };
-    window.addEventListener("rd-consent", on);
-    // consenso già dato in precedenza (lettura di localStorage dopo il mount)
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    try { const v = JSON.parse(localStorage.getItem("rd-consent-v1") || "null"); if (v?.marketing) setOk(true); } catch {}
-    return () => window.removeEventListener("rd-consent", on);
-  }, [businessUnitId]);
+  const consent = useConsent();
+  const ok = consent.experience || consent.marketing;
   useEffect(() => {
     if (!ok || !ref.current) return;
     const w = window as unknown as { Trustpilot?: { loadFromElement: (el: HTMLElement, f?: boolean) => void } };
@@ -42,7 +35,7 @@ function Trustpilot() {
     <div ref={ref} className="trustpilot-widget mt-8" data-locale="it-IT" data-template-id={templateId} data-businessunit-id={businessUnitId} data-style-height="52px" data-style-width="100%" data-theme="light">
       <a href={REVIEW_SOURCES.trustpilot.profileUrl} target="_blank" rel="noopener">Trustpilot</a>
     </div>
-  ) : <p className="mt-6 text-sm text-stone">Per vedere il widget Trustpilot accetta i cookie di marketing dal banner, oppure <a className="ulink text-ink" href={REVIEW_SOURCES.trustpilot.profileUrl || "#"} target="_blank" rel="noopener">leggi le recensioni su Trustpilot</a>.</p>;
+  ) : <p className="mt-6 text-sm text-stone">Per vedere il widget Trustpilot accetta i cookie dal banner, oppure <a className="ulink text-ink" href={REVIEW_SOURCES.trustpilot.profileUrl || "#"} target="_blank" rel="noopener">leggi le recensioni su Trustpilot</a>.</p>;
 }
 
 export function ReviewsSection({ title = "Cosa dicono *di me* online." }: { title?: string }) {

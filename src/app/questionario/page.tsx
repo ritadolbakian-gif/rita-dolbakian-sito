@@ -77,7 +77,7 @@ export default function Questionario() {
               </div>
               <GhlForm id="rEqmS1NUILpw2jrDWoOg" name="Questionario pre-disco" height={3358} />
             </div>
-            <p className="mt-5 px-2 text-xs text-stone">Uso le tue risposte solo per preparare la nostra call. Come tratto i dati lo trovi nell'<Link href="/privacy" className="ulink text-ink">informativa privacy</Link>.</p>
+            <p className="mt-5 px-2 text-xs text-stone">Uso le tue risposte solo per preparare la nostra call. Come tratto i dati lo trovi nell'<a target="_blank" rel="noopener" href="https://www.iubenda.com/privacy-policy/59136129" className="ulink text-ink">informativa privacy</a>.</p>
           </div>
         </div>
       </section>

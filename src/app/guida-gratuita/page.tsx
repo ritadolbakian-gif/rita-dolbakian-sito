@@ -135,7 +135,7 @@ export default function Guida() {
         { q: "È per massaggiatrici o anche per altre professioni?", a: "Per chiunque lavori nel benessere: massaggiatori, estetiste, operatori olistici, personal trainer e simili. Gli esempi partono dal massaggio." },
         { q: "Mi arriveranno tante email?", a: "No. Ti scrivo per mandarti la guida. Dopo, mi fai sapere tu se vuoi ricevere le mie email." },
         { q: "E dopo la guida?", a: "Se vuoi un aiuto concreto puoi prenotare una call gratuita. Oppure vai avanti da sola con il piano della guida." },
-        { q: "Come vengono usati i miei dati?", a: <>Solo per inviarti quello che hai chiesto, come spiegato nell'<Link href="/privacy" className="ulink text-ink">informativa privacy</Link>.</>, plain: "Solo per inviarti quello che hai chiesto, come spiegato nell'informativa privacy." },
+        { q: "Come vengono usati i miei dati?", a: <>Solo per inviarti quello che hai chiesto, come spiegato nell'<a target="_blank" rel="noopener" href="https://www.iubenda.com/privacy-policy/59136129" className="ulink text-ink">informativa privacy</a>.</>, plain: "Solo per inviarti quello che hai chiesto, come spiegato nell'informativa privacy." },
       ]} />
 
       <CtaBand title="Pronta a *cominciare*?" sub="Ricevi la guida e comincia dal primo passo." primary={{ href: "#modulo", label: "Ricevi la guida via email" }} secondary={{ href: "/call-orientamento", label: "Preferisco parlarne in call" }} />
