@@ -10,7 +10,7 @@ export const metadata = meta("Wellness Profit Calculator: in arrivo a breve", "I
 export default function Page() {
   return (
     <>
-      <Crumbs trail={[["Corsi", "/corsi"], ["Wellness Profit Calculator", "/prodotti/wellness-profit-calculator"]]} />
+      <Crumbs trail={[["Prodotti digitali", "/prodotti"], ["Wellness Profit Calculator", "/prodotti/wellness-profit-calculator"]]} />
 
       <PageHero dark eyebrow="In arrivo a breve" title="Wellness Profit *Calculator*." answer="Il foglio di calcolo per chi lavora nel benessere in regime forfettario. Non è ancora disponibile." />
 

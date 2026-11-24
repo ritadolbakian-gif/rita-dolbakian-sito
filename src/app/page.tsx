@@ -165,7 +165,8 @@ export default function Home() {
               <span className="eyebrow">Per iniziare</span>
               <Link href="/guida-gratuita" className="ulink text-ivory">Guida gratuita</Link>
               <Link href="/call-orientamento" className="ulink text-ivory">Call di orientamento</Link>
-              <Link href="/corsi" className="ulink text-ivory">Tutti i corsi e i prodotti</Link>
+              <Link href="/corsi" className="ulink text-ivory">Tutti i corsi</Link>
+              <Link href="/prodotti" className="ulink text-ivory">Prodotti digitali</Link>
             </div>
           </Reveal>
           <p className="mt-8 text-ivory/60 text-sm">Cerchi un attestato? <Link href="/formazione-certificata" className="ulink">Scopri la formazione certificata</Link>.</p>

@@ -16,6 +16,7 @@ export const NAV = [
   { href: "/percorsi", label: "Percorsi" },
   { href: "/corsi", label: "Corsi" },
   { href: "/formazione-certificata", label: "Formazione certificata" },
+  { href: "/prodotti", label: "Prodotti digitali" },
   { href: "/risultati", label: "Risultati" },
   { href: "/blog", label: "Blog" },
 ];

@@ -52,11 +52,11 @@ export default function Percorsi() {
           <Label n="03" t="Da dove partire" />
           <Heading text="Quattro passi, *nell'ordine giusto*." className="text-5xl md:text-6xl max-w-3xl" />
           <ol className="mt-12 grid gap-4 md:grid-cols-4">
-            {[["Gratis", "La guida e la call di orientamento", "/guida-gratuita"], ["Primo passo", "Un prodotto digitale, per iniziare subito", "/corsi#digitali"], ["Affiancamento", "Metodo A.G.E.N.D.A., con me accanto", "/percorsi/metodo-agenda"], ["Il massimo", "Metodo Sold Out, il massimo affiancamento", "/percorsi/sold-out"]].map(([k, d, h], i) => (
+            {[["Gratis", "La guida e la call di orientamento", "/guida-gratuita"], ["Primo passo", "Un prodotto digitale, per iniziare subito", "/prodotti"], ["Affiancamento", "Metodo A.G.E.N.D.A., con me accanto", "/percorsi/metodo-agenda"], ["Il massimo", "Metodo Sold Out, il massimo affiancamento", "/percorsi/sold-out"]].map(([k, d, h], i) => (
               <li key={k}><Reveal delay={i * 0.08}><Link href={h} className="lift block rounded-3xl border border-ivory/15 p-6 h-full"><span className="font-display text-5xl kw leading-none">0{i + 1}</span><h3 className="font-display text-2xl mt-3">{k}</h3><p className="mt-2 text-ivory/70 text-sm">{d}</p></Link></Reveal></li>
             ))}
           </ol>
-          <p className="mt-8 text-ivory/70">Vuoi vedere tutto in un posto solo? <Link href="/corsi" className="ulink text-ivory">Guarda i corsi e i prodotti</Link>.</p>
+          <p className="mt-8 text-ivory/70">Vuoi vedere tutto? <Link href="/corsi" className="ulink text-ivory">Guarda i corsi</Link> e i <Link href="/prodotti" className="ulink text-ivory">prodotti digitali</Link>.</p>
         </div>
       </section>
 

@@ -191,7 +191,8 @@ details.acc .acc-body { padding: 0 0 1.75rem; max-width: 46rem; color: var(--sto
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--rose); }
 
 /* Navigazione senza sottolineature */
-.navlink { position: relative; display: inline-flex; align-items: center; gap: .35rem; padding: .55rem 1rem; border-radius: 999px; font-size: .9rem; transition: background .35s var(--ease), color .35s var(--ease); }
+.navlink { position: relative; display: inline-flex; white-space: nowrap; align-items: center; gap: .35rem; padding: .55rem 1rem; border-radius: 999px; font-size: .9rem; transition: background .35s var(--ease), color .35s var(--ease); }
+@media (max-width: 1535px) { .navlink { padding-inline: .6rem; } }
 .navlink:hover, .group:focus-within > .navlink, .group:hover > .navlink { background: rgba(11,10,9,.06); }
 .navlink[aria-current="page"] { color: var(--rose); }
 .navlink[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: .15rem; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: var(--rose); }

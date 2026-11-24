@@ -26,7 +26,7 @@ export function CheckoutButton({ href, children, className = "btn btn-primary" }
 export function ProductPage(p: ProductProps) {
   return (
     <>
-      <Crumbs trail={[["Corsi", "/corsi"], [p.name, `/prodotti/${p.slug}`]]} />
+      <Crumbs trail={[["Prodotti digitali", "/prodotti"], [p.name, `/prodotti/${p.slug}`]]} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Product", name: p.name, description: p.description, brand: { "@type": "Brand", name: "RD Academy" } }} />
       <PageHero eyebrow={p.eyebrow} title={p.title} answer={p.answer} imageId={p.imageId} imageRatio="16/9" imageArt="waves">
         {p.comingSoon ? <a href="#acquista" className="btn btn-primary">Avvisami quando esce <span className="arr">→</span></a> : <CheckoutButton href={p.checkout}>{p.cta}</CheckoutButton>}

@@ -4,9 +4,9 @@ import { Heading, Reveal } from "./Motion";
 
 type P = { id: string; t: string; d: string; fmt: string; price: string; badge?: string; href: string };
 
-const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }[] = [
+const GROUPS: { id: string; title: string; lead: string; items: P[] }[] = [
   {
-    id: "affiancamento", n: "01", title: "Percorsi di *affiancamento*", lead: "Lavoriamo insieme, con una guida vera: per far crescere la tua attività o per imparare a massaggiare.",
+    id: "affiancamento", title: "Percorsi di *affiancamento*", lead: "Lavoriamo insieme, con una guida vera: per far crescere la tua attività o per imparare a massaggiare.",
     items: [
       { id: "corso-agenda", t: "Metodo A.G.E.N.D.A.", d: "Ritrovi direzione e riempi l'agenda: impari a farti scegliere online e a far tornare le clienti, con me al tuo fianco.", fmt: "Per chi lavora nel benessere", price: "", badge: "Con me al tuo fianco", href: "/percorsi/metodo-agenda" },
       { id: "corso-wm", t: "Metodo Sold Out", d: "Il massimo affiancamento, a tu per tu: lavoriamo insieme finché non diventi il riferimento del tuo territorio.", fmt: "Il massimo affiancamento", price: "", badge: "Pochi posti alla volta", href: "/percorsi/sold-out" },
@@ -15,14 +15,14 @@ const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }
     ],
   },
   {
-    id: "digitali", n: "02", title: "Prodotti *digitali*", lead: "Manuali e strumenti da usare subito, con i tuoi tempi, a un prezzo contenuto.",
+    id: "digitali", title: "Prodotti *digitali*", lead: "Manuali e strumenti da usare subito, con i tuoi tempi, a un prezzo contenuto.",
     items: [
       { id: "prodotto-stories", t: "Instagram Stories che vendono", d: "Il manuale operativo per riempire l'agenda con le Stories.", fmt: "Manuale", price: "37 €", badge: "Garanzia 14 giorni", href: "/prodotti/instagram-stories-che-vendono" },
       { id: "prodotto-calcolatore", t: "Wellness Profit Calculator", d: "Il foglio di calcolo per il regime forfettario.", fmt: "Foglio XLS", price: "In arrivo", badge: "In arrivo", href: "/prodotti/wellness-profit-calculator" },
     ],
   },
   {
-    id: "gratis", n: "03", title: "Per iniziare, *gratis*", lead: "Un primo passo per capire da dove partire.",
+    id: "gratis", title: "Per iniziare, *gratis*", lead: "Un primo passo per capire da dove partire.",
     items: [
       { id: "card-quiz", t: "Quiz: cosa ti blocca?", d: "In 2 minuti scopri dove stai perdendo clienti e da dove partire.", fmt: "Quiz", price: "Gratis", badge: "2 minuti", href: "/quiz-diagnostico" },
       { id: "corso-guida", t: "Guida Metodo A.G.E.N.D.A.", d: "La guida pratica per fare i primi 10 clienti online.", fmt: "Guida", price: "Gratis", badge: "Gratis", href: "/guida-gratuita" },
@@ -31,12 +31,14 @@ const GROUPS: { id: string; n: string; title: string; lead: string; items: P[] }
   },
 ];
 
-export function CatalogoCorsi() {
+/** `only`: gli id dei gruppi da mostrare (es. ["digitali"]). I numeri si ricalcolano in base a cosa si vede. */
+export function CatalogoCorsi({ only, numbered = true }: { only?: string[]; numbered?: boolean } = {}) {
+  const groups = only ? GROUPS.filter((g) => only.includes(g.id)) : GROUPS;
   return (
     <div className="space-y-20 md:space-y-28">
-      {GROUPS.map((g) => (
+      {groups.map((g, gi) => (
         <section key={g.id} id={g.id} className="scroll-mt-28">
-          <p className="eyebrow mb-4">{g.n}</p>
+          {numbered && <p className="eyebrow mb-4">{String(gi + 1).padStart(2, "0")}</p>}
           <Heading text={g.title} className="text-4xl md:text-6xl" />
           <p className="mt-4 text-stone max-w-xl">{g.lead}</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

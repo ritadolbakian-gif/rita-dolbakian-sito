@@ -29,7 +29,7 @@ export function llmsIndex() {
 - [Guida Metodo A.G.E.N.D.A.](${U}/guida-gratuita): guida pratica gratuita in PDF per fare i primi 10 clienti online.
 - [Call di orientamento](${U}/call-orientamento): videochiamata gratuita con Rita, fino a un'ora.
 
-## Prodotti digitali
+## [Prodotti digitali](${U}/prodotti)
 - [Instagram Stories che vendono](${U}/prodotti/instagram-stories-che-vendono): manuale operativo per usare le Stories e trasformare le follower in clienti.
 - [Wellness Profit Calculator](${U}/prodotti/wellness-profit-calculator): foglio di calcolo per il regime forfettario (in arrivo).
 
@@ -37,7 +37,7 @@ export function llmsIndex() {
 ${byCat.map(([c, l]) => `### ${c}\n${l.map((p) => `- [${p.title}](${U}/blog/${p.slug}): ${p.metaDescription}`).join("\n")}`).join("\n\n")}
 
 ## Altre pagine
-- [Tutti i corsi e i prodotti](${U}/corsi) · [Risultati](${U}/risultati) · [Contatti](${U}/contatti) · [Blog](${U}/blog)
+- [Tutti i corsi](${U}/corsi) · [Prodotti digitali](${U}/prodotti) · [Risultati](${U}/risultati) · [Contatti](${U}/contatti) · [Blog](${U}/blog)
 - Testo completo delle risposte: ${U}/llms-full.txt
 `;
 }

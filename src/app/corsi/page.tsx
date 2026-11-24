@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { QuoteWall } from "@/components/Proof";
 import { PageHero, CtaBand, Faq, Tbc } from "@/components/Ui";
 import { CatalogoCorsi } from "@/components/CatalogoCorsi";
@@ -10,12 +11,12 @@ export default function Corsi() {
   return (
     <>
       <Crumbs trail={[["Corsi", "/corsi"]]} />
-      <PageHero dark bgId="hero-stage" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi tutto quello che ho preparato, in tre gruppi: percorsi di affiancamento, prodotti digitali e risorse gratuite.">
+      <PageHero dark bgId="hero-stage" eyebrow="Corsi" title="Il corso giusto per il tuo *prossimo passo*." answer="Non sai quale corso ti serve? Qui trovi i percorsi di affiancamento e le risorse gratuite per iniziare. Manuali e strumenti sono nei Prodotti digitali.">
         <a href="#affiancamento" className="btn btn-primary">Percorsi di affiancamento</a>
-        <a href="#digitali" className="btn btn-ghost">Prodotti digitali</a>
+        <Link href="/prodotti" className="btn btn-ghost">Prodotti digitali</Link>
         <a href="#gratis" className="btn btn-ghost">Gratis</a>
       </PageHero>
-      <section className="section"><div className="wrap"><CatalogoCorsi /></div></section>
+      <section className="section"><div className="wrap"><CatalogoCorsi only={["affiancamento", "gratis"]} /></div></section>
       <CtaBand title="Non sai quale *scegliere*?" primary={{ href: "/percorsi", label: "Rispondi a 3 domande" }} secondary={{ href: "/call-orientamento", label: "Prenota la call" }} />
       <section className="section bg-blush/30"><div className="wrap">
         <p className="eyebrow mb-5">Cosa dicono le allieve</p>
@@ -25,7 +26,7 @@ export default function Corsi() {
       <Faq items={[
         { q: "Come scelgo il corso giusto?", a: "Dipende da cosa vuoi cambiare: se vuoi più clienti per la tua attività, parti dal Metodo A.G.E.N.D.A. o dal Metodo Sold Out. Se vuoi imparare a massaggiare, il Metodo Rita Dolbakian. Il test di orientamento nella pagina Percorsi ti aiuta a decidere." },
         { q: "C'è qualcosa di gratuito per iniziare?", a: "Sì: la guida «Guida Metodo A.G.E.N.D.A.» e la call di orientamento." },
-        { q: "Quali sono i prezzi?", a: "Per A.G.E.N.D.A. e Sold Out il prezzo si comunica durante la videochiamata di orientamento, perché dipende dal percorso giusto per te. Instagram Stories che vendono costa 37 €. Gli altri prezzi sono nella pagina di ogni percorso." },
+        { q: "Quali sono i prezzi?", a: "Per A.G.E.N.D.A. e Sold Out il prezzo si comunica durante la videochiamata di orientamento, perché dipende dal percorso giusto per te. I prodotti digitali, come Instagram Stories che vendono a 37 €, sono nella pagina Prodotti digitali. Gli altri prezzi sono nella pagina di ogni percorso." },
         { q: "Posso seguire i corsi online?", a: "Sì: i percorsi per l'attività sono pensati per essere seguiti online. Per la tecnica di massaggio, lo studio è online e la pratica in presenza." },
         { q: "Devo già lavorare nel benessere?", a: "Per A.G.E.N.D.A. e Metodo Sold Out sì: servono competenza e un'attività, anche appena avviata. Per il Metodo Rita Dolbakian si può partire da zero." },
         { q: "Come accedo ai corsi dopo l'acquisto?", a: "Dall'Area Privata, con le credenziali che ricevi via email dopo l'iscrizione." },

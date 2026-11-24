@@ -16,6 +16,7 @@ const SPECIAL: Record<string, string> = {
   "/percorsi/metodo-rita-dolbakian": "Metodo Rita Dolbakian",
   "/percorsi": "Percorsi",
   "/corsi": "Corsi",
+  "/prodotti": "Prodotti digitali",
   "/formazione-certificata": "Formazione certificata",
   "/call-orientamento": "Call di orientamento",
   "/guida-gratuita": "Guida Metodo A.G.E.N.D.A.",
