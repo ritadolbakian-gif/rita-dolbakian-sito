@@ -257,3 +257,9 @@ details.acc .acc-body { padding: 0 0 1.75rem; max-width: 46rem; color: var(--sto
 
 /* iubenda: banner cookie in basso (nel pannello iubenda è impostato in alto) */
 html body #iubenda-cs-banner.iubenda-cs-top { align-items: flex-end !important; }
+/* iubenda: il bottoncino delle preferenze cookie va in basso a SINISTRA (a destra c'è WhatsApp) */
+html body .iubenda-tp-btn.iubenda-cs-preferences-link[data-tp-float][data-tp-float="bottom-right"] { left: 0 !important; right: auto !important; }
+/* su telefono sta sopra la barra "Prenota la call" */
+@media (max-width: 639px) {
+  html body .iubenda-tp-btn.iubenda-cs-preferences-link[data-tp-float][data-tp-float="bottom-right"] { bottom: 64px !important; }
+}
